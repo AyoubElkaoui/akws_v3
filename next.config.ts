@@ -50,6 +50,9 @@ const nextConfig: NextConfig = {
       // We doen geen pure webshops meer; /diensten/websites bestaat niet
       { source: '/webshop-laten-maken-baarn', destination: '/diensten', permanent: true },
 
+      // ─── Blog slug hernoemed
+      { source: '/blog/van-dijk-218-procent-meer-aanvragen', destination: '/blog/ad-loodgieter-meer-aanvragen-google-ads', permanent: true },
+
       // ─── Oude blog posts (geïndexeerd maar buiten nieuwe positionering)
       { source: '/blog/webshop-starten-complete-gids', destination: '/blog', permanent: true },
       { source: '/blog/waarom-professionele-website-essentieel', destination: '/blog', permanent: true },

@@ -837,7 +837,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
   },
   {
-    slug: 'van-dijk-218-procent-meer-aanvragen',
+    slug: 'ad-loodgieter-meer-aanvragen-google-ads',
     titel: 'Hoe AD Loodgietersbedrijf meer aanvragen via Google kreeg',
     excerpt:
       'Een eerlijke case-deepdive. Wat gedaan is, wat werkte, en eerlijk ook wat in eerste instantie niet werkte.',
