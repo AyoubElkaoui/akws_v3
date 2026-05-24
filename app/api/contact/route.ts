@@ -81,6 +81,8 @@ Verzonden via contactformulier op ${timestamp}`;
 
     if (process.env.RESEND_API_KEY) {
       const resend = new Resend(process.env.RESEND_API_KEY);
+
+      // Notificatie naar Ayoub
       await resend.emails.send({
         from: RESEND_FROM,
         to: CONTACT_EMAIL,
@@ -89,6 +91,57 @@ Verzonden via contactformulier op ${timestamp}`;
         text: textBody,
         html: htmlBody,
       });
+
+      // Bevestiging naar klant (alleen als e-mailadres is ingevuld)
+      if (email) {
+        const confirmHtml = `
+<div style="font-family:system-ui,sans-serif;max-width:600px;margin:0 auto;color:#14101c">
+  <div style="background:#7c3aed;padding:24px 32px;border-radius:12px 12px 0 0">
+    <div style="color:#fff;font-size:11px;letter-spacing:.12em;text-transform:uppercase;opacity:.7">AK Web Solutions</div>
+    <div style="color:#fff;font-size:22px;font-weight:700;margin-top:6px">Bedankt voor je aanvraag, ${name.split(' ')[0]}.</div>
+  </div>
+  <div style="background:#fff;border:1px solid #e8e4f0;border-top:none;padding:32px;border-radius:0 0 12px 12px">
+    <p style="margin:0 0 20px;font-size:16px;line-height:1.6;color:#3d3550">
+      We hebben je aanvraag ontvangen en nemen <strong>binnen 24 uur</strong> contact met je op via
+      ${phone ? `<strong>${phone}</strong>` : `<strong>${email}</strong>`}.
+    </p>
+    ${message ? `
+    <div style="background:#f8f6ff;border-radius:10px;padding:16px 20px;margin-bottom:20px">
+      <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#9490a0;margin-bottom:6px">Jouw bericht</div>
+      <p style="margin:0;font-size:14px;line-height:1.6;color:#3d3550">${message.replace(/\n/g, '<br>')}</p>
+    </div>` : ''}
+    <p style="margin:0 0 8px;font-size:15px;line-height:1.6;color:#3d3550">
+      Heb je een dringende vraag? Bel of app gerust:
+    </p>
+    <a href="tel:+31685722387" style="display:inline-block;background:#7c3aed;color:#fff;text-decoration:none;padding:12px 24px;border-radius:8px;font-weight:600;font-size:15px;margin-bottom:24px">
+      06 — 85 72 23 87
+    </a>
+    <div style="padding-top:20px;border-top:1px solid #f0ecf8;font-size:12px;color:#9490a0">
+      AK Web Solutions · Baarn · <a href="https://akwebsolutions.nl" style="color:#7c3aed">akwebsolutions.nl</a>
+    </div>
+  </div>
+</div>`;
+
+        const confirmText = `Hoi ${name.split(' ')[0]},
+
+Bedankt voor je aanvraag via akwebsolutions.nl. We nemen binnen 24 uur contact met je op.
+
+Dringende vraag? Bel of app: 06 — 85 72 23 87
+
+Met vriendelijke groet,
+Ayoub Elkaoui
+AK Web Solutions
+akwebsolutions.nl`;
+
+        await resend.emails.send({
+          from: RESEND_FROM,
+          to: email,
+          replyTo: CONTACT_EMAIL,
+          subject: `Bedankt voor je aanvraag, ${name.split(' ')[0]}!`,
+          text: confirmText,
+          html: confirmHtml,
+        });
+      }
     } else {
       console.log('[contact form] RESEND_API_KEY niet ingesteld. Formulierdata:', {
         name, company, phone, email, branche, message,
