@@ -7,13 +7,17 @@ const RECAPTCHA_SECRET = process.env.RECAPTCHA_SECRET_KEY;
 
 async function verifyRecaptcha(token: string): Promise<boolean> {
   if (!RECAPTCHA_SECRET) return true;
-  if (!token) return false;
+  if (!token) {
+    console.warn('[recaptcha] lege token ontvangen');
+    return false;
+  }
   const res = await fetch('https://www.google.com/recaptcha/api/siteverify', {
     method: 'POST',
     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
     body: `secret=${RECAPTCHA_SECRET}&response=${token}`,
   });
-  const data = await res.json() as { success: boolean; score: number };
+  const data = await res.json() as { success: boolean; score: number; 'error-codes'?: string[] };
+  console.log('[recaptcha] response:', JSON.stringify(data));
   return data.success && data.score >= 0.5;
 }
 
