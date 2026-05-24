@@ -76,14 +76,16 @@ function CtaSimpleForm() {
     e.preventDefault();
     setStatus('loading');
     const fd = new FormData(e.currentTarget);
+    const contact = (fd.get('contact') as string) ?? '';
+    const isEmail = contact.includes('@');
     try {
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           name: fd.get('name'),
-          email: fd.get('contact'),
-          phone: fd.get('contact'),
+          email: isEmail ? contact : undefined,
+          phone: isEmail ? undefined : contact,
         }),
       });
       setStatus(res.ok ? 'ok' : 'error');
