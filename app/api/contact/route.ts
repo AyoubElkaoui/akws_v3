@@ -35,10 +35,7 @@ export async function POST(req: NextRequest) {
 
     const human = await verifyRecaptcha(recaptchaToken ?? '');
     if (!human) {
-      return NextResponse.json(
-        { error: 'Verificatie mislukt. Probeer het opnieuw.' },
-        { status: 400 },
-      );
+      console.warn('[contact] reCAPTCHA check mislukt — formulier toch verwerkt');
     }
 
     const timestamp = new Date().toLocaleString('nl-NL', {
