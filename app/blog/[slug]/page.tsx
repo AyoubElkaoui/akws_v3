@@ -16,7 +16,7 @@ export async function generateStaticParams() {
 // Posts die noindex krijgen omdat de content nog dunner is dan 600 woorden
 // TODO: Ayoub — breid deze posts uit of vervang ze door betere content
 const NOINDEX_SLUGS = new Set([
-  'van-dijk-218-procent-meer-aanvragen',
+  'ad-loodgieter-meer-aanvragen-google-ads',
   '5-fouten-op-installateur-websites',
   'snelstart-koppelen-met-werkbon-app',
   'google-ads-installateur-beginnen',
