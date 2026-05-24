@@ -6,7 +6,7 @@ import { SiteFooter } from '@/components/SiteFooter';
 import { PageHead } from '@/components/PageHead';
 import { Cta } from '@/components/Cta';
 import { DIENSTEN, PRIJZEN } from '@/lib/data';
-import { buildMetadata } from '@/lib/seo';
+import { buildMetadata, breadcrumbSchema, serviceSchema } from '@/lib/seo';
 
 // Unsplash foto's per dienst (royalty-free, credit in footer)
 const DIENST_IMAGES: Record<string, string> = {
@@ -27,6 +27,46 @@ export default function DienstenPage() {
   return (
     <>
       <SiteNav active="/diensten" />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema([
+          { name: 'Home', href: '/' },
+          { name: 'Diensten', href: '/diensten' },
+        ])) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema('Webontwikkeling voor installatiebedrijven', {
+          name: 'Websites die leads opleveren',
+          url: '/diensten/websites',
+          description: 'Snelle, mobiel-first websites gebouwd op Next.js voor installatiebedrijven. Lokale SEO, AVG-proof, vaste prijs.',
+        })) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema('SEO en online adverteren voor installatiebedrijven', {
+          name: 'SEO & Google Ads',
+          url: '/diensten/seo-en-google-ads',
+          description: 'Lokale SEO en Google Ads voor installateurs. Vindbaar in je werkgebied, leads meten, maandelijkse rapportage.',
+        })) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema('Maatwerk software voor installatiebedrijven', {
+          name: 'Maatwerk software',
+          url: '/diensten/maatwerk-software',
+          description: 'Op maat gemaakte software: urenregistratie, werkbonnen, koppelingen. Gebouwd rond hoe jouw bedrijf werkt.',
+        })) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema('Website onderhoud en support voor installatiebedrijven', {
+          name: 'Onderhoud & support',
+          url: '/diensten/onderhoud',
+          description: 'Maandelijks onderhoud, updates, hosting en support. Eén aanspreekpunt voor alles wat na de livegang komt.',
+        })) }}
+      />
 
       <PageHead
         crumbs={[{ href: '/', label: 'Home' }, { label: 'Diensten' }]}
