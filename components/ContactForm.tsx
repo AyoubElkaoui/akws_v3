@@ -28,12 +28,24 @@ export function ContactForm() {
     const fd = new FormData(e.currentTarget);
 
     let recaptchaToken = '';
-    if (SITE_KEY && typeof window !== 'undefined' && window.grecaptcha) {
+    if (SITE_KEY) {
       try {
-        await new Promise<void>((resolve) => window.grecaptcha.ready(resolve));
+        // wacht tot grecaptcha beschikbaar is (max 5 seconden)
+        await new Promise<void>((resolve, reject) => {
+          const deadline = setTimeout(() => reject(new Error('timeout')), 5000);
+          const poll = () => {
+            if (typeof window !== 'undefined' && window.grecaptcha) {
+              clearTimeout(deadline);
+              window.grecaptcha.ready(resolve);
+            } else {
+              setTimeout(poll, 100);
+            }
+          };
+          poll();
+        });
         recaptchaToken = await window.grecaptcha.execute(SITE_KEY, { action: 'contact' });
-      } catch {
-        // doorgaan zonder token; server beslist
+      } catch (err) {
+        console.warn('[recaptcha] niet geladen:', err);
       }
     }
 
@@ -91,7 +103,7 @@ export function ContactForm() {
       {SITE_KEY && (
         <Script
           src={`https://www.google.com/recaptcha/api.js?render=${SITE_KEY}`}
-          strategy="lazyOnload"
+          strategy="afterInteractive"
         />
       )}
 
