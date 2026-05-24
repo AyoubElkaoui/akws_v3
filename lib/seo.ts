@@ -76,11 +76,17 @@ export function localBusinessSchema() {
   };
 }
 
-export function serviceSchema(serviceType: string) {
+export function serviceSchema(
+  serviceType: string,
+  opts?: { name?: string; url?: string; description?: string },
+) {
   return {
     '@context': 'https://schema.org',
     '@type': 'Service',
     serviceType,
+    name: opts?.name ?? serviceType,
+    ...(opts?.url ? { url: `${BASE_URL}${opts.url}` } : {}),
+    ...(opts?.description ? { description: opts.description } : {}),
     provider: { '@type': 'ProfessionalService', name: SITE_NAME },
     areaServed: 'Midden-Nederland',
   };
