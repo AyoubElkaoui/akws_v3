@@ -16,7 +16,7 @@ export const metadata: Metadata = buildMetadata({
 
 const WERKWIJZE_MAATWERK = [
   { n: '01', t: 'Intake', d: 'gratis', s: 'Wat moet de software doen, wat is het probleem nu? 30 minuten, geen verkooppraat.' },
-  { n: '02', t: 'Procesanalyse', d: '€500 vast, verrekend in project', s: 'Ik bel uitgebreid of kom langs, schrijf op hoe je nu werkt, en breng in kaart wat de software moet doen.' },
+  { n: '02', t: 'Procesanalyse', d: 'verrekend in project', s: 'Ik bel uitgebreid of kom langs, schrijf op hoe je nu werkt, en breng in kaart wat de software moet doen.' },
   { n: '03', t: 'Voorstel', d: 'binnen 5 werkdagen', s: 'Vaste prijs per fase, scope op papier. Geen uurtje-factuurtje, geen nacalculatie.' },
   { n: '04', t: 'Bouw', d: 'sprints van 2 weken', s: 'Demo\'s tussendoor. Je ziet elke sprint wat er gebouwd is.' },
   { n: '05', t: 'Oplevering', d: 'training + documentatie', s: 'Productie-klaar systeem, training voor je team, documentatie voor beheer.' },
@@ -161,9 +161,9 @@ export default function MaatwerkSoftwarePage() {
           </span>
           <div style={{ marginTop: 32, display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 20 }}>
             {[
-              { titel: 'Eenvoudige module', prijs: 'v.a. €4.000', d: '4 tot 6 weken', tekst: 'Eén afgebakende module. Urenregistratie, werkbon-systeem, of koppeling.' },
-              { titel: 'Middelgroot project', prijs: '€8.000 tot €18.000', d: '2 tot 3 maanden', tekst: 'Meerdere gekoppelde modules. Dashboard, klantportaal, planningssysteem.' },
-              { titel: 'Groot project', prijs: 'Op offerte', d: 'na inventarisatie', tekst: 'Volledig maatwerk platform. Intake en procesanalyse vooraf verplicht.' },
+              { titel: 'Eenvoudige module', prijs: 'Op maat', d: '4 tot 6 weken', tekst: 'Eén afgebakende module. Urenregistratie, werkbon-systeem, of koppeling.' },
+              { titel: 'Middelgroot project', prijs: 'Op maat', d: '2 tot 3 maanden', tekst: 'Meerdere gekoppelde modules. Dashboard, klantportaal, planningssysteem.' },
+              { titel: 'Groot project', prijs: 'Op maat', d: 'na inventarisatie', tekst: 'Volledig maatwerk platform. Intake en procesanalyse vooraf verplicht.' },
             ].map((item) => (
               <div key={item.titel} style={{ background: '#fff', borderRadius: 16, padding: '28px 28px', border: '1px solid var(--rule)' }}>
                 <div style={{ fontFamily: 'var(--mono)', fontSize: 11, color: 'var(--p1)', letterSpacing: '.08em', textTransform: 'uppercase', marginBottom: 8 }}>{item.titel}</div>
@@ -174,7 +174,7 @@ export default function MaatwerkSoftwarePage() {
             ))}
           </div>
           <p style={{ marginTop: 20, fontFamily: 'var(--mono)', fontSize: 11, color: 'var(--mute)', letterSpacing: '.06em' }}>
-            Alle prijzen exclusief 21% BTW. Vaste prijs per fase — geen uurtje-factuurtje.
+            Prijzen op maat, exclusief 21% BTW. Vaste prijs per fase — geen uurtje-factuurtje.
           </p>
         </div>
       </section>

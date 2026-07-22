@@ -177,7 +177,7 @@ export default function DienstenPage() {
             <h2>Of kies een pakket.<em>/ losse modules of alles-in-één.</em></h2>
             <p className="lead">
               Begin klein en breid uit, of pak meteen de complete digitale werkplaats. Beide zijn prima.
-              Alle prijzen exclusief 21% BTW.
+              Elk traject krijgt een prijs op maat na een gratis kennismaking.
             </p>
           </div>
           <div className="prijs-grid">

@@ -108,8 +108,8 @@ export default function SeoPage() {
           </span>
           <div style={{ marginTop: 32, display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 20 }}>
             {[
-              { titel: 'Inbegrepen bij Pro-pakket', prijs: '€3.750 + €145/mnd', tekst: 'Google Ads-setup en maandelijks beheer inbegrepen bij het Pro-pakket. Advertentiebudget (wat je aan Google betaalt) staat los.' },
-              { titel: 'Los te boeken op bestaande site', prijs: 'v.a. €350/mnd', tekst: 'Inclusief beheer, rapportage en optimalisatie. Excl. advertentiebudget. Vereist eerst een audit van je bestaande site.' },
+              { titel: 'Samen met een nieuwe website', prijs: 'Op maat', tekst: 'Google Ads-setup en maandelijks beheer als onderdeel van je website-traject. Advertentiebudget (wat je aan Google betaalt) staat los.' },
+              { titel: 'Los te boeken op bestaande site', prijs: 'Op maat', tekst: 'Inclusief beheer, rapportage en optimalisatie. Excl. advertentiebudget. Vereist eerst een audit van je bestaande site.' },
             ].map((item) => (
               <div key={item.titel} style={{ background: '#fff', borderRadius: 16, padding: '32px', border: '1px solid var(--rule)' }}>
                 <div style={{ fontFamily: 'var(--mono)', fontSize: 11, color: 'var(--p1)', letterSpacing: '.08em', textTransform: 'uppercase', marginBottom: 8 }}>{item.titel}</div>

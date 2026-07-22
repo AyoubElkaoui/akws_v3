@@ -10,7 +10,7 @@ import { buildMetadata, breadcrumbSchema, serviceSchema } from '@/lib/seo';
 export const metadata: Metadata = buildMetadata({
   title: 'Websites voor installatiebedrijven — Snel, vindbaar, Next.js | AKWS',
   description:
-    'Websites voor installatiebedrijven gebouwd op Next.js. Snel, mobiel-first, lokale SEO ingebouwd. Starter v.a. €2.250 + €85/mnd. Freelancer Baarn.',
+    'Websites voor installatiebedrijven gebouwd op Next.js. Snel, mobiel-first, lokale SEO ingebouwd. Prijs op maat na een gratis kennismaking. Freelancer Baarn.',
   path: '/diensten/websites',
 });
 
