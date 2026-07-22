@@ -50,6 +50,7 @@ export const metadata: Metadata = {
     // Social-preview wordt gegenereerd door app/opengraph-image.tsx.
   },
   twitter: { card: 'summary_large_image' },
+  verification: { google: '3HwRdeI8kKX00Zq06xpm2urRC3KExYES3d-MQ4EkC94' },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
