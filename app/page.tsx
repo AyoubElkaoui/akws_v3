@@ -31,7 +31,7 @@ const HOME_FAQ = [
   },
   {
     q: "Wat kost een website?",
-    a: "Het Starter-pakket kost €2.250 eenmalig plus €85 per maand. Het Pro-pakket (€3.750) voegt Google Ads en meer pagina's toe. Maatwerk software start vanaf €4.000 per fase.",
+    a: "Elk bedrijf is anders, dus werk ik met een offerte op maat in plaats van vaste pakketprijzen. Na een gratis kennismaking van 30 minuten weet ik wat je nodig hebt en krijg je een vast bod op papier — geen uurtje-factuurtje, geen verrassingen achteraf.",
   },
   {
     q: "Hoe snel is mijn site live?",
@@ -437,16 +437,16 @@ export default function HomePage() {
         <div className="wrap">
           <span className="eyebrow">
             <span className="num">06</span>
-            <span className="rule" /> Prijzen
+            <span className="rule" /> Wat het kost
           </span>
           <div className="section-head" style={{ marginTop: 24 }}>
             <h2>
-              Vaste prijzen.<em>/ geen verrassingen achteraf.</em>
+              Alles op maat.<em>/ jij betaalt voor wat je nodig hebt.</em>
             </h2>
             <p className="lead">
-              Geen uurtje-factuurtje. Wat je met mij afspreekt is wat je
-              betaalt. De maandelijkse kosten dekken hosting, monitoring en
-              kleine wijzigingen.
+              Geen standaardprijs die niet bij jouw bedrijf past, geen
+              uurtje-factuurtje. We beginnen met een gratis kennismaking en je
+              krijgt een vast bod op papier — dat is wat je betaalt.
             </p>
           </div>
           <div className="prijs-grid">
@@ -482,8 +482,8 @@ export default function HomePage() {
               letterSpacing: ".06em",
             }}
           >
-            Alle prijzen exclusief 21% BTW. Onderhoudscontract is verplicht
-            onderdeel van elk traject.
+            Prijzen op maat, exclusief 21% BTW. Onderhoud is een vast onderdeel
+            van elk traject. Vraag een vrijblijvende offerte aan.
           </p>
         </div>
       </section>

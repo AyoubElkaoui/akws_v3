@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Script from 'next/script';
 import { Barlow, Barlow_Condensed, JetBrains_Mono } from 'next/font/google';
 import { localBusinessSchema } from '@/lib/seo';
 import { WhatsAppButton } from '@/components/WhatsAppButton';
@@ -46,7 +47,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'nl_NL',
     siteName: 'AK Web Solutions',
-    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'AK Web Solutions' }],
+    // Social-preview wordt gegenereerd door app/opengraph-image.tsx.
   },
   twitter: { card: 'summary_large_image' },
 };
@@ -61,6 +62,16 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema()) }}
         />
+
+        {/* Privacy-vriendelijke analytics — Plausible (geen cookiebanner nodig) */}
+        <Script
+          defer
+          src="https://plausible.io/js/pa-UrWzaBmn4p0tJC6gPC8s6.js"
+          strategy="afterInteractive"
+        />
+        <Script id="plausible-init" strategy="afterInteractive">
+          {`window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init()`}
+        </Script>
       </body>
     </html>
   );

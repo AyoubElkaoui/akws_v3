@@ -2,7 +2,9 @@ import type { Metadata } from 'next';
 
 const BASE_URL = 'https://akwebsolutions.nl';
 const SITE_NAME = 'AK Web Solutions';
-const DEFAULT_OG_IMAGE = '/og-image.png';
+// Logo voor JSON-LD. De social-preview (OG) wordt dynamisch gegenereerd
+// door app/opengraph-image.tsx — daarom hier géén vaste og-image opgeven.
+const LOGO_IMAGE = '/akws-logo.png';
 
 type SeoInput = {
   title: string;
@@ -16,7 +18,7 @@ export function buildMetadata({
   title,
   description,
   path = '',
-  ogImage = DEFAULT_OG_IMAGE,
+  ogImage,
   noIndex = false,
 }: SeoInput): Metadata {
   const url = `${BASE_URL}${path}`;
@@ -32,13 +34,14 @@ export function buildMetadata({
       siteName: SITE_NAME,
       title,
       description,
-      images: [{ url: ogImage, width: 1200, height: 630, alt: SITE_NAME }],
+      // Alleen expliciet meegegeven beeld overschrijft de gegenereerde OG-image.
+      ...(ogImage ? { images: [{ url: ogImage, width: 1200, height: 630, alt: SITE_NAME }] } : {}),
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description,
-      images: [ogImage],
+      ...(ogImage ? { images: [ogImage] } : {}),
     },
     robots: noIndex
       ? { index: false, follow: false }
@@ -53,7 +56,7 @@ export function localBusinessSchema() {
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
     name: SITE_NAME,
-    image: `${BASE_URL}${DEFAULT_OG_IMAGE}`,
+    image: `${BASE_URL}${LOGO_IMAGE}`,
     '@id': BASE_URL,
     url: BASE_URL,
     telephone: '+31685722387',

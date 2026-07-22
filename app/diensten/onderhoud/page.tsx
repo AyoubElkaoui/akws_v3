@@ -15,21 +15,21 @@ export const metadata: Metadata = buildMetadata({
 
 const PAKKETTEN = [
   {
-    titel: 'Starter onderhoud',
-    prijs: '€85/mnd',
-    bij: 'Bij Starter-pakket',
+    titel: 'Basis onderhoud',
+    prijs: 'Op maat',
+    bij: 'Bij elke website',
     items: ['Hosting op Vercel', 'SSL-certificaat', 'CMS & plugin-updates', 'Beveiligingsmonitoring', 'Uptime-monitoring', '1 uur wijzigingen per maand', 'E-mail support (reactie < 24 uur)'],
   },
   {
     titel: 'Pro onderhoud',
-    prijs: '€145/mnd',
-    bij: 'Bij Pro-pakket',
+    prijs: 'Op maat',
+    bij: 'Bij Website + Google Ads',
     items: ['Alles uit Starter onderhoud', '2 uur wijzigingen per maand', 'Google Ads maandelijks beheer', 'Maandelijkse rapportage', 'Conversie-tracking onderhoud'],
     featured: true,
   },
   {
     titel: 'Premium onderhoud',
-    prijs: '€250/mnd',
+    prijs: 'Op maat',
     bij: 'Op aanvraag',
     items: ['Alles uit Pro onderhoud', '4 uur wijzigingen per maand', 'Kwartaalstrategie-sessie', 'Prioriteitsbehandeling bij storing', 'SEO-rapportage met aanbevelingen'],
   },

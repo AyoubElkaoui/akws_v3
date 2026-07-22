@@ -10,17 +10,17 @@ import { buildMetadata, breadcrumbSchema } from '@/lib/seo';
 export const metadata: Metadata = buildMetadata({
   title: 'Prijzen — Websites en software voor installateurs | AKWS',
   description:
-    'Vaste prijzen zonder verrassingen. Starter v.a. €2.250, Pro v.a. €3.750, Maatwerk software v.a. €4.000. Alle prijzen excl. 21% BTW.',
+    'Elke klus op maat. Geen standaardpakketten die niet passen, geen uurtje-factuurtje. Gratis kennismaking, daarna een vast bod op papier.',
   path: '/prijzen',
 });
 
 const FAQ_PRIJZEN = [
-  { q: 'Zijn dit de definitieve prijzen of indicaties?', a: 'Dit zijn vaste prijzen, geen indicaties. Wat in het voorstel staat is wat je betaalt. Als er iets meer kost dan verwacht, is dat mijn probleem, niet het jouwe.' },
-  { q: 'Wat zit er in het maandelijkse bedrag?', a: 'Hosting op Vercel, SSL, CMS-updates, beveiligingsmonitoring, uptime-monitoring en een uur kleine wijzigingen (Starter) of twee uur (Pro). Pro voegt ook Google Ads-beheer toe.' },
-  { q: 'Is het onderhoudscontract verplicht?', a: 'Ja. Een website zonder onderhoud is een tijdbom. Na een halfjaar zitten er security-lekken in, na een jaar kost traagheid je rankings. Het maandelijkse bedrag is een investering in continuïteit.' },
-  { q: 'Kan ik stoppen met het onderhoudscontract?', a: 'Maandelijks opzegbaar. Bij opzegging help ik je met overdracht naar een andere partij. Je houdt je site, je code en je content. Geen vendor lock-in.' },
-  { q: 'Zit het advertentiebudget bij Google Ads in het Pro-pakket?', a: 'Nee. Het beheer en de setup zitten in het Pro-pakket (€145/mnd). Het advertentiebudget dat je aan Google betaalt staat los — dat stel je zelf in. Realistisch begin je met €300 tot €600 per maand.' },
-  { q: 'Zijn er kortingen bij meerdere modules?', a: 'Voor software-projecten die uit meerdere modules bestaan, bespreek ik de prijs in de intake op basis van scope. Er is geen standaardkorting, wel een eerlijk voorstel op maat.' },
+  { q: 'Waarom staan er geen prijzen op de site?', a: 'Omdat een installatiebedrijf met vijf monteurs iets anders nodig heeft dan een eenmanszaak. Een standaardprijs klopt bijna nooit — hij is te hoog voor de één en te laag voor de ander. Ik maak liever een eerlijk bod dat past bij wat jij écht nodig hebt.' },
+  { q: 'Hoe kom ik dan aan een prijs?', a: 'Simpel: we plannen een gratis kennismaking van 30 minuten. Je vertelt wat je nodig hebt, ik stel vragen, en binnen 3 werkdagen krijg je een vast bod op papier met scope, planning en prijs. Geen verplichtingen.' },
+  { q: 'Is het een vaste prijs of een schatting?', a: 'Een vaste prijs. Wat in het voorstel staat is wat je betaalt. Als iets meer werk blijkt dan verwacht, is dat mijn probleem, niet het jouwe. Geen uurtje-factuurtje, geen nacalculatie.' },
+  { q: 'Wat zit er in het maandelijkse bedrag?', a: 'Hosting, SSL, updates, beveiligings- en uptime-monitoring en kleine wijzigingen. Bij een traject met Google Ads komt daar het maandelijkse campagnebeheer bij. Precieze invulling bespreken we in de kennismaking.' },
+  { q: 'Is onderhoud verplicht?', a: 'Onderhoud is een vast onderdeel van elk traject. Een website zonder onderhoud is een tijdbom: na een halfjaar zitten er security-lekken in, na een jaar kost traagheid je rankings. Maandelijks opzegbaar, geen vendor lock-in — je houdt je site, code en content.' },
+  { q: 'Zit het advertentiebudget van Google Ads erbij?', a: 'Nee. Het beheer en de setup regel ik; het advertentiebudget dat je aan Google betaalt staat los en stel je zelf in. Realistisch begin je met een paar honderd euro per maand — wat past bij jouw werkgebied bespreken we vooraf.' },
 ];
 
 export default function PrijzenPage() {
@@ -38,9 +38,9 @@ export default function PrijzenPage() {
 
       <PageHead
         crumbs={[{ href: '/', label: 'Home' }, { label: 'Prijzen' }]}
-        chip="Vaste prijzen · geen uurtje-factuurtje"
-        title="Prijzen."
-        subtitle="Wat je met mij afspreekt is wat je betaalt. Geen verrassingen achteraf, geen uurtje-factuurtje, geen verborgen meerkosten."
+        chip="Op maat · geen uurtje-factuurtje"
+        title="Wat het kost."
+        subtitle="Elk installatiebedrijf is anders, dus geef ik geen standaardprijs die tóch niet past. Je krijgt een vast bod op maat na een gratis kennismaking — wat we afspreken is wat je betaalt."
       />
 
       <section className="section prijzen">
@@ -67,7 +67,7 @@ export default function PrijzenPage() {
             ))}
           </div>
           <p style={{ textAlign: 'center', marginTop: 28, fontFamily: 'var(--mono)', fontSize: 11, color: 'var(--mute)', letterSpacing: '.06em' }}>
-            Alle prijzen exclusief 21% BTW. Onderhoudscontract is verplicht onderdeel van elk traject.
+            Prijzen op maat, exclusief 21% BTW. Onderhoud is een vast onderdeel van elk traject.
           </p>
         </div>
       </section>
@@ -87,17 +87,17 @@ export default function PrijzenPage() {
           <div style={{ display: 'grid', gap: 24 }}>
             {[
               {
-                naam: 'Starter — €2.250 eenmalig + €85/mnd',
-                tekst: 'Het Starter-pakket is bedoeld voor installatiebedrijven die online vindbaar willen zijn en serieuze aanvragen willen ontvangen via hun website. Je krijgt een maatwerk ontwerp op jouw huisstijl, tot 6 pagina\'s, een lokale SEO-basis, Google Bedrijfsprofiel en een contactformulier. Het maandelijkse bedrag dekt hosting, SSL en kleine wijzigingen.',
+                naam: 'Website',
+                tekst: 'Voor installatiebedrijven die online vindbaar willen zijn en serieuze aanvragen willen ontvangen via hun website. Je krijgt een maatwerk ontwerp op jouw huisstijl, een lokale SEO-basis, Google Bedrijfsprofiel en een contactformulier dat werkt. Hosting, SSL en kleine wijzigingen zitten in het vaste maandbedrag.',
                 voor: 'Geschikt voor: starters online, bedrijven met een verouderde site, en bedrijven die puur via mond-tot-mond werken maar dat willen veranderen.',
               },
               {
-                naam: 'Pro — €3.750 eenmalig + €145/mnd',
-                tekst: 'Het Pro-pakket voegt Google Ads-beheer toe aan alles uit Starter. Tot 12 pagina\'s, lokale landingspagina\'s per stad in je werkgebied, Google Ads opzet en maandelijks beheer (excl. advertentiebudget), conversie-tracking en maandelijkse rapportage. 2 uur wijzigingen per maand inbegrepen.',
+                naam: 'Website + Google Ads',
+                tekst: 'Alles uit Website, plus actieve leadgeneratie via Google. Lokale landingspagina\'s per stad in je werkgebied, Google Ads opzet en maandelijks beheer (excl. advertentiebudget), conversie-tracking en maandelijkse rapportage waarin je precies ziet hoeveel aanvragen het oplevert.',
                 voor: 'Geschikt voor: bedrijven die actief aanvragen willen genereren via Google, lokale marktleider willen worden, en een consistente aanwas van leads nodig hebben.',
               },
               {
-                naam: 'Maatwerk software — v.a. €4.000 per fase',
+                naam: 'Maatwerk software',
                 tekst: 'Voor installatiebedrijven die meer dan een website nodig hebben. Urenregistratie, planningssystemen, werkbon-apps, klantportalen, koppelingen met Snelstart, Exact of Moneybird. Vaste prijs per afgebakende fase, na intake en procesanalyse. Doorlooptijd 4 tot 8 weken per fase.',
                 voor: 'Geschikt voor: bedrijven met administratieve pijnpunten, meerdere monteurs, handmatige processen die schaalbaar moeten worden.',
               },
