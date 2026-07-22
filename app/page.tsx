@@ -20,14 +20,14 @@ import { CountUp } from "@/components/CountUp";
 export const metadata = buildMetadata({
   title: "Websites & software voor installateurs | AK Web Solutions Baarn",
   description:
-    "Freelance webdeveloper voor installatiebedrijven in Midden-Nederland. Websites, Google Ads en maatwerk software. Vaste prijzen, geen verrassingen.",
+    "Freelance webdeveloper voor installateurs, aannemers en vakmensen in Midden-Nederland. Websites, Google Ads en maatwerk software. Prijzen op maat, geen verrassingen.",
   path: "/",
 });
 
 const HOME_FAQ = [
   {
     q: "Werken jullie alleen voor installatiebedrijven?",
-    a: "Ja. Ik richt me specifiek op installatiebedrijven, voornamelijk in Midden-Nederland (remote door heel NL mogelijk). Die focus maakt dat ik de branche ken en geen uitleg vooraf nodig heb.",
+    a: "Installateurs zijn mijn thuisbasis, maar ik werk voor vakmensen in installatie, bouw en techniek: ook aannemers, dakdekkers, hoveniers en schilders. Voornamelijk in Midden-Nederland, remote door heel NL. Die focus op de vakwereld maakt dat ik jullie markt ken en geen uitleg vooraf nodig heb.",
   },
   {
     q: "Wat kost een website?",
@@ -66,7 +66,7 @@ export default function HomePage() {
           <div className="hero-grid">
             <div>
               <span className="chip chip-purple">
-                Voor installatiebedrijven door heel Nederland
+                Voor installatie-, bouw- en technische bedrijven — heel NL
               </span>
               <h1>
                 Websites &amp;
@@ -80,9 +80,9 @@ export default function HomePage() {
             <div style={{ paddingBottom: 24 }}>
               <p className="hero-sub">
                 Eén freelancer voor je website, leads en de software die jouw
-                werk eenvoudiger maakt. Gemaakt door iemand die de
-                installatiebranche kent, niet door een marketingbureau dat
-                zonder uitleg de mist in gaat.
+                werk eenvoudiger maakt. Gemaakt door iemand die de wereld van
+                installateurs, bouw en techniek kent, niet door een
+                marketingbureau dat zonder uitleg de mist in gaat.
               </p>
               <div className="hero-cta">
                 <Link href="/contact" className="btn btn-primary">
@@ -121,13 +121,13 @@ export default function HomePage() {
             <h2>
               Ik bouw voor
               <br />
-              de installatiebranche.<em>/ dat is een keuze, geen toeval.</em>
+              vakmensen.<em>/ installatie, bouw &amp; techniek.</em>
             </h2>
             <p className="lead">
               Ik ken jullie markt: spoedklussen die op zaterdagavond
-              binnenkomen, planning van monteurs, urenregistratie die op de
-              bouwplaats moet werken, en koppelingen met Snelstart en Exact.
-              Geen uitleg vooraf nodig.
+              binnenkomen, seizoenspieken, planning van monteurs en ploegen,
+              urenregistratie die op locatie moet werken, en koppelingen met
+              Snelstart en Exact. Geen uitleg vooraf nodig.
             </p>
           </div>
           <div className="branch-list">

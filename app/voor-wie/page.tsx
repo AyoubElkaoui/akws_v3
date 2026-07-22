@@ -8,9 +8,9 @@ import { BRANCHES, BRANCHE_DETAILS } from '@/lib/data';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Voor wie — Websites voor installatiebedrijven | AKWS',
+  title: 'Voor wie — Websites voor installateurs, bouw & vakmensen | AKWS',
   description:
-    'Ik bouw websites en software specifiek voor installatiebedrijven: loodgieters, CV-monteurs, elektriciens, installatiebedrijven en dakdekkers. Kies jouw branche.',
+    'Ik bouw websites en software voor vakmensen: loodgieters, CV-monteurs, elektriciens, installatiebedrijven, dakdekkers, aannemers, hoveniers en schilders. Kies jouw vak.',
   path: '/voor-wie',
 });
 
@@ -21,9 +21,9 @@ export default function VoorWiePage() {
 
       <PageHead
         crumbs={[{ href: '/', label: 'Home' }, { label: 'Voor wie' }]}
-        chip="5 branches, 1 specialist"
+        chip="8 vakgebieden, 1 specialist"
         title="Voor wie."
-        subtitle="Ik bouw specifiek voor installatiebedrijven. Geen generalist die ook wel een loodgieter-site kan — iemand die de branche kent."
+        subtitle="Ik bouw voor vakmensen in installatie, bouw en techniek. Geen generalist die ook wel een vaksite kan — iemand die jullie markt en werkdag kent."
       />
 
       <section className="section over">
