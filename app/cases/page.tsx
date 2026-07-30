@@ -11,7 +11,7 @@ import { buildMetadata } from '@/lib/seo';
 export const metadata: Metadata = buildMetadata({
   title: 'Cases — Websites en software voor installatiebedrijven | AKWS',
   description:
-    'Een selectie van mijn werk voor installatie- en technische bedrijven: websites, urenregistratie, ticketsystemen en koppelingen.',
+    'Een selectie van mijn werk: websites, maatwerk software en koppelingen voor installatiebedrijven, bouw, logistiek en ander MKB.',
   path: '/cases',
 });
 
@@ -37,13 +37,12 @@ export default function CasesPage() {
             <span className="count">{CASES.length} cases</span>
           </div>
 
-          {/* Omgekeerde piramide: 3 boven, 2 gecentreerd onder — zie .pyramid-grid CSS */}
-          <div className="pyramid-grid" style={{ marginBottom: 80 }}>
-            {CASES.map((c, idx) => {
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: 24, marginBottom: 80 }}>
+            {CASES.map((c) => {
               const detail = CASE_DETAILS.find((d) => d.slug === c.slug);
               const cover = detail?.images?.cover;
               return (
-              <Link href={`/cases/${c.slug}`} className={`post pyramid-item pyramid-item-${idx}`} key={c.slug}>
+              <Link href={`/cases/${c.slug}`} className="post" key={c.slug}>
                 <div
                   className="img"
                   style={cover ? { position: 'relative' } : {
@@ -99,7 +98,7 @@ export default function CasesPage() {
           </span>
           <div className="section-head" style={{ marginTop: 24, marginBottom: 32 }}>
             <h2>
-              Vijf projecten in vier getallen.<em>/ gemeten, niet geclaimd.</em>
+              Het portfolio in vier getallen.<em>/ gemeten, niet geclaimd.</em>
             </h2>
             <p className="lead" style={{ color: 'rgba(255,255,255,.55)' }}>
               Over mijn portfolio. Bron: eigen analytics en klantfeedback.
