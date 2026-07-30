@@ -5,7 +5,17 @@ import { SiteFooter } from '@/components/SiteFooter';
 import { Cta } from '@/components/Cta';
 import { PageHead } from '@/components/PageHead';
 import { PRIJZEN } from '@/lib/data';
-import { buildMetadata, breadcrumbSchema, serviceSchema } from '@/lib/seo';
+import { buildMetadata, breadcrumbSchema, serviceSchema, faqSchema } from '@/lib/seo';
+
+const FAQ_WEBSITES = [
+  { q: 'Hoe snel staat mijn website live?', a: 'Binnen 2 weken, van kennismaking tot lancering. Dat is het uitgangspunt, geen uitzondering. Snelheid is voor mij een verkoopargument: elke week dat je site niet live is, laat je aanvragen liggen.' },
+  { q: 'Wat kost een website?', a: 'Prijs op maat, want een eenmanszaak heeft iets anders nodig dan een bedrijf met vijf monteurs. Na een gratis kennismaking van 30 minuten krijg je een vast bod op papier — geen uurtje-factuurtje, geen verrassingen achteraf.' },
+  { q: 'Kan ik de website daarna zelf bijhouden?', a: 'Ja. Ik lever de site desgewenst met een eenvoudig CMS zodat je zelf teksten, foto’s en diensten aanpast, zonder code en zonder mij te hoeven bellen. Grotere wijzigingen pak ik voor je op.' },
+  { q: 'Werkt dit ook voor mijn vak buiten de installatiebranche?', a: 'Zeker. Installateurs zijn mijn thuisbasis, maar ik bouw net zo goed voor aannemers, hoveniers, schilders, transportbedrijven en ander lokaal MKB. De aanpak — snel, vindbaar, gericht op aanvragen — werkt voor elk vak.' },
+  { q: 'Ik heb al een website. Kan die verbeterd worden of moet het nieuw?', a: 'Dat hangt van je huidige site af. Soms is bijsturen op snelheid en vindbaarheid genoeg; soms is een frisse basis slimmer. Ik check je bestaande site eerst en geef je daar eerlijk advies over, ook als dat "houden zo" is.' },
+  { q: 'Krijg ik ook hulp met vindbaarheid in Google?', a: 'De lokale SEO-fundamenten (snelheid, structuur, Google Bedrijfsprofiel, lokale landingspagina’s) zitten standaard in elke website. Wil je actief adverteren met Google Ads, dan is dat een aparte dienst die we erbij kunnen nemen.' },
+  { q: 'Is de website geschikt voor mobiel?', a: 'Mobiel-first, altijd. Ruim 80% van je bezoekers zit op de telefoon, vaak met matig bereik. Mijn sites laden in onder een seconde en werken vlekkeloos op elk scherm — dat is waar je (spoed)klanten binnenkomen.' },
+];
 
 export const metadata: Metadata = buildMetadata({
   title: 'Websites voor installatiebedrijven — Snel, vindbaar, Next.js | AKWS',
@@ -113,7 +123,7 @@ export default function WebsitesPage() {
           </span>
           <div className="section-head" style={{ marginTop: 24 }}>
             <h2>Kies een pakket.<em>/ of vraag een offerte op maat.</em></h2>
-            <p className="lead">Alle prijzen exclusief 21% BTW. Onderhoudscontract verplicht onderdeel.</p>
+            <p className="lead">Prijs op maat na een gratis kennismaking. Onderhoud is een vast onderdeel van elk traject.</p>
           </div>
           <div className="prijs-grid">
             {PRIJZEN.filter(p => p.naam !== 'Maatwerk software').map((p) => (
@@ -134,6 +144,31 @@ export default function WebsitesPage() {
             ))}
           </div>
         </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="section over" style={{ paddingTop: 60, paddingBottom: 80 }}>
+        <div className="wrap">
+          <span className="eyebrow">
+            <span className="num">→</span>
+            <span className="rule" /> Veelgestelde vragen over websites
+          </span>
+          <div style={{ marginTop: 40, display: 'grid', gap: 14, maxWidth: 920 }}>
+            {FAQ_WEBSITES.map((f) => (
+              <details key={f.q} style={{ background: '#fff', borderRadius: 14, border: '1px solid var(--rule)', overflow: 'hidden' }}>
+                <summary style={{ padding: '24px 28px', cursor: 'pointer', fontFamily: 'var(--cond)', fontWeight: 700, fontSize: 22, textTransform: 'uppercase', letterSpacing: '.005em', display: 'flex', justifyContent: 'space-between', alignItems: 'center', listStyle: 'none' }}>
+                  {f.q}
+                  <span style={{ fontFamily: 'var(--mono)', fontSize: 14, color: 'var(--p1)', flexShrink: 0, marginLeft: 16 }}>+</span>
+                </summary>
+                <div style={{ padding: '0 28px 24px', fontSize: 16, lineHeight: 1.6, color: 'var(--ink-soft)' }}>{f.a}</div>
+              </details>
+            ))}
+          </div>
+        </div>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(FAQ_WEBSITES)) }}
+        />
       </section>
 
       <Cta

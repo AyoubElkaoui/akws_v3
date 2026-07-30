@@ -5,7 +5,16 @@ import { SiteFooter } from '@/components/SiteFooter';
 import { Cta } from '@/components/Cta';
 import { PageHead } from '@/components/PageHead';
 import { CASES } from '@/lib/data';
-import { buildMetadata, breadcrumbSchema, serviceSchema } from '@/lib/seo';
+import { buildMetadata, breadcrumbSchema, serviceSchema, faqSchema } from '@/lib/seo';
+
+const FAQ_SOFTWARE = [
+  { q: 'Wanneer is maatwerk software slimmer dan een bestaand pakket?', a: 'Als je huidige tools niet aansluiten op hoe jij werkt en je daardoor veel handmatig werk of dubbele invoer hebt. Voor standaardprocessen is een bestaand pakket vaak prima; maatwerk loont zodra je maand na maand tijd verliest aan iets wat geautomatiseerd zou kunnen. In de intake bekijk ik eerlijk welke kant voor jou beter is.' },
+  { q: 'Kan de software koppelen met mijn administratie?', a: 'Ja. Ik koppel met pakketten als Snelstart, Exact en Moneybird, mits die een koppeling toelaten. Zo hoef je gegevens niet dubbel in te voeren en komt bijvoorbeeld een werkbon of urenregistratie direct in je administratie terecht.' },
+  { q: 'Hoe lang duurt een softwareproject?', a: 'Ik werk in afgebakende fases van doorgaans 4 tot 8 weken, elk met een vaste prijs. Zo lever ik snel iets werkends op en breiden we uit op basis van gebruik, in plaats van maandenlang aan één groot systeem te bouwen zonder tussenresultaat.' },
+  { q: 'Wat kost maatwerk software?', a: 'Prijs op maat, per afgebakende fase, na een intake en procesanalyse. Vaste prijs per fase — geen uurtje-factuurtje en geen nacalculatie. Je weet vooraf waar je aan toe bent.' },
+  { q: 'Werkt de software ook op de bouwplaats, zonder goed bereik?', a: 'Ja. Ik bouw mobiel-first en waar nodig als Progressive Web App die offline werkt en synct zodra er weer verbinding is. Zo kan een monteur uren of een werkbon ter plekke registreren, ook in een kruipruimte zonder bereik.' },
+  { q: 'Wat als maatwerk toch niet de juiste oplossing blijkt?', a: 'Dan zeg ik dat. Soms is een bestaand pakket of een slimme koppeling goedkoper en beter dan iets nieuws bouwen. Ik verdien liever je vertrouwen met eerlijk advies dan een project dat je niet nodig had.' },
+];
 
 export const metadata: Metadata = buildMetadata({
   title: 'Maatwerk software voor installatiebedrijven | AKWS',
@@ -177,6 +186,31 @@ export default function MaatwerkSoftwarePage() {
             Prijzen op maat, exclusief 21% BTW. Vaste prijs per fase — geen uurtje-factuurtje.
           </p>
         </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="section over" style={{ paddingTop: 60, paddingBottom: 80 }}>
+        <div className="wrap">
+          <span className="eyebrow">
+            <span className="num">→</span>
+            <span className="rule" /> Veelgestelde vragen over maatwerk software
+          </span>
+          <div style={{ marginTop: 40, display: 'grid', gap: 14, maxWidth: 920 }}>
+            {FAQ_SOFTWARE.map((f) => (
+              <details key={f.q} style={{ background: '#fff', borderRadius: 14, border: '1px solid var(--rule)', overflow: 'hidden' }}>
+                <summary style={{ padding: '24px 28px', cursor: 'pointer', fontFamily: 'var(--cond)', fontWeight: 700, fontSize: 22, textTransform: 'uppercase', letterSpacing: '.005em', display: 'flex', justifyContent: 'space-between', alignItems: 'center', listStyle: 'none' }}>
+                  {f.q}
+                  <span style={{ fontFamily: 'var(--mono)', fontSize: 14, color: 'var(--p1)', flexShrink: 0, marginLeft: 16 }}>+</span>
+                </summary>
+                <div style={{ padding: '0 28px 24px', fontSize: 16, lineHeight: 1.6, color: 'var(--ink-soft)' }}>{f.a}</div>
+              </details>
+            ))}
+          </div>
+        </div>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(FAQ_SOFTWARE)) }}
+        />
       </section>
 
       <Cta
