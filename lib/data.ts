@@ -983,7 +983,7 @@ export const BLOG_POSTS: BlogPost[] = [
     author: 'Ayoub Elkaoui',
     authorAv: 'AE',
     gradient: 'linear-gradient(135deg, #4c1d95 0%, #2e1065 60%, #7c3aed 100%)',
-    cover: '/blog/website-binnen-2-weken-live.jpg',
+    cover: '/blog-covers/website-binnen-2-weken-live.jpg',
     content: [
       { kind: 'p', text: '**"Een nieuwe website? Dat duurt zeker maanden."** Dat hoor ik vaak. En bij veel bureaus klopt het ook — eindeloze rondjes, feedbackformulieren, en een offerte waar je maanden later nog op wacht. Bij mij niet. Een website staat binnen 2 weken live. Punt.' },
       { kind: 'h2', text: 'Waarom snelheid wint', id: 'snelheid' },
@@ -1011,7 +1011,7 @@ export const BLOG_POSTS: BlogPost[] = [
     author: 'Ayoub Elkaoui',
     authorAv: 'AE',
     gradient: 'linear-gradient(135deg, #7c3aed 0%, #4c1d95 100%)',
-    cover: '/blog/google-bedrijfsprofiel-meer-klanten.jpg',
+    cover: '/blog-covers/google-bedrijfsprofiel-meer-klanten.jpg',
     content: [
       { kind: 'p', text: '**Als iemand zoekt op "loodgieter Soest" of "garage in de buurt",** verschijnt bovenaan Google een kaartje met drie bedrijven — de lokale 3-pack. Dáár klikken de meeste mensen. En of jij daartussen staat, bepaalt je Google Bedrijfsprofiel. Gratis, maar door bijna iedereen half ingevuld.' },
       { kind: 'h2', text: 'Waarom het zo belangrijk is', id: 'waarom' },
@@ -1040,7 +1040,7 @@ export const BLOG_POSTS: BlogPost[] = [
     author: 'Ayoub Elkaoui',
     authorAv: 'AE',
     gradient: 'linear-gradient(135deg, #1a0f33 0%, #4c1d95 100%)',
-    cover: '/blog/meer-google-reviews-krijgen.jpg',
+    cover: '/blog-covers/meer-google-reviews-krijgen.jpg',
     content: [
       { kind: 'p', text: '**Twee loodgieters, dezelfde prijs, dezelfde stad.** De één heeft 4 reviews, de ander 87 met een 4,9. Wie belt de klant? Precies. Reviews zijn het meest overtuigende verkoopargument dat je hebt — en ze kosten je niks.' },
       { kind: 'h2', text: 'Waarom reviews zo zwaar wegen', id: 'waarom' },
@@ -1068,7 +1068,7 @@ export const BLOG_POSTS: BlogPost[] = [
     author: 'Ayoub Elkaoui',
     authorAv: 'AE',
     gradient: 'linear-gradient(135deg, #0b3a6b 0%, #0a1f3c 100%)',
-    cover: '/blog/website-voor-transportbedrijf.jpg',
+    cover: '/blog-covers/website-voor-transportbedrijf.jpg',
     content: [
       { kind: 'p', text: '**In transport en logistiek telt één ding boven alles: betrouwbaarheid.** Een opdrachtgever die met spoed een zending weg moet krijgen, heeft geen tijd voor een trage of onduidelijke website. Onlangs bouwde ik de site voor Zando Transport, een spoedkoerier uit Soest — en dat maakte precies duidelijk wat een transportsite anders maakt.' },
       { kind: 'h2', text: '1. Snelheid is niet optioneel', id: 'snelheid' },
@@ -1093,7 +1093,7 @@ export const BLOG_POSTS: BlogPost[] = [
     author: 'Ayoub Elkaoui',
     authorAv: 'AE',
     gradient: 'linear-gradient(135deg, #1a0f33 0%, #7c3aed 100%)',
-    cover: '/blog/website-aan-vervanging-toe.jpg',
+    cover: '/blog-covers/website-aan-vervanging-toe.jpg',
     content: [
       { kind: 'p', text: '**Een slechte website faalt in stilte.** Je krijgt geen boze mails van bezoekers die afhaken — ze klikken gewoon weg naar de concurrent, en jij merkt er niks van. Hier zijn 5 tekenen dat het tijd is voor een nieuwe.' },
       { kind: 'h2', text: '1. Hij is traag, zeker op mobiel', id: 'traag' },
