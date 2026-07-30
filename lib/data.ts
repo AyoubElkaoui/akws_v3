@@ -218,6 +218,17 @@ export const CASES = [
     gradient: 'linear-gradient(135deg, #1a0f33 0%, #7c3aed 100%)',
     excerpt: 'Intern ticketsysteem dat Zoho Desk en Clockwise verving. Modules voor tickets, klantbeheer, assets en urenregistratie.',
   },
+  {
+    slug: 'zando-transport',
+    naam: 'Zando Transport',
+    branche: 'Transport & logistiek',
+    locatie: 'Soest',
+    resultaat: 'Live',
+    resultaatSub: 'incl. eigen CMS',
+    meta: 'Website + CMS',
+    gradient: 'linear-gradient(135deg, #1e6fb8 0%, #0a1f3c 100%)',
+    excerpt: 'Snelle, professionele website met eigen CMS voor een spoedkoerier uit Soest. Diensten, offerteflow en 24/7 spoedlijn — zelf te beheren.',
+  },
 ];
 
 // Gedetailleerde case-content voor /cases/[slug] pagina's
@@ -397,6 +408,33 @@ export const CASE_DETAILS: CaseDetail[] = [
       cover: '/itflow/itflow-1.png',
       screens: ['/itflow/itflow-1.png', '/itflow/itflow-2.png'],
     },
+    quote: null,
+  },
+  {
+    slug: 'zando-transport',
+    naam: 'Zando Transport',
+    sector: 'Transport & logistiek',
+    locatie: 'Soest',
+    liveUrl: 'https://zandotransport.nl',
+    intro: 'Snelle, professionele website met eigen CMS voor een spoedkoerier die door heel Nederland en Europa rijdt.',
+    meta: 'Website + CMS',
+    gradient: 'linear-gradient(135deg, #1e6fb8 0%, #0a1f3c 100%)',
+    situatie: [
+      'Zando Transport is een spoedkoerier uit Soest die door heel Nederland en tot in België, Duitsland en Frankrijk rijdt. Van express-ritten (A naar B binnen 30–45 minuten) tot contractvervoer, nacht- en gekoeld transport — met een eigen wagenpark, vaste chauffeurs, NIWO-vergunning en TLN-lidmaatschap.',
+      'Voor een transportbedrijf dat draait om betrouwbaarheid en snelheid moest de website datzelfde uitstralen: professioneel, razendsnel en glashelder over de diensten. Daarnaast wilde Zando teksten, diensten en FAQ zelf kunnen beheren, zonder telkens een developer nodig te hebben.',
+    ],
+    aanpak: [
+      { titel: 'Next.js website', tekst: "Een snelle, mobiel-first website op Next.js met een heldere structuur per dienst: express, same-day, internationaal, nacht- en gekoeld transport. Directe offerteaanvraag en een prominente 24/7 spoedlijn, altijd één tap weg." },
+      { titel: 'Eigen CMS met Sanity', tekst: "Een op maat ingericht CMS (Sanity Studio) zodat Zando zelf diensten, teksten en FAQ beheert. Content aanpassen zonder code, wijzigingen staan direct live." },
+      { titel: 'Vertrouwen voor B2B', tekst: "Certificeringen (NIWO-vergunning, TLN-lid) en concrete cijfers prominent in beeld om vertrouwen te wekken bij expediteurs en logistieke opdrachtgevers die geen vertraging kunnen verantwoorden." },
+    ],
+    resultaat: [
+      'Site live op zandotransport.nl.',
+      'Professionele uitstraling die past bij een betrouwbare spoedkoerier.',
+      'Zando beheert alle content voortaan zelf via het CMS.',
+      'Duidelijke offerteflow en 24/7 spoedlijn voor snelle aanvragen.',
+    ],
+    techStack: ['Next.js', 'TypeScript', 'Sanity CMS', 'Vercel', 'Cloud86 mail'],
     quote: null,
   },
 ];

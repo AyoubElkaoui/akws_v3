@@ -237,8 +237,8 @@ export default function HomePage() {
               Werk dat ik trots laat zien.<em>/ eerlijk over wat is gedaan.</em>
             </h2>
             <p className="lead" style={{ color: "rgba(255,255,255,.55)" }}>
-              Een selectie van projecten voor installatie- en technische
-              bedrijven.
+              Vooral installatie- en technische bedrijven — en ander MKB dat
+              serieus online wil, van maatwerk software tot logistiek.
             </p>
           </div>
 
@@ -250,11 +250,10 @@ export default function HomePage() {
               gap: 24,
             }}
           >
-            {CASES.map((c, idx) => {
+            {CASES.map((c) => {
               const detail = CASE_DETAILS.find((d) => d.slug === c.slug);
               const cover = detail?.images?.cover;
-              const gridColumn =
-                idx < 3 ? "span 2" : idx === 3 ? "2 / span 2" : "4 / span 2";
+              const gridColumn = "span 2";
               return (
                 <Link
                   href={`/cases/${c.slug}`}
