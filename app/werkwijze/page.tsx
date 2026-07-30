@@ -40,7 +40,7 @@ const STAPPEN = [
   {
     n: '03',
     titel: 'Bouw',
-    duur: '3 tot 6 weken',
+    duur: 'max 2 weken (website)',
     tekst: 'Na akkoord start de bouw. Wekelijkse demo via videocall (max 30 min). Tussenversies live op een staging-omgeving zodat je precies ziet wat er gebouwd wordt. Feedback ophalen tussendoor, niet aan het eind. Wijzigingen binnen scope zijn welkom en worden direct opgepakt.',
     details: [
       'Wekelijkse demo (max 30 min)',
