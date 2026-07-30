@@ -29,7 +29,7 @@ export const NAV_LINKS = [
 ];
 
 export const USPS = [
-  { num: '01', k: '4 wkn', v: 'Van kennismaking tot live binnen vier weken voor een Starter-pakket.' },
+  { num: '01', k: '2 wkn', v: 'Van kennismaking tot een live website binnen twee weken. Snelheid als standaard.' },
   { num: '02', k: 'Vast', v: 'Wat we afspreken is wat je betaalt. Geen verrassingen achteraf.' },
   { num: '03', k: '1 partij', v: 'Website en software bij dezelfde freelancer.' },
   { num: '04', k: 'NL', v: 'Nederlandstalige support. Geen ticket-fabriek, geen tijdverschil.' },
@@ -69,7 +69,7 @@ export const DIENSTEN = [
       "Mobiel-first & snel",
       "AVG-proof",
     ],
-    price: { v: 'Op maat', m: 'gratis kennismaking', d: '3 tot 4 wkn' },
+    price: { v: 'Op maat', m: 'gratis kennismaking', d: 'max 2 wkn' },
   },
   {
     n: '02',
@@ -150,7 +150,7 @@ export const PROCES = [
     n: '03',
     t: 'Bouw',
     s: "Wekelijkse demo. Je ziet vooruitgang, geen rapportages. Wijzigingen binnen scope zijn welkom.",
-    d: '3 tot 6 wkn',
+    d: 'max 2 wkn',
   },
   {
     n: '04',
@@ -440,7 +440,12 @@ export const CASE_DETAILS: CaseDetail[] = [
     ],
     techStack: ['Next.js', 'TypeScript', 'Sanity CMS', 'Vercel', 'Cloud86 mail'],
     images: {
-      cover: '/zando-transport/cover.jpg',
+      cover: '/zando-transport/screen-home.jpg',
+      screens: [
+        '/zando-transport/screen-home.jpg',
+        '/zando-transport/screen-over.jpg',
+        '/zando-transport/screen-contact.jpg',
+      ],
     },
     quote: null,
   },
@@ -491,7 +496,7 @@ export const BRANCHE_DETAILS: BrancheDetail[] = [
       "loodgieter in de buurt", "afvoer verstopt spoed", "boiler lekt", "kraan vervangen",
     ],
     faq: [
-      { q: "Hoe lang duurt het bouwen van een loodgieter-website?", a: "Drie tot zes weken afhankelijk van het pakket. Een Starter-pakket staat live binnen 3 weken vanaf akkoord op het voorstel. Een Pro-pakket met Google Ads duurt 4 tot 6 weken omdat de campagne tijd nodig heeft om te testen." },
+      { q: "Hoe lang duurt het bouwen van een loodgieter-website?", a: "Snel: je website staat binnen 2 weken live vanaf akkoord op het voorstel. Komt er Google Ads bij, dan loopt de campagne-optimalisatie daarna door — maar de site zelf hoef je niet lang op te wachten." },
       { q: "Wat kost een Google Ads-campagne voor mijn loodgietersbedrijf?", a: "Het beheer regel ik als onderdeel van je traject; de prijs bespreken we op maat. Het advertentiebudget dat je aan Google betaalt staat daar los van en bepaal je zelf. Realistisch begin je met €300 tot €600 per maand voor lokaal spoedwerk." },
       { q: "Mijn telefoon rinkelt al genoeg, heb ik dit wel nodig?", a: "Misschien niet. Een goede website is een investering in groei, niet een noodgreep. Als je geen ruimte hebt voor meer klussen, zijn er andere prioriteiten. Ik geef je dat eerlijk advies in het kennismakingsgesprek." },
       { q: "Kan ik mijn huidige website houden en alleen Google Ads laten doen?", a: "Soms wel, soms niet. Een Ads-campagne stuurt mensen naar je site — als die slecht converteert verbrand je geld. Ik check eerst je huidige site. Als die qua snelheid en mobiele weergave in orde is, kan ik los Google Ads doen." },
@@ -935,7 +940,7 @@ export const PRIJZEN = [
 export const STATS = [
   { k: '5', v: 'Projecten\nlive in productie' },
   { k: '100%', v: 'Maatwerk, geen\ntemplates' },
-  { k: '3 wkn', v: 'Gemiddelde doorlooptijd\nStarter-pakket' },
+  { k: '2 wkn', v: 'Van akkoord tot\nlive website' },
   { k: '24 uur', v: 'Reactietijd\nop werkdagen' },
 ];
 
@@ -951,6 +956,7 @@ export type BlogPost = {
   author: string;
   authorAv: string;
   gradient: string;
+  cover?: string;
   featured?: boolean;
   content?: BlogBlock[];
 };
@@ -966,6 +972,143 @@ export type BlogBlock =
   | { kind: 'callout'; ico: string; titel: string; body: string };
 
 export const BLOG_POSTS: BlogPost[] = [
+  {
+    slug: 'website-binnen-2-weken-live',
+    titel: 'Waarom je nieuwe website binnen 2 weken live kan (en waarom snelheid wint)',
+    excerpt:
+      'Veel ondernemers denken dat een goede website maanden kost. Dat hoeft niet. Ik lever websites binnen 2 weken op — en juist die snelheid levert je eerder klanten op. Zo werkt het.',
+    cat: 'Websites',
+    date: '28 juli 2026',
+    readMin: 5,
+    author: 'Ayoub Elkaoui',
+    authorAv: 'AE',
+    gradient: 'linear-gradient(135deg, #4c1d95 0%, #2e1065 60%, #7c3aed 100%)',
+    cover: '/blog/website-binnen-2-weken-live.jpg',
+    content: [
+      { kind: 'p', text: '**"Een nieuwe website? Dat duurt zeker maanden."** Dat hoor ik vaak. En bij veel bureaus klopt het ook — eindeloze rondjes, feedbackformulieren, en een offerte waar je maanden later nog op wacht. Bij mij niet. Een website staat binnen 2 weken live. Punt.' },
+      { kind: 'h2', text: 'Waarom snelheid wint', id: 'snelheid' },
+      { kind: 'p', text: 'Elke week dat je website níet live is, is een week waarin je concurrent wél gevonden wordt. Voor een installatiebedrijf, transporteur of ander lokaal MKB is dat direct gemiste omzet. Snelheid is geen luxe — het is het verschil tussen deze maand klanten krijgen of volgend kwartaal.' },
+      { kind: 'h2', text: 'Hoe het in 2 weken kan', id: 'hoe' },
+      { kind: 'ol', items: [
+        '**Één kennismaking, geen tien meetings** — 30 minuten waarin ik alles vraag wat ik nodig heb.',
+        '**Vaste, bewezen basis** — ik bouw op Next.js met een aanpak die ik al tientallen keren heb gedaan, geen experiment op jouw kosten.',
+        '**Content samen, snel** — jij levert je diensten en foto’s aan, ik schrijf de rest. Wekelijkse demo, feedback tussendoor.',
+        '**Live in week 2** — getest op snelheid, mobiel en vindbaarheid, en de deur uit.',
+      ] },
+      { kind: 'h2', text: 'En de kwaliteit dan?', id: 'kwaliteit' },
+      { kind: 'p', text: 'Snel betekent niet slordig. Mijn sites laden in onder een seconde, zijn mobiel-first, AVG-proof en technisch geoptimaliseerd voor Google. Snelheid komt niet doordat ik minder doe — het komt doordat ik geen tijd verspil aan bureaucratie.' },
+      { kind: 'callout', ico: '→', titel: 'Wil je binnen 2 weken online?', body: 'Plan een gratis kennismaking van 30 minuten. Ik vertel je eerlijk of het haalbaar is voor jouw project.' },
+    ],
+  },
+  {
+    slug: 'google-bedrijfsprofiel-meer-klanten',
+    titel: 'Google Bedrijfsprofiel: de gratis tool die de meeste lokale bedrijven laten liggen',
+    excerpt:
+      'Bijna de helft van alle Google-zoekopdrachten is lokaal. Toch is het Google Bedrijfsprofiel van de meeste vakbedrijven half leeg. Zonde — het is gratis en levert direct meer klanten op. Zo pak je het aan.',
+    cat: 'SEO',
+    date: '25 juli 2026',
+    readMin: 6,
+    author: 'Ayoub Elkaoui',
+    authorAv: 'AE',
+    gradient: 'linear-gradient(135deg, #7c3aed 0%, #4c1d95 100%)',
+    cover: '/blog/google-bedrijfsprofiel-meer-klanten.jpg',
+    content: [
+      { kind: 'p', text: '**Als iemand zoekt op "loodgieter Soest" of "garage in de buurt",** verschijnt bovenaan Google een kaartje met drie bedrijven — de lokale 3-pack. Dáár klikken de meeste mensen. En of jij daartussen staat, bepaalt je Google Bedrijfsprofiel. Gratis, maar door bijna iedereen half ingevuld.' },
+      { kind: 'h2', text: 'Waarom het zo belangrijk is', id: 'waarom' },
+      { kind: 'p', text: 'Bijna de helft van alle zoekopdrachten op Google is lokaal. Mensen zoeken een vakman dichtbij, kijken naar de reviews en openingstijden, en bellen. Sta je niet in dat kaartje, dan besta je voor die klant niet — hoe goed je vakwerk ook is.' },
+      { kind: 'h2', text: '5 dingen die je vandaag kunt doen', id: 'acties' },
+      { kind: 'ol', items: [
+        '**Vul alles in** — categorieën, diensten, openingstijden (inclusief spoedlijn), werkgebied.',
+        '**Zet er foto’s op** — van je werk, je bus, je team. Profielen met foto’s krijgen meer klikken.',
+        '**Vraag om reviews** — na elke tevreden klus. Reviews wegen zwaar mee in de ranking.',
+        '**Reageer op reviews** — ook de mindere. Dat laat zien dat je betrokken bent.',
+        '**Post updates** — een afgerond project, een tip. Een actief profiel scoort beter.',
+      ] },
+      { kind: 'h2', text: 'En dan?', id: 'dan' },
+      { kind: 'p', text: 'Een goed ingevuld profiel is de snelste, goedkoopste winst in lokale vindbaarheid. Combineer het met een website die dezelfde stad en diensten benoemt, en je bouwt gestaag naar die top-3-positie toe.' },
+      { kind: 'callout', ico: 'i', titel: 'Hulp nodig met je lokale vindbaarheid?', body: 'Ik richt je Google Bedrijfsprofiel volledig in en zorg dat je website erop aansluit. Plan een gratis kennismaking.' },
+    ],
+  },
+  {
+    slug: 'meer-google-reviews-krijgen',
+    titel: 'Zo krijg je meer 5-sterren reviews (en waarom ze goud waard zijn)',
+    excerpt:
+      'Reviews zijn voor een lokaal bedrijf het krachtigste verkoopargument dat er is — en ze zijn gratis. Toch vragen de meeste vakmensen er nooit om. Zo bouw je systematisch aan een stapel 5-sterren beoordelingen.',
+    cat: 'SEO',
+    date: '23 juli 2026',
+    readMin: 5,
+    author: 'Ayoub Elkaoui',
+    authorAv: 'AE',
+    gradient: 'linear-gradient(135deg, #1a0f33 0%, #4c1d95 100%)',
+    cover: '/blog/meer-google-reviews-krijgen.jpg',
+    content: [
+      { kind: 'p', text: '**Twee loodgieters, dezelfde prijs, dezelfde stad.** De één heeft 4 reviews, de ander 87 met een 4,9. Wie belt de klant? Precies. Reviews zijn het meest overtuigende verkoopargument dat je hebt — en ze kosten je niks.' },
+      { kind: 'h2', text: 'Waarom reviews zo zwaar wegen', id: 'waarom' },
+      { kind: 'p', text: 'Mensen vertrouwen andere klanten meer dan jouw eigen mooie woorden. Reviews verlagen de drempel om te bellen, én ze helpen je hoger in Google te komen: het aantal en de recentheid van reviews telt mee in de lokale ranking. Dubbele winst.' },
+      { kind: 'h2', text: 'Het probleem: bijna niemand vraagt erom', id: 'probleem' },
+      { kind: 'p', text: 'Tevreden klanten laten uit zichzelf zelden een review achter — niet omdat ze ontevreden zijn, maar omdat ze er niet aan denken. De ontevreden klant schrijft wél. Vraag je nooit, dan krijg je een vertekend beeld én te weinig reviews.' },
+      { kind: 'h2', text: 'Zo bouw je er systematisch aan', id: 'systeem' },
+      { kind: 'ol', items: [
+        '**Vraag altijd, direct na de klus** — als de tevredenheid het hoogst is.',
+        '**Maak het makkelijk** — stuur een directe link naar je Google-reviewpagina, geen zoekwerk.',
+        '**Persoonlijk, niet massaal** — een kort appje of mailtje werkt beter dan een automatische blast.',
+        '**Zet ze op je website** — bundel je beste reviews prominent op je site, niet alleen op Google.',
+      ] },
+      { kind: 'callout', ico: '→', titel: 'Reviews slim inzetten op je site?', body: 'Ik zet een reviewroutine op en toon je beste beoordelingen prominent op je website. Plan een gratis gesprek.' },
+    ],
+  },
+  {
+    slug: 'website-voor-transportbedrijf',
+    titel: 'Een website voor een transportbedrijf: wat maakt het anders?',
+    excerpt:
+      'Een transporteur heeft een andere website nodig dan een webshop of een kapper. Snelheid, betrouwbaarheid en directe bereikbaarheid bepalen alles. Aan de hand van het project voor Zando Transport laat ik zien wat werkt.',
+    cat: 'Websites',
+    date: '21 juli 2026',
+    readMin: 6,
+    author: 'Ayoub Elkaoui',
+    authorAv: 'AE',
+    gradient: 'linear-gradient(135deg, #0b3a6b 0%, #0a1f3c 100%)',
+    cover: '/blog/website-voor-transportbedrijf.jpg',
+    content: [
+      { kind: 'p', text: '**In transport en logistiek telt één ding boven alles: betrouwbaarheid.** Een opdrachtgever die met spoed een zending weg moet krijgen, heeft geen tijd voor een trage of onduidelijke website. Onlangs bouwde ik de site voor Zando Transport, een spoedkoerier uit Soest — en dat maakte precies duidelijk wat een transportsite anders maakt.' },
+      { kind: 'h2', text: '1. Snelheid is niet optioneel', id: 'snelheid' },
+      { kind: 'p', text: 'Als jouw belofte "binnen 45 minuten onderweg" is, mag je website daar niet bij achterblijven. Elke seconde laadtijd is een bezoeker die afhaakt. Een transportsite moet razendsnel zijn, zeker op mobiel.' },
+      { kind: 'h2', text: '2. Direct kunnen bellen', id: 'bellen' },
+      { kind: 'p', text: 'Bij spoed wil niemand een contactformulier invullen. De spoedlijn moet altijd één tap weg zijn, op elke pagina. Zando kreeg een prominente spoedlijn-knop die overal meescrollt.' },
+      { kind: 'h2', text: '3. Vertrouwen wekken bij B2B', id: 'vertrouwen' },
+      { kind: 'p', text: 'Expediteurs en logistiek partners kiezen op betrouwbaarheid. Certificeringen (NIWO, TLN), een eigen wagenpark en concrete cijfers moeten prominent in beeld — dat overtuigt zakelijke opdrachtgevers vóór ze bellen.' },
+      { kind: 'h2', text: '4. Zelf kunnen beheren', id: 'cms' },
+      { kind: 'p', text: 'Diensten en tarieven veranderen. Daarom kreeg Zando een eigen CMS: teksten, diensten en FAQ zelf aanpassen, zonder telkens een developer nodig te hebben.' },
+      { kind: 'callout', ico: 'i', titel: 'Transporteur en aan een nieuwe site toe?', body: 'Bekijk de case van Zando Transport of plan een gratis kennismaking. Ik snap de logistieke wereld.' },
+    ],
+  },
+  {
+    slug: 'website-aan-vervanging-toe',
+    titel: '5 tekenen dat je bedrijfswebsite aan vervanging toe is',
+    excerpt:
+      'Een verouderde website kost je stilletjes klanten — je merkt het alleen niet, want die klanten klikken gewoon weg. Herken je een van deze 5 tekenen? Dan is het tijd.',
+    cat: 'Websites',
+    date: '18 juli 2026',
+    readMin: 5,
+    author: 'Ayoub Elkaoui',
+    authorAv: 'AE',
+    gradient: 'linear-gradient(135deg, #1a0f33 0%, #7c3aed 100%)',
+    cover: '/blog/website-aan-vervanging-toe.jpg',
+    content: [
+      { kind: 'p', text: '**Een slechte website faalt in stilte.** Je krijgt geen boze mails van bezoekers die afhaken — ze klikken gewoon weg naar de concurrent, en jij merkt er niks van. Hier zijn 5 tekenen dat het tijd is voor een nieuwe.' },
+      { kind: 'h2', text: '1. Hij is traag, zeker op mobiel', id: 'traag' },
+      { kind: 'p', text: '80% van je bezoekers zit op de telefoon. Laadt je site langzaam of springt de opmaak door elkaar, dan ben je die bezoeker binnen enkele seconden kwijt. Google straft trage sites bovendien af in de ranking.' },
+      { kind: 'h2', text: '2. Je bent niet vindbaar in Google', id: 'vindbaar' },
+      { kind: 'p', text: 'Zoek eens op "[jouw vak] [jouw stad]". Sta je niet op de eerste pagina? Dan besta je voor die zoekende klant niet. Een moderne site met lokale SEO verandert dat.' },
+      { kind: 'h2', text: '3. Hij oogt verouderd', id: 'verouderd' },
+      { kind: 'p', text: 'Een gedateerde site wekt onbewust wantrouwen: "zijn ze nog wel actief?". Je website is vaak de eerste indruk — en die moet passen bij de kwaliteit van je werk.' },
+      { kind: 'h2', text: '4. Je kunt er zelf niks aan veranderen', id: 'beheer' },
+      { kind: 'p', text: 'Moet je voor elke tekstwijziging bellen met een bureau dat niet terugbelt? Dan werkt je site tegen je. Met een modern CMS pas je zelf teksten en foto’s aan.' },
+      { kind: 'h2', text: '5. Hij levert geen aanvragen op', id: 'aanvragen' },
+      { kind: 'p', text: 'Uiteindelijk telt maar één ding: brengt je site klanten binnen? Geen duidelijke call-to-action, geen makkelijk contact, geen reviews — dan is je site een digitaal visitekaartje in plaats van een verkoper.' },
+      { kind: 'callout', ico: '→', titel: 'Herken je een paar van deze tekenen?', body: 'Plan een gratis check van 30 minuten. Ik kijk mee naar je huidige site en geef eerlijke feedback, ook als je niks bij mij afneemt.' },
+    ],
+  },
   {
     slug: 'werkbon-naar-factuur-in-10-seconden',
     titel: 'Van papieren werkbon naar factuur in tien seconden: zo werkt het.',

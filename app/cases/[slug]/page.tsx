@@ -251,14 +251,14 @@ export default async function CaseDetailPage({ params }: { params: Promise<Param
                 Screenshots
               </h2>
               <p style={{ fontFamily: 'var(--mono)', fontSize: 11, color: 'var(--mute)', letterSpacing: '.08em', textTransform: 'uppercase', marginBottom: 28 }}>
-                Met mock-data — geen echte klantgegevens
+                {c.sector === 'Maatwerk software' ? 'Met mock-data — geen echte klantgegevens' : 'Van de live website'}
               </p>
               <div style={{ display: 'grid', gridTemplateColumns: c.images!.screens!.length > 2 ? '1fr 1fr' : '1fr', gap: 20 }}>
                 {c.images!.screens!.map((src, i) => (
                   <ImageLightbox
                     key={i}
                     src={src}
-                    alt={`${c.naam} — ${c.sector} screenshot ${i + 1} (mockdata)`}
+                    alt={`${c.naam} — ${c.sector} screenshot ${i + 1}${c.sector === 'Maatwerk software' ? ' (mockdata)' : ''}`}
                     caption={`Fig 0.${i + 1}`}
                     style={IMG_STYLE}
                   />

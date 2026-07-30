@@ -35,7 +35,7 @@ const HOME_FAQ = [
   },
   {
     q: "Hoe snel is mijn site live?",
-    a: "Het Starter-pakket is gemiddeld 3 weken van kennismaking tot live. Het Pro-pakket duurt 4 tot 5 weken door de extra pagina's en Google Ads-setup.",
+    a: "Snel — dat is nou juist het punt. Een website staat bij mij binnen 2 weken live, van kennismaking tot lancering. Komt er Google Ads of maatwerk software bij, dan bespreken we die planning apart, maar op je site zelf hoef je niet maanden te wachten.",
   },
   {
     q: "Wat als ik al een administratiepakket heb?",

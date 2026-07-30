@@ -149,9 +149,15 @@ export default function BlogPage() {
                 <Link href={`/blog/${p.slug}`} className="post" key={p.slug}>
                   <div
                     className="img"
-                    style={{
-                      backgroundImage: p.gradient,
-                    }}
+                    style={
+                      p.cover
+                        ? {
+                            backgroundImage: `linear-gradient(180deg, rgba(0,0,0,.05) 0%, rgba(0,0,0,.4) 100%), url(${p.cover})`,
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center',
+                          }
+                        : { backgroundImage: p.gradient }
+                    }
                   >
                     <span className="cat chip chip-dark">{p.cat}</span>
                   </div>

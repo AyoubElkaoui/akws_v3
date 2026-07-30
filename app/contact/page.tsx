@@ -25,7 +25,7 @@ const FAQ = [
   { q: 'Kan ik de website zelf bijhouden?', a: 'Ja. Tekst en foto\'s pas je zelf aan in het CMS. Voor structurele wijzigingen help ik. Kleine aanpassingen zijn inbegrepen in het onderhoudsbedrag.' },
   { q: 'Wat als ik al een boekhoudpakket heb?', a: 'Snelstart, Exact, Moneybird: ik koppel ermee. Liever houden wat werkt dan opnieuw beginnen.' },
   { q: 'Wat kost een website?', a: 'Dat hangt af van wat je nodig hebt, dus werk ik met een offerte op maat in plaats van vaste pakketprijzen. In een gratis kennismaking van 30 minuten hoor ik wat je zoekt en krijg je daarna een vast bod op papier — geen uurtje-factuurtje, alle prijzen excl. 21% BTW.' },
-  { q: 'Hoe lang duurt een traject?', a: 'Het Starter-pakket is gemiddeld 3 weken van kennismaking tot live. Het Pro-pakket duurt 4 tot 5 weken door de extra pagina\'s en Google Ads-setup.' },
+  { q: 'Hoe lang duurt een traject?', a: 'Een website staat binnen 2 weken live, van kennismaking tot lancering. Maatwerk software duurt langer (per fase); de planning krijg je vooraf op papier.' },
   { q: 'Wat als ik niet tevreden ben?', a: 'Ik werk met wekelijkse demo\'s en vaste mijlpalen. Bij elke mijlpaal kun je bijsturen. Als het echt niet klikt, stoppen we.' },
 ];
 

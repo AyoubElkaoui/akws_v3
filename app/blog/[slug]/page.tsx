@@ -162,22 +162,33 @@ export default async function BlogPostPage({ params }: { params: Promise<Params>
 
       {/* Cover */}
       <div className="wrap article-cover">
-        <div
-          className="article-cover-img"
-          style={{
-            backgroundImage: `repeating-linear-gradient(135deg, rgba(0,0,0,.05) 0, rgba(0,0,0,.05) 1px, transparent 1px, transparent 14px), ${post.gradient}`,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            color: 'rgba(255,255,255,.55)',
-            fontFamily: 'var(--mono)',
-            fontSize: 12,
-            letterSpacing: '.1em',
-            textTransform: 'uppercase',
-          }}
-        >
-          foto · cover voor {post.cat.toLowerCase()}
-        </div>
+        {post.cover ? (
+          <div
+            className="article-cover-img"
+            style={{
+              backgroundImage: `url(${post.cover})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }}
+          />
+        ) : (
+          <div
+            className="article-cover-img"
+            style={{
+              backgroundImage: `repeating-linear-gradient(135deg, rgba(0,0,0,.05) 0, rgba(0,0,0,.05) 1px, transparent 1px, transparent 14px), ${post.gradient}`,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              color: 'rgba(255,255,255,.55)',
+              fontFamily: 'var(--mono)',
+              fontSize: 12,
+              letterSpacing: '.1em',
+              textTransform: 'uppercase',
+            }}
+          >
+            foto · cover voor {post.cat.toLowerCase()}
+          </div>
+        )}
       </div>
 
       {/* Article body */}
@@ -196,9 +207,6 @@ export default async function BlogPostPage({ params }: { params: Promise<Params>
               <div className="lbl">Deel artikel</div>
               <a href="#">
                 <span style={{ fontSize: 14 }}>in</span> LinkedIn
-              </a>
-              <a href="#">
-                <span style={{ fontSize: 14 }}>𝕏</span> X / Twitter
               </a>
               <a href="#">
                 <span style={{ fontSize: 14 }}>✉</span> E-mail
