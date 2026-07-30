@@ -4,7 +4,16 @@ import { SiteNav } from '@/components/SiteNav';
 import { SiteFooter } from '@/components/SiteFooter';
 import { Cta } from '@/components/Cta';
 import { PageHead } from '@/components/PageHead';
-import { buildMetadata, breadcrumbSchema } from '@/lib/seo';
+import { buildMetadata, breadcrumbSchema, faqSchema } from '@/lib/seo';
+
+const FAQ_ONDERHOUD = [
+  { q: 'Wat zit er precies in het onderhoud?', a: 'Beheerde hosting, SSL-certificaat, software- en beveiligingsupdates, uptime- en beveiligingsmonitoring, automatische back-ups en een aantal uur kleine wijzigingen per maand. Kortom: alles om je site snel, veilig en actueel te houden zonder dat jij eraan hoeft te denken.' },
+  { q: 'Is onderhoud verplicht?', a: 'Onderhoud is een vast onderdeel van elk traject. Een website zonder onderhoud is een tijdbom: na een halfjaar zitten er security-lekken in, na een jaar kost traagheid je rankings. Het is een investering in continuïteit, geen bijkomende kostenpost.' },
+  { q: 'Kan ik maandelijks opzeggen?', a: 'Ja, maandelijks opzegbaar — geen jaarcontract. Bij opzegging help ik je met de overdracht naar een andere partij. Je houdt je site, je code en je content: geen vendor lock-in.' },
+  { q: 'Wat gebeurt er als mijn site eruit ligt?', a: 'Dat merk ik meestal eerder dan jij. Door de uptime-monitoring krijg ik automatisch een melding als er iets mis is en pak ik het op — je hoeft niet eerst een klant te krijgen die meldt dat je offline staat.' },
+  { q: 'Krijg ik ook hulp bij kleine tekst- of fotowijzigingen?', a: 'Ja, kleine wijzigingen zitten in het maandbedrag. En omdat ik de site desgewenst met een CMS lever, kun je de meeste teksten en foto’s ook gewoon zelf aanpassen wanneer het jou uitkomt.' },
+  { q: 'Wat kost onderhoud?', a: 'Een vast bedrag per maand, op maat afgestemd op je site en wat je nodig hebt. Je weet vooraf precies waar je aan toe bent — geen verrassingen, geen uurtje-factuurtje.' },
+];
 
 export const metadata: Metadata = buildMetadata({
   title: 'Onderhoud & support — Hosting, updates, monitoring | AKWS',
@@ -138,6 +147,31 @@ export default function OnderhoudPage() {
             ))}
           </div>
         </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="section over" style={{ paddingTop: 60, paddingBottom: 80 }}>
+        <div className="wrap">
+          <span className="eyebrow">
+            <span className="num">→</span>
+            <span className="rule" /> Veelgestelde vragen over onderhoud
+          </span>
+          <div style={{ marginTop: 40, display: 'grid', gap: 14, maxWidth: 920 }}>
+            {FAQ_ONDERHOUD.map((f) => (
+              <details key={f.q} style={{ background: '#fff', borderRadius: 14, border: '1px solid var(--rule)', overflow: 'hidden' }}>
+                <summary style={{ padding: '24px 28px', cursor: 'pointer', fontFamily: 'var(--cond)', fontWeight: 700, fontSize: 22, textTransform: 'uppercase', letterSpacing: '.005em', display: 'flex', justifyContent: 'space-between', alignItems: 'center', listStyle: 'none' }}>
+                  {f.q}
+                  <span style={{ fontFamily: 'var(--mono)', fontSize: 14, color: 'var(--p1)', flexShrink: 0, marginLeft: 16 }}>+</span>
+                </summary>
+                <div style={{ padding: '0 28px 24px', fontSize: 16, lineHeight: 1.6, color: 'var(--ink-soft)' }}>{f.a}</div>
+              </details>
+            ))}
+          </div>
+        </div>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(FAQ_ONDERHOUD)) }}
+        />
       </section>
 
       <Cta

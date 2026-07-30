@@ -4,7 +4,16 @@ import { SiteNav } from '@/components/SiteNav';
 import { SiteFooter } from '@/components/SiteFooter';
 import { Cta } from '@/components/Cta';
 import { PageHead } from '@/components/PageHead';
-import { buildMetadata, breadcrumbSchema, serviceSchema } from '@/lib/seo';
+import { buildMetadata, breadcrumbSchema, serviceSchema, faqSchema } from '@/lib/seo';
+
+const FAQ_SEO = [
+  { q: 'Wat is het verschil tussen SEO en Google Ads?', a: 'SEO is de lange termijn: je bouwt gratis, duurzaam verkeer op door hoger in de organische resultaten te komen. Dat kost maanden, maar blijft. Google Ads is direct: je betaalt per klik en staat meteen bovenaan, maar het verkeer stopt zodra je de campagne uitzet. De sterkste aanpak combineert beide.' },
+  { q: 'Hoe lang duurt het voordat ik resultaat zie?', a: 'Met Google Ads heb je binnen dagen de eerste klikken en aanvragen. Met SEO praat je over maanden: lokale SEO en een goed Google Bedrijfsprofiel laten meestal binnen enkele maanden verbetering zien in de lokale resultaten. Ik zet daarom vaak Ads in om het gat te overbruggen terwijl de SEO rijpt.' },
+  { q: 'Wat kost een Google Ads-campagne?', a: 'Het beheer regel ik tegen een prijs op maat. Het advertentiebudget dat je aan Google betaalt staat daar los van en bepaal je zelf — realistisch begin je met een paar honderd euro per maand voor lokaal werk. In de kennismaking bepalen we samen wat past bij je werkgebied.' },
+  { q: 'Kom ik ook in de lokale top 3 van Google?', a: 'Dat is precies het doel van lokale SEO. Met een volledig ingericht Google Bedrijfsprofiel, lokale landingspagina’s per stad en actief om reviews vragen, werk je toe naar dat kaartje met drie bedrijven bovenaan — waar de meeste klikken naartoe gaan.' },
+  { q: 'Kan ik alleen Ads laten draaien op mijn bestaande site?', a: 'Soms wel, soms niet. Een advertentie stuurt bezoekers naar je site; als die traag is of slecht converteert, verbrand je geld. Daarom check ik eerst je huidige site. Is die qua snelheid en mobiel in orde, dan kan ik los Ads doen; zo niet, dan is een betere basis eerst slimmer.' },
+  { q: 'Hoe weet ik of het werkt?', a: 'Ik meet leads, geen ijdelheidscijfers. Met conversie-tracking op telefoontjes en formulieren zie je maandelijks precies hoeveel aanvragen je campagne oplevert en wat een aanvraag je kost. Geen vaag "meer bereik", maar concrete klussen.' },
+];
 
 export const metadata: Metadata = buildMetadata({
   title: 'SEO & Google Ads voor installateurs | AKWS',
@@ -119,6 +128,31 @@ export default function SeoPage() {
             ))}
           </div>
         </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="section over" style={{ paddingTop: 60, paddingBottom: 80 }}>
+        <div className="wrap">
+          <span className="eyebrow">
+            <span className="num">→</span>
+            <span className="rule" /> Veelgestelde vragen over SEO &amp; Google Ads
+          </span>
+          <div style={{ marginTop: 40, display: 'grid', gap: 14, maxWidth: 920 }}>
+            {FAQ_SEO.map((f) => (
+              <details key={f.q} style={{ background: '#fff', borderRadius: 14, border: '1px solid var(--rule)', overflow: 'hidden' }}>
+                <summary style={{ padding: '24px 28px', cursor: 'pointer', fontFamily: 'var(--cond)', fontWeight: 700, fontSize: 22, textTransform: 'uppercase', letterSpacing: '.005em', display: 'flex', justifyContent: 'space-between', alignItems: 'center', listStyle: 'none' }}>
+                  {f.q}
+                  <span style={{ fontFamily: 'var(--mono)', fontSize: 14, color: 'var(--p1)', flexShrink: 0, marginLeft: 16 }}>+</span>
+                </summary>
+                <div style={{ padding: '0 28px 24px', fontSize: 16, lineHeight: 1.6, color: 'var(--ink-soft)' }}>{f.a}</div>
+              </details>
+            ))}
+          </div>
+        </div>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(FAQ_SEO)) }}
+        />
       </section>
 
       <Cta
