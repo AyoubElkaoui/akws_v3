@@ -435,6 +435,9 @@ export const CASE_DETAILS: CaseDetail[] = [
       'Duidelijke offerteflow en 24/7 spoedlijn voor snelle aanvragen.',
     ],
     techStack: ['Next.js', 'TypeScript', 'Sanity CMS', 'Vercel', 'Cloud86 mail'],
+    images: {
+      cover: '/zando-transport/cover.jpg',
+    },
     quote: null,
   },
 ];
