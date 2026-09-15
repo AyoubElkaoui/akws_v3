@@ -1,6 +1,6 @@
-# AKWS — Next.js 16
+# AK Web Solutions — akwebsolutions.nl
 
-Multi-page marketing site voor AK Web Solutions, gebouwd op **Next.js 16 App Router**, **React 19**, **TypeScript**.
+Marketing site van mijn eigen webbureau [AK Web Solutions](https://akwebsolutions.nl): websites, software en SEO voor vakbedrijven in Midden-Nederland, gebouwd op **Next.js 16 App Router**, **React 19**, **TypeScript**.
 
 ## Stack
 
@@ -14,7 +14,6 @@ Multi-page marketing site voor AK Web Solutions, gebouwd op **Next.js 16 App Rou
 ## Aan de slag
 
 ```bash
-cd nextjs
 npm install
 npm run dev
 ```
@@ -65,15 +64,14 @@ Alle copy, prijzen, blogposts en cases zitten in **`lib/data.ts`** als één bro
 - **Nieuwe dienst:** voeg toe aan `DIENSTEN`. Verschijnt op de home én op `/diensten` met deep dive.
 - **Prijzen aanpassen:** edit `PRIJZEN`. Zichtbaar op home + `/diensten`.
 
-## Wat nog te doen
+## Features
 
-- Echte foto's i.p.v. placeholders (Ahmad, team, cases)
-- Echte klant-logo's (SVG wordmarks zijn nu plaintext)
-- Form-submit endpoint (`/contact` POST handler — zie `app/api/contact/route.ts` toevoegen)
-- Cookie banner indien nodig (nu geen analytics actief)
-- Sitemap + robots.txt
-- OpenGraph images per pagina
-- Mobile-eerste responsive pass (de css is nu desktop-first met 1440 wrap)
+- Volledig statisch gerenderd (SSG) via `generateStaticParams`, geen client-side databundel
+- Per pagina OpenGraph-image (`opengraph-image.tsx`), sitemap en robots via de App Router
+- FAQ-secties met JSON-LD schema voor rich results
+- Content (diensten, cases, prijzen, blog) in één typed datalaag (`lib/data.ts`)
+- Contactformulier via een Route Handler (`app/api`)
+- Lighthouse-gericht: geen CSS-framework, fonts via `next/font`, images via `next/image`
 
 ## Deployen
 
