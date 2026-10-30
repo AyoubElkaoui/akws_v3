@@ -379,7 +379,6 @@ export default function HomePage() {
           </div>
         </section>
       ) : (
-        // TODO: Ayoub — verwijder dit blok zodra eerste echte testimonials binnen zijn
         <section className="section reviews">
           <div className="wrap">
             <span className="eyebrow">
@@ -391,7 +390,7 @@ export default function HomePage() {
               style={{ marginTop: 24, marginBottom: 0 }}
             >
               <h2>
-                Echte reacties.<em>/ binnen na de eerste opleveringen.</em>
+                Echte reacties.<em>/ alleen met akkoord van de klant.</em>
               </h2>
               <p className="lead">
                 Ik vraag actief feedback aan klanten na oplevering. Quotes
@@ -409,11 +408,6 @@ export default function HomePage() {
                 maxWidth: 680,
               }}
             >
-              <div className="review-stars">
-                {[...Array(5)].map((_, i) => (
-                  <span key={i}>★</span>
-                ))}
-              </div>
               <p className="review-q" style={{ fontSize: 17 }}>
                 &quot;Ik geloof niet in verzonnen reviews. Liever drie echte
                 uitspraken dan dertig die nep voelen. Dit deel vult zich

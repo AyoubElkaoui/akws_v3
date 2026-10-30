@@ -17,16 +17,16 @@ export async function generateStaticParams() {
 
 const CASE_META: Record<string, { title: string; description: string }> = {
   'ad-loodgietersbedrijf': {
-    title: 'AD Loodgietersbedrijf — Website & Google Ads Amsterdam | AKWS Case',
-    description: 'Case: nieuwe website en Google Ads-beheer voor AD Loodgietersbedrijf in Amsterdam. Voor en na vergelijking.',
+    title: 'AD Loodgietersbedrijf — Website & lokale SEO Utrecht | AKWS Case',
+    description: 'Case: nieuwe website en lokale SEO voor AD Loodgietersbedrijf in Utrecht en omgeving. Voor en na vergelijking.',
   },
   'mba-installaties': {
     title: 'MBA-installaties — Eerste website Midden-Nederland | AKWS Case',
     description: 'Case: eerste professionele website voor installatiebedrijf MBA-installaties in Midden-Nederland.',
   },
   'mkh-bouw': {
-    title: 'MKH Bouw — Website voor bouw en stukwerk | AKWS Case',
-    description: 'Case: moderne website voor MKH Bouw in Midden-Nederland. Stukwerk en bouw met heldere dienstenpresentatie.',
+    title: 'MKH Bouw — Website en lokale SEO voor afbouw | AKWS Case',
+    description: 'Case: nieuwe website voor afbouw- en renovatiebedrijf MKH Bouw in Amsterdam, met lokale SEO per dienst en plaats.',
   },
   'clockd': {
     title: 'Clockd — Urenregistratie en factuurkoppeling | AKWS Case',
@@ -179,13 +179,13 @@ export default async function CaseDetailPage({ params }: { params: Promise<Param
                 />
                 <ImageLightbox
                   src={c.images!.after!}
-                  alt={`Nieuwe website ${c.naam} na redesign 2024`}
+                  alt={`Nieuwe website ${c.naam} na redesign`}
                   caption="Na / De nieuwe site"
                   style={IMG_STYLE}
                 />
               </div>
               <p style={{ marginTop: 20, fontSize: 16, lineHeight: 1.65, color: 'var(--ink-soft)' }}>
-                Van een verouderde site die slecht laadde naar een snelle, mobiel-first website die bovenaan ranked voor spoedklus-zoekwoorden in Amsterdam.
+                Van een zakelijke site naar een snelle, mobiel-first website die vanuit de klacht van de bezoeker begint.
               </p>
             </div>
           )}
