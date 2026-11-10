@@ -14,9 +14,8 @@ export async function generateStaticParams() {
   return BLOG_POSTS.map((p) => ({ slug: p.slug }));
 }
 
-// Bewust buiten de index: bevat resultaatclaims die nog niet door de klant
-// bevestigd zijn. Pas weer indexeren na akkoord en herschrijven.
-const NOINDEX_SLUGS = new Set(['ad-loodgieter-meer-aanvragen-google-ads']);
+// Slugs die je (tijdelijk) buiten Google wilt houden.
+const NOINDEX_SLUGS = new Set<string>([]);
 
 export async function generateMetadata({
   params,

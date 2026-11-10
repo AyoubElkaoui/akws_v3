@@ -16,8 +16,8 @@ export function SiteFooter() {
               </span>
             </Link>
             <p>
-              Websites en maatwerk software voor installatiebedrijven in Midden-Nederland.
-              Eén freelancer, korte lijntjes, eerlijke prijzen.
+              Websites en maatwerk software voor installateurs, bouw en lokaal MKB in
+              Midden-Nederland. Eén freelancer, korte lijntjes, eerlijke prijzen.
             </p>
             {/* TODO: Ayoub — KvK- en BTW-nummer invullen in lib/data.ts */}
             {BRAND.kvk !== 'TODO_KVK' && (
@@ -39,7 +39,7 @@ export function SiteFooter() {
               <Link href="/over">Over Ayoub</Link>
               <Link href="/cases">Cases</Link>
               <Link href="/werkwijze">Werkwijze</Link>
-              <Link href="/prijzen">Prijzen</Link>
+              <Link href="/prijzen">Pakketten</Link>
               <Link href="/blog">Blog</Link>
             </div>
           </div>
@@ -82,9 +82,6 @@ export function SiteFooter() {
             {' · '}
             <Link href="/privacy" style={{ color: 'inherit' }}>Privacy</Link>
           </span>
-        </div>
-        <div style={{ paddingTop: 16, fontFamily: 'var(--mono)', fontSize: 10, color: 'rgba(255,255,255,.25)', letterSpacing: '.06em', textTransform: 'uppercase' }}>
-          Foto&apos;s via Unsplash. Mockdata in software-screenshots.
         </div>
       </div>
     </footer>

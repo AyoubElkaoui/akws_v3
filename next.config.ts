@@ -52,7 +52,8 @@ const nextConfig: NextConfig = {
       { source: '/webshop-laten-maken-baarn', destination: '/diensten', permanent: true },
 
       // ─── Blog slug hernoemed
-      { source: '/blog/van-dijk-218-procent-meer-aanvragen', destination: '/blog/ad-loodgieter-meer-aanvragen-google-ads', permanent: true },
+      { source: '/blog/van-dijk-218-procent-meer-aanvragen', destination: '/blog/ad-loodgietersbedrijf-nieuwe-website-lokale-seo', permanent: true },
+      { source: '/blog/ad-loodgieter-meer-aanvragen-google-ads', destination: '/blog/ad-loodgietersbedrijf-nieuwe-website-lokale-seo', permanent: true },
 
       // ─── Oude blog posts (geïndexeerd maar buiten nieuwe positionering)
       { source: '/blog/webshop-starten-complete-gids', destination: '/blog', permanent: true },

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { track } from '@/lib/track';
 import Script from 'next/script';
 import { BRAND } from '@/lib/data';
 
@@ -71,6 +72,7 @@ export function ContactForm() {
         setStatus('error');
         return;
       }
+      track('Aanvraag verstuurd', { formulier: 'contact', pagina: window.location.pathname });
       setStatus('ok');
     } catch {
       setError('Verbinding mislukt. Probeer het opnieuw of bel direct.');

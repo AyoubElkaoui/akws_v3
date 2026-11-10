@@ -202,7 +202,7 @@ export default function DienstenPage() {
             ))}
           </div>
           <p style={{ textAlign: 'center', marginTop: 24, fontFamily: 'var(--mono)', fontSize: 11, color: 'var(--mute)', letterSpacing: '.06em' }}>
-            Alle prijzen exclusief 21% BTW. Onderhoudscontract is verplicht onderdeel van elk traject.
+            Prijzen op maat, exclusief 21% BTW. Hosting en onderhoud horen bij elk traject.
           </p>
         </div>
       </section>

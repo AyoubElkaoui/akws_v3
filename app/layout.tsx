@@ -3,6 +3,7 @@ import Script from 'next/script';
 import { Barlow, Barlow_Condensed, JetBrains_Mono } from 'next/font/google';
 import { localBusinessSchema } from '@/lib/seo';
 import { WhatsAppButton } from '@/components/WhatsAppButton';
+import { TrackClicks } from '@/components/TrackClicks';
 import './globals.css';
 
 const barlow = Barlow({
@@ -64,6 +65,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body>
         {children}
         <WhatsAppButton />
+        <TrackClicks />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema()) }}

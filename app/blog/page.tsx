@@ -26,7 +26,7 @@ export default function BlogPage() {
           { href: '/', label: 'Home' },
           { label: 'Blog' },
         ]}
-        chip={`${BLOG_POSTS.length} artikelen · bijgewerkt wekelijks`}
+        chip={`${BLOG_POSTS.length} artikelen`}
         title="Het kennisblok."
         subtitle="Praktische artikelen voor installatiebedrijven — over websites, software, marketing en wat we onderweg leerden."
       />

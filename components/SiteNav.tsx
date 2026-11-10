@@ -31,7 +31,7 @@ export function SiteNav({ active }: { active?: string }) {
         </nav>
 
         <div className="nav-cta">
-          <span className="phone">{BRAND.phone}</span>
+          <a className="phone" href={`tel:${BRAND.phoneRaw}`}>{BRAND.phone}</a>
           <Link href="/contact" className="cta-mini">
             Plan gesprek <span className="badge" />
           </Link>
@@ -63,7 +63,9 @@ export function SiteNav({ active }: { active?: string }) {
           <Link href="/contact" className="btn btn-primary nav-mobile-cta" onClick={() => setOpen(false)}>
             Plan gesprek <span className="arrow">→</span>
           </Link>
-          <div className="nav-mobile-phone">{BRAND.phone}</div>
+          <a className="nav-mobile-phone" href={`tel:${BRAND.phoneRaw}`} style={{ display: 'block' }}>
+            Bel {BRAND.phone}
+          </a>
         </div>
       )}
     </header>

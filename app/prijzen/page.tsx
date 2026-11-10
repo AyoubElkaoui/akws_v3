@@ -19,7 +19,7 @@ const FAQ_PRIJZEN = [
   { q: 'Hoe kom ik dan aan een prijs?', a: 'Simpel: we plannen een gratis kennismaking van 30 minuten. Je vertelt wat je nodig hebt, ik stel vragen, en binnen 3 werkdagen krijg je een vast bod op papier met scope, planning en prijs. Geen verplichtingen.' },
   { q: 'Is het een vaste prijs of een schatting?', a: 'Een vaste prijs. Wat in het voorstel staat is wat je betaalt. Als iets meer werk blijkt dan verwacht, is dat mijn probleem, niet het jouwe. Geen uurtje-factuurtje, geen nacalculatie.' },
   { q: 'Wat zit er in het maandelijkse bedrag?', a: 'Hosting, SSL, updates, beveiligings- en uptime-monitoring en kleine wijzigingen. Bij een traject met Google Ads komt daar het maandelijkse campagnebeheer bij. Precieze invulling bespreken we in de kennismaking.' },
-  { q: 'Is onderhoud verplicht?', a: 'Onderhoud is een vast onderdeel van elk traject. Een website zonder onderhoud is een tijdbom: na een halfjaar zitten er security-lekken in, na een jaar kost traagheid je rankings. Maandelijks opzegbaar, geen vendor lock-in — je houdt je site, code en content.' },
+  { q: 'Is onderhoud verplicht?', a: 'Onderhoud is een vast onderdeel van elk traject. Een website zonder onderhoud is een tijdbom: na een halfjaar zitten er security-lekken in, na een jaar kost traagheid je rankings. De eerste looptijd is 12 maanden, daarna is het maandelijks opzegbaar. Geen vendor lock-in: je houdt je site, code en content.' },
   { q: 'Zit het advertentiebudget van Google Ads erbij?', a: 'Nee. Het beheer en de setup regel ik; het advertentiebudget dat je aan Google betaalt staat los en stel je zelf in. Realistisch begin je met een paar honderd euro per maand — wat past bij jouw werkgebied bespreken we vooraf.' },
 ];
 
@@ -32,12 +32,12 @@ export default function PrijzenPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema([
           { name: 'Home', href: '/' },
-          { name: 'Prijzen', href: '/prijzen' },
+          { name: 'Pakketten', href: '/prijzen' },
         ])) }}
       />
 
       <PageHead
-        crumbs={[{ href: '/', label: 'Home' }, { label: 'Prijzen' }]}
+        crumbs={[{ href: '/', label: 'Home' }, { label: 'Pakketten' }]}
         chip="Op maat · geen uurtje-factuurtje"
         title="Wat het kost."
         subtitle="Elk installatiebedrijf is anders, dus geef ik geen standaardprijs die tóch niet past. Je krijgt een vast bod op maat na een gratis kennismaking — wat we afspreken is wat je betaalt."

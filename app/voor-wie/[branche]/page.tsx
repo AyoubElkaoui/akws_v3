@@ -190,10 +190,11 @@ export default async function BranchePage({ params }: { params: Promise<Params> 
           </span>
           <div className="section-head" style={{ marginTop: 24 }}>
             <h2>
-              Vaste prijzen.<em>/ geen verrassingen achteraf.</em>
+              Vaste prijs op maat.<em>/ geen verrassingen achteraf.</em>
             </h2>
             <p className="lead">
-              Alle prijzen exclusief 21% BTW. Onderhoudscontract is verplicht onderdeel van elk traject.
+              Na de kennismaking krijg je één vast bedrag, exclusief btw. Hosting en onderhoud
+              horen bij elk traject, zodat je site snel en veilig blijft.
             </p>
           </div>
           <div className="prijs-grid">

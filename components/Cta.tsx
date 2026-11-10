@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import { BRAND } from '@/lib/data';
+import { track } from '@/lib/track';
 
 type CtaProps = {
   eyebrow?: string;
@@ -17,8 +18,21 @@ export function Cta({
   title,
   subtitle = '30 minuten, vrijblijvend',
   body = 'We bespreken waar het knelt en wat het zou opleveren om dat op te lossen. Geen verkooppraat. Eerlijk advies, ook als ik niet de juiste partij blijk.',
-  variant = 'simple',
+  variant = 'form',
 }: CtaProps) {
+  const wa = `https://wa.me/31${BRAND.phoneRaw.slice(1)}?text=${encodeURIComponent('Hoi Ayoub, ik heb een vraag over een website.')}`;
+  const pil = {
+    display: 'inline-flex',
+    alignItems: 'center',
+    gap: 8,
+    padding: '12px 18px',
+    borderRadius: 999,
+    border: '1px solid rgba(255,255,255,.3)',
+    color: '#fff',
+    fontWeight: 600,
+    fontSize: 15,
+    textDecoration: 'none',
+  } as const;
   return (
     <section className="section cta">
       <div className="wrap">
@@ -32,6 +46,10 @@ export function Cta({
               <em>/ {subtitle}</em>
             </h2>
             <p className="cta-sub">{body}</p>
+            <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', marginTop: 24 }}>
+              <a href={`tel:${BRAND.phoneRaw}`} style={pil}>Bel {BRAND.phone.replace(/ — /g, ' ')}</a>
+              <a href={wa} target="_blank" rel="noopener noreferrer" style={pil}>Stuur een appje</a>
+            </div>
             <div className="cta-checks">
               <span className="ok">Reactie &lt; 24 uur</span>
               <span>Vrijblijvend</span>
@@ -57,7 +75,7 @@ export function Cta({
                   letterSpacing: '.06em',
                 }}
               >
-                of bel direct: {BRAND.phone}
+                of laat hiernaast je nummer achter
               </div>
             </div>
           ) : (
@@ -88,6 +106,7 @@ function CtaSimpleForm() {
           phone: isEmail ? undefined : contact,
         }),
       });
+      if (res.ok) track('Aanvraag verstuurd', { formulier: 'terugbel', pagina: window.location.pathname });
       setStatus(res.ok ? 'ok' : 'error');
     } catch {
       setStatus('error');
@@ -110,8 +129,8 @@ function CtaSimpleForm() {
 
   return (
     <form className="form-card" onSubmit={handleSubmit}>
-      <div className="lbl">Plan een gesprek</div>
-      <div className="head">30 min, vrijblijvend</div>
+      <div className="lbl">Liever dat ik bel?</div>
+      <div className="head">Ik neem contact op</div>
       <div className="form-fields">
         <input name="name" placeholder="Naam en bedrijf" required />
         <input name="contact" placeholder="Telefoon of e-mail" required />
