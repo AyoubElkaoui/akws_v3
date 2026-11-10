@@ -1,8 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
-const CONTACT_EMAIL = process.env.CONTACT_EMAIL ?? 'info@akwebsolutions.nl';
-const RESEND_FROM = process.env.RESEND_FROM ?? 'noreply@akwebsolutions.nl';
+// .trim(): de waarden in Vercel bleken een regeleinde aan het eind te hebben,
+// waardoor het adres ongeldig was en aanvragen niet aankwamen.
+const CONTACT_EMAIL = (process.env.CONTACT_EMAIL ?? '').trim() || 'info@akwebsolutions.nl';
+const RESEND_FROM = (process.env.RESEND_FROM ?? '').trim() || 'noreply@akwebsolutions.nl';
+const RESEND_API_KEY = (process.env.RESEND_API_KEY ?? '').trim();
 const RECAPTCHA_SECRET = process.env.RECAPTCHA_SECRET_KEY;
 
 async function verifyRecaptcha(token: string): Promise<boolean> {
@@ -79,11 +82,21 @@ Verzonden via contactformulier op ${timestamp}`;
   </div>
 </div>`;
 
-    if (process.env.RESEND_API_KEY) {
-      const resend = new Resend(process.env.RESEND_API_KEY);
+    if (!RESEND_API_KEY) {
+      // Zonder sleutel kan er niets verstuurd worden: zeg dat eerlijk tegen de
+      // bezoeker in plaats van een aanvraag stil te laten verdwijnen.
+      console.error('[contact form] RESEND_API_KEY ontbreekt. Aanvraag niet verstuurd:', { name, company, phone, email });
+      return NextResponse.json(
+        { error: 'Versturen lukt nu niet. Bel of app direct: 06 85 72 23 87.' },
+        { status: 503 },
+      );
+    }
+    {
+      const resend = new Resend(RESEND_API_KEY);
 
       // Notificatie naar Ayoub
-      await resend.emails.send({
+      // Resend gooit geen fout bij een mislukte verzending maar geeft die terug.
+      const melding = await resend.emails.send({
         from: RESEND_FROM,
         to: CONTACT_EMAIL,
         replyTo: email || undefined,
@@ -91,6 +104,13 @@ Verzonden via contactformulier op ${timestamp}`;
         text: textBody,
         html: htmlBody,
       });
+      if (melding.error) {
+        console.error('[contact form] verzenden mislukt:', melding.error, { name, company, phone, email });
+        return NextResponse.json(
+          { error: 'Versturen lukt nu niet. Bel of app direct: 06 85 72 23 87.' },
+          { status: 502 },
+        );
+      }
 
       // Bevestiging naar klant (alleen als e-mailadres is ingevuld)
       if (email) {
@@ -142,10 +162,6 @@ akwebsolutions.nl`;
           html: confirmHtml,
         });
       }
-    } else {
-      console.log('[contact form] RESEND_API_KEY niet ingesteld. Formulierdata:', {
-        name, company, phone, email, branche, message,
-      });
     }
 
     return NextResponse.json({ ok: true });
