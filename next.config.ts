@@ -20,6 +20,7 @@ const nextConfig: NextConfig = {
       { source: '/blog/', destination: '/blog', permanent: true },
       { source: '/cases/', destination: '/cases', permanent: true },
       { source: '/voor-wie/', destination: '/voor-wie', permanent: true },
+      { source: '/website-laten-maken/', destination: '/website-laten-maken', permanent: true },
       { source: '/privacy/', destination: '/privacy', permanent: true },
 
       // ─── Over pagina (oude URL /over-ons) ──────────────────────────
@@ -40,11 +41,11 @@ const nextConfig: NextConfig = {
       // Loens Collection valt niet binnen nieuwe niche, geen individuele case
       { source: '/portfolio/loens-collection', destination: '/cases', permanent: true },
 
-      // ─── Stad-specifieke pagina's (geïndexeerd) → branche-pagina ───
-      { source: '/website-laten-maken-baarn', destination: '/voor-wie/installatiebedrijven', permanent: true },
-      { source: '/website-laten-maken-nijkerk', destination: '/voor-wie/installatiebedrijven', permanent: true },
-      { source: '/website-laten-maken-soest', destination: '/voor-wie/installatiebedrijven', permanent: true },
-      { source: '/website-laten-maken-bussum', destination: '/voor-wie/installatiebedrijven', permanent: true },
+      // ─── Oude stad-URL's (geïndexeerd) → nieuwe stadspagina's ──────
+      { source: '/website-laten-maken-baarn', destination: '/website-laten-maken/baarn', permanent: true },
+      { source: '/website-laten-maken-nijkerk', destination: '/website-laten-maken/nijkerk', permanent: true },
+      { source: '/website-laten-maken-soest', destination: '/website-laten-maken/soest', permanent: true },
+      { source: '/website-laten-maken-bussum', destination: '/website-laten-maken/bussum', permanent: true },
 
       // ─── Webshop-pagina (geïndexeerd) → diensten ───────────────────
       // We doen geen pure webshops meer; /diensten/websites bestaat niet

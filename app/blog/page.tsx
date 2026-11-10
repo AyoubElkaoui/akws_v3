@@ -4,12 +4,14 @@ import { SiteNav } from '@/components/SiteNav';
 import { SiteFooter } from '@/components/SiteFooter';
 import { PageHead } from '@/components/PageHead';
 import { BLOG_POSTS, BLOG_CATEGORIES } from '@/lib/data';
+import { buildMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  title: 'Blog',
+export const metadata: Metadata = buildMetadata({
+  title: 'Blog — Websites, lokale SEO en software voor vakmensen | AKWS',
   description:
-    'Praktische artikelen voor installatiebedrijven — over websites, software, marketing en wat we onderweg leerden.',
-};
+    'Praktische artikelen voor installatiebedrijven en vakmensen: meer aanvragen via Google, lokale SEO, Google Ads en slimme software.',
+  path: '/blog',
+});
 
 export default function BlogPage() {
   const featured = BLOG_POSTS.find((p) => p.featured);

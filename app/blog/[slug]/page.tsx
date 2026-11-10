@@ -6,6 +6,7 @@ import { SiteFooter } from '@/components/SiteFooter';
 import { Cta } from '@/components/Cta';
 import { TocClient } from '@/components/TocClient';
 import { BLOG_POSTS, type BlogBlock } from '@/lib/data';
+import { buildMetadata, articleSchema, breadcrumbSchema, isoDatum } from '@/lib/seo';
 
 type Params = { slug: string };
 
@@ -13,16 +14,9 @@ export async function generateStaticParams() {
   return BLOG_POSTS.map((p) => ({ slug: p.slug }));
 }
 
-// Posts die noindex krijgen omdat de content nog dunner is dan 600 woorden
-// TODO: Ayoub — breid deze posts uit of vervang ze door betere content
-const NOINDEX_SLUGS = new Set([
-  'ad-loodgieter-meer-aanvragen-google-ads',
-  '5-fouten-op-installateur-websites',
-  'snelstart-koppelen-met-werkbon-app',
-  'google-ads-installateur-beginnen',
-  'avg-voor-installateurs',
-  'geen-uurtjes-factuurtjes',
-]);
+// Bewust buiten de index: bevat resultaatclaims die nog niet door de klant
+// bevestigd zijn. Pas weer indexeren na akkoord en herschrijven.
+const NOINDEX_SLUGS = new Set(['ad-loodgieter-meer-aanvragen-google-ads']);
 
 export async function generateMetadata({
   params,
@@ -32,11 +26,14 @@ export async function generateMetadata({
   const { slug } = await params;
   const post = BLOG_POSTS.find((p) => p.slug === slug);
   if (!post) return {};
-  return {
-    title: post.titel,
+  return buildMetadata({
+    title: `${post.titel} | AKWS`,
     description: post.excerpt,
-    robots: NOINDEX_SLUGS.has(slug) ? { index: false, follow: false } : { index: true, follow: true },
-  };
+    path: `/blog/${slug}`,
+    ogImage: post.cover,
+    noIndex: NOINDEX_SLUGS.has(slug),
+    article: { publishedTime: isoDatum(post.date), author: post.author },
+  });
 }
 
 // Render markdown-lite: **bold** → <strong>
@@ -112,6 +109,19 @@ export default async function BlogPostPage({ params }: { params: Promise<Params>
     <>
       <SiteNav active="/blog" />
 
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema(post)) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema([
+          { name: 'Home', href: '/' },
+          { name: 'Blog', href: '/blog' },
+          { name: post.titel, href: `/blog/${post.slug}` },
+        ])) }}
+      />
+
       {/* Article hero */}
       <section className="article-hero">
         <div className="wrap-narrow">
@@ -152,9 +162,16 @@ export default async function BlogPostPage({ params }: { params: Promise<Params>
             </div>
             <div className="meta-extra">
               <span>↳ Deel:</span>
-              <a href="#">LinkedIn</a>
-              <a href="#">Mail</a>
-              <a href="#">X</a>
+              <a
+                href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(`https://akwebsolutions.nl/blog/${post.slug}`)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LinkedIn
+              </a>
+              <a href={`mailto:?subject=${encodeURIComponent(post.titel)}&body=${encodeURIComponent(`https://akwebsolutions.nl/blog/${post.slug}`)}`}>
+                Mail
+              </a>
             </div>
           </div>
         </div>

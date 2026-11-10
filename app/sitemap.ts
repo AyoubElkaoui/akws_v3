@@ -1,5 +1,7 @@
 import type { MetadataRoute } from 'next';
 import { BLOG_POSTS, CASE_DETAILS, BRANCHE_DETAILS } from '@/lib/data';
+import { STEDEN } from '@/lib/steden';
+import { isoDatum } from '@/lib/seo';
 
 const BASE = 'https://akwebsolutions.nl';
 const now = new Date();
@@ -8,6 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: BASE,                                    lastModified: now, changeFrequency: 'weekly',  priority: 1.0 },
     { url: `${BASE}/voor-wie`,                      lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${BASE}/website-laten-maken`,           lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${BASE}/diensten`,                      lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE}/diensten/websites`,             lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE}/diensten/seo-en-google-ads`,    lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
@@ -30,6 +33,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }));
 
+  const stadRoutes: MetadataRoute.Sitemap = STEDEN.map((s) => ({
+    url: `${BASE}/website-laten-maken/${s.slug}`,
+    lastModified: now,
+    changeFrequency: 'monthly' as const,
+    priority: 0.9,
+  }));
+
   const caseRoutes: MetadataRoute.Sitemap = CASE_DETAILS.map((c) => ({
     url: `${BASE}/cases/${c.slug}`,
     lastModified: now,
@@ -39,10 +49,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const blogRoutes: MetadataRoute.Sitemap = BLOG_POSTS.map((p) => ({
     url: `${BASE}/blog/${p.slug}`,
-    lastModified: now,
+    lastModified: new Date(isoDatum(p.date)),
     changeFrequency: 'monthly' as const,
     priority: 0.6,
   }));
 
-  return [...staticRoutes, ...brancheRoutes, ...caseRoutes, ...blogRoutes];
+  return [...staticRoutes, ...stadRoutes, ...brancheRoutes, ...caseRoutes, ...blogRoutes];
 }

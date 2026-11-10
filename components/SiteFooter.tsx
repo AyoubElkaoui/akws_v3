@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { BRAND } from '@/lib/data';
+import { BRAND, BRANCHES } from '@/lib/data';
+import { STEDEN } from '@/lib/steden';
 
 export function SiteFooter() {
   return (
@@ -52,6 +53,27 @@ export function SiteFooter() {
             </div>
           </div>
         </div>
+        <nav
+          aria-label="Branches en plaatsen"
+          style={{ display: 'grid', gap: 14, padding: '28px 0', borderTop: '1px solid rgba(255,255,255,.1)', fontSize: 13, lineHeight: 1.9 }}
+        >
+          <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+            <Link href="/voor-wie" style={{ color: '#fff', fontWeight: 600, marginRight: 14 }}>Voor wie</Link>
+            {BRANCHES.map((b) => (
+              <Link key={b.slug} href={`/voor-wie/${b.slug}`} style={{ color: 'rgba(255,255,255,.6)', marginRight: 14, whiteSpace: 'nowrap' }}>
+                {b.naam}
+              </Link>
+            ))}
+          </div>
+          <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+            <Link href="/website-laten-maken" style={{ color: '#fff', fontWeight: 600, marginRight: 14 }}>Website laten maken</Link>
+            {STEDEN.map((st) => (
+              <Link key={st.slug} href={`/website-laten-maken/${st.slug}`} style={{ color: 'rgba(255,255,255,.6)', marginRight: 14, whiteSpace: 'nowrap' }}>
+                {st.naam}
+              </Link>
+            ))}
+          </div>
+        </nav>
         <div className="bottom">
           <span>© 2026 AK Web Solutions · Ayoub Elkaoui</span>
           <span>{BRAND.domain}</span>
