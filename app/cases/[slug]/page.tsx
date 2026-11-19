@@ -114,7 +114,7 @@ export default async function CaseDetailPage({ params }: { params: Promise<Param
           {c.liveUrl && (
             <div style={{ marginTop: 24 }}>
               <a href={c.liveUrl} target="_blank" rel="noopener noreferrer" className="btn btn-ghost" style={{ fontSize: 14, padding: '10px 18px' }}>
-                Bekijk live site →
+                {c.liveLabel ?? 'Bekijk live site'} →
               </a>
             </div>
           )}

@@ -253,6 +253,8 @@ export type CaseDetail = {
   sector: string;
   locatie: string;
   liveUrl?: string;
+  /** Linktekst voor de live-site-knop (beschrijvend helpt de klant in Google). */
+  liveLabel?: string;
   intro: string;
   meta: string;
   gradient: string;
@@ -278,6 +280,7 @@ export const CASE_DETAILS: CaseDetail[] = [
     sector: 'Loodgieter',
     locatie: 'Maarssen',
     liveUrl: 'https://www.adloodgietersbedrijf.nl',
+    liveLabel: 'AD Loodgieters, loodgieter in Utrecht',
     intro: 'Volledig nieuwe website en lokale SEO voor een loodgieter in Utrecht en omgeving.',
     meta: 'Website + lokale SEO',
     gradient: 'linear-gradient(135deg, #2d4a3e 0%, #1a3329 100%)',
@@ -292,9 +295,11 @@ export const CASE_DETAILS: CaseDetail[] = [
     ],
     resultaat: [
       'Nieuwe site live sinds oktober 2026.',
-      "8 diensten en 8 plaatsen met een eigen pagina.",
-      'Bel- of offerteknop direct vanuit de klachtenkiezer.',
-      'Contactformulier getest en werkend op het eigen maildomein.',
+      'Vertoningen in Google van zo’n 100 naar bijna 500 per dag, en het aantal klikken uit Google verdubbeld (Search Console, november 2026).',
+      'Op pagina 1 van Google voor onder meer "loodgieter Harmelen", "loodgieter Bunnik" en "loodgieter Maarssen".',
+      'Unieke pagina’s per plaats en dienst in de regio Utrecht, plus tips en advies voor klanten.',
+      'Google Bedrijfsprofiel en Bing opgeschoond, met echte klusfoto’s en een vast werkgebied.',
+      'Bel-, WhatsApp- en offerteknoppen worden gemeten, zodat zichtbaar is welke pagina’s klanten opleveren.',
     ],
     techStack: ['Next.js', 'TypeScript', 'Vercel', 'Structured data', 'Search Console'],
     images: {
