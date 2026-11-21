@@ -1,166 +1,128 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import type { Metadata } from 'next';
 import { SiteNav } from '@/components/SiteNav';
 import { SiteFooter } from '@/components/SiteFooter';
 import { PageHead } from '@/components/PageHead';
 import { Cta } from '@/components/Cta';
-import Image from 'next/image';
-import { CASES, CASE_DETAILS, REVIEWS, STATS } from '@/lib/data';
+import { CASES, CASE_DETAILS, OOK_GEBOUWD } from '@/lib/data';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Cases — Websites en software voor installatiebedrijven | AKWS',
+  title: 'Werk — Websites en software voor installatiebedrijven | AKWS',
   description:
-    'Een selectie van mijn werk: websites, maatwerk software en koppelingen voor installatiebedrijven, bouw, logistiek en ander MKB.',
+    'Websites met lokale SEO en maatwerk software: facturatie, voorraad, dashboards en ticketsystemen voor installatiebedrijven, bouw, logistiek en ander MKB.',
   path: '/cases',
 });
 
+function detail(slug: string) {
+  return CASE_DETAILS.find((d) => d.slug === slug);
+}
+
 export default function CasesPage() {
+  const websites = CASES.filter((c) => c.meta !== 'Maatwerk software');
+  const software = CASES.filter((c) => c.meta === 'Maatwerk software');
+
   return (
     <>
       <SiteNav active="/cases" />
 
       <PageHead
-        crumbs={[{ href: '/', label: 'Home' }, { label: 'Cases' }]}
-        chip="Echte klanten, echte resultaten"
-        title="Cases."
-        subtitle="Werk dat ik trots laat zien, eerlijk over wat is gedaan, geen verzonnen cijfers. De aanpak, het resultaat en wat ik onderweg leerde."
-      />
+        crumbs={[{ href: '/', label: 'Home' }, { label: 'Werk' }]}
+        title="Werk dat ik laat zien."
+        subtitle="Websites voor vakmensen en de software erachter. Met wat er gedaan is en wat het opleverde, zonder verzonnen cijfers."
+      >
+        <div className="v4-filter" style={{ marginTop: 28, marginBottom: 0 }}>
+          <a href="#websites">Websites ({websites.length})</a>
+          <a href="#software">Maatwerk software ({software.length})</a>
+          <a href="#ook-gebouwd">Ook gebouwd</a>
+        </div>
+      </PageHead>
 
-      {/* Cases grid */}
-      <section className="blog-bg">
+      <section className="v4-sec" style={{ paddingTop: 24 }}>
         <div className="wrap">
-          <div className="blog-filter" style={{ marginBottom: 48 }}>
-            <span className="filt active">Alle cases</span>
-            <span className="filt">Websites</span>
-            <span className="filt">Maatwerk software</span>
-            <span className="count">{CASES.length} cases</span>
+          <div id="websites" className="v4-sec-head" style={{ scrollMarginTop: 96 }}>
+            <div className="l">
+              <span className="v4-kicker">Websites</span>
+              <h2 className="v4-h2">Sites die aanvragen opleveren.</h2>
+            </div>
           </div>
-
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: 24, marginBottom: 80 }}>
-            {CASES.map((c) => {
-              const detail = CASE_DETAILS.find((d) => d.slug === c.slug);
-              const cover = detail?.images?.cover;
+          <div className="v4-work">
+            {websites.map((c) => {
+              const d = detail(c.slug);
               return (
-              <Link href={`/cases/${c.slug}`} className="post" key={c.slug}>
-                <div
-                  className="img"
-                  style={cover ? { position: 'relative' } : {
-                    backgroundImage: `repeating-linear-gradient(135deg, rgba(0,0,0,.08) 0, rgba(0,0,0,.08) 1px, transparent 1px, transparent 14px), ${c.gradient}`,
-                  }}
-                >
-                  {cover && (
-                    <>
-                      <Image src={cover} alt={`${c.naam} — ${c.meta} preview`} fill sizes="(max-width:768px) 100vw, 33vw" style={{ objectFit: 'cover', objectPosition: 'top' }} />
-                      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(0,0,0,.1) 0%, rgba(0,0,0,.55) 100%)', zIndex: 1 }} />
-                    </>
-                  )}
-                  <span className="cat chip chip-dark" style={{ position: 'relative', zIndex: 2 }}>{c.meta}</span>
-                  <div
-                    style={{
-                      position: 'absolute',
-                      bottom: 14,
-                      left: 14,
-                      fontFamily: 'var(--cond)',
-                      fontWeight: 900,
-                      fontSize: 42,
-                      color: '#fff',
-                      lineHeight: 0.9,
-                      letterSpacing: '-.02em',
-                      zIndex: 2,
-                    }}
-                  >
-                    {c.resultaat}
+                <Link href={`/cases/${c.slug}`} className="v4-work-card" key={c.slug}>
+                  <div className="v4-work-img">
+                    {d?.images?.cover && (
+                      <Image src={d.images.cover} alt={`Website van ${c.naam}`} width={1440} height={1080} sizes="(max-width: 900px) 100vw, 400px" />
+                    )}
                   </div>
-                </div>
-                <div className="body">
-                  <div className="meta">{c.branche} · {c.locatie}</div>
-                  <h3>{c.naam}</h3>
-                  <p className="excerpt">{c.excerpt}</p>
-                  <div className="read">
-                    <span>Lees case →</span>
-                    <span style={{ color: 'var(--mute)' }}>{c.meta}</span>
-                  </div>
-                </div>
-              </Link>
-            );
+                  <span className="v4-work-meta">{d?.sector ?? c.branche} · {c.locatie} · {c.meta}</span>
+                  <span className="v4-work-title">{c.naam}</span>
+                  <span className="v4-work-res">{c.excerpt}</span>
+                  <span className="v4-work-link">Bekijk case →</span>
+                </Link>
+              );
             })}
           </div>
         </div>
       </section>
 
-      {/* Stats */}
-      <section className="section cases" style={{ paddingTop: 80, paddingBottom: 80 }}>
+      <section className="v4-sec alt">
         <div className="wrap">
-          <span className="eyebrow">
-            <span className="num">→</span>
-            <span className="rule" /> Resultaten in cijfers
-          </span>
-          <div className="section-head" style={{ marginTop: 24, marginBottom: 32 }}>
-            <h2>
-              Het portfolio in vier getallen.<em>/ gemeten, niet geclaimd.</em>
-            </h2>
-            <p className="lead" style={{ color: 'rgba(255,255,255,.55)' }}>
-              Over mijn portfolio. Bron: eigen analytics en klantfeedback.
-            </p>
-          </div>
-          <div className="stats" style={{ marginTop: 0, borderTop: 'none' }}>
-            {STATS.map((s) => (
-              <div className="stat" key={s.k}>
-                <div className="k">{s.k}</div>
-                <div className="v">
-                  {s.v.split('\n').map((line, i) => (
-                    <span key={i}>
-                      {line}
-                      {i < s.v.split('\n').length - 1 && <br />}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Reviews conditioneel */}
-      {REVIEWS.length > 0 && (
-        <section className="section reviews">
-          <div className="wrap">
-            <span className="eyebrow">
-              <span className="num">→</span>
-              <span className="rule" /> Wat klanten zeggen
-            </span>
-            <div className="section-head" style={{ marginTop: 24 }}>
-              <h2>
-                Geen verzonnen quotes.<em>/ gewoon wat klanten zeiden.</em>
-              </h2>
+          <div id="software" className="v4-sec-head" style={{ scrollMarginTop: 96 }}>
+            <div className="l">
+              <span className="v4-kicker">Maatwerk software</span>
+              <h2 className="v4-h2">Software die werk uit handen neemt.</h2>
+              <p className="v4-lead">
+                De schermen hieronder tonen voorbeelddata. Echte klantgegevens en
+                bedragen laat ik nooit zien.
+              </p>
             </div>
-            <div className="review-grid">
-              {REVIEWS.map((r) => (
-                <div className="review" key={r.n}>
-                  <div className="review-stars">
-                    {[...Array(5)].map((_, i) => <span key={i}>★</span>)}
+          </div>
+          <div className="v4-sw">
+            {software.map((c) => {
+              const d = detail(c.slug);
+              return (
+                <Link href={`/cases/${c.slug}`} className="v4-sw-card" key={c.slug}>
+                  {d?.images?.cover && (
+                    <Image src={d.images.cover} alt={`Scherm van ${c.naam}`} width={1440} height={900} sizes="(max-width: 900px) 100vw, 300px" />
+                  )}
+                  <div className="v4-sw-body">
+                    <span className="t">{c.naam}</span>
+                    <span className="d">{c.excerpt}</span>
+                    {d?.demoNote && <span className="demo">Voorbeelddata</span>}
                   </div>
-                  <p className="review-q">&quot;{r.q}&quot;</p>
-                  <div className="review-by">
-                    <div className="avatar">{r.av}</div>
-                    <div>
-                      <div className="n">{r.n}</div>
-                      <div className="f">{r.f}</div>
-                    </div>
-                  </div>
+                </Link>
+              );
+            })}
+          </div>
+
+          <div id="ook-gebouwd" style={{ marginTop: 64, scrollMarginTop: 96 }}>
+            <div className="v4-sec-head">
+              <div className="l">
+                <span className="v4-kicker">Ook gebouwd</span>
+                <h2 className="v4-h2" style={{ fontSize: 'clamp(24px, 2.6vw, 32px)' }}>Kleinere tools en lopend werk.</h2>
+              </div>
+            </div>
+            <div className="v4-also">
+              {OOK_GEBOUWD.map((o) => (
+                <div className="v4-card" key={o.naam}>
+                  <span className="meta">{o.meta}</span>
+                  <span className="t">{o.naam}</span>
+                  <span className="d">{o.tekst}</span>
                 </div>
               ))}
             </div>
           </div>
-        </section>
-      )}
+        </div>
+      </section>
 
       <Cta
-        eyebrow="Wil je hier ook bij?"
+        eyebrow="Iets vergelijkbaars nodig?"
         title="Plan een gesprek."
         subtitle="30 minuten, vrijblijvend"
-        body="Vertel wat je wil bouwen of verbeteren. Ik geef binnen 24 uur een eerlijke inschatting."
+        body="Vertel wat je wil bouwen of verbeteren. Ik geef binnen één werkdag een eerlijke inschatting."
       />
 
       <SiteFooter />

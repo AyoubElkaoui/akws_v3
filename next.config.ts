@@ -59,6 +59,10 @@ const nextConfig: NextConfig = {
       { source: '/blog/webshop-starten-complete-gids', destination: '/blog', permanent: true },
       { source: '/blog/waarom-professionele-website-essentieel', destination: '/blog', permanent: true },
 
+      // ─── Dienst-plaatspagina's hebben geen eigen overzicht ───────────
+      { source: '/maatwerk-software', destination: '/diensten/maatwerk-software', permanent: true },
+      { source: '/lokale-seo', destination: '/diensten/seo-en-google-ads', permanent: true },
+
       // ─── Bedankt pagina → homepage ─────────────────────────────────
       { source: '/bedankt', destination: '/', permanent: true },
       { source: '/bedankt/', destination: '/', permanent: true },

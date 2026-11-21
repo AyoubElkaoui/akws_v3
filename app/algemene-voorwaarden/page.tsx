@@ -13,7 +13,7 @@ export const metadata: Metadata = buildMetadata({
 
 const Artikel = ({ titel, children }: { titel: string; children: React.ReactNode }) => (
   <div style={{ marginBottom: 36 }}>
-    <h2 style={{ fontFamily: 'var(--cond)', fontWeight: 800, fontSize: 20, textTransform: 'uppercase', margin: '0 0 10px', color: 'var(--ink)' }}>{titel}</h2>
+    <h2 style={{ fontFamily: 'var(--cond)', fontWeight: 800, fontSize: 17, margin: '0 0 10px', color: 'var(--ink)' }}>{titel}</h2>
     <div style={{ fontSize: 15, lineHeight: 1.75, color: 'var(--ink-soft)' }}>{children}</div>
   </div>
 );

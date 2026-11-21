@@ -19,17 +19,16 @@ export const BRAND = {
 };
 
 export const NAV_LINKS = [
+  { href: '/cases', label: 'Werk' },
   { href: '/diensten', label: 'Diensten' },
   { href: '/voor-wie', label: 'Voor wie' },
-  { href: '/cases', label: 'Cases' },
-  { href: '/werkwijze', label: 'Werkwijze' },
   { href: '/prijzen', label: 'Pakketten' },
   { href: '/over', label: 'Over' },
   { href: '/blog', label: 'Blog' },
 ];
 
 export const USPS = [
-  { num: '01', k: '2 wkn', v: 'Van kennismaking tot een live website binnen twee weken. Snelheid als standaard.' },
+  { num: '01', k: '3–4 wkn', v: 'Van akkoord tot een live website in drie tot vier weken, met elke week een demo.' },
   { num: '02', k: 'Vast', v: 'Wat we afspreken is wat je betaalt. Geen verrassingen achteraf.' },
   { num: '03', k: '1 partij', v: 'Website en software bij dezelfde freelancer.' },
   { num: '04', k: 'NL', v: 'Nederlandstalige support. Geen ticket-fabriek, geen tijdverschil.' },
@@ -69,7 +68,7 @@ export const DIENSTEN = [
       "Mobiel-first & snel",
       "AVG-proof",
     ],
-    price: { v: 'Op maat', m: 'gratis kennismaking', d: 'max 2 wkn' },
+    price: { v: 'vanaf €1.495', m: 'eenmalig, excl. btw', d: '3–4 wkn' },
   },
   {
     n: '02',
@@ -89,7 +88,7 @@ export const DIENSTEN = [
       "Review-strategie",
       "Inbegrepen bij Pro-pakket",
     ],
-    price: { v: 'Op maat', m: 'gratis kennismaking', d: 'doorlopend' },
+    price: { v: 'vanaf €195 p/m', m: 'beheer, excl. advertentiebudget', d: 'doorlopend' },
   },
   {
     n: '03',
@@ -109,7 +108,7 @@ export const DIENSTEN = [
       "Hosting en onderhoud inbegrepen",
       "Maatwerk API-koppelingen",
     ],
-    price: { v: 'Op maat', m: 'vaste prijs per fase', d: '4 tot 8 wkn' },
+    price: { v: 'vanaf €3.500', m: 'vaste prijs per fase', d: '4 tot 8 wkn' },
   },
   {
     n: '04',
@@ -118,7 +117,7 @@ export const DIENSTEN = [
     body: "Hosting, SSL, updates, beveiliging, kleine wijzigingen. Vast onderdeel van elk traject. Zo blijft je site snel, veilig en actueel zonder dat jij erover hoeft na te denken.",
     tags: ['Hosting', 'Updates', 'Support', 'Monitoring'],
     deepDeck:
-      "Verplicht onderdeel van elk traject. Hosting, SSL, CMS-updates, beveiligingsmonitoring en kleine tekstwijzigingen. Reactie binnen 24 uur op werkdagen. Geen ticketstapel, geen vertraagde e-mailservice.",
+      "Verplicht onderdeel van elk traject. Hosting, SSL, CMS-updates, beveiligingsmonitoring en kleine tekstwijzigingen. Reactie binnen één werkdag. Geen ticketstapel, geen vertraagde e-mailservice.",
     features: [
       "Beheerde hosting op Vercel",
       "SSL-certificaat",
@@ -126,10 +125,10 @@ export const DIENSTEN = [
       "Beveiligingsmonitoring",
       "Uptime-monitoring",
       "Kleine tekstwijzigingen inbegrepen",
-      "Reactie binnen 24 uur op werkdagen",
+      "Reactie binnen één werkdag",
       "Maandelijks, geen jaarcontract",
     ],
-    price: { v: 'Inbegrepen', m: 'bij elk traject', d: 'doorlopend' },
+    price: { v: 'vanaf €49 p/m', m: 'hosting, updates & support', d: 'doorlopend' },
   },
 ];
 
@@ -150,7 +149,7 @@ export const PROCES = [
     n: '03',
     t: 'Bouw',
     s: "Wekelijkse demo. Je ziet vooruitgang, geen rapportages. Wijzigingen binnen scope zijn welkom.",
-    d: 'max 2 wkn',
+    d: '3–4 wkn',
   },
   {
     n: '04',
@@ -161,7 +160,7 @@ export const PROCES = [
   {
     n: '05',
     t: 'Doorontwikkeling',
-    s: 'Vast aanspreekpunt voor wijzigingen en uitbreidingen. Geen ticketstapel, wel snelle reactie binnen 24 uur op werkdagen.',
+    s: 'Vast aanspreekpunt voor wijzigingen en uitbreidingen. Geen ticketstapel, wel een reactie binnen één werkdag.',
     d: 'doorlopend',
   },
 ];
@@ -214,13 +213,13 @@ export const CASES = [
   {
     slug: 'itflow',
     naam: 'ITflow',
-    branche: 'Maatwerk software',
+    branche: 'IT-dienstverlener',
     locatie: 'Midden-Nederland',
-    resultaat: '3 tools',
-    resultaatSub: 'vervangen door één',
+    resultaat: '1 platform',
+    resultaatSub: 'tickets, voorraad & assets',
     meta: 'Maatwerk software',
     gradient: 'linear-gradient(135deg, #1a0f33 0%, #7c3aed 100%)',
-    excerpt: 'Intern ticketsysteem dat Zoho Desk en Clockwise verving. Modules voor tickets, klantbeheer, assets en urenregistratie.',
+    excerpt: 'Ticket- en urenplatform dat Zoho Desk verving: tickets per klant, werktijd, voorraad, assets, kennisbank en een klantportaal in één systeem.',
   },
   {
     slug: 'zando-transport',
@@ -243,6 +242,61 @@ export const CASES = [
     meta: 'Website + CMS',
     gradient: 'linear-gradient(135deg, #1c1b18 0%, #8a7338 100%)',
     excerpt: 'Zakelijke website met eigen CMS voor een koeriers- en transportbedrijf uit Amersfoort, inclusief offerteformulier en vacatures met sollicitaties.',
+  },
+  {
+    slug: 'itfin-website',
+    naam: 'ITFIN',
+    branche: 'IT-dienstverlener',
+    locatie: 'Amersfoort',
+    resultaat: 'Nieuw',
+    resultaatSub: 'klaar voor livegang',
+    meta: 'Website',
+    gradient: 'linear-gradient(135deg, #0b2a4a 0%, #1f6fb2 100%)',
+    excerpt: 'Nieuwe website voor een IT-dienstverlener uit Amersfoort, met een security quickscan als ingang voor nieuwe klanten en een pagina per dienst.',
+  },
+  {
+    slug: 'facturatie-app',
+    naam: 'Facturatie-app',
+    branche: 'Eigen product',
+    locatie: 'Baarn',
+    resultaat: 'Dagelijks',
+    resultaatSub: 'in gebruik bij AKWS',
+    meta: 'Maatwerk software',
+    gradient: 'linear-gradient(135deg, #1e1b4b 0%, #4f35e8 100%)',
+    excerpt: 'Facturen, offertes en terugkerende facturen met een iDEAL-betaallink op de PDF. Uren uit een export worden automatisch factuurregels.',
+  },
+  {
+    slug: 'voorraad-app',
+    naam: 'Productie- & voorraadapp',
+    branche: 'Elektrotechniek',
+    locatie: 'Midden-Nederland',
+    resultaat: 'Scan',
+    resultaatSub: 'kasten & voorraad via QR en barcode',
+    meta: 'Maatwerk software',
+    gradient: 'linear-gradient(135deg, #1e1a4c 0%, #3b3a8c 100%)',
+    excerpt: 'Elke groepenkast geregistreerd met serienummer, QR-code en schema, plus een magazijn dat je met een scanner of telefoon bijhoudt.',
+  },
+  {
+    slug: 'financieel-dashboard',
+    naam: 'Financieel dashboard',
+    branche: 'Installatiebedrijf',
+    locatie: 'Midden-Nederland',
+    resultaat: '4 lagen',
+    resultaatSub: 'drill-down tot factuurregel',
+    meta: 'Maatwerk software',
+    gradient: 'linear-gradient(135deg, #0f3d4c 0%, #12805c 100%)',
+    excerpt: 'Omzet, marge en openstaande facturen live uit de Firebird-database van het ERP, met doorklikken van klant naar project naar factuur.',
+  },
+  {
+    slug: 'urenportaal',
+    naam: 'Urenportaal',
+    branche: 'Administratiekantoor',
+    locatie: 'Midden-Nederland',
+    resultaat: 'Team',
+    resultaatSub: 'uren en afwijkingen in één scherm',
+    meta: 'Maatwerk software',
+    gradient: 'linear-gradient(135deg, #134e4a 0%, #0f766e 100%)',
+    excerpt: 'Urenregistratie per klant met weekgoedkeuring en een overzicht voor de manager. Uitgewerkt als klikbaar prototype voor een administratiekantoor.',
   },
 ];
 
@@ -269,6 +323,8 @@ export type CaseDetail = {
     screens?: string[];      // screenshot-grid (met mock-data label)
     extra?: string[];        // extra sectie-screenshots
   };
+  /** Toon een label dat de schermen voorbeelddata bevatten (geen echte klantgegevens). */
+  demoNote?: string;
   // TODO: Ayoub — voeg echte quote toe zodra klant schriftelijk akkoord geeft voor publicatie
   quote: { tekst: string; naam: string; functie: string } | null;
 };
@@ -406,25 +462,26 @@ export const CASE_DETAILS: CaseDetail[] = [
   {
     slug: 'itflow',
     naam: 'ITflow',
-    sector: 'Maatwerk software',
+    sector: 'IT-dienstverlener',
     locatie: 'Midden-Nederland',
-    intro: 'Ticketsysteem voor een IT-dienstverlener dat Zoho Desk en Clockwise verving door één geïntegreerd platform.',
+    intro: 'Ticket- en urenplatform voor een IT-dienstverlener: tickets, voorraad, assets, kennisbank en een klantportaal in één systeem, ter vervanging van Zoho Desk.',
     meta: 'Maatwerk software',
     gradient: 'linear-gradient(135deg, #1a0f33 0%, #7c3aed 100%)',
     situatie: [
-      'Een IT-dienstverlener gebruikte Zoho Desk voor ticketing en Clockwise voor urenregistratie, met handmatige koppelingen ertussen. Dat leverde versnipperde data op, dubbel werk, en onnodig veel tijd kwijt aan administratie.',
-      'Behoefte: één platform voor tickets, klantbeheer, assetregistratie, urenregistratie en kennisbank — specifiek gebouwd op de interne werkwijze.',
+      'Een IT-dienstverlener met klanten in de zorg en het MKB werkte met Zoho Desk voor tickets en losse lijstjes voor voorraad en apparatuur. Wat er bij een klant geleverd was, welke laptop bij wie stond en hoeveel tijd een klus kostte, stond op verschillende plekken.',
+      'Behoefte: één systeem dat past bij hoe het team werkt, van melding tot factuur, zonder dubbel invoeren.',
     ],
     aanpak: [
-      { titel: 'Geïntegreerd platform', tekst: "Eén systeem gebouwd met modules voor ticketing (SLA-tracking), klantbeheer, assetregistratie, urenregistratie gekoppeld aan tickets, en kennisbank." },
-      { titel: 'Koppelingen tussen modules', tekst: "Alle modules praten met elkaar: ticket koppelt aan klant en asset, uren via ticket-context, facturatie haalt gewerkte uren op. Eén bron van waarheid." },
+      { titel: 'Tickets per klant', tekst: 'Elke melding als ticket bij de juiste klant, met werktijd, status en wat er gedaan is. Een klantportaal waar klanten zelf meldingen doen en de status volgen.' },
+      { titel: 'Voorraad en assets gekoppeld', tekst: 'Een laptop die naar een klant gaat, gaat in hetzelfde ticket uit voorraad en wordt een asset met een vaste naamgeving. Reparaties raken de voorraad niet.' },
+      { titel: 'Kennisbank en dagafsluiting', tekst: 'Oplossingen worden vastgelegd in een kennisbank. De dagafsluiting zet de gewerkte uren klaar in het formaat van het urensysteem, zodat facturatie aansluit.' },
     ],
     resultaat: [
-      'Platform in dagelijks intern gebruik.',
-      'Vervangt drie aparte tools door één geïntegreerd systeem.',
-      'Eén bron van waarheid voor klantdata, tickets en uren.',
+      'In dagelijks gebruik; Zoho Desk is vervangen.',
+      'Voorraad, assets en tickets in één bron: wat er bij een klant staat, is terug te vinden.',
+      'Uren gaan via de dagafsluiting zonder overtypen naar de facturatie.',
     ],
-    techStack: ['Next.js', 'TypeScript', 'PostgreSQL', 'Prisma ORM', 'NextAuth (role-based permissions)', 'E-mail notificaties', 'Vercel'],
+    techStack: ['Next.js', 'TypeScript', 'Prisma', 'PostgreSQL', 'Vercel'],
     images: {
       cover: '/itflow/itflow-1.png',
       screens: ['/itflow/itflow-1.png', '/itflow/itflow-2.png'],
@@ -496,6 +553,161 @@ export const CASE_DETAILS: CaseDetail[] = [
     },
     quote: null,
   },
+  {
+    slug: 'itfin-website',
+    naam: 'ITFIN',
+    sector: 'IT-dienstverlener',
+    locatie: 'Amersfoort',
+    intro: 'Nieuwe website voor een IT-dienstverlener uit Amersfoort, gebouwd rond beveiliging en één vast aanspreekpunt.',
+    meta: 'Website',
+    gradient: 'linear-gradient(135deg, #0b2a4a 0%, #1f6fb2 100%)',
+    situatie: [
+      'ITFIN helpt ondernemers in Amersfoort en omgeving al meer dan 15 jaar met hun IT. De bestaande website stamt uit 2022 en vertelde het verhaal van nu niet meer: beveiliging als vaste basis en één vast aanspreekpunt.',
+      'De nieuwe site moest in een paar seconden duidelijk maken voor wie ITFIN er is, wat ze doen en hoe je contact opneemt.',
+    ],
+    aanpak: [
+      { titel: 'Kies je situatie', tekst: 'Bezoekers kiezen op de homepage de situatie die bij ze past, bijvoorbeeld een nieuwe werkplek of een overstap naar de cloud, en komen direct op de juiste dienst uit.' },
+      { titel: 'Security quickscan', tekst: 'Acht korte vragen en je ziet meteen hoe kwetsbaar je bedrijf is en waar de grootste risico\'s zitten. Een laagdrempelige eerste stap richting een gesprek.' },
+      { titel: 'Een pagina per dienst', tekst: 'Elke dienst heeft een eigen pagina met wat het is, hoe ITFIN het aanpakt en wat het oplevert, plus een supportpagina voor bestaande klanten.' },
+    ],
+    resultaat: [
+      'Nieuwe site gebouwd en klaar voor livegang.',
+      'Security quickscan als ingang voor nieuwe klanten.',
+      'Snel, mobiel-first en zonder CMS-onderhoud: alle teksten staan centraal in de code.',
+    ],
+    techStack: ['Next.js', 'TypeScript', 'React', 'Vercel'],
+    images: {
+      cover: '/itfin-website/home.jpg',
+      screens: ['/itfin-website/home.jpg', '/itfin-website/diensten.jpg', '/itfin-website/support.jpg'],
+    },
+    quote: null,
+  },
+  {
+    slug: 'facturatie-app',
+    naam: 'Facturatie-app',
+    sector: 'Eigen product',
+    locatie: 'Baarn',
+    intro: 'Mijn eigen facturatiesysteem: facturen, offertes en terugkerende facturen, met een betaallink op elke factuur.',
+    meta: 'Maatwerk software',
+    gradient: 'linear-gradient(135deg, #1e1b4b 0%, #4f35e8 100%)',
+    situatie: [
+      'Als zzp\'er factureer ik elke maand uren, reiskosten, hosting en projecten. Standaard boekhoudpakketten konden dat wel, maar niet op de manier waarop ik werk: uren komen uit een export, reiskosten hangen af van de locatie en hosting komt elk jaar terug.',
+      'Dus bouwde ik mijn eigen app. Die gebruik ik dagelijks, en hij is opgezet voor meerdere organisaties.',
+    ],
+    aanpak: [
+      { titel: 'Van uren naar factuur', tekst: 'Een urenexport plakken en de app maakt er factuurregels van, inclusief reiskosten op basis van de afstand naar de klantlocatie.' },
+      { titel: 'Betalen met één klik', tekst: 'Onbetaalde facturen krijgen een iDEAL-betaallink en QR-code op de PDF en in de mail. Betaalt de klant, dan springt de factuur vanzelf op betaald.' },
+      { titel: 'Alles op één plek', tekst: 'Offertes die je met één klik omzet naar een factuur, terugkerende facturen, betalingsherinneringen, een jaaroverzicht met btw en een CSV-export voor de boekhouding.' },
+    ],
+    resultaat: [
+      'Dagelijks in gebruik voor de facturatie van AK Web Solutions.',
+      'Facturen, offertes en herinneringen gaan per mail met PDF de deur uit.',
+      'Betaalstatus wordt automatisch bijgewerkt via de betaalprovider.',
+    ],
+    techStack: ['Next.js', 'TypeScript', 'Prisma', 'PostgreSQL (Neon)', 'React-PDF', 'Resend', 'Revolut Merchant API'],
+    images: {
+      cover: '/factuur-app/facturen.jpg',
+      screens: ['/factuur-app/facturen.jpg', '/factuur-app/factuur.jpg', '/factuur-app/rapport.jpg', '/factuur-app/offertes.jpg'],
+    },
+    demoNote: 'Schermen met voorbeelddata, geen echte klanten of bedragen',
+    quote: null,
+  },
+  {
+    slug: 'voorraad-app',
+    naam: 'Productie- & voorraadapp',
+    sector: 'Elektrotechniek',
+    locatie: 'Midden-Nederland',
+    intro: 'Registratie van groepenkasten en het magazijn in één app, met QR-codes, barcodes en scannen via telefoon of handscanner.',
+    meta: 'Maatwerk software',
+    gradient: 'linear-gradient(135deg, #1e1a4c 0%, #3b3a8c 100%)',
+    situatie: [
+      'Een bedrijf dat groepenkasten bouwt wilde van elke kast vastleggen wat erin zit, voor wie hij is en waar hij hangt, en het magazijn bijhouden zonder Excel-lijsten.',
+      'Op de werkvloer moest het snel gaan: een code scannen, materiaal afboeken en door.',
+    ],
+    aanpak: [
+      { titel: 'Elke kast een eigen paspoort', tekst: 'Kastcode, uniek serienummer, barcode en QR-code, foto\'s, schema en historie. Via de QR-code op de kast opent een openbare pagina met aanzicht en schema, zonder klantgegevens.' },
+      { titel: 'Scannen op de werkvloer', tekst: 'Met een USB- of bluetoothscanner of de camera van een telefoon. Een scan haalt materiaal van de voorraad en koppelt het aan de kast, inclusief kostprijs.' },
+      { titel: 'Nooit meer misgrijpen', tekst: 'Minimumvoorraad per artikel, een bestellijst per leverancier en een mail zodra iets bijna op is. Een levering boek je in één keer in.' },
+    ],
+    resultaat: [
+      'Kasten, voorraad en bestellingen in één systeem.',
+      'Labels van 100×60 mm met QR- en barcode direct uit de app te printen.',
+      'Opgezet voor meerdere bedrijven, met eigen logo en kleuren per organisatie.',
+    ],
+    techStack: ['Next.js 16', 'React 19', 'TypeScript', 'Prisma', 'PostgreSQL (Neon)', 'Vercel Cron'],
+    images: {
+      cover: '/voorraad-app/dashboard.jpg',
+      screens: ['/voorraad-app/dashboard.jpg', '/voorraad-app/kast.jpg', '/voorraad-app/voorraad.jpg', '/voorraad-app/bestellen.jpg'],
+    },
+    demoNote: 'Schermen uit de demo-omgeving met voorbeelddata',
+    quote: null,
+  },
+  {
+    slug: 'financieel-dashboard',
+    naam: 'Financieel dashboard',
+    sector: 'Installatiebedrijf',
+    locatie: 'Midden-Nederland',
+    intro: 'Een read-only dashboard dat omzet, marge en debiteuren live uit de Firebird-database van het ERP-pakket haalt.',
+    meta: 'Maatwerk software',
+    gradient: 'linear-gradient(135deg, #0f3d4c 0%, #12805c 100%)',
+    situatie: [
+      'Een installatiebedrijf werkt met Syntess Atrium als ERP. Alle cijfers staan erin, maar een overzicht van omzet, marge per project en openstaande facturen kostte steeds handwerk in Excel.',
+      'Het management wilde die cijfers actueel zien, zonder dat iemand iets hoeft te exporteren.',
+    ],
+    aanpak: [
+      { titel: 'Rechtstreeks uit het ERP', tekst: 'Het dashboard leest direct uit de Firebird-database, strikt read-only. Rapportage-SQL per scherm, zodat de berekeningen in de database gebeuren en de cijfers overal gelijk zijn.' },
+      { titel: 'Doorklikken tot de bron', tekst: 'Van jaaroverzicht naar klant, naar project met marge, naar de facturen en inkoop van dat project en de losse factuurregels.' },
+      { titel: 'Debiteuren in één oogopslag', tekst: 'Openstaande facturen ingedeeld naar dagen over de vervaldatum, met de gemiddelde betaaltermijn per jaar.' },
+    ],
+    resultaat: [
+      'Omzet, inkoop, brutomarge en openstaand bedrag per jaar, met vergelijking met vorig jaar.',
+      'Marge per project zichtbaar zonder export naar Excel.',
+      'Draait binnen het bedrijfsnetwerk en schrijft nooit in het ERP.',
+    ],
+    techStack: ['Node.js', 'Fastify', 'node-firebird', 'Next.js', 'TanStack Query', 'Recharts', 'Tailwind CSS'],
+    images: {
+      cover: '/financieel-dashboard/dashboard.jpg',
+      screens: ['/financieel-dashboard/dashboard.jpg', '/financieel-dashboard/klant.jpg', '/financieel-dashboard/project.jpg', '/financieel-dashboard/debiteuren.jpg'],
+    },
+    demoNote: 'Schermen uit de demo-versie met fictieve cijfers',
+    quote: null,
+  },
+  {
+    slug: 'urenportaal',
+    naam: 'Urenportaal',
+    sector: 'Administratiekantoor',
+    locatie: 'Midden-Nederland',
+    intro: 'Urenregistratie per klant met weekgoedkeuring en een teamoverzicht voor de manager, uitgewerkt als klikbaar prototype.',
+    meta: 'Maatwerk software',
+    gradient: 'linear-gradient(135deg, #134e4a 0%, #0f766e 100%)',
+    situatie: [
+      'Een administratiekantoor wilde dat medewerkers hun uren per klant bijhouden, en dat de manager per week ziet wat er geregistreerd is en waar iets niet klopt.',
+      'Voordat er een volledig systeem gebouwd wordt, wilde het kantoor eerst zien en voelen hoe het zou werken.',
+    ],
+    aanpak: [
+      { titel: 'Voor de medewerker', tekst: 'Een dagoverzicht met timer, tijd toevoegen per klant en werkzaamheid, en aan het eind van de week de uren indienen.' },
+      { titel: 'Voor de manager', tekst: 'Een teamoverzicht met de status per medewerker, aandachtspunten om te beoordelen en uren goedkeuren of met een opmerking terugsturen.' },
+      { titel: 'Eerst klikken, dan bouwen', tekst: 'Het prototype draait volledig in de browser met voorbeeldaccounts per rol, zodat het kantoor alle schermen kon proberen voordat de echte koppelingen gebouwd worden.' },
+    ],
+    resultaat: [
+      'Klikbaar prototype met drie rollen: medewerker, manager en beheerder.',
+      'Basis voor de productieversie met een eigen API en database.',
+    ],
+    techStack: ['React', 'TypeScript', 'Vite'],
+    images: {
+      cover: '/urenportaal/team.jpg',
+      screens: ['/urenportaal/team.jpg', '/urenportaal/week.jpg', '/urenportaal/afwijkingen.jpg'],
+    },
+    demoNote: 'Prototype met voorbeeldaccounts en fictieve uren',
+    quote: null,
+  },
+];
+
+// Kleinere tools zonder eigen casepagina (getoond onder 'Ook gebouwd' op /cases)
+export const OOK_GEBOUWD = [
+  { naam: 'Laptop klaarmaken', meta: 'Windows-tool · IT-beheer', tekst: 'Eén programma op een USB-stick dat een nieuwe laptop inricht: pc-naam volgens vaste regels, accounts, standaardsoftware en de tekst voor het ticket op het klembord.' },
+  { naam: 'Urenconverter naar ERP', meta: 'Windows-tool · Installatiebedrijf', tekst: 'Zet urenexports om naar het importformaat van het ERP-pakket, zodat monteursuren niet meer worden overgetypt.' },
+  { naam: 'Rapportage-app voor monteurs', meta: 'In ontwikkeling · Installatiebedrijf', tekst: 'Onderhouds-, F-gassen- en CO-rapporten op de telefoon invullen, vooringevuld met de vorige beurt, en als PDF naar de klant.' },
 ];
 
 // Branche-detail data voor /voor-wie/[branche] pagina's
@@ -543,7 +755,7 @@ export const BRANCHE_DETAILS: BrancheDetail[] = [
       "loodgieter in de buurt", "afvoer verstopt spoed", "boiler lekt", "kraan vervangen",
     ],
     faq: [
-      { q: "Hoe lang duurt het bouwen van een loodgieter-website?", a: "Snel: je website staat binnen 2 weken live vanaf akkoord op het voorstel. Komt er Google Ads bij, dan loopt de campagne-optimalisatie daarna door — maar de site zelf hoef je niet lang op te wachten." },
+      { q: "Hoe lang duurt het bouwen van een loodgieter-website?", a: "Je website staat drie tot vier weken na akkoord op het voorstel live. Komt er Google Ads bij, dan loopt de campagne-optimalisatie daarna door — maar de site zelf hoef je niet lang op te wachten." },
       { q: "Wat kost een Google Ads-campagne voor mijn loodgietersbedrijf?", a: "Het beheer regel ik als onderdeel van je traject; de prijs bespreken we op maat. Het advertentiebudget dat je aan Google betaalt staat daar los van en bepaal je zelf. Realistisch begin je met €300 tot €600 per maand voor lokaal spoedwerk." },
       { q: "Mijn telefoon rinkelt al genoeg, heb ik dit wel nodig?", a: "Misschien niet. Een goede website is een investering in groei, niet een noodgreep. Als je geen ruimte hebt voor meer klussen, zijn er andere prioriteiten. Ik geef je dat eerlijk advies in het kennismakingsgesprek." },
       { q: "Kan ik mijn huidige website houden en alleen Google Ads laten doen?", a: "Soms wel, soms niet. Een Ads-campagne stuurt mensen naar je site — als die slecht converteert verbrand je geld. Ik check eerst je huidige site. Als die qua snelheid en mobiele weergave in orde is, kan ik los Google Ads doen." },
@@ -916,8 +1128,8 @@ export const PRIJZEN = [
   {
     naam: 'Website',
     sub: 'Online vindbaar & serieuze aanvragen',
-    prijs: 'Op maat',
-    eenh: 'gratis kennismaking',
+    prijs: 'vanaf €1.495',
+    eenh: 'eenmalig · daarna €49 p/m hosting & onderhoud',
     bullets: [
       "Maatwerk ontwerp in jouw huisstijl",
       "Mobiel-first & razendsnel",
@@ -934,8 +1146,8 @@ export const PRIJZEN = [
   {
     naam: 'Website + Google Ads',
     sub: 'Actief nieuwe klanten binnenhalen',
-    prijs: 'Op maat',
-    eenh: 'gratis kennismaking',
+    prijs: 'vanaf €2.495',
+    eenh: 'eenmalig · daarna €195 p/m beheer, excl. advertentiebudget',
     bullets: [
       "Alles uit Website",
       "Lokale landingspagina's per stad",
@@ -950,8 +1162,8 @@ export const PRIJZEN = [
   {
     naam: 'Maatwerk software',
     sub: 'Automatiseer je administratie & planning',
-    prijs: 'Op maat',
-    eenh: 'gratis kennismaking',
+    prijs: 'vanaf €3.500',
+    eenh: 'per fase · uitbreidingen €85 per uur',
     bullets: [
       "Intake en procesanalyse",
       "Software op jouw manier van werken",
@@ -965,11 +1177,39 @@ export const PRIJZEN = [
   },
 ];
 
+// Tarieven: één plek voor alle bedragen op de site (excl. 21% btw).
+// Afgestemd op wat freelancers en kleine bureaus in Nederland gemiddeld vragen.
+export const TARIEVEN = {
+  websiteVanaf: '€1.495',
+  websitePlusVanaf: '€2.495',
+  onderhoud: '€49',
+  adsBeheer: '€195',
+  softwareVanaf: '€3.500',
+  prototypeVanaf: '€750',
+  softwareHosting: '€49',
+  uurtarief: '€85',
+  extraPagina: '€149',
+};
+
+export const LOSSE_PRIJZEN: { wat: string; uitleg: string; prijs: string; soort: 'website' | 'software' | 'beide' }[] = [
+  { wat: 'Compacte website', uitleg: "Tot zo'n zes pagina's, ontwerp in je huisstijl, lokale SEO-basis en contactformulier", prijs: 'vanaf €1.495', soort: 'website' },
+  { wat: 'Uitgebreide website', uitleg: 'Pagina per dienst en plaats, CMS om zelf aan te passen, offerte- of vacatureformulier', prijs: '€2.000 – €3.500', soort: 'website' },
+  { wat: 'Extra dienst- of plaatspagina', uitleg: 'Eigen tekst per pagina, geen kopie met een andere plaatsnaam', prijs: '€149 per pagina', soort: 'website' },
+  { wat: 'Hosting & onderhoud website', uitleg: 'Hosting, SSL, updates, monitoring en kleine tekstwijzigingen', prijs: '€49 p/m', soort: 'website' },
+  { wat: 'Google Ads beheer', uitleg: 'Opzet, beheer, conversiemeting en maandrapport. Advertentiebudget apart', prijs: '€195 p/m', soort: 'website' },
+  { wat: 'Google Bedrijfsprofiel inrichten', uitleg: "Categorieën, diensten, werkgebied, foto's en een reviewlink (los, zonder website)", prijs: '€195 eenmalig', soort: 'website' },
+  { wat: 'Klikbaar prototype software', uitleg: 'Alle schermen om te proberen voordat er gebouwd wordt', prijs: 'vanaf €750', soort: 'software' },
+  { wat: 'Kleine tool of koppeling', uitleg: 'Bijvoorbeeld een export omzetten naar je ERP of een los Windows-hulpprogramma', prijs: '€500 – €1.500', soort: 'software' },
+  { wat: 'Maatwerk software, eerste fase', uitleg: 'Werkende web-app met login, database en hosting', prijs: '€3.500 – €8.000', soort: 'software' },
+  { wat: 'Hosting & onderhoud software', uitleg: "Database, back-ups, updates en monitoring", prijs: 'vanaf €49 p/m', soort: 'software' },
+  { wat: 'Uurtarief', uitleg: 'Voor uitbreidingen en wijzigingen buiten de afspraak, altijd vooraf geschat', prijs: '€85 per uur', soort: 'beide' },
+];
+
 export const STATS = [
-  { k: '7', v: 'Projecten\nlive in productie' },
-  { k: '100%', v: 'Maatwerk, geen\ntemplates' },
-  { k: '2 wkn', v: 'Van akkoord tot\nlive website' },
-  { k: '24 uur', v: 'Reactietijd\nop werkdagen' },
+  { k: '5×', v: 'Meer vertoningen in\nGoogle (AD Loodgieters)' },
+  { k: '70', v: "Lokale dienstpagina's\n(MKH Bouw)" },
+  { k: '3–4 wkn', v: 'Van akkoord tot\nlive website' },
+  { k: '1 werkdag', v: 'Reactietijd,\ngeen ticketstapel' },
 ];
 
 // ─── Blog ──────────────────────────────────────────────────────────────────

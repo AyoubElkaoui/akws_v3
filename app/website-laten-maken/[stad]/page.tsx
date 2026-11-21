@@ -38,7 +38,7 @@ const WAT_JE_KRIJGT = [
   },
   {
     titel: 'Eén aanspreekpunt',
-    tekst: 'Je belt of appt met degene die je site bouwt. Vaste prijs vooraf, binnen twee weken live en daarna onderhoud en hosting bij dezelfde persoon.',
+    tekst: 'Je belt of appt met degene die je site bouwt. Vaste prijs vooraf, binnen drie tot vier weken live en daarna onderhoud en hosting bij dezelfde persoon.',
   },
   {
     titel: 'Zelf bij te werken',
@@ -91,7 +91,7 @@ export default async function StadPage({ params }: { params: Promise<Params> }) 
             <span>{s.naam}</span>
           </div>
           <span className="chip chip-purple">{s.naam.toUpperCase()} E.O.</span>
-          <h1>Website laten maken in {s.naam}<em>/ {s.subtitel}</em></h1>
+          <h1>Website laten maken in {s.naam}<em>{s.subtitel}</em></h1>
           <p className="lead">{s.lead}</p>
           <div style={{ marginTop: 32, display: 'flex', gap: 12, flexWrap: 'wrap' }}>
             <Link href="/contact" className="btn btn-primary">
@@ -111,7 +111,7 @@ export default async function StadPage({ params }: { params: Promise<Params> }) 
           </span>
           <div className="section-head" style={{ marginTop: 24, marginBottom: 48 }}>
             <h2>
-              Snel, vindbaar, geregeld.<em>/ voor bedrijven in {s.naam}.</em>
+              Snel, vindbaar, geregeld.<em>voor bedrijven in {s.naam}.</em>
             </h2>
           </div>
           <div className="dienst-grid">
@@ -137,7 +137,7 @@ export default async function StadPage({ params }: { params: Promise<Params> }) 
           </span>
           <div className="section-head" style={{ marginTop: 24, marginBottom: 32 }}>
             <h2>
-              Gevonden worden in {s.naam}.<em>/ wat hier anders is.</em>
+              Gevonden worden in {s.naam}.<em>wat hier anders is.</em>
             </h2>
           </div>
           <div style={{ display: 'grid', gap: 20, maxWidth: 820 }}>
@@ -174,7 +174,7 @@ export default async function StadPage({ params }: { params: Promise<Params> }) 
               <div style={{ fontFamily: 'var(--mono)', fontSize: 11, letterSpacing: '.1em', textTransform: 'uppercase', color: 'var(--p1)', fontWeight: 600 }}>
                 Case · {lokaleCase.locatie}
               </div>
-              <h3 style={{ fontFamily: 'var(--cond)', fontWeight: 800, fontSize: 28, textTransform: 'uppercase', margin: '8px 0 10px', color: 'var(--ink)' }}>
+              <h3 style={{ fontFamily: 'var(--cond)', fontWeight: 800, fontSize: 24, margin: '8px 0 10px', color: 'var(--ink)' }}>
                 {lokaleCase.naam}
               </h3>
               <p style={{ fontSize: 16, lineHeight: 1.6, color: 'var(--mute)', margin: 0 }}>{s.caseTekst}</p>
@@ -193,7 +193,7 @@ export default async function StadPage({ params }: { params: Promise<Params> }) 
           </span>
           <div className="section-head" style={{ marginTop: 24, marginBottom: 32 }}>
             <h2>
-              Jouw vak, jouw site.<em>/ per branche uitgewerkt.</em>
+              Jouw vak, jouw site.<em>per branche uitgewerkt.</em>
             </h2>
             <p className="lead">
               Een loodgieter heeft een andere site nodig dan een hovenier. Per branche lees je
@@ -223,7 +223,7 @@ export default async function StadPage({ params }: { params: Promise<Params> }) 
           </span>
           <div className="section-head" style={{ marginTop: 24, marginBottom: 48 }}>
             <h2>
-              Vragen uit {s.naam}.<em>/ misschien staat het hier al.</em>
+              Vragen uit {s.naam}.<em>misschien staat het hier al.</em>
             </h2>
           </div>
           <div style={{ display: 'grid', gap: 14, maxWidth: 920 }}>
@@ -232,7 +232,7 @@ export default async function StadPage({ params }: { params: Promise<Params> }) 
                 key={f.q}
                 style={{ background: '#fff', borderRadius: 14, border: '1px solid var(--rule)', overflow: 'hidden' }}
               >
-                <summary style={{ padding: '24px 28px', cursor: 'pointer', fontFamily: 'var(--cond)', fontWeight: 700, fontSize: 22, textTransform: 'uppercase', letterSpacing: '.005em', display: 'flex', justifyContent: 'space-between', alignItems: 'center', listStyle: 'none' }}>
+                <summary style={{ padding: '24px 28px', cursor: 'pointer', fontFamily: 'var(--cond)', fontWeight: 700, fontSize: 19, letterSpacing: '.005em', display: 'flex', justifyContent: 'space-between', alignItems: 'center', listStyle: 'none' }}>
                   {f.q}
                   <span style={{ fontFamily: 'var(--mono)', fontSize: 14, color: 'var(--p1)', flexShrink: 0, marginLeft: 16 }}>+</span>
                 </summary>
@@ -260,7 +260,7 @@ export default async function StadPage({ params }: { params: Promise<Params> }) 
         eyebrow={`Bedrijf in ${s.naam}?`}
         title="Plan een gesprek."
         subtitle="30 minuten, vrijblijvend"
-        body={`Vertel wat je nodig hebt. Je krijgt binnen 24 uur een eerlijke inschatting voor een website of software voor jouw bedrijf in ${s.naam}.`}
+        body={`Vertel wat je nodig hebt. Je krijgt binnen één werkdag een eerlijke inschatting voor een website of software voor jouw bedrijf in ${s.naam}.`}
       />
 
       <SiteFooter />

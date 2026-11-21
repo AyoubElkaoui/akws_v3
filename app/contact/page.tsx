@@ -25,7 +25,7 @@ const FAQ = [
   { q: 'Kan ik de website zelf bijhouden?', a: 'Ja. Tekst en foto\'s pas je zelf aan in het CMS. Voor structurele wijzigingen help ik. Kleine aanpassingen zijn inbegrepen in het onderhoudsbedrag.' },
   { q: 'Wat als ik al een boekhoudpakket heb?', a: 'Snelstart, Exact, Moneybird: ik koppel ermee. Liever houden wat werkt dan opnieuw beginnen.' },
   { q: 'Wat kost een website?', a: 'Dat hangt af van wat je nodig hebt, dus werk ik met een offerte op maat in plaats van vaste pakketprijzen. In een gratis kennismaking van 30 minuten hoor ik wat je zoekt en krijg je daarna een vast bod op papier — geen uurtje-factuurtje, alle prijzen excl. 21% BTW.' },
-  { q: 'Hoe lang duurt een traject?', a: 'Een website staat binnen 2 weken live, van kennismaking tot lancering. Maatwerk software duurt langer (per fase); de planning krijg je vooraf op papier.' },
+  { q: 'Hoe lang duurt een traject?', a: 'Een website staat binnen 3–4 weken live, van kennismaking tot lancering. Maatwerk software duurt langer (per fase); de planning krijg je vooraf op papier.' },
   { q: 'Wat als ik niet tevreden ben?', a: 'Ik werk met wekelijkse demo\'s en vaste mijlpalen. Bij elke mijlpaal kun je bijsturen. Als het echt niet klikt, stoppen we.' },
 ];
 
@@ -44,7 +44,7 @@ export default function ContactPage() {
 
       <PageHead
         crumbs={[{ href: '/', label: 'Home' }, { label: 'Contact' }]}
-        chip="Reactie binnen 24 uur op werkdagen"
+        chip="Reactie binnen één werkdag"
         title={
           <>
             Plan een gesprek<br />of stuur een mail.
@@ -67,7 +67,7 @@ export default function ContactPage() {
                 <em>zonder wachtrij.</em>
               </h2>
               <p>
-                Bereikbaar op werkdagen. Via e-mail reageer ik binnen 24 uur.
+                Bereikbaar op werkdagen. Via e-mail reageer ik binnen één werkdag.
                 Liever bellen? Vul het formulier in, dan neem ik contact op voor een gesprekstijd.
               </p>
 
@@ -91,7 +91,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <div className="lbl">Reactietijd</div>
-                  <div className="v">24 uur<br /><span style={{ fontFamily: 'var(--sans)', fontWeight: 400, fontSize: 14, color: 'var(--mute)', textTransform: 'none' }}>Op werkdagen</span></div>
+                  <div className="v">1 werkdag<br /><span style={{ fontFamily: 'var(--sans)', fontWeight: 400, fontSize: 14, color: 'var(--mute)', textTransform: 'none' }}>Op werkdagen</span></div>
                 </div>
                 <div>
                   <div className="lbl">Werkgebied</div>
@@ -118,9 +118,9 @@ export default function ContactPage() {
             <span className="rule" /> Veelgestelde vragen
           </span>
           <div className="section-head" style={{ marginTop: 24, marginBottom: 48 }}>
-            <h2 style={{ fontFamily: 'var(--cond)', fontWeight: 800, fontSize: 64, letterSpacing: '-.02em', lineHeight: .95, textTransform: 'uppercase', margin: 0 }}>
+            <h2 style={{ fontFamily: 'var(--cond)', fontWeight: 800, fontSize: 40, letterSpacing: '-.02em', lineHeight: 1.05, margin: 0 }}>
               Voordat je schrijft.
-              <em style={{ fontFamily: '"Barlow", sans-serif', fontStyle: 'italic', fontWeight: 300, textTransform: 'none', letterSpacing: '-.015em', color: 'var(--mute)', fontSize: '.5em', display: 'block', marginTop: 6 }}>
+              <em style={{ fontFamily: 'var(--sans)', fontStyle: 'normal', fontWeight: 500, textTransform: 'none', letterSpacing: '-.015em', color: 'var(--mute)', fontSize: '.5em', display: 'block', marginTop: 6 }}>
                 / misschien staat het hier al.
               </em>
             </h2>
@@ -134,7 +134,7 @@ export default function ContactPage() {
                 style={{ background: '#fff', borderRadius: 14, border: '1px solid var(--rule)', overflow: 'hidden' }}
                 {...(f.open ? { open: true } : {})}
               >
-                <summary style={{ padding: '24px 28px', cursor: 'pointer', fontFamily: 'var(--cond)', fontWeight: 700, fontSize: 22, textTransform: 'uppercase', letterSpacing: '.005em', display: 'flex', justifyContent: 'space-between', alignItems: 'center', listStyle: 'none' }}>
+                <summary style={{ padding: '24px 28px', cursor: 'pointer', fontFamily: 'var(--cond)', fontWeight: 700, fontSize: 19, letterSpacing: '.005em', display: 'flex', justifyContent: 'space-between', alignItems: 'center', listStyle: 'none' }}>
                   {f.q}
                   <span style={{ fontFamily: 'var(--mono)', fontSize: 14, color: 'var(--p1)', flexShrink: 0, marginLeft: 16 }}>+</span>
                 </summary>

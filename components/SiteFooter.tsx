@@ -1,7 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { BRAND, BRANCHES } from '@/lib/data';
-import { STEDEN } from '@/lib/steden';
+import { STEDEN, stadBySlug } from '@/lib/steden';
+import { DIENST_LOCATIES, dienstSteden } from '@/lib/dienst-steden';
 
 export function SiteFooter() {
   return (
@@ -37,7 +38,7 @@ export function SiteFooter() {
             <div className="col-t">Bedrijf</div>
             <div className="col-l">
               <Link href="/over">Over Ayoub</Link>
-              <Link href="/cases">Cases</Link>
+              <Link href="/cases">Werk</Link>
               <Link href="/werkwijze">Werkwijze</Link>
               <Link href="/prijzen">Pakketten</Link>
               <Link href="/blog">Blog</Link>
@@ -73,6 +74,16 @@ export function SiteFooter() {
               </Link>
             ))}
           </div>
+          {DIENST_LOCATIES.map((d) => (
+            <div key={d.key} style={{ display: 'flex', flexWrap: 'wrap' }}>
+              <Link href={d.dienstHref} style={{ color: '#fff', fontWeight: 600, marginRight: 14 }}>{d.key === 'lokale-seo' ? 'Lokale SEO' : d.naam}</Link>
+              {dienstSteden(d).map((slug) => (
+                <Link key={slug} href={`${d.base}/${slug}`} style={{ color: 'rgba(255,255,255,.6)', marginRight: 14, whiteSpace: 'nowrap' }}>
+                  {stadBySlug(slug)?.naam}
+                </Link>
+              ))}
+            </div>
+          ))}
         </nav>
         <div className="bottom">
           <span>© 2026 AK Web Solutions · Ayoub Elkaoui</span>

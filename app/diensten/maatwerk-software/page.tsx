@@ -4,24 +4,43 @@ import { SiteNav } from '@/components/SiteNav';
 import { SiteFooter } from '@/components/SiteFooter';
 import { Cta } from '@/components/Cta';
 import { PageHead } from '@/components/PageHead';
-import { CASES } from '@/lib/data';
+import { RegioLinks } from '@/components/RegioLinks';
+import { MAATWERK_SOFTWARE } from '@/lib/dienst-steden';
+import { CASES, CASE_DETAILS } from '@/lib/data';
 import { buildMetadata, breadcrumbSchema, serviceSchema, faqSchema } from '@/lib/seo';
 
 const FAQ_SOFTWARE = [
   { q: 'Wanneer is maatwerk software slimmer dan een bestaand pakket?', a: 'Als je huidige tools niet aansluiten op hoe jij werkt en je daardoor veel handmatig werk of dubbele invoer hebt. Voor standaardprocessen is een bestaand pakket vaak prima; maatwerk loont zodra je maand na maand tijd verliest aan iets wat geautomatiseerd zou kunnen. In de intake bekijk ik eerlijk welke kant voor jou beter is.' },
   { q: 'Kan de software koppelen met mijn administratie?', a: 'Ja. Ik koppel met pakketten als Snelstart, Exact en Moneybird, mits die een koppeling toelaten. Zo hoef je gegevens niet dubbel in te voeren en komt bijvoorbeeld een werkbon of urenregistratie direct in je administratie terecht.' },
   { q: 'Hoe lang duurt een softwareproject?', a: 'Ik werk in afgebakende fases van doorgaans 4 tot 8 weken, elk met een vaste prijs. Zo lever ik snel iets werkends op en breiden we uit op basis van gebruik, in plaats van maandenlang aan één groot systeem te bouwen zonder tussenresultaat.' },
-  { q: 'Wat kost maatwerk software?', a: 'Prijs op maat, per afgebakende fase, na een intake en procesanalyse. Vaste prijs per fase — geen uurtje-factuurtje en geen nacalculatie. Je weet vooraf waar je aan toe bent.' },
+  { q: 'Wat kost maatwerk software?', a: 'Een klikbaar prototype begint bij €750, een kleine tool of koppeling kost €500 tot €1.500 en een eerste werkende fase van een web-app met login en database ligt meestal tussen €3.500 en €8.000. Grotere platforms bouw ik in fases met elk een vaste prijs. Hosting en onderhoud vanaf €49 per maand, uitbreidingen €85 per uur of per blok.' },
   { q: 'Werkt de software ook op de bouwplaats, zonder goed bereik?', a: 'Ja. Ik bouw mobiel-first en waar nodig als Progressive Web App die offline werkt en synct zodra er weer verbinding is. Zo kan een monteur uren of een werkbon ter plekke registreren, ook in een kruipruimte zonder bereik.' },
   { q: 'Wat als maatwerk toch niet de juiste oplossing blijkt?', a: 'Dan zeg ik dat. Soms is een bestaand pakket of een slimme koppeling goedkoper en beter dan iets nieuws bouwen. Ik verdien liever je vertrouwen met eerlijk advies dan een project dat je niet nodig had.' },
 ];
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Maatwerk software voor installatiebedrijven | AKWS',
+  title: 'Maatwerk software laten maken | Vanaf €3.500 per fase | AKWS',
   description:
-    'Urenregistratie, ticketsystemen, koppelingen met Snelstart en Exact. Software die past bij jouw processen, geen generieke SaaS. Vaste prijs per fase.',
+    'Maatwerk software laten maken: urenregistratie, voorraad, dashboards en koppelingen met je ERP of boekhouding. Prototype vanaf €750, eerste fase vanaf €3.500. Bekijk 6 echte projecten.',
   path: '/diensten/maatwerk-software',
 });
+
+const PRIJSKLASSEN = {
+  prototype: { titel: 'Klikbaar prototype', prijs: 'vanaf €750', d: '1 tot 2 weken', tekst: 'Alle schermen om te proberen, met voorbeelddata. Je weet wat je krijgt voordat er gebouwd wordt.' },
+  tool: { titel: 'Kleine tool of koppeling', prijs: '€500 – €1.500', d: '1 tot 2 weken', tekst: 'Een export omzetten naar je ERP, een los hulpprogramma of een koppeling tussen twee pakketten.' },
+  module: { titel: 'Eerste fase web-app', prijs: '€3.500 – €8.000', d: '4 tot 8 weken', tekst: 'Eén afgebakende module met login en database: urenregistratie, voorraad, dashboard of werkbonnen.' },
+  platform: { titel: 'Platform in fases', prijs: 'vanaf €8.000', d: '2 tot 4 maanden', tekst: 'Meerdere gekoppelde modules, zoals tickets, voorraad en facturatie. Elke fase een eigen vaste prijs.' },
+};
+
+/** Welke prijsklasse past bij een vergelijkbaar project (indicatie, geen factuurbedrag van de klant). */
+const KLASSE_PER_CASE: Record<string, keyof typeof PRIJSKLASSEN> = {
+  urenportaal: 'prototype',
+  'financieel-dashboard': 'module',
+  'voorraad-app': 'module',
+  'facturatie-app': 'platform',
+  clockd: 'platform',
+  itflow: 'platform',
+};
 
 const WERKWIJZE_MAATWERK = [
   { n: '01', t: 'Intake', d: 'gratis', s: 'Wat moet de software doen, wat is het probleem nu? 30 minuten, geen verkooppraat.' },
@@ -34,6 +53,7 @@ const WERKWIJZE_MAATWERK = [
 
 export default function MaatwerkSoftwarePage() {
   const softwareCases = CASES.filter(c => c.meta === 'Maatwerk software');
+  const softwareDetails = CASE_DETAILS.filter(c => c.meta === 'Maatwerk software');
 
   return (
     <>
@@ -82,7 +102,7 @@ export default function MaatwerkSoftwarePage() {
               { titel: 'Dashboards', tekst: 'Jouw bedrijfsvoering inzichtelijk. Uren, projecten, omzet, openstaande items.' },
             ].map((item) => (
               <div key={item.titel} style={{ background: '#fff', borderRadius: 14, padding: '24px 24px', border: '1px solid var(--rule)' }}>
-                <h3 style={{ fontFamily: 'var(--cond)', fontWeight: 700, fontSize: 20, textTransform: 'uppercase', margin: '0 0 10px' }}>{item.titel}</h3>
+                <h3 style={{ fontFamily: 'var(--cond)', fontWeight: 700, fontSize: 17, margin: '0 0 10px' }}>{item.titel}</h3>
                 <p style={{ fontSize: 14, color: 'var(--mute)', margin: 0, lineHeight: 1.55 }}>{item.tekst}</p>
               </div>
             ))}
@@ -90,7 +110,7 @@ export default function MaatwerkSoftwarePage() {
 
           {/* Geen SaaS, wel maatwerk */}
           <div style={{ padding: '36px 40px', background: 'linear-gradient(135deg, color-mix(in oklab, var(--p1) 6%, #fff), #fff)', border: '1px solid color-mix(in oklab, var(--p1) 20%, transparent)', borderRadius: 16, maxWidth: 720, marginBottom: 64 }}>
-            <h3 style={{ fontFamily: 'var(--cond)', fontWeight: 800, fontSize: 28, textTransform: 'uppercase', margin: '0 0 16px' }}>Geen SaaS, wel maatwerk</h3>
+            <h3 style={{ fontFamily: 'var(--cond)', fontWeight: 800, fontSize: 24, margin: '0 0 16px' }}>Geen SaaS, wel maatwerk</h3>
             <p style={{ fontSize: 16, lineHeight: 1.65, color: 'var(--ink-soft)', margin: 0 }}>
               Het verschil met generieke software (Zoho, AFAS, Simplicate) is dat ik bouw wat jouw bedrijf
               nodig heeft, niet wat 10.000 andere bedrijven nodig hebben. Geen overbodige features, geen
@@ -135,7 +155,7 @@ export default function MaatwerkSoftwarePage() {
               <span className="rule" /> Voorbeelden
             </span>
             <div className="section-head" style={{ marginTop: 24, marginBottom: 40 }}>
-              <h2>Eerder gebouwd.<em>/ met echte technische uitdagingen.</em></h2>
+              <h2>Eerder gebouwd.<em>met echte technische uitdagingen.</em></h2>
             </div>
             <div className="case-grid">
               {softwareCases.map((c) => (
@@ -161,6 +181,69 @@ export default function MaatwerkSoftwarePage() {
         </section>
       )}
 
+      {/* Per project uitgelegd */}
+      <section className="section over">
+        <div className="wrap">
+          <span className="eyebrow">
+            <span className="num">→</span>
+            <span className="rule" /> Per project uitgelegd
+          </span>
+          <div className="section-head" style={{ marginTop: 24, marginBottom: 40 }}>
+            <h2>Wat ik bouwde.<em>probleem, oplossing en wat het opleverde.</em></h2>
+            <p className="lead">
+              Geen vage beloftes: per project lees je wat er misging, wat de software doet en wat het
+              nu oplevert. De prijsklasse is wat een vergelijkbaar project bij mij kost.
+            </p>
+          </div>
+          <div style={{ display: 'grid', gap: 20 }}>
+            {softwareDetails.map((c) => {
+              const klasse = PRIJSKLASSEN[KLASSE_PER_CASE[c.slug] ?? 'module'];
+              return (
+                <article key={c.slug} style={{ background: '#fff', borderRadius: 16, border: '1px solid var(--rule)', padding: '28px 32px' }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', gap: 12, flexWrap: 'wrap', alignItems: 'baseline' }}>
+                    <div>
+                      <div style={{ fontFamily: 'var(--mono)', fontSize: 11, letterSpacing: '.1em', textTransform: 'uppercase', color: 'var(--p1)', fontWeight: 600 }}>
+                        {c.sector} · {c.locatie}
+                      </div>
+                      <h3 style={{ fontFamily: 'var(--cond)', fontWeight: 800, fontSize: 26, margin: '6px 0 0', color: 'var(--ink)' }}>{c.naam}</h3>
+                    </div>
+                    <div style={{ textAlign: 'right' }}>
+                      <div style={{ fontFamily: 'var(--mono)', fontSize: 10, letterSpacing: '.08em', textTransform: 'uppercase', color: 'var(--mute)' }}>Vergelijkbaar project</div>
+                      <div style={{ fontFamily: 'var(--cond)', fontWeight: 800, fontSize: 18, color: 'var(--ink)' }}>{klasse.prijs}</div>
+                    </div>
+                  </div>
+                  <p style={{ fontSize: 17, lineHeight: 1.6, color: 'var(--ink-soft)', margin: '14px 0 20px' }}>{c.intro}</p>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 24 }}>
+                    <div>
+                      <div style={{ fontFamily: 'var(--mono)', fontSize: 11, letterSpacing: '.08em', textTransform: 'uppercase', color: 'var(--mute)', marginBottom: 8 }}>Het probleem</div>
+                      <p style={{ fontSize: 15, lineHeight: 1.6, color: 'var(--ink-soft)', margin: 0 }}>{c.situatie[0]}</p>
+                    </div>
+                    <div>
+                      <div style={{ fontFamily: 'var(--mono)', fontSize: 11, letterSpacing: '.08em', textTransform: 'uppercase', color: 'var(--mute)', marginBottom: 8 }}>Wat het doet</div>
+                      <ul style={{ margin: 0, paddingLeft: 18, fontSize: 15, lineHeight: 1.6, color: 'var(--ink-soft)' }}>
+                        {c.aanpak.map((a) => <li key={a.titel}><strong style={{ color: 'var(--ink)' }}>{a.titel}.</strong> {a.tekst}</li>)}
+                      </ul>
+                    </div>
+                    <div>
+                      <div style={{ fontFamily: 'var(--mono)', fontSize: 11, letterSpacing: '.08em', textTransform: 'uppercase', color: 'var(--mute)', marginBottom: 8 }}>Resultaat</div>
+                      <ul style={{ margin: 0, paddingLeft: 18, fontSize: 15, lineHeight: 1.6, color: 'var(--ink-soft)' }}>
+                        {c.resultaat.map((r) => <li key={r}>{r}</li>)}
+                      </ul>
+                    </div>
+                  </div>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', gap: 12, flexWrap: 'wrap', alignItems: 'center', marginTop: 22, paddingTop: 18, borderTop: '1px solid var(--rule)' }}>
+                    <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
+                      {(c.techStack ?? []).slice(0, 5).map((t) => <span className="chip" key={t}>{t}</span>)}
+                    </div>
+                    <Link href={`/cases/${c.slug}`} style={{ fontWeight: 600, color: 'var(--p1)' }}>Bekijk schermen en details →</Link>
+                  </div>
+                </article>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
       {/* Prijzen */}
       <section className="section prijzen">
         <div className="wrap">
@@ -168,22 +251,23 @@ export default function MaatwerkSoftwarePage() {
             <span className="num">→</span>
             <span className="rule" /> Prijzen
           </span>
-          <div style={{ marginTop: 32, display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 20 }}>
+          <div className="section-head" style={{ marginTop: 24, marginBottom: 32 }}>
+            <h2>Wat het kost.<em>normale prijzen, vooraf vast.</em></h2>
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 20 }}>
             {[
-              { titel: 'Eenvoudige module', prijs: 'Op maat', d: '4 tot 6 weken', tekst: 'Eén afgebakende module. Urenregistratie, werkbon-systeem, of koppeling.' },
-              { titel: 'Middelgroot project', prijs: 'Op maat', d: '2 tot 3 maanden', tekst: 'Meerdere gekoppelde modules. Dashboard, klantportaal, planningssysteem.' },
-              { titel: 'Groot project', prijs: 'Op maat', d: 'na inventarisatie', tekst: 'Volledig maatwerk platform. Intake en procesanalyse vooraf verplicht.' },
+              ...Object.values(PRIJSKLASSEN),
             ].map((item) => (
               <div key={item.titel} style={{ background: '#fff', borderRadius: 16, padding: '28px 28px', border: '1px solid var(--rule)' }}>
                 <div style={{ fontFamily: 'var(--mono)', fontSize: 11, color: 'var(--p1)', letterSpacing: '.08em', textTransform: 'uppercase', marginBottom: 8 }}>{item.titel}</div>
-                <div style={{ fontFamily: 'var(--cond)', fontWeight: 800, fontSize: 28, textTransform: 'uppercase', marginBottom: 4 }}>{item.prijs}</div>
+                <div style={{ fontFamily: 'var(--cond)', fontWeight: 800, fontSize: 24, marginBottom: 4 }}>{item.prijs}</div>
                 <div style={{ fontFamily: 'var(--mono)', fontSize: 11, color: 'var(--mute)', letterSpacing: '.06em', marginBottom: 16 }}>{item.d}</div>
                 <p style={{ fontSize: 14, color: 'var(--mute)', margin: 0, lineHeight: 1.55 }}>{item.tekst}</p>
               </div>
             ))}
           </div>
           <p style={{ marginTop: 20, fontFamily: 'var(--mono)', fontSize: 11, color: 'var(--mute)', letterSpacing: '.06em' }}>
-            Prijzen op maat, exclusief 21% BTW. Vaste prijs per fase — geen uurtje-factuurtje.
+            Alle prijzen exclusief 21% btw. Vaste prijs per fase; hosting en onderhoud vanaf €49 per maand, uitbreidingen €85 per uur.
           </p>
         </div>
       </section>
@@ -198,7 +282,7 @@ export default function MaatwerkSoftwarePage() {
           <div style={{ marginTop: 40, display: 'grid', gap: 14, maxWidth: 920 }}>
             {FAQ_SOFTWARE.map((f) => (
               <details key={f.q} style={{ background: '#fff', borderRadius: 14, border: '1px solid var(--rule)', overflow: 'hidden' }}>
-                <summary style={{ padding: '24px 28px', cursor: 'pointer', fontFamily: 'var(--cond)', fontWeight: 700, fontSize: 22, textTransform: 'uppercase', letterSpacing: '.005em', display: 'flex', justifyContent: 'space-between', alignItems: 'center', listStyle: 'none' }}>
+                <summary style={{ padding: '24px 28px', cursor: 'pointer', fontFamily: 'var(--cond)', fontWeight: 700, fontSize: 19, letterSpacing: '.005em', display: 'flex', justifyContent: 'space-between', alignItems: 'center', listStyle: 'none' }}>
                   {f.q}
                   <span style={{ fontFamily: 'var(--mono)', fontSize: 14, color: 'var(--p1)', flexShrink: 0, marginLeft: 16 }}>+</span>
                 </summary>
@@ -212,6 +296,8 @@ export default function MaatwerkSoftwarePage() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(FAQ_SOFTWARE)) }}
         />
       </section>
+
+      <RegioLinks dienst={MAATWERK_SOFTWARE} />
 
       <Cta
         eyebrow="Een software-uitdaging?"

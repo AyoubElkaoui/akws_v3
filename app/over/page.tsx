@@ -66,7 +66,7 @@ export default function OverPage() {
                     <div style={{ fontFamily: 'var(--mono)', fontSize: 10, color: 'var(--mute)', letterSpacing: '.08em', textTransform: 'uppercase' }}>
                       HBO + MBO
                     </div>
-                    <div style={{ fontFamily: 'var(--cond)', fontSize: 18, fontWeight: 700, textTransform: 'uppercase', marginTop: 2 }}>
+                    <div style={{ fontFamily: 'var(--cond)', fontSize: 18, fontWeight: 700, marginTop: 2 }}>
                       Software & business
                     </div>
                   </div>
@@ -118,7 +118,7 @@ export default function OverPage() {
             <span className="rule" /> Waarom installatiebranche
           </span>
           <div className="section-head" style={{ marginTop: 24, marginBottom: 48 }}>
-            <h2>Hier liegt het werk.<em>/ hier ben ik thuis.</em></h2>
+            <h2>Hier liegt het werk.<em>hier ben ik thuis.</em></h2>
             <p className="lead">
               Mijn eerste klanten kwamen uit deze hoek. Op een gegeven moment was het patroon duidelijk.
             </p>
@@ -147,7 +147,7 @@ export default function OverPage() {
             <span className="rule" /> Principes
           </span>
           <div className="section-head" style={{ marginTop: 24, marginBottom: 48 }}>
-            <h2>Drie principes.<em>/ geen muurposters, gewoon hoe ik werk.</em></h2>
+            <h2>Drie principes.<em>geen muurposters, gewoon hoe ik werk.</em></h2>
           </div>
           <div className="values">
             {PRINCIPES.map((v) => (
@@ -169,7 +169,7 @@ export default function OverPage() {
             <span className="rule" /> Tijdlijn
           </span>
           <div className="section-head" style={{ marginTop: 24, marginBottom: 60 }}>
-            <h2>Hoe het ging.<em>/ chronologisch, geen pretentie.</em></h2>
+            <h2>Hoe het ging.<em>chronologisch, geen pretentie.</em></h2>
           </div>
           <div className="timeline">
             {TIMELINE.map((t) => (
@@ -203,18 +203,18 @@ export default function OverPage() {
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: 24, paddingTop: 28, borderTop: '1px solid var(--rule)' }}>
               <div>
                 <div style={{ fontFamily: 'var(--mono)', fontSize: 11, color: 'var(--mute)', letterSpacing: '.08em', textTransform: 'uppercase', marginBottom: 6 }}>E-mail</div>
-                <a href={`mailto:${BRAND.email}`} style={{ fontFamily: 'var(--cond)', fontWeight: 700, fontSize: 18, textTransform: 'uppercase', color: 'var(--p1)', textDecoration: 'none' }}>
+                <a href={`mailto:${BRAND.email}`} style={{ fontFamily: 'var(--cond)', fontWeight: 700, fontSize: 18, color: 'var(--p1)', textDecoration: 'none' }}>
                   {BRAND.email}
                 </a>
               </div>
               <div>
                 <div style={{ fontFamily: 'var(--mono)', fontSize: 11, color: 'var(--mute)', letterSpacing: '.08em', textTransform: 'uppercase', marginBottom: 6 }}>Gevestigd</div>
-                <div style={{ fontFamily: 'var(--cond)', fontWeight: 700, fontSize: 18, textTransform: 'uppercase' }}>Baarn, Utrecht</div>
+                <div style={{ fontFamily: 'var(--cond)', fontWeight: 700, fontSize: 18 }}>Baarn, Utrecht</div>
               </div>
               {BRAND.linkedin !== 'TODO_LINKEDIN' && (
                 <div>
                   <div style={{ fontFamily: 'var(--mono)', fontSize: 11, color: 'var(--mute)', letterSpacing: '.08em', textTransform: 'uppercase', marginBottom: 6 }}>LinkedIn</div>
-                  <a href={BRAND.linkedin} target="_blank" rel="noopener noreferrer" style={{ fontFamily: 'var(--cond)', fontWeight: 700, fontSize: 18, textTransform: 'uppercase', color: 'var(--p1)', textDecoration: 'none' }}>
+                  <a href={BRAND.linkedin} target="_blank" rel="noopener noreferrer" style={{ fontFamily: 'var(--cond)', fontWeight: 700, fontSize: 18, color: 'var(--p1)', textDecoration: 'none' }}>
                     Profiel →
                   </a>
                 </div>

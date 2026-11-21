@@ -23,11 +23,10 @@ export default function NotFound() {
           <h1
             style={{
               fontFamily: 'var(--cond)',
-              fontWeight: 900,
-              fontSize: 'clamp(64px, 12vw, 140px)',
+              fontWeight: 800,
+              fontSize: 'clamp(42px, 12vw, 91px)',
               lineHeight: 0.92,
               letterSpacing: '-.025em',
-              textTransform: 'uppercase',
               margin: '0 0 32px',
             }}
           >

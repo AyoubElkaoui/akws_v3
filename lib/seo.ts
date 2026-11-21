@@ -73,7 +73,7 @@ export function localBusinessSchema() {
     knowsAbout: ['Webdesign', 'Lokale SEO', 'Google Ads', 'Maatwerk software', 'Next.js'],
     telephone: '+31685722387',
     email: 'info@akwebsolutions.nl',
-    priceRange: '€€',
+    priceRange: '€1.495 - €8.000',
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Baarn',
@@ -81,8 +81,9 @@ export function localBusinessSchema() {
       addressCountry: 'NL',
     },
     areaServed: [
-      'Baarn', 'Soest', 'Hilversum', 'Bussum', 'Naarden', 'Huizen',
-      'Laren', 'Amersfoort', 'Nijkerk', 'Utrecht',
+      'Baarn', 'Soest', 'Eemnes', 'Hilversum', 'Bussum', 'Naarden', 'Huizen',
+      'Laren', 'Amersfoort', 'Leusden', 'Bunschoten-Spakenburg', 'Nijkerk',
+      'Zeist', 'De Bilt', 'Maarssen', 'Utrecht',
     ].map((name) => ({ '@type': 'City', name })),
     founder: {
       '@type': 'Person',

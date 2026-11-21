@@ -80,11 +80,10 @@ export default function BlogPage() {
                     <div
                       style={{
                         fontFamily: 'var(--cond)',
-                        fontSize: 80,
+                        fontSize: 50,
                         lineHeight: 0.9,
-                        fontWeight: 900,
+                        fontWeight: 800,
                         color: '#fff',
-                        textTransform: 'uppercase',
                         letterSpacing: '-.02em',
                       }}
                     >

@@ -87,11 +87,11 @@ export function ContactForm() {
         style={{ display: 'flex', flexDirection: 'column', gap: 16, alignItems: 'center', justifyContent: 'center', minHeight: 400 }}
       >
         <div style={{ fontSize: 40 }}>✓</div>
-        <div style={{ fontFamily: 'var(--cond)', fontWeight: 800, fontSize: 28, textTransform: 'uppercase', textAlign: 'center' }}>
+        <div style={{ fontFamily: 'var(--cond)', fontWeight: 800, fontSize: 24, textAlign: 'center' }}>
           Aanvraag ontvangen
         </div>
         <p style={{ color: 'rgba(255,255,255,.7)', textAlign: 'center', margin: 0, fontSize: 15 }}>
-          Ayoub neemt binnen 24 uur contact op via je opgegeven telefoonnummer of e-mailadres.
+          Ayoub neemt binnen één werkdag contact op via je opgegeven telefoonnummer of e-mailadres.
         </p>
         <div style={{ fontFamily: 'var(--mono)', fontSize: 12, color: 'rgba(255,255,255,.5)', marginTop: 8 }}>
           Of bel direct: {BRAND.phone}
@@ -115,7 +115,7 @@ export function ContactForm() {
           Plan 30 minuten<br />met Ayoub.
         </div>
         <p className="sub">
-          Vertel kort waar je tegenaan loopt. Binnen 24 uur reactie op werkdagen.
+          Vertel kort waar je tegenaan loopt. Reactie binnen één werkdag.
         </p>
 
         <div className="field">
@@ -204,7 +204,7 @@ export function ContactForm() {
             flexWrap: 'wrap',
           }}
         >
-          <span style={{ color: 'var(--p-soft)' }}>Reactie &lt; 24 uur</span>
+          <span style={{ color: 'var(--p-soft)' }}>Reactie binnen 1 werkdag</span>
           <span>Vrijblijvend</span>
           <span>Geen verkooppraat</span>
         </div>

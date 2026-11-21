@@ -43,7 +43,7 @@ export function Cta({
             </span>
             <h2>
               {title}
-              <em>/ {subtitle}</em>
+              <em>{subtitle}</em>
             </h2>
             <p className="cta-sub">{body}</p>
             <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', marginTop: 24 }}>
@@ -51,7 +51,7 @@ export function Cta({
               <a href={wa} target="_blank" rel="noopener noreferrer" style={pil}>Stuur een appje</a>
             </div>
             <div className="cta-checks">
-              <span className="ok">Reactie &lt; 24 uur</span>
+              <span className="ok">Reactie binnen 1 werkdag</span>
               <span>Vrijblijvend</span>
               <span>Geen verkooppraat</span>
             </div>
@@ -117,11 +117,11 @@ function CtaSimpleForm() {
     return (
       <div className="form-card" style={{ textAlign: 'center' }}>
         <div style={{ fontSize: 32, marginBottom: 12 }}>✓</div>
-        <div style={{ fontFamily: 'var(--cond)', fontWeight: 800, fontSize: 22, textTransform: 'uppercase' }}>
+        <div style={{ fontFamily: 'var(--cond)', fontWeight: 800, fontSize: 19 }}>
           Aanvraag ontvangen
         </div>
-        <p style={{ color: 'rgba(255,255,255,.7)', marginTop: 8, fontSize: 14 }}>
-          Ayoub neemt binnen 24 uur contact op.
+        <p style={{ color: 'var(--mute)', marginTop: 8, fontSize: 14 }}>
+          Ayoub neemt binnen één werkdag contact op.
         </p>
       </div>
     );
@@ -140,7 +140,7 @@ function CtaSimpleForm() {
         {status !== 'loading' && <span className="arrow">→</span>}
       </button>
       {status === 'error' && (
-        <p style={{ color: '#fca5a5', fontSize: 12, marginTop: 8 }}>
+        <p style={{ color: '#b42318', fontSize: 13, marginTop: 8 }}>
           Er is iets misgegaan. Probeer het opnieuw.
         </p>
       )}

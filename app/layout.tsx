@@ -1,29 +1,23 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
-import { Barlow, Barlow_Condensed, JetBrains_Mono } from 'next/font/google';
+import localFont from 'next/font/local';
 import { localBusinessSchema } from '@/lib/seo';
 import { WhatsAppButton } from '@/components/WhatsAppButton';
 import { TrackClicks } from '@/components/TrackClicks';
 import './globals.css';
 
-const barlow = Barlow({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-  variable: '--font-barlow',
+// Fonts staan lokaal in app/fonts (Inter + Inter Tight, OFL-licentie): geen Google Fonts nodig.
+const inter = localFont({
+  src: './fonts/inter-latin.woff2',
+  weight: '100 900',
+  variable: '--font-sans',
   display: 'swap',
 });
 
-const barlowCondensed = Barlow_Condensed({
-  subsets: ['latin'],
-  weight: ['500', '600', '700', '800', '900'],
-  variable: '--font-barlow-condensed',
-  display: 'swap',
-});
-
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ['latin'],
-  weight: ['400', '500', '600'],
-  variable: '--font-jetbrains',
+const interTight = localFont({
+  src: './fonts/inter-tight-latin.woff2',
+  weight: '100 900',
+  variable: '--font-display',
   display: 'swap',
 });
 
@@ -61,7 +55,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="nl" className={`${barlow.variable} ${barlowCondensed.variable} ${jetbrainsMono.variable}`}>
+    <html lang="nl" className={`${inter.variable} ${interTight.variable}`}>
       <body>
         {children}
         <WhatsAppButton />

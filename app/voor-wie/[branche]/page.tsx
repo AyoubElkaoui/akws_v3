@@ -61,7 +61,7 @@ export default async function BranchePage({ params }: { params: Promise<Params> 
             <span>{b.naam}</span>
           </div>
           <span className="chip chip-purple">{b.sectorLabel}</span>
-          <h1>{b.h1}<em>/ {b.subtitel}</em></h1>
+          <h1>{b.h1}<em>{b.subtitel}</em></h1>
           <p className="lead">{b.lead}</p>
           <div style={{ marginTop: 32, display: 'flex', gap: 12, flexWrap: 'wrap' }}>
             <Link href="/contact" className="btn btn-primary">
@@ -81,7 +81,7 @@ export default async function BranchePage({ params }: { params: Promise<Params> 
           </span>
           <div className="section-head" style={{ marginTop: 24, marginBottom: 48 }}>
             <h2>
-              Wat loopt er vast?<em>/ herkenbaar voor {b.naam.toLowerCase()}.</em>
+              Wat loopt er vast?<em>herkenbaar voor {b.naam.toLowerCase()}.</em>
             </h2>
           </div>
           <div className="dienst-grid">
@@ -107,7 +107,7 @@ export default async function BranchePage({ params }: { params: Promise<Params> 
           </span>
           <div className="section-head" style={{ marginTop: 24, marginBottom: 48 }}>
             <h2>
-              Concrete aanpak.<em>/ voor {b.naam.toLowerCase()}.</em>
+              Concrete aanpak.<em>voor {b.naam.toLowerCase()}.</em>
             </h2>
           </div>
           <div style={{ display: 'grid', gap: 24 }}>
@@ -144,7 +144,7 @@ export default async function BranchePage({ params }: { params: Promise<Params> 
                   {String(i + 1).padStart(2, '0')}
                 </div>
                 <div>
-                  <h3 style={{ fontFamily: 'var(--cond)', fontWeight: 800, fontSize: 26, textTransform: 'uppercase', margin: '0 0 10px', color: 'var(--ink)' }}>
+                  <h3 style={{ fontFamily: 'var(--cond)', fontWeight: 800, fontSize: 22, margin: '0 0 10px', color: 'var(--ink)' }}>
                     {o.titel}
                   </h3>
                   <p style={{ fontSize: 16, color: 'var(--mute)', lineHeight: 1.6, margin: 0 }}>
@@ -166,7 +166,7 @@ export default async function BranchePage({ params }: { params: Promise<Params> 
           </span>
           <div className="section-head" style={{ marginTop: 24, marginBottom: 32 }}>
             <h2>
-              Zoekwoorden die ertoe doen.<em>/ voor {b.naam.toLowerCase()}.</em>
+              Zoekwoorden die ertoe doen.<em>voor {b.naam.toLowerCase()}.</em>
             </h2>
             <p className="lead">
               Dit zijn de zoekopdrachten waarop ik jouw site optimaliseer. Klanten die dit googelen,
@@ -190,7 +190,7 @@ export default async function BranchePage({ params }: { params: Promise<Params> 
           </span>
           <div className="section-head" style={{ marginTop: 24 }}>
             <h2>
-              Vaste prijs op maat.<em>/ geen verrassingen achteraf.</em>
+              Vaste prijs op maat.<em>geen verrassingen achteraf.</em>
             </h2>
             <p className="lead">
               Na de kennismaking krijg je één vast bedrag, exclusief btw. Hosting en onderhoud
@@ -200,7 +200,7 @@ export default async function BranchePage({ params }: { params: Promise<Params> 
           <div className="prijs-grid">
             {PRIJZEN.map((p) => (
               <div className={`prijs${p.feat ? ' feat' : ''}`} key={p.naam}>
-                {p.feat && <div className="prijs-tag">Meest gekozen</div>}
+                {p.feat && <div className="prijs-tag">Aanrader</div>}
                 <div className="naam">{p.naam}</div>
                 <div className="sub">{p.sub}</div>
                 <div className="price">{p.prijs}</div>
@@ -226,9 +226,9 @@ export default async function BranchePage({ params }: { params: Promise<Params> 
             <span className="rule" /> Veelgestelde vragen
           </span>
           <div className="section-head" style={{ marginTop: 24, marginBottom: 48 }}>
-            <h2 style={{ fontFamily: 'var(--cond)', fontWeight: 800, fontSize: 64, letterSpacing: '-.02em', lineHeight: .95, textTransform: 'uppercase', margin: 0 }}>
+            <h2 style={{ fontFamily: 'var(--cond)', fontWeight: 800, fontSize: 40, letterSpacing: '-.02em', lineHeight: 1.05, margin: 0 }}>
               Vragen over {b.naam.toLowerCase()}.
-              <em style={{ fontFamily: '"Barlow",sans-serif', fontStyle: 'italic', fontWeight: 300, textTransform: 'none', letterSpacing: '-.015em', color: 'var(--mute)', fontSize: '.5em', display: 'block', marginTop: 6 }}>
+              <em style={{ fontFamily: 'var(--sans)', fontStyle: 'normal', fontWeight: 500, textTransform: 'none', letterSpacing: '-.015em', color: 'var(--mute)', fontSize: '.5em', display: 'block', marginTop: 6 }}>
                 / misschien staat het hier al.
               </em>
             </h2>
@@ -239,7 +239,7 @@ export default async function BranchePage({ params }: { params: Promise<Params> 
                 key={f.q}
                 style={{ background: '#fff', borderRadius: 14, border: '1px solid var(--rule)', overflow: 'hidden' }}
               >
-                <summary style={{ padding: '24px 28px', cursor: 'pointer', fontFamily: 'var(--cond)', fontWeight: 700, fontSize: 22, textTransform: 'uppercase', letterSpacing: '.005em', display: 'flex', justifyContent: 'space-between', alignItems: 'center', listStyle: 'none' }}>
+                <summary style={{ padding: '24px 28px', cursor: 'pointer', fontFamily: 'var(--cond)', fontWeight: 700, fontSize: 19, letterSpacing: '.005em', display: 'flex', justifyContent: 'space-between', alignItems: 'center', listStyle: 'none' }}>
                   {f.q}
                   <span style={{ fontFamily: 'var(--mono)', fontSize: 14, color: 'var(--p1)', flexShrink: 0, marginLeft: 16 }}>+</span>
                 </summary>
@@ -254,7 +254,7 @@ export default async function BranchePage({ params }: { params: Promise<Params> 
         eyebrow={`Website voor ${b.naam.toLowerCase()}?`}
         title="Plan een gesprek."
         subtitle="30 minuten, vrijblijvend"
-        body={`Vertel wat je nodig hebt. Ik geef binnen 24 uur een eerlijke inschatting voor een website of software voor jouw ${b.naam.toLowerCase()}bedrijf.`}
+        body={`Vertel wat je nodig hebt. Ik geef binnen één werkdag een eerlijke inschatting voor een website of software voor jouw ${b.naam.toLowerCase()}bedrijf.`}
       />
 
       <SiteFooter />

@@ -20,13 +20,10 @@ export function ImageLightbox({ src, alt, caption, style }: Props) {
         {caption && (
           <figcaption style={{
             marginTop: 10,
-            fontFamily: 'var(--mono)',
-            fontSize: 10,
-            color: 'var(--mute)',
-            letterSpacing: '.1em',
-            textTransform: 'uppercase',
+            fontSize: 13,
+            color: 'var(--mute-2)',
           }}>
-            {caption} <span style={{ color: 'var(--p1)', marginLeft: 8 }}>klik voor groot ↗</span>
+            {caption} <span style={{ color: 'var(--p1)', marginLeft: 8 }}>Klik voor groot ↗</span>
           </figcaption>
         )}
       </figure>

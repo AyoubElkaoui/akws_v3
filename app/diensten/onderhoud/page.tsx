@@ -12,7 +12,7 @@ const FAQ_ONDERHOUD = [
   { q: 'Kan ik maandelijks opzeggen?', a: 'Ja, maandelijks opzegbaar — geen jaarcontract. Bij opzegging help ik je met de overdracht naar een andere partij. Je houdt je site, je code en je content: geen vendor lock-in.' },
   { q: 'Wat gebeurt er als mijn site eruit ligt?', a: 'Dat merk ik meestal eerder dan jij. Door de uptime-monitoring krijg ik automatisch een melding als er iets mis is en pak ik het op — je hoeft niet eerst een klant te krijgen die meldt dat je offline staat.' },
   { q: 'Krijg ik ook hulp bij kleine tekst- of fotowijzigingen?', a: 'Ja, kleine wijzigingen zitten in het maandbedrag. En omdat ik de site desgewenst met een CMS lever, kun je de meeste teksten en foto’s ook gewoon zelf aanpassen wanneer het jou uitkomt.' },
-  { q: 'Wat kost onderhoud?', a: 'Een vast bedrag per maand, op maat afgestemd op je site en wat je nodig hebt. Je weet vooraf precies waar je aan toe bent — geen verrassingen, geen uurtje-factuurtje.' },
+  { q: 'Wat kost onderhoud?', a: 'Basis onderhoud kost €49 per maand, Pro (met Google Ads-beheer) €195 per maand en Premium €395 per maand. Werk buiten het pakket reken ik tegen €85 per uur, altijd vooraf geschat.' },
 ];
 
 export const metadata: Metadata = buildMetadata({
@@ -25,22 +25,22 @@ export const metadata: Metadata = buildMetadata({
 const PAKKETTEN = [
   {
     titel: 'Basis onderhoud',
-    prijs: 'Op maat',
+    prijs: '€49 p/m',
     bij: 'Bij elke website',
-    items: ['Hosting op Vercel', 'SSL-certificaat', 'CMS & plugin-updates', 'Beveiligingsmonitoring', 'Uptime-monitoring', '1 uur wijzigingen per maand', 'E-mail support (reactie < 24 uur)'],
+    items: ['Hosting op Vercel', 'SSL-certificaat', 'CMS & plugin-updates', 'Beveiligingsmonitoring', 'Uptime-monitoring', 'Kleine wijzigingen (tot 30 min p/m)', 'E-mail support (reactie binnen 1 werkdag)'],
   },
   {
     titel: 'Pro onderhoud',
-    prijs: 'Op maat',
+    prijs: '€195 p/m',
     bij: 'Bij Website + Google Ads',
-    items: ['Alles uit Starter onderhoud', '2 uur wijzigingen per maand', 'Google Ads maandelijks beheer', 'Maandelijkse rapportage', 'Conversie-tracking onderhoud'],
+    items: ['Alles uit Basis onderhoud', '1 uur wijzigingen per maand', 'Google Ads maandelijks beheer', 'Maandelijkse rapportage', 'Conversie-tracking onderhoud'],
     featured: true,
   },
   {
     titel: 'Premium onderhoud',
-    prijs: 'Op maat',
+    prijs: '€395 p/m',
     bij: 'Op aanvraag',
-    items: ['Alles uit Pro onderhoud', '4 uur wijzigingen per maand', 'Kwartaalstrategie-sessie', 'Prioriteitsbehandeling bij storing', 'SEO-rapportage met aanbevelingen'],
+    items: ['Alles uit Pro onderhoud', '3 uur wijzigingen per maand', 'Kwartaalstrategie-sessie', 'Prioriteitsbehandeling bij storing', 'SEO-rapportage met aanbevelingen'],
   },
 ];
 
@@ -77,7 +77,7 @@ export default function OnderhoudPage() {
             {[
               {
                 titel: 'Wat zit erin',
-                items: ['Hosting op Vercel of dedicated server, incl. SSL', 'Monitoring 24/7 met automatische meldingen bij uitval', 'Back-ups dagelijks, herstelbaar tot 30 dagen', 'Beveiligingsupdates voor framework en dependencies', 'Performance-checks maandelijks (Lighthouse 95+)', 'Kleine wijzigingen binnen het maandbudget', 'E-mail support met reactie < 24 uur op werkdagen'],
+                items: ['Hosting op Vercel of dedicated server, incl. SSL', 'Monitoring 24/7 met automatische meldingen bij uitval', 'Back-ups dagelijks, herstelbaar tot 30 dagen', 'Beveiligingsupdates voor framework en dependencies', 'Performance-checks maandelijks (Lighthouse 95+)', 'Kleine wijzigingen binnen het maandbudget', 'E-mail support met reactie binnen één werkdag'],
                 kleur: 'var(--p1)',
               },
               {
@@ -87,7 +87,7 @@ export default function OnderhoudPage() {
               },
             ].map((col) => (
               <div key={col.titel} style={{ background: '#fff', borderRadius: 16, padding: '32px 28px', border: '1px solid var(--rule)' }}>
-                <h3 style={{ fontFamily: 'var(--cond)', fontWeight: 800, fontSize: 22, textTransform: 'uppercase', margin: '0 0 20px' }}>{col.titel}</h3>
+                <h3 style={{ fontFamily: 'var(--cond)', fontWeight: 800, fontSize: 19, margin: '0 0 20px' }}>{col.titel}</h3>
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gap: 10 }}>
                   {col.items.map((item) => (
                     <li key={item} style={{ display: 'flex', gap: 10, fontSize: 14, color: 'var(--ink-soft)', lineHeight: 1.5 }}>
@@ -102,7 +102,7 @@ export default function OnderhoudPage() {
 
           {/* Geen vendor lock-in */}
           <div style={{ padding: '32px 36px', background: 'linear-gradient(135deg, color-mix(in oklab, var(--p1) 6%, #fff), #fff)', border: '1px solid color-mix(in oklab, var(--p1) 20%, transparent)', borderRadius: 16, maxWidth: 720, marginBottom: 64 }}>
-            <h3 style={{ fontFamily: 'var(--cond)', fontWeight: 800, fontSize: 24, textTransform: 'uppercase', margin: '0 0 16px' }}>Geen vendor lock-in</h3>
+            <h3 style={{ fontFamily: 'var(--cond)', fontWeight: 800, fontSize: 20, margin: '0 0 16px' }}>Geen vendor lock-in</h3>
             <p style={{ fontSize: 16, lineHeight: 1.65, color: 'var(--ink-soft)', margin: 0 }}>
               Het contract is maandelijks opzegbaar. Stop je het contract: je houdt je site, je code
               en je content. Ik help je met overdracht naar een andere partij als dat nodig is.
@@ -112,7 +112,7 @@ export default function OnderhoudPage() {
 
           {/* Waarom verplicht */}
           <div style={{ padding: '32px 36px', background: 'var(--bg-alt)', borderRadius: 16, maxWidth: 720 }}>
-            <h3 style={{ fontFamily: 'var(--cond)', fontWeight: 800, fontSize: 24, textTransform: 'uppercase', margin: '0 0 16px' }}>Waarom verplicht?</h3>
+            <h3 style={{ fontFamily: 'var(--cond)', fontWeight: 800, fontSize: 20, margin: '0 0 16px' }}>Waarom verplicht?</h3>
             <p style={{ fontSize: 16, lineHeight: 1.65, color: 'var(--ink-soft)', margin: 0 }}>
               Een site zonder onderhoud is een tijdbom. Geen updates betekent: security-lekken na een
               halfjaar, traagheid die rankings kost na een jaar, en grote vervangkosten als je over
@@ -132,7 +132,7 @@ export default function OnderhoudPage() {
           <div style={{ marginTop: 32, display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 20 }}>
             {PAKKETTEN.map((p) => (
               <div key={p.titel} className={p.featured ? 'prijs feat' : 'prijs'} style={{ position: 'relative' }}>
-                {p.featured && <div className="prijs-tag">Meest gekozen</div>}
+                {p.featured && <div className="prijs-tag">Aanrader</div>}
                 <div className="naam">{p.titel}</div>
                 <div className="sub">{p.bij}</div>
                 <div className="price">{p.prijs}</div>
@@ -159,7 +159,7 @@ export default function OnderhoudPage() {
           <div style={{ marginTop: 40, display: 'grid', gap: 14, maxWidth: 920 }}>
             {FAQ_ONDERHOUD.map((f) => (
               <details key={f.q} style={{ background: '#fff', borderRadius: 14, border: '1px solid var(--rule)', overflow: 'hidden' }}>
-                <summary style={{ padding: '24px 28px', cursor: 'pointer', fontFamily: 'var(--cond)', fontWeight: 700, fontSize: 22, textTransform: 'uppercase', letterSpacing: '.005em', display: 'flex', justifyContent: 'space-between', alignItems: 'center', listStyle: 'none' }}>
+                <summary style={{ padding: '24px 28px', cursor: 'pointer', fontFamily: 'var(--cond)', fontWeight: 700, fontSize: 19, letterSpacing: '.005em', display: 'flex', justifyContent: 'space-between', alignItems: 'center', listStyle: 'none' }}>
                   {f.q}
                   <span style={{ fontFamily: 'var(--mono)', fontSize: 14, color: 'var(--p1)', flexShrink: 0, marginLeft: 16 }}>+</span>
                 </summary>

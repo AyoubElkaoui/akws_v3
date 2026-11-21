@@ -5,11 +5,12 @@ import { SiteFooter } from '@/components/SiteFooter';
 import { Cta } from '@/components/Cta';
 import { PageHead } from '@/components/PageHead';
 import { PRIJZEN } from '@/lib/data';
+import { TariefTabel } from '@/components/TariefTabel';
 import { buildMetadata, breadcrumbSchema, serviceSchema, faqSchema } from '@/lib/seo';
 
 const FAQ_WEBSITES = [
-  { q: 'Hoe snel staat mijn website live?', a: 'Binnen 2 weken, van kennismaking tot lancering. Dat is het uitgangspunt, geen uitzondering. Snelheid is voor mij een verkoopargument: elke week dat je site niet live is, laat je aanvragen liggen.' },
-  { q: 'Wat kost een website?', a: 'Prijs op maat, want een eenmanszaak heeft iets anders nodig dan een bedrijf met vijf monteurs. Na een gratis kennismaking van 30 minuten krijg je een vast bod op papier — geen uurtje-factuurtje, geen verrassingen achteraf.' },
+  { q: 'Hoe snel staat mijn website live?', a: 'Binnen 3–4 weken, van akkoord tot lancering. Dat is het uitgangspunt, geen uitzondering. Snelheid is voor mij een verkoopargument: elke week dat je site niet live is, laat je aanvragen liggen.' },
+  { q: 'Wat kost een website?', a: 'Een compacte website begint bij €1.495 eenmalig. Met meer dienst- en plaatspagina\'s of een CMS zit je meestal tussen €2.000 en €3.500. Hosting en onderhoud kost €49 per maand. Na een gratis kennismaking van 30 minuten krijg je een vaste prijs op papier, zonder verrassingen achteraf.' },
   { q: 'Kan ik de website daarna zelf bijhouden?', a: 'Ja. Ik lever de site desgewenst met een eenvoudig CMS zodat je zelf teksten, foto’s en diensten aanpast, zonder code en zonder mij te hoeven bellen. Grotere wijzigingen pak ik voor je op.' },
   { q: 'Werkt dit ook voor mijn vak buiten de installatiebranche?', a: 'Zeker. Installateurs zijn mijn thuisbasis, maar ik bouw net zo goed voor aannemers, hoveniers, schilders, transportbedrijven en ander lokaal MKB. De aanpak — snel, vindbaar, gericht op aanvragen — werkt voor elk vak.' },
   { q: 'Ik heb al een website. Kan die verbeterd worden of moet het nieuw?', a: 'Dat hangt van je huidige site af. Soms is bijsturen op snelheid en vindbaarheid genoeg; soms is een frisse basis slimmer. Ik check je bestaande site eerst en geef je daar eerlijk advies over, ook als dat "houden zo" is.' },
@@ -20,7 +21,7 @@ const FAQ_WEBSITES = [
 export const metadata: Metadata = buildMetadata({
   title: 'Websites voor installatiebedrijven — Snel, vindbaar, Next.js | AKWS',
   description:
-    'Websites voor installatiebedrijven gebouwd op Next.js. Snel, mobiel-first, lokale SEO ingebouwd. Prijs op maat na een gratis kennismaking. Freelancer Baarn.',
+    'Websites voor installatiebedrijven gebouwd op Next.js. Snel, mobiel-first, lokale SEO ingebouwd. Vanaf €1.495, vaste prijs vooraf. Freelancer uit Baarn.',
   path: '/diensten/websites',
 });
 
@@ -66,7 +67,7 @@ export default function WebsitesPage() {
               { t: 'Wat je niet krijgt', items: ['Geen WordPress-template met 50 plugins', 'Geen sleepwerk-bouwer om in te hobby\'en', 'Geen drie maanden wachten op oplevering', 'Geen verdwijnact na livegang', 'Geen templates die eruitzien als elke andere site'] },
             ].map((col) => (
               <div key={col.t} style={{ background: '#fff', borderRadius: 16, padding: '32px 32px', border: '1px solid var(--rule)' }}>
-                <h3 style={{ fontFamily: 'var(--cond)', fontWeight: 800, fontSize: 24, textTransform: 'uppercase', margin: '0 0 20px' }}>{col.t}</h3>
+                <h3 style={{ fontFamily: 'var(--cond)', fontWeight: 800, fontSize: 20, margin: '0 0 20px' }}>{col.t}</h3>
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gap: 10 }}>
                   {col.items.map((item) => (
                     <li key={item} style={{ display: 'flex', gap: 10, fontSize: 14, color: 'var(--ink-soft)', lineHeight: 1.5 }}>
@@ -94,7 +95,7 @@ export default function WebsitesPage() {
             ].map((item) => (
               <div key={item.k} style={{ padding: '10px 16px', background: '#fff', borderRadius: 10, border: '1px solid var(--rule)' }}>
                 <div style={{ fontFamily: 'var(--mono)', fontSize: 9, color: 'var(--mute)', letterSpacing: '.1em', textTransform: 'uppercase', marginBottom: 4 }}>{item.k}</div>
-                <div style={{ fontFamily: 'var(--cond)', fontWeight: 700, fontSize: 16, textTransform: 'uppercase' }}>{item.v}</div>
+                <div style={{ fontFamily: 'var(--cond)', fontWeight: 700, fontSize: 16 }}>{item.v}</div>
               </div>
             ))}
           </div>
@@ -122,13 +123,13 @@ export default function WebsitesPage() {
             <span className="rule" /> Pakketten
           </span>
           <div className="section-head" style={{ marginTop: 24 }}>
-            <h2>Kies een pakket.<em>/ of vraag een offerte op maat.</em></h2>
-            <p className="lead">Prijs op maat na een gratis kennismaking. Onderhoud is een vast onderdeel van elk traject.</p>
+            <h2>Kies een pakket.<em>of vraag een offerte op maat.</em></h2>
+            <p className="lead">Normale prijzen, vooraf vast. Alle bedragen exclusief 21% btw; hosting en onderhoud horen bij elk traject.</p>
           </div>
           <div className="prijs-grid">
             {PRIJZEN.filter(p => p.naam !== 'Maatwerk software').map((p) => (
               <div className={`prijs${p.feat ? ' feat' : ''}`} key={p.naam}>
-                {p.feat && <div className="prijs-tag">Meest gekozen</div>}
+                {p.feat && <div className="prijs-tag">Aanrader</div>}
                 <div className="naam">{p.naam}</div>
                 <div className="sub">{p.sub}</div>
                 <div className="price">{p.prijs}</div>
@@ -143,6 +144,9 @@ export default function WebsitesPage() {
               </div>
             ))}
           </div>
+          <div style={{ marginTop: 40 }}>
+            <TariefTabel filter="website" />
+          </div>
         </div>
       </section>
 
@@ -156,7 +160,7 @@ export default function WebsitesPage() {
           <div style={{ marginTop: 40, display: 'grid', gap: 14, maxWidth: 920 }}>
             {FAQ_WEBSITES.map((f) => (
               <details key={f.q} style={{ background: '#fff', borderRadius: 14, border: '1px solid var(--rule)', overflow: 'hidden' }}>
-                <summary style={{ padding: '24px 28px', cursor: 'pointer', fontFamily: 'var(--cond)', fontWeight: 700, fontSize: 22, textTransform: 'uppercase', letterSpacing: '.005em', display: 'flex', justifyContent: 'space-between', alignItems: 'center', listStyle: 'none' }}>
+                <summary style={{ padding: '24px 28px', cursor: 'pointer', fontFamily: 'var(--cond)', fontWeight: 700, fontSize: 19, letterSpacing: '.005em', display: 'flex', justifyContent: 'space-between', alignItems: 'center', listStyle: 'none' }}>
                   {f.q}
                   <span style={{ fontFamily: 'var(--mono)', fontSize: 14, color: 'var(--p1)', flexShrink: 0, marginLeft: 16 }}>+</span>
                 </summary>

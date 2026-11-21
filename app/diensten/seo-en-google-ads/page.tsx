@@ -4,12 +4,14 @@ import { SiteNav } from '@/components/SiteNav';
 import { SiteFooter } from '@/components/SiteFooter';
 import { Cta } from '@/components/Cta';
 import { PageHead } from '@/components/PageHead';
+import { RegioLinks } from '@/components/RegioLinks';
+import { LOKALE_SEO } from '@/lib/dienst-steden';
 import { buildMetadata, breadcrumbSchema, serviceSchema, faqSchema } from '@/lib/seo';
 
 const FAQ_SEO = [
   { q: 'Wat is het verschil tussen SEO en Google Ads?', a: 'SEO is de lange termijn: je bouwt gratis, duurzaam verkeer op door hoger in de organische resultaten te komen. Dat kost maanden, maar blijft. Google Ads is direct: je betaalt per klik en staat meteen bovenaan, maar het verkeer stopt zodra je de campagne uitzet. De sterkste aanpak combineert beide.' },
   { q: 'Hoe lang duurt het voordat ik resultaat zie?', a: 'Met Google Ads heb je binnen dagen de eerste klikken en aanvragen. Met SEO praat je over maanden: lokale SEO en een goed Google Bedrijfsprofiel laten meestal binnen enkele maanden verbetering zien in de lokale resultaten. Ik zet daarom vaak Ads in om het gat te overbruggen terwijl de SEO rijpt.' },
-  { q: 'Wat kost een Google Ads-campagne?', a: 'Het beheer regel ik tegen een prijs op maat. Het advertentiebudget dat je aan Google betaalt staat daar los van en bepaal je zelf — realistisch begin je met een paar honderd euro per maand voor lokaal werk. In de kennismaking bepalen we samen wat past bij je werkgebied.' },
+  { q: 'Wat kost een Google Ads-campagne?', a: 'Beheer kost €195 per maand, inclusief conversiemeting en maandrapport. Op een bestaande site begin ik met een audit en opzet van €395 eenmalig. Het advertentiebudget dat je aan Google betaalt staat daar los van: voor lokaal werk begin je realistisch met €300 tot €600 per maand.' },
   { q: 'Kom ik ook in de lokale top 3 van Google?', a: 'Dat is precies het doel van lokale SEO. Met een volledig ingericht Google Bedrijfsprofiel, lokale landingspagina’s per stad en actief om reviews vragen, werk je toe naar dat kaartje met drie bedrijven bovenaan — waar de meeste klikken naartoe gaan.' },
   { q: 'Kan ik alleen Ads laten draaien op mijn bestaande site?', a: 'Soms wel, soms niet. Een advertentie stuurt bezoekers naar je site; als die traag is of slecht converteert, verbrand je geld. Daarom check ik eerst je huidige site. Is die qua snelheid en mobiel in orde, dan kan ik los Ads doen; zo niet, dan is een betere basis eerst slimmer.' },
   { q: 'Hoe weet ik of het werkt?', a: 'Ik meet leads, geen ijdelheidscijfers. Met conversie-tracking op telefoontjes en formulieren zie je maandelijks precies hoeveel aanvragen je campagne oplevert en wat een aanvraag je kost. Geen vaag "meer bereik", maar concrete klussen.' },
@@ -69,8 +71,8 @@ export default function SeoPage() {
               },
             ].map((item) => (
               <div key={item.n} style={{ background: '#fff', borderRadius: 16, padding: '36px 32px', border: '1px solid var(--rule)' }}>
-                <div style={{ fontFamily: 'var(--cond)', fontWeight: 900, fontSize: 56, lineHeight: 0.9, background: 'linear-gradient(135deg, var(--p2), var(--p1))', WebkitBackgroundClip: 'text', backgroundClip: 'text', color: 'transparent', marginBottom: 16 }}>{item.n}</div>
-                <h3 style={{ fontFamily: 'var(--cond)', fontWeight: 800, fontSize: 28, textTransform: 'uppercase', margin: '0 0 16px' }}>{item.titel}</h3>
+                <div style={{ fontFamily: 'var(--cond)', fontWeight: 800, fontSize: 35, lineHeight: 0.9, background: 'linear-gradient(135deg, var(--p2), var(--p1))', WebkitBackgroundClip: 'text', backgroundClip: 'text', color: 'transparent', marginBottom: 16 }}>{item.n}</div>
+                <h3 style={{ fontFamily: 'var(--cond)', fontWeight: 800, fontSize: 24, margin: '0 0 16px' }}>{item.titel}</h3>
                 {item.tekst.split('\n\n').map((p, i) => (
                   <p key={i} style={{ fontSize: 15, lineHeight: 1.65, color: 'var(--ink-soft)', margin: '0 0 12px' }}>{p}</p>
                 ))}
@@ -80,7 +82,7 @@ export default function SeoPage() {
 
           {/* Wat dit niet is */}
           <div style={{ padding: '32px 36px', background: 'var(--bg-alt)', borderRadius: 16, marginBottom: 64 }}>
-            <h3 style={{ fontFamily: 'var(--cond)', fontWeight: 800, fontSize: 24, textTransform: 'uppercase', margin: '0 0 20px' }}>Wat dit niet is</h3>
+            <h3 style={{ fontFamily: 'var(--cond)', fontWeight: 800, fontSize: 20, margin: '0 0 20px' }}>Wat dit niet is</h3>
             <div style={{ display: 'grid', gap: 12 }}>
               {[
                 'Geen SEO-rapport van 30 pagina\'s per maand zonder dat er iets verandert',
@@ -98,7 +100,7 @@ export default function SeoPage() {
 
           {/* Verbonden met website */}
           <div style={{ padding: '32px 36px', background: 'linear-gradient(135deg, color-mix(in oklab, var(--p1) 6%, #fff), #fff)', border: '1px solid color-mix(in oklab, var(--p1) 20%, transparent)', borderRadius: 16, maxWidth: 720 }}>
-            <h3 style={{ fontFamily: 'var(--cond)', fontWeight: 800, fontSize: 24, textTransform: 'uppercase', margin: '0 0 16px' }}>Verbonden met je website</h3>
+            <h3 style={{ fontFamily: 'var(--cond)', fontWeight: 800, fontSize: 20, margin: '0 0 16px' }}>Verbonden met je website</h3>
             <p style={{ fontSize: 16, lineHeight: 1.65, color: 'var(--ink-soft)', margin: 0 }}>
               SEO en Ads werken alleen goed als je website ze ondersteunt. Daarom doe ik beide bij
               voorkeur samen met de site. Op een bestaande site doe ik eerst een snelheids- en
@@ -117,12 +119,13 @@ export default function SeoPage() {
           </span>
           <div style={{ marginTop: 32, display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 20 }}>
             {[
-              { titel: 'Samen met een nieuwe website', prijs: 'Op maat', tekst: 'Google Ads-setup en maandelijks beheer als onderdeel van je website-traject. Advertentiebudget (wat je aan Google betaalt) staat los.' },
-              { titel: 'Los te boeken op bestaande site', prijs: 'Op maat', tekst: 'Inclusief beheer, rapportage en optimalisatie. Excl. advertentiebudget. Vereist eerst een audit van je bestaande site.' },
+              { titel: 'Samen met een nieuwe website', prijs: 'vanaf €2.495 + €195 p/m', tekst: 'Website met lokale pagina\'s, Google Ads-setup en maandelijks beheer, hosting en onderhoud. Advertentiebudget (wat je aan Google betaalt) staat los.' },
+              { titel: 'Los op een bestaande site', prijs: '€395 + €195 p/m', tekst: 'Eerst een audit en opzet van €395 eenmalig, daarna beheer, rapportage en optimalisatie voor €195 per maand. Excl. advertentiebudget.' },
+              { titel: 'Lokale SEO uitbreiden', prijs: '€149 per pagina', tekst: 'Extra pagina\'s per dienst en plaats met eigen tekst, structured data en interne links. Google Bedrijfsprofiel inrichten: €195 eenmalig.' },
             ].map((item) => (
               <div key={item.titel} style={{ background: '#fff', borderRadius: 16, padding: '32px', border: '1px solid var(--rule)' }}>
                 <div style={{ fontFamily: 'var(--mono)', fontSize: 11, color: 'var(--p1)', letterSpacing: '.08em', textTransform: 'uppercase', marginBottom: 8 }}>{item.titel}</div>
-                <div style={{ fontFamily: 'var(--cond)', fontWeight: 800, fontSize: 32, textTransform: 'uppercase', marginBottom: 12 }}>{item.prijs}</div>
+                <div style={{ fontFamily: 'var(--cond)', fontWeight: 800, fontSize: 27, marginBottom: 12 }}>{item.prijs}</div>
                 <p style={{ fontSize: 14, color: 'var(--mute)', margin: 0, lineHeight: 1.55 }}>{item.tekst}</p>
               </div>
             ))}
@@ -140,7 +143,7 @@ export default function SeoPage() {
           <div style={{ marginTop: 40, display: 'grid', gap: 14, maxWidth: 920 }}>
             {FAQ_SEO.map((f) => (
               <details key={f.q} style={{ background: '#fff', borderRadius: 14, border: '1px solid var(--rule)', overflow: 'hidden' }}>
-                <summary style={{ padding: '24px 28px', cursor: 'pointer', fontFamily: 'var(--cond)', fontWeight: 700, fontSize: 22, textTransform: 'uppercase', letterSpacing: '.005em', display: 'flex', justifyContent: 'space-between', alignItems: 'center', listStyle: 'none' }}>
+                <summary style={{ padding: '24px 28px', cursor: 'pointer', fontFamily: 'var(--cond)', fontWeight: 700, fontSize: 19, letterSpacing: '.005em', display: 'flex', justifyContent: 'space-between', alignItems: 'center', listStyle: 'none' }}>
                   {f.q}
                   <span style={{ fontFamily: 'var(--mono)', fontSize: 14, color: 'var(--p1)', flexShrink: 0, marginLeft: 16 }}>+</span>
                 </summary>
@@ -154,6 +157,8 @@ export default function SeoPage() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(FAQ_SEO)) }}
         />
       </section>
+
+      <RegioLinks dienst={LOKALE_SEO} />
 
       <Cta
         eyebrow="Meer aanvragen via Google?"

@@ -92,15 +92,15 @@ export default function DienstenPage() {
         .dienst-deep .visual{height:480px;border-radius:18px;background:linear-gradient(135deg, color-mix(in oklab, var(--p1) 18%, var(--bg-alt)) 0%, var(--bg-alt) 100%);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
         .dienst-deep .visual::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(135deg, rgba(20,16,28,.05) 0, rgba(20,16,28,.05) 1px, transparent 1px, transparent 14px)}
         .dienst-deep .visual-label{position:relative;font-family:var(--mono);font-size:11px;color:var(--mute);letter-spacing:.08em;text-transform:uppercase}
-        .dienst-deep .num{font-family:var(--cond);font-weight:900;font-size:120px;line-height:.9;background:linear-gradient(135deg, var(--p2), var(--p1) 50%, var(--p3));-webkit-background-clip:text;background-clip:text;color:transparent;letter-spacing:-.04em;margin-bottom:12px}
-        .dienst-deep h2{font-family:var(--cond);font-weight:800;font-size:56px;letter-spacing:-.02em;line-height:.98;text-transform:uppercase;margin:0 0 20px}
+        .dienst-deep .num{font-family:var(--cond);font-weight:800;font-size:74px;line-height:1.05;background:linear-gradient(135deg, var(--p2), var(--p1) 50%, var(--p3));-webkit-background-clip:text;background-clip:text;color:transparent;letter-spacing:-.04em;margin-bottom:12px}
+        .dienst-deep h2{font-family:var(--cond);font-weight:800;font-size:35px;letter-spacing:-.02em;line-height:1.05;margin:0 0 20px}
         .dienst-deep .deck{font-size:17px;line-height:1.65;color:var(--ink-soft);margin:0 0 28px;max-width:520px}
         .dienst-deep .features{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:28px}
         .dienst-deep .feat{display:flex;gap:10px;align-items:start;font-size:14px;color:var(--ink-soft);line-height:1.5}
         .dienst-deep .feat .ic{width:22px;height:22px;border-radius:7px;background:color-mix(in oklab, var(--p1) 12%, #fff);color:var(--p1);display:inline-flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;flex-shrink:0;box-shadow:inset 0 0 0 1px color-mix(in oklab, var(--p1) 20%, transparent)}
         .dienst-deep .price-strip{display:flex;align-items:center;gap:24px;padding-top:24px;border-top:1px solid var(--rule);flex-wrap:wrap}
         .dienst-deep .price-strip .lbl{font-family:var(--mono);font-size:11px;color:var(--mute);letter-spacing:.08em;text-transform:uppercase}
-        .dienst-deep .price-strip .v{font-family:var(--cond);font-weight:800;font-size:28px;text-transform:uppercase;letter-spacing:.005em}
+        .dienst-deep .price-strip .v{font-family:var(--cond);font-weight:800;font-size:24px;letter-spacing:.005em}
         @media(max-width:768px){
           .dienst-deep .grid{grid-template-columns:1fr!important;direction:ltr!important}
           .dienst-deep .grid > *{direction:ltr!important}
@@ -174,16 +174,16 @@ export default function DienstenPage() {
             <span className="rule" /> Pakketten
           </span>
           <div className="section-head" style={{ marginTop: 24 }}>
-            <h2>Of kies een pakket.<em>/ losse modules of alles-in-één.</em></h2>
+            <h2>Of kies een pakket.<em>losse modules of alles-in-één.</em></h2>
             <p className="lead">
               Begin klein en breid uit, of pak meteen de complete digitale werkplaats. Beide zijn prima.
-              Elk traject krijgt een prijs op maat na een gratis kennismaking.
+              Website vanaf €1.495, met Google Ads vanaf €2.495, software vanaf €3.500 per fase. Na een gratis kennismaking krijg je een vaste prijs.
             </p>
           </div>
           <div className="prijs-grid">
             {PRIJZEN.map((p) => (
               <div className={`prijs${p.feat ? ' feat' : ''}`} key={p.naam}>
-                {p.feat && <div className="prijs-tag">Meest gekozen</div>}
+                {p.feat && <div className="prijs-tag">Aanrader</div>}
                 <div className="naam">{p.naam}</div>
                 <div className="sub">{p.sub}</div>
                 <div className="price">{p.prijs}</div>
@@ -202,7 +202,7 @@ export default function DienstenPage() {
             ))}
           </div>
           <p style={{ textAlign: 'center', marginTop: 24, fontFamily: 'var(--mono)', fontSize: 11, color: 'var(--mute)', letterSpacing: '.06em' }}>
-            Prijzen op maat, exclusief 21% BTW. Hosting en onderhoud horen bij elk traject.
+            Alle prijzen exclusief 21% btw. Hosting en onderhoud horen bij elk traject.
           </p>
         </div>
       </section>

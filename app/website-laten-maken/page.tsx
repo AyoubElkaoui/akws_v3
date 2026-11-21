@@ -10,7 +10,7 @@ import { buildMetadata, breadcrumbSchema } from '@/lib/seo';
 export const metadata: Metadata = buildMetadata({
   title: 'Website laten maken in Midden-Nederland | Baarn, Amersfoort, Utrecht | AKWS',
   description:
-    'Website laten maken door een freelance webdeveloper uit Baarn. Actief in Baarn, Soest, Amersfoort, Hilversum, Bussum, Nijkerk en Utrecht. Binnen 2 weken live.',
+    'Website laten maken door een freelance webdeveloper uit Baarn. Actief in Baarn, Soest, Amersfoort, Hilversum, Zeist, Utrecht en omgeving. Vanaf €1.495, binnen 3–4 weken live.',
   path: '/website-laten-maken',
 });
 

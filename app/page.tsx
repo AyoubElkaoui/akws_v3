@@ -3,699 +3,462 @@ import Link from "next/link";
 import { SiteNav } from "@/components/SiteNav";
 import { SiteFooter } from "@/components/SiteFooter";
 import { Cta } from "@/components/Cta";
-import {
-  USPS,
-  BRANCHES,
-  DIENSTEN,
-  PROCES,
-  CASES,
-  CASE_DETAILS,
-  REVIEWS,
-  PRIJZEN,
-  STATS,
-} from "@/lib/data";
+import { BRAND, BRANCHES, CASES, CASE_DETAILS, PRIJZEN } from "@/lib/data";
 import { buildMetadata, faqSchema } from "@/lib/seo";
-import { CountUp } from "@/components/CountUp";
 
 export const metadata = buildMetadata({
   title: "Websites & software voor installateurs | AK Web Solutions Baarn",
   description:
-    "Freelance webdeveloper voor installateurs, aannemers en vakmensen in Midden-Nederland. Websites, Google Ads en maatwerk software. Prijzen op maat, geen verrassingen.",
+    "Websites met lokale SEO en maatwerk software voor installateurs, aannemers en vakmensen in Midden-Nederland. Vaste prijs vooraf, live in 3–4 weken.",
   path: "/",
 });
 
 const HOME_FAQ = [
   {
-    q: "Werken jullie alleen voor installatiebedrijven?",
-    a: "Installateurs zijn mijn thuisbasis, maar ik werk voor vakmensen in installatie, bouw en techniek: ook aannemers, dakdekkers, hoveniers en schilders. Voornamelijk in Midden-Nederland, remote door heel NL. Die focus op de vakwereld maakt dat ik jullie markt ken en geen uitleg vooraf nodig heb.",
+    q: "Werk je alleen voor installatiebedrijven?",
+    a: "Installateurs zijn mijn thuisbasis, maar ik werk voor vakmensen in installatie, bouw en techniek: ook aannemers, dakdekkers, hoveniers, schilders en transportbedrijven. Vooral in Midden-Nederland, op afstand in heel Nederland.",
   },
   {
     q: "Wat kost een website?",
-    a: "Elk bedrijf is anders, dus werk ik met een offerte op maat in plaats van vaste pakketprijzen. Na een gratis kennismaking van 30 minuten weet ik wat je nodig hebt en krijg je een vast bod op papier — geen uurtje-factuurtje, geen verrassingen achteraf.",
+    a: "Een compacte website begint bij €1.495, een uitgebreide site met pagina's per dienst en plaats zit meestal tussen €2.000 en €3.500. Hosting en onderhoud kost €49 per maand. Na een gratis kennismaking krijg je binnen drie werkdagen een vaste prijs op papier, zonder verrassingen achteraf.",
   },
   {
     q: "Hoe snel is mijn site live?",
-    a: "Snel — dat is nou juist het punt. Een website staat bij mij binnen 2 weken live, van kennismaking tot lancering. Komt er Google Ads of maatwerk software bij, dan bespreken we die planning apart, maar op je site zelf hoef je niet maanden te wachten.",
+    a: "Reken op drie tot vier weken van akkoord tot livegang, met elke week een demo zodat je kunt bijsturen. Komt er Google Ads of maatwerk software bij, dan plannen we dat apart.",
   },
   {
     q: "Wat als ik al een administratiepakket heb?",
-    a: "Snelstart, Exact, Moneybird: ik koppel ermee. Liever houden wat werkt dan opnieuw beginnen.",
+    a: "Dan koppel ik ermee: Snelstart, Exact, Moneybird of een ERP-pakket zoals Syntess. Liever houden wat werkt dan opnieuw beginnen.",
   },
 ];
 
+const WEBSITE_CASES = ["ad-loodgietersbedrijf", "mkh-bouw", "zando-transport"];
+const SOFTWARE_CASES = ["facturatie-app", "voorraad-app", "financieel-dashboard", "itflow"];
+
+const DIENSTEN_KORT = [
+  {
+    href: "/diensten/websites",
+    t: "Websites die aanvragen opleveren",
+    d: "Snel, mobiel-first en gebouwd rond één doel: dat een klant belt of een offerte aanvraagt.",
+    icon: <><rect x="3" y="4" width="18" height="14" rx="2" /><path d="M3 9h18" /><path d="M8 21h8" /></>,
+  },
+  {
+    href: "/diensten/seo-en-google-ads",
+    t: "Lokale SEO & Google Ads",
+    d: "Pagina's per dienst en plaats, je Google Bedrijfsprofiel op orde en Ads voor spoed- en seizoenswerk.",
+    icon: <><circle cx="11" cy="11" r="7" /><path d="M21 21l-4.5-4.5" /></>,
+  },
+  {
+    href: "/diensten/maatwerk-software",
+    t: "Maatwerk software",
+    d: "Urenregistratie, voorraad, dashboards of een koppeling met je administratie. Vaste prijs per fase.",
+    icon: <><path d="M8 7l-5 5 5 5" /><path d="M16 7l5 5-5 5" /></>,
+  },
+  {
+    href: "/diensten/onderhoud",
+    t: "Onderhoud & support",
+    d: "Hosting, updates, beveiliging en kleine wijzigingen. Eén vast aanspreekpunt, reactie binnen één werkdag.",
+    icon: <><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z" /><path d="M9 12l2 2 4-4" /></>,
+  },
+];
+
+const STAPPEN = [
+  { n: "01 · 30 minuten", t: "Kennismaking", d: "Vrijblijvend. Wat loopt er vast en wat moet de site of software voor je opleveren?" },
+  { n: "02 · binnen 3 werkdagen", t: "Vast bod", d: "Prijs, planning en wat er wel en niet in zit, op papier." },
+  { n: "03 · 3–4 weken", t: "Bouw met weekdemo", d: "Elke week zie je de vooruitgang en stuur je bij." },
+  { n: "04 · doorlopend", t: "Live & meten", d: "Live, Google op orde, en je ziet wat je site oplevert." },
+];
+
+function Check({ color = "var(--ok)" }: { color?: string }) {
+  return (
+    <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M5 12l5 5L20 7" />
+    </svg>
+  );
+}
+
+function detail(slug: string) {
+  return CASE_DETAILS.find((d) => d.slug === slug);
+}
+
 export default function HomePage() {
+  const websites = WEBSITE_CASES.map((s) => CASES.find((c) => c.slug === s)!).filter(Boolean);
+  const software = SOFTWARE_CASES.map((s) => CASES.find((c) => c.slug === s)!).filter(Boolean);
+
   return (
     <>
       <SiteNav />
 
       {/* Hero */}
-      <section className="hero">
-        <div className="hero-bg">
-          <div className="orb1" />
-          <div className="orb2" />
-        </div>
-        <div className="wrap">
-          <div className="hero-meta">
-            <span className="live">
-              <span className="dot" /> Beschikbaar voor nieuwe projecten
+      <section className="v4-hero">
+        <div className="wrap v4-hero-grid">
+          <div className="v4-hero-copy">
+            <span className="v4-pill">
+              <span className="dot" /> Voor installateurs, bouw &amp; techniek · Midden-Nederland
             </span>
-            <span>Freelance webdeveloper · Baarn</span>
-            <span>akwebsolutions.nl</span>
+            <h1>
+              Een website die de telefoon laat <span>rinkelen</span>.
+            </h1>
+            <p className="v4-hero-sub">
+              Ik bouw snelle websites met lokale SEO voor vakmensen, en de
+              software die het werk erachter makkelijker maakt. Gemeten op
+              aanvragen, niet op mooie plaatjes.
+            </p>
+            <div className="v4-actions">
+              <Link href="/contact" className="btn btn-primary">
+                Plan een gratis gesprek <span className="arrow">→</span>
+              </Link>
+              <Link href="/cases" className="btn btn-ghost">
+                Bekijk mijn werk
+              </Link>
+            </div>
+            <div className="v4-checks">
+              <span><Check />Vaste prijs vooraf</span>
+              <span><Check />Live in 3–4 weken</span>
+              <span><Check />Eén vast aanspreekpunt</span>
+            </div>
           </div>
 
-          <div className="hero-grid">
-            <div>
-              <span className="chip chip-purple">
-                Voor installatie-, bouw- en technische bedrijven — heel NL
+          <div className="v4-hero-visual" aria-label="Websites van klanten">
+            <div className="v4-browser v4-b1">
+              <div className="v4-browser-bar"><i /><i /><i /><span>zandotransport.nl</span></div>
+              <Image src="/zando-transport/screen-home.jpg" alt="Website van Zando Transport" width={1280} height={800} sizes="(max-width: 900px) 70vw, 420px" />
+            </div>
+            <div className="v4-browser v4-b2">
+              <div className="v4-browser-bar"><i /><i /><i /><span>mkhbouw.nl</span></div>
+              <Image src="/mkh-bouw/home-v2.jpg" alt="Website van MKH Bouw" width={1424} height={890} sizes="(max-width: 900px) 70vw, 420px" />
+            </div>
+            <div className="v4-browser v4-b3">
+              <div className="v4-browser-bar"><i /><i /><i /><span>adloodgietersbedrijf.nl</span></div>
+              <Image src="/ad-loodgietersbedrijf/home-v4.jpg" alt="Website van AD Loodgietersbedrijf" width={1440} height={900} sizes="(max-width: 900px) 70vw, 420px" priority />
+            </div>
+            <div className="v4-stat-float">
+              <span className="k">AD Loodgieters · Google</span>
+              <span className="v">
+                Pagina 1
+                <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--ok)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M4 17l6-6 4 4 6-7" /><path d="M14 8h6v6" /></svg>
               </span>
-              <h1>
-                Websites &amp;
-                <br />
-                software voor
-                <br />
-                <span className="gradient-text">installateurs</span>.
-                <em>/ Geen onzin. Wel resultaat.</em>
-              </h1>
+              <span className="d">op &ldquo;loodgieter Maarssen&rdquo;, &ldquo;Bunnik&rdquo; en &ldquo;Harmelen&rdquo;</span>
             </div>
-            <div style={{ paddingBottom: 24 }}>
-              <p className="hero-sub">
-                Eén freelancer voor je website, leads en de software die jouw
-                werk eenvoudiger maakt. Gemaakt door iemand die de wereld van
-                installateurs, bouw en techniek kent, niet door een
-                marketingbureau dat zonder uitleg de mist in gaat.
-              </p>
-              <div className="hero-cta">
-                <Link href="/contact" className="btn btn-primary">
-                  Plan strategiegesprek <span className="arrow">→</span>
-                </Link>
-                <Link href="/cases" className="btn btn-ghost">
-                  Bekijk cases
-                </Link>
-              </div>
-              <div className="hero-note">
-                30 min, vrijblijvend, geen verkooppraat
-              </div>
-            </div>
-          </div>
-
-          <div className="usps">
-            {USPS.map((u) => (
-              <div className="usp" key={u.num}>
-                <div className="lbl">{u.num}</div>
-                <div className="k">{u.k}</div>
-                <div className="v">{u.v}</div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
 
-      {/* Voor wie */}
-      <section className="section branches">
-        <div className="wrap">
-          <span className="eyebrow">
-            <span className="num">01</span>
-            <span className="rule" /> Voor wie
-          </span>
-          <div className="section-head" style={{ marginTop: 24 }}>
-            <h2>
-              Ik bouw voor
-              <br />
-              vakmensen.<em>/ installatie, bouw &amp; techniek.</em>
-            </h2>
-            <p className="lead">
-              Ik ken jullie markt: spoedklussen die op zaterdagavond
-              binnenkomen, seizoenspieken, planning van monteurs en ploegen,
-              urenregistratie die op locatie moet werken, en koppelingen met
-              Snelstart en Exact. Geen uitleg vooraf nodig.
-            </p>
+      {/* Bewijs */}
+      <section className="v4-proof" aria-label="Resultaten">
+        <div className="wrap v4-proof-grid">
+          <div className="v4-proof-item">
+            <span className="k">5×</span>
+            <span className="t">meer vertoningen in Google</span>
+            <span className="s">AD Loodgieters · sinds livegang in okt 2026</span>
           </div>
-          <div className="branch-list">
-            {BRANCHES.map((b) => (
-              <Link
-                href={`/voor-wie/${b.slug}`}
-                className="branch"
-                key={b.naam}
-              >
-                <div>
-                  <div className="naam">{b.naam}</div>
-                  <div className="sub">{b.sub}</div>
-                </div>
-                <span className="branch-arrow">→</span>
+          <div className="v4-proof-item">
+            <span className="k">70</span>
+            <span className="t">lokale dienstpagina&apos;s live</span>
+            <span className="s">MKH Bouw · 10 diensten × 7 plaatsen</span>
+          </div>
+          <div className="v4-proof-item">
+            <span className="k">1</span>
+            <span className="t">systeem voor tickets, voorraad en assets</span>
+            <span className="s">ITflow · verving Zoho Desk</span>
+          </div>
+          <div className="v4-proof-item">
+            <span className="k">{CASES.length}</span>
+            <span className="t">websites en apps gebouwd</span>
+            <span className="s">Van loodgieter tot spoedkoerier</span>
+          </div>
+        </div>
+      </section>
+
+      {/* Klanten */}
+      <section className="v4-clients" aria-label="Klanten">
+        <div className="wrap v4-clients-row">
+          <span className="lbl">Gebouwd voor onder andere</span>
+          <div className="names">
+            <span>AD Loodgieters</span>
+            <span>MKH Bouw</span>
+            <span>Zando Transport</span>
+            <span>R.I.N. B.V.</span>
+            <span>MBA-installaties</span>
+            <span>ITFIN</span>
+          </div>
+        </div>
+      </section>
+
+      {/* Websites */}
+      <section className="v4-sec">
+        <div className="wrap">
+          <div className="v4-sec-head">
+            <div className="l">
+              <span className="v4-kicker">Websites</span>
+              <h2 className="v4-h2">Echte sites voor echte vakmensen.</h2>
+            </div>
+            <Link href="/cases" className="v4-more">Alle cases →</Link>
+          </div>
+          <div className="v4-work">
+            {websites.map((c) => {
+              const d = detail(c.slug);
+              return (
+                <Link href={`/cases/${c.slug}`} className="v4-work-card" key={c.slug}>
+                  <div className="v4-work-img">
+                    {d?.images?.cover && (
+                      <Image src={d.images.cover} alt={`Website van ${c.naam}`} width={1440} height={1080} sizes="(max-width: 900px) 100vw, 400px" />
+                    )}
+                  </div>
+                  <span className="v4-work-meta">{d?.sector ?? c.branche} · {c.locatie} · {c.meta}</span>
+                  <span className="v4-work-title">{c.naam}</span>
+                  <span className="v4-work-res">{c.excerpt}</span>
+                  <span className="v4-work-link">Bekijk case →</span>
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Software */}
+      <section className="v4-sec alt">
+        <div className="wrap">
+          <div className="v4-sec-head">
+            <div className="l">
+              <span className="v4-kicker">Maatwerk software</span>
+              <h2 className="v4-h2">Software die het werk achter de website regelt.</h2>
+              <p className="v4-lead">
+                Facturatie, voorraad, uren en cijfers: gebouwd op hoe een bedrijf
+                werkt, gekoppeld aan wat er al is.
+              </p>
+            </div>
+            <Link href="/diensten/maatwerk-software" className="v4-more">Meer over maatwerk →</Link>
+          </div>
+          <div className="v4-sw">
+            {software.map((c) => {
+              const d = detail(c.slug);
+              return (
+                <Link href={`/cases/${c.slug}`} className="v4-sw-card" key={c.slug}>
+                  {d?.images?.cover && (
+                    <Image src={d.images.cover} alt={`Scherm van ${c.naam}`} width={1440} height={900} sizes="(max-width: 900px) 100vw, 300px" />
+                  )}
+                  <div className="v4-sw-body">
+                    <span className="t">{c.naam}</span>
+                    <span className="d">{c.excerpt}</span>
+                    {d?.demoNote && <span className="demo">Voorbeelddata</span>}
+                  </div>
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Weekrapport */}
+      <section className="v4-sec">
+        <div className="wrap v4-portal">
+          <div className="v4-portal-copy">
+            <span className="v4-kicker">Klantportaal · binnenkort</span>
+            <h2 className="v4-h2">Elke week zwart-op-wit wat je website opleverde.</h2>
+            <p className="v4-lead">
+              Geen grafieken vol bouncepercentages. Gewoon hoeveel mensen belden,
+              appten of een offerte vroegen, en wat je kunt doen om er volgende
+              week meer te krijgen.
+            </p>
+            <ul className="v4-list">
+              <li><Check color="var(--p1)" />Telefoontjes, WhatsApp-klikken en offerteaanvragen</li>
+              <li><Check color="var(--p1)" />Op welke zoektermen je gevonden wordt, en op welke plek</li>
+              <li><Check color="var(--p1)" />Snelheid, uptime en SSL in één oogopslag</li>
+              <li><Check color="var(--p1)" />Elke week één concrete tip voor meer aanvragen</li>
+            </ul>
+          </div>
+          <div className="v4-report" aria-label="Voorbeeld van een weekrapport">
+            <div className="v4-report-head">
+              <div>
+                <div className="s">Weekrapport · week 47</div>
+                <div className="t">Loodgietersbedrijf Voorbeeld</div>
+              </div>
+              <span className="v4-tag-demo">Voorbeeld · fictieve cijfers</span>
+            </div>
+            <div className="v4-kpis">
+              <div className="v4-kpi"><span className="l">Telefoontjes</span><span className="n">14</span><span className="d">↑ 3 t.o.v. vorige week</span></div>
+              <div className="v4-kpi"><span className="l">Offertes</span><span className="n">5</span><span className="d">↑ 2 t.o.v. vorige week</span></div>
+              <div className="v4-kpi"><span className="l">Uit Google</span><span className="n">412</span><span className="d">↑ 18% bezoekers</span></div>
+            </div>
+            <div className="v4-rank">
+              <span className="h">Positie in Google</span>
+              <div><span>loodgieter maarssen</span><b>#3</b></div>
+              <div><span>lekkage utrecht</span><b>#7</b></div>
+              <div><span>wc verstopt maarssen</span><b>#5</b></div>
+            </div>
+            <div className="v4-status">
+              <span><i />Site online 100%</span>
+              <span><i />SSL geldig</span>
+              <span><i />Snelheid 96/100</span>
+            </div>
+            <div className="v4-tip">
+              <b>Tip van de week:</b> &ldquo;cv-ketel vervangen&rdquo; wordt veel gezocht in je regio en je staat op plek 14. Met een eigen pagina kun je hier naar pagina 1.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Diensten */}
+      <section className="v4-sec alt">
+        <div className="wrap">
+          <div className="v4-sec-head">
+            <div className="l">
+              <span className="v4-kicker">Diensten</span>
+              <h2 className="v4-h2">Alles wat je online nodig hebt, bij één persoon.</h2>
+            </div>
+            <Link href="/diensten" className="v4-more">Alle diensten →</Link>
+          </div>
+          <div className="v4-cards4">
+            {DIENSTEN_KORT.map((d) => (
+              <Link href={d.href} className="v4-card" key={d.href}>
+                <span className="v4-ico">
+                  <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">{d.icon}</svg>
+                </span>
+                <span className="t">{d.t}</span>
+                <span className="d">{d.d}</span>
               </Link>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Diensten */}
-      <section className="section diensten">
+      {/* Voor wie */}
+      <section className="v4-sec">
         <div className="wrap">
-          <span className="eyebrow">
-            <span className="num">02</span>
-            <span className="rule" /> Diensten
-          </span>
-          <div className="section-head" style={{ marginTop: 24 }}>
-            <h2>
-              Vier diensten.<em>/ één aanspreekpunt. Één factuur.</em>
-            </h2>
-            <p className="lead">
-              Begin met een website. Voeg software toe wanneer het uitkomt.
-              Alles werkt samen, niets staat op een eiland.
-            </p>
+          <div className="v4-sec-head">
+            <div className="l">
+              <span className="v4-kicker">Voor wie</span>
+              <h2 className="v4-h2">Ik ken jullie vak.</h2>
+              <p className="v4-lead">
+                Spoedklussen op zaterdagavond, seizoenspieken, planning van
+                monteurs, uren op locatie en koppelingen met je administratie.
+                Daar hoef je mij niets over uit te leggen.
+              </p>
+            </div>
           </div>
-
-          <div className="dienst-grid">
-            {DIENSTEN.map((d) => (
-              <article className="dienst" key={d.n}>
-                <div className="dienst-head">
-                  <div className="dienst-icon">{d.n}</div>
-                  <div className="dienst-meta">{d.sub}</div>
-                </div>
-                <h3>{d.titel}</h3>
-                <p>{d.body}</p>
-                <div className="dienst-tags">
-                  {d.tags.map((t) => (
-                    <span className="chip chip-soft" key={t}>
-                      {t}
-                    </span>
-                  ))}
-                </div>
-              </article>
+          <div className="v4-branches">
+            {BRANCHES.map((b) => (
+              <Link href={`/voor-wie/${b.slug}`} key={b.slug}>{b.naam}</Link>
             ))}
           </div>
+        </div>
+      </section>
 
-          <div style={{ marginTop: 48, textAlign: "center" }}>
-            <Link href="/diensten" className="btn btn-ghost">
-              Alle diensten in detail →
-            </Link>
+      {/* Pakketten */}
+      <section className="v4-sec alt">
+        <div className="wrap">
+          <div className="v4-sec-head">
+            <div className="l">
+              <span className="v4-kicker">Pakketten</span>
+              <h2 className="v4-h2">Duidelijke afspraken. Geen uurtje-factuurtje.</h2>
+              <p className="v4-lead">
+                Je krijgt na een gratis kennismaking altijd een vast bod op papier.
+                Dat is wat je betaalt.
+              </p>
+            </div>
+            <Link href="/prijzen" className="v4-more">Pakketten vergelijken →</Link>
+          </div>
+          <div className="v4-pricing">
+            {PRIJZEN.map((p) => (
+              <div className={`v4-plan${p.feat ? " feat" : ""}`} key={p.naam}>
+                <div>
+                  <div className="n">
+                    {p.naam}
+                    {p.feat && <span className="badge">Aanrader</span>}
+                  </div>
+                  <div className="s">{p.sub}</div>
+                </div>
+                <div>
+                  <div className="p">{p.prijs}</div>
+                  <div className="pe">{p.eenh} · excl. btw</div>
+                </div>
+                <ul>
+                  {p.bullets.map((b) => (
+                    <li key={b}>{b}</li>
+                  ))}
+                </ul>
+                <Link href="/contact" className={`btn ${p.feat ? "btn-primary" : "btn-ghost"}`}>
+                  {p.cta}
+                </Link>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Werkwijze */}
-      <section className="section proces">
+      <section className="v4-sec">
         <div className="wrap">
-          <span className="eyebrow">
-            <span className="num">03</span>
-            <span className="rule" /> Werkwijze
-          </span>
-          <div className="section-head" style={{ marginTop: 24 }}>
-            <h2>
-              Vijf stappen.
-              <em>/ geen powerpoints, wel wekelijkse demo&apos;s.</em>
-            </h2>
-            <p className="lead">
-              Elke week zie je vooruitgang. Geen lange stilte gevolgd door een
-              grote oplevering. Wijzigingen mogen tijdens de bouw, binnen de
-              afgesproken scope.
-            </p>
+          <div className="v4-sec-head">
+            <div className="l">
+              <span className="v4-kicker">Werkwijze</span>
+              <h2 className="v4-h2">Van eerste gesprek tot je eerste aanvraag.</h2>
+            </div>
+            <Link href="/werkwijze" className="v4-more">Hoe ik werk →</Link>
           </div>
-
-          <div className="proces-list">
-            {PROCES.map((p) => (
-              <div className="proces-row" key={p.n}>
-                <div className="proces-num">{p.n}</div>
-                <div className="proces-t">{p.t}</div>
-                <div className="proces-s">{p.s}</div>
-                <div className="proces-dur">{p.d}</div>
+          <div className="v4-steps">
+            {STAPPEN.map((s) => (
+              <div className="v4-step" key={s.t}>
+                <span className="n">{s.n}</span>
+                <span className="t">{s.t}</span>
+                <span className="d">{s.d}</span>
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Cases */}
-      <section className="section cases">
-        <div className="wrap">
-          <span className="eyebrow">
-            <span className="num">04</span>
-            <span className="rule" /> Cases
-          </span>
-          <div className="section-head" style={{ marginTop: 24 }}>
-            <h2>
-              Werk dat ik trots laat zien.<em>/ eerlijk over wat is gedaan.</em>
-            </h2>
-            <p className="lead" style={{ color: "rgba(255,255,255,.55)" }}>
-              Vooral installatie- en technische bedrijven — en ander MKB dat
-              serieus online wil, van maatwerk software tot logistiek.
-            </p>
-          </div>
-
-          {/* Omgekeerde piramide: 3 boven, 2 gecentreerd onder */}
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(6, 1fr)",
-              gap: 24,
-            }}
-          >
-            {CASES.map((c) => {
-              const detail = CASE_DETAILS.find((d) => d.slug === c.slug);
-              const cover = detail?.images?.cover;
-              const gridColumn = "span 2";
-              return (
-                <Link
-                  href={`/cases/${c.slug}`}
-                  className="case"
-                  key={c.slug}
-                  style={{ gridColumn }}
-                >
-                  <div
-                    className="case-img"
-                    style={
-                      cover
-                        ? undefined
-                        : {
-                            backgroundImage: `repeating-linear-gradient(135deg, rgba(0,0,0,.08) 0, rgba(0,0,0,.08) 1px, transparent 1px, transparent 14px), ${c.gradient}`,
-                          }
-                    }
-                  >
-                    {cover && (
-                      <Image
-                        src={cover}
-                        alt={`${c.naam} — website preview`}
-                        fill
-                        sizes="(max-width: 768px) 100vw, 50vw"
-                        style={{ objectFit: "cover", objectPosition: "top" }}
-                      />
-                    )}
-                    {/* Overlay zodat tekst leesbaar blijft op foto's */}
-                    {cover && (
-                      <div
-                        style={{
-                          position: "absolute",
-                          inset: 0,
-                          background:
-                            "linear-gradient(180deg, rgba(0,0,0,.15) 0%, rgba(0,0,0,.5) 100%)",
-                          zIndex: 1,
-                        }}
-                      />
-                    )}
-                    <span
-                      className="case-tag chip chip-dark"
-                      style={{ position: "relative", zIndex: 2 }}
-                    >
-                      {c.meta}
-                    </span>
-                    <div
-                      className="case-result"
-                      style={{ position: "relative", zIndex: 2 }}
-                    >
-                      <div className="lbl">Resultaat</div>
-                      <div className="v">
-                        {c.resultaat}
-                        <br />
-                        <span
-                          style={{ fontSize: ".5em", letterSpacing: ".04em" }}
-                        >
-                          {c.resultaatSub}
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="case-foot">
-                    <div>
-                      <div className="naam">{c.naam}</div>
-                      <div className="branche">{c.branche}</div>
-                    </div>
-                    <span className="link">Lees case →</span>
-                  </div>
-                </Link>
-              );
-            })}
-          </div>
-
-          <div className="stats" style={{ marginTop: 48 }}>
-            {STATS.map((s) => (
-              <div className="stat" key={s.k}>
-                <CountUp value={s.k} className="k" />
-                <div className="v">
-                  {s.v.split("\n").map((line, i) => (
-                    <span key={i}>
-                      {line}
-                      {i < s.v.split("\n").length - 1 && <br />}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Reviews — conditioneel, alleen tonen als echte quotes beschikbaar */}
-      {REVIEWS.length > 0 ? (
-        <section className="section reviews">
-          <div className="wrap">
-            <span className="eyebrow">
-              <span className="num">05</span>
-              <span className="rule" /> Wat klanten zeggen
-            </span>
-            <div className="section-head" style={{ marginTop: 24 }}>
-              <h2>
-                Echte reacties.<em>/ niet samengesteld, niet gekocht.</em>
-              </h2>
-            </div>
-            <div className="review-grid">
-              {REVIEWS.map((r) => (
-                <div className="review" key={r.n}>
-                  <div className="review-stars">
-                    {[...Array(5)].map((_, i) => (
-                      <span key={i}>★</span>
-                    ))}
-                  </div>
-                  <p className="review-q">&quot;{r.q}&quot;</p>
-                  <div className="review-by">
-                    <div className="avatar">{r.av}</div>
-                    <div>
-                      <div className="n">{r.n}</div>
-                      <div className="f">{r.f}</div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-      ) : (
-        <section className="section reviews">
-          <div className="wrap">
-            <span className="eyebrow">
-              <span className="num">05</span>
-              <span className="rule" /> Wat klanten zeggen
-            </span>
-            <div
-              className="section-head"
-              style={{ marginTop: 24, marginBottom: 0 }}
-            >
-              <h2>
-                Echte reacties.<em>/ alleen met akkoord van de klant.</em>
-              </h2>
-              <p className="lead">
-                Ik vraag actief feedback aan klanten na oplevering. Quotes
-                verschijnen hier zodra ze schriftelijk akkoord hebben gegeven
-                voor publicatie.
-              </p>
-            </div>
-            <div
-              style={{
-                marginTop: 48,
-                padding: "36px 40px",
-                background: "#fff",
-                borderRadius: 16,
-                border: "1px solid var(--rule)",
-                maxWidth: 680,
-              }}
-            >
-              <p className="review-q" style={{ fontSize: 17 }}>
-                &quot;Ik geloof niet in verzonnen reviews. Liever drie echte
-                uitspraken dan dertig die nep voelen. Dit deel vult zich
-                naarmate projecten worden opgeleverd.&quot;
-              </p>
-              <div className="review-by">
-                <div className="avatar">AE</div>
-                <div>
-                  <div className="n">Ayoub Elkaoui</div>
-                  <div className="f">Oprichter, AK Web Solutions</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* Prijzen */}
-      <section className="section prijzen">
-        <div className="wrap">
-          <span className="eyebrow">
-            <span className="num">06</span>
-            <span className="rule" /> Wat het kost
-          </span>
-          <div className="section-head" style={{ marginTop: 24 }}>
-            <h2>
-              Alles op maat.<em>/ jij betaalt voor wat je nodig hebt.</em>
-            </h2>
-            <p className="lead">
-              Geen standaardprijs die niet bij jouw bedrijf past, geen
-              uurtje-factuurtje. We beginnen met een gratis kennismaking en je
-              krijgt een vast bod op papier — dat is wat je betaalt.
-            </p>
-          </div>
-          <div className="prijs-grid">
-            {PRIJZEN.map((p) => (
-              <div className={`prijs${p.feat ? " feat" : ""}`} key={p.naam}>
-                {p.feat && <div className="prijs-tag">Meest gekozen</div>}
-                <div className="naam">{p.naam}</div>
-                <div className="sub">{p.sub}</div>
-                <div className="price">{p.prijs}</div>
-                <div className="eenh">{p.eenh}</div>
-                <div className="divider" />
-                <ul>
-                  {p.bullets.map((b) => (
-                    <li key={b}>
-                      <span className="v">✓</span>
-                      <span>{b}</span>
-                    </li>
-                  ))}
-                </ul>
-                <Link href="/contact" className={p.feat ? "" : ""}>
-                  <button type="button">{p.cta} →</button>
-                </Link>
-              </div>
-            ))}
-          </div>
-          <p
-            style={{
-              textAlign: "center",
-              marginTop: 24,
-              fontFamily: "var(--mono)",
-              fontSize: 11,
-              color: "var(--mute)",
-              letterSpacing: ".06em",
-            }}
-          >
-            Prijzen op maat, exclusief 21% BTW. Onderhoud is een vast onderdeel
-            van elk traject. Vraag een vrijblijvende offerte aan.
-          </p>
         </div>
       </section>
 
       {/* Over */}
-      <section className="section over">
-        <div className="wrap">
-          <div className="over-grid">
-            <div className="over-photo">
-              <div className="ph">
-                {/* TODO: Ayoub — vervang dit door een echte foto van jezelf */}
-                <span className="ph-label">Ayoub Elkaoui / Baarn, NL</span>
-                <div className="badge">
-                  <div>
-                    <div
-                      style={{
-                        fontFamily: "var(--mono)",
-                        fontSize: 10,
-                        color: "var(--mute)",
-                        letterSpacing: ".08em",
-                        textTransform: "uppercase",
-                      }}
-                    >
-                      HBO + MBO
-                    </div>
-                    <div
-                      style={{
-                        fontFamily: "var(--cond)",
-                        fontSize: 18,
-                        fontWeight: 700,
-                        textTransform: "uppercase",
-                        marginTop: 2,
-                      }}
-                    >
-                      Software & business
-                    </div>
-                  </div>
-                  <div
-                    style={{
-                      width: 42,
-                      height: 42,
-                      borderRadius: 999,
-                      background: "linear-gradient(135deg,var(--p2),var(--p3))",
-                      color: "#fff",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      fontSize: 14,
-                      fontWeight: 700,
-                    }}
-                  >
-                    AE
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div>
-              <span className="eyebrow">
-                <span className="num">07</span>
-                <span className="rule" /> Over AK
-              </span>
-              <h2>
-                Eén gezicht.
-                <br />
-                <em>geen accountmanager ertussen.</em>
-              </h2>
-              <p>
-                Ik ben <strong>Ayoub Elkaoui</strong>, freelance webdeveloper
-                uit Baarn. Ik bouw websites en maatwerk software voor
-                installatiebedrijven in Midden-Nederland. Mijn achtergrond is
-                een combinatie van MBO Junior Accountmanager en HBO Software
-                Development. Eerst leerde ik denken vanuit bedrijven en klanten,
-                daarna leerde ik bouwen. Die combinatie maakt het verschil: ik
-                begrijp waar jouw bedrijf vastloopt én ik kan de software maken
-                die het oplost.
-              </p>
-              <p>
-                Geen agency, geen tussenpersonen, geen uitbesteed werk in het
-                buitenland. Jij praat met de developer die je site bouwt en
-                onderhoudt. Dat houdt lijntjes kort en prijzen eerlijk.
-              </p>
-              <div className="over-foot">
-                <div>
-                  <div className="lbl">Bel direct</div>
-                  <div className="v">06 — 85 72 23 87</div>
-                </div>
-                <div>
-                  <div className="lbl">Mail</div>
-                  <div className="v">info@akwebsolutions.nl</div>
-                </div>
-                <div>
-                  <div className="lbl">Werkgebied</div>
-                  <div className="v">Midden-NL (remote heel NL)</div>
-                </div>
-              </div>
-              <div style={{ marginTop: 32 }}>
-                <Link href="/over" className="btn btn-ghost">
-                  Lees mijn verhaal →
-                </Link>
-              </div>
+      <section className="v4-sec alt">
+        <div className="wrap v4-about">
+          <div className="v4-about-photo" aria-hidden="true">
+            <span className="mono">AE</span>
+          </div>
+          <div className="v4-about-copy">
+            <span className="v4-kicker">Over</span>
+            <h2 className="v4-h2">Je praat met degene die je site bouwt.</h2>
+            <p className="v4-lead">
+              Ik ben {BRAND.founder}, webdeveloper uit {BRAND.location}. Met een
+              achtergrond als junior accountmanager en in HBO Software Development
+              denk ik eerst vanuit jouw klanten, en bouw ik daarna. Geen
+              accountmanager ertussen, niets uitbesteed.
+            </p>
+            <div className="v4-contacts">
+              <a href={`tel:${BRAND.phoneRaw}`}>{BRAND.phone.replace(/ — /g, " ")}</a>
+              <a href={`mailto:${BRAND.email}`}>{BRAND.email}</a>
+              <a href={`https://wa.me/31${BRAND.phoneRaw.slice(1)}`} target="_blank" rel="noopener noreferrer">WhatsApp</a>
+              <Link href="/over">Mijn verhaal →</Link>
             </div>
           </div>
         </div>
       </section>
 
       {/* FAQ */}
-      <section
-        className="section over"
-        style={{ paddingTop: 80, paddingBottom: 80 }}
-      >
+      <section className="v4-sec">
         <div className="wrap">
-          <span className="eyebrow">
-            <span className="num">08</span>
-            <span className="rule" /> Veelgestelde vragen
-          </span>
-          <div
-            className="section-head"
-            style={{ marginTop: 24, marginBottom: 48 }}
-          >
-            <h2
-              style={{
-                fontFamily: "var(--cond)",
-                fontWeight: 800,
-                fontSize: 64,
-                letterSpacing: "-.02em",
-                lineHeight: 0.95,
-                textTransform: "uppercase",
-                margin: 0,
-              }}
-            >
-              Veelgestelde vragen.
-              <em
-                style={{
-                  fontFamily: '"Barlow", sans-serif',
-                  fontStyle: "italic",
-                  fontWeight: 300,
-                  textTransform: "none",
-                  letterSpacing: "-.015em",
-                  color: "var(--mute)",
-                  fontSize: ".5em",
-                  display: "block",
-                  marginTop: 6,
-                }}
-              >
-                / misschien staat het hier al.
-              </em>
-            </h2>
+          <div className="v4-sec-head">
+            <div className="l">
+              <span className="v4-kicker">Veelgestelde vragen</span>
+              <h2 className="v4-h2">Misschien staat je vraag er al tussen.</h2>
+            </div>
           </div>
-          <div style={{ display: "grid", gap: 14, maxWidth: 920 }}>
+          <div className="v4-faq">
             {HOME_FAQ.map((f) => (
-              <details
-                key={f.q}
-                style={{
-                  background: "#fff",
-                  borderRadius: 14,
-                  border: "1px solid var(--rule)",
-                  overflow: "hidden",
-                }}
-              >
-                <summary
-                  style={{
-                    padding: "24px 28px",
-                    cursor: "pointer",
-                    fontFamily: "var(--cond)",
-                    fontWeight: 700,
-                    fontSize: 22,
-                    textTransform: "uppercase",
-                    letterSpacing: ".005em",
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                    listStyle: "none",
-                  }}
-                >
-                  {f.q}
-                  <span
-                    style={{
-                      fontFamily: "var(--mono)",
-                      fontSize: 14,
-                      color: "var(--p1)",
-                      flexShrink: 0,
-                      marginLeft: 16,
-                    }}
-                  >
-                    +
-                  </span>
-                </summary>
-                <div
-                  style={{
-                    padding: "0 28px 24px",
-                    fontSize: 16,
-                    lineHeight: 1.6,
-                    color: "var(--ink-soft)",
-                  }}
-                >
-                  {f.a}
-                </div>
+              <details key={f.q}>
+                <summary>{f.q}</summary>
+                <p>{f.a}</p>
               </details>
             ))}
           </div>
         </div>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(faqSchema(HOME_FAQ)),
-          }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(HOME_FAQ)) }}
         />
       </section>
 
-      <Cta
-        title={
-          <>
-            Plan een
-            <br />
-            strategie&shy;gesprek.
-          </>
-        }
-        variant="form"
-      />
+      <Cta title="Benieuwd wat jouw website kan opleveren?" subtitle="30 minuten, vrijblijvend" variant="form" />
 
       <SiteFooter />
     </>

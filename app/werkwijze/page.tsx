@@ -40,7 +40,7 @@ const STAPPEN = [
   {
     n: '03',
     titel: 'Bouw',
-    duur: 'max 2 weken (website)',
+    duur: '3–4 weken (website)',
     tekst: 'Na akkoord start de bouw. Wekelijkse demo via videocall (max 30 min). Tussenversies live op een staging-omgeving zodat je precies ziet wat er gebouwd wordt. Feedback ophalen tussendoor, niet aan het eind. Wijzigingen binnen scope zijn welkom en worden direct opgepakt.',
     details: [
       'Wekelijkse demo (max 30 min)',
@@ -65,10 +65,10 @@ const STAPPEN = [
     n: '05',
     titel: 'Doorontwikkeling',
     duur: 'doorlopend',
-    tekst: 'Na live ga je het onderhoudscontract in. Vast aanspreekpunt voor kleine wijzigingen (binnen maandbudget), snelle reactie binnen 24 uur op werkdagen, maandelijkse performance- en SEO-checks. Grotere uitbreidingen op aanvraag met los voorstel.',
+    tekst: 'Na live ga je het onderhoudscontract in. Vast aanspreekpunt voor kleine wijzigingen (binnen maandbudget), snelle reactie binnen één werkdag op werkdagen, maandelijkse performance- en SEO-checks. Grotere uitbreidingen op aanvraag met los voorstel.',
     details: [
       'Wijzigingen binnen maandbudget',
-      'Reactie binnen 24 uur op werkdagen',
+      'Reactie binnen één werkdag',
       'Maandelijkse performance-checks',
       'Uitbreidingen op aanvraag',
     ],
@@ -103,7 +103,7 @@ export default function WerkwijzePage() {
           </span>
           <div className="section-head" style={{ marginTop: 24 }}>
             <h2>
-              Vijf stappen.<em>/ transparant van begin tot eind.</em>
+              Vijf stappen.<em>transparant van begin tot eind.</em>
             </h2>
             <p className="lead">
               Mijn werkwijze is opgezet om verrassingen te minimaliseren. Je weet vooraf wat je krijgt,
@@ -116,12 +116,12 @@ export default function WerkwijzePage() {
             {STAPPEN.map((s) => (
               <div key={s.n} style={{ borderBottom: '1px solid var(--rule)', padding: '48px 0' }}>
                 <div style={{ display: 'grid', gridTemplateColumns: '100px 1fr', gap: 32, alignItems: 'start' }}>
-                  <div style={{ fontFamily: 'var(--cond)', fontWeight: 900, fontSize: 64, lineHeight: 0.9, background: 'linear-gradient(135deg, var(--p2), var(--p1))', WebkitBackgroundClip: 'text', backgroundClip: 'text', color: 'transparent', letterSpacing: '-.04em' }}>
+                  <div style={{ fontFamily: 'var(--cond)', fontWeight: 800, fontSize: 40, lineHeight: 0.9, background: 'linear-gradient(135deg, var(--p2), var(--p1))', WebkitBackgroundClip: 'text', backgroundClip: 'text', color: 'transparent', letterSpacing: '-.04em' }}>
                     {s.n}
                   </div>
                   <div>
                     <div style={{ display: 'flex', alignItems: 'baseline', gap: 16, flexWrap: 'wrap', marginBottom: 16 }}>
-                      <h2 style={{ fontFamily: 'var(--cond)', fontWeight: 800, fontSize: 40, textTransform: 'uppercase', margin: 0, letterSpacing: '-.01em' }}>
+                      <h2 style={{ fontFamily: 'var(--cond)', fontWeight: 800, fontSize: 25, margin: 0, letterSpacing: '-.01em' }}>
                         {s.titel}
                       </h2>
                       <span style={{ fontFamily: 'var(--mono)', fontSize: 12, color: 'var(--p1)', letterSpacing: '.08em', textTransform: 'uppercase' }}>
