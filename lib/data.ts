@@ -353,7 +353,7 @@ export const CASE_DETAILS: CaseDetail[] = [
       'Nieuwe site live sinds oktober 2026.',
       'Vertoningen in Google van zo’n 100 naar 1.311 per dag op 19 november 2026: ruim 13 keer zoveel (Search Console).',
       '34 klikken uit Google in één week (13–19 november 2026), met een piek van 10 klikken op 18 november.',
-      'Gemiddeld in de top 10 voor onder meer "loodgieter Harmelen" (positie 2), "installatiebedrijf Maarssen" (1,5), "afvoer ontstoppen Maarssen" (4) en "cv ketel onderhoud De Bilt" (7).',
+      'Gemiddeld in de top 10 voor onder meer "loodgieter Harmelen" (positie 2), "installatiebedrijf Maarssen" (1,5) en "afvoer ontstoppen Maarssen" (4).',
       'Op pagina 1 van Google voor onder meer "loodgieter Harmelen", "loodgieter Bunnik" en "loodgieter Maarssen".',
       'Unieke pagina’s per plaats en dienst in de regio Utrecht, plus tips en advies voor klanten.',
       'Google Bedrijfsprofiel en Bing opgeschoond, met echte klusfoto’s en een vast werkgebied.',
