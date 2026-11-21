@@ -250,7 +250,7 @@ footer .bottom{padding-top:24px;border-top:1px solid rgba(255,255,255,.08);displ
 .prijzen{background:var(--bg-alt);position:relative}
 .prijzen::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(20,16,28,.06) 1px, transparent 1px);background-size:24px 24px;pointer-events:none;mask-image:linear-gradient(180deg, transparent 0%, #000 20%, #000 80%, transparent 100%)}
 .prijzen .wrap{position:relative}
-.prijs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.prijs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .prijs{background:#fff;border-radius:18px;padding:40px 36px;position:relative;transition:transform .2s, box-shadow .2s;border:1px solid var(--rule)}
 .prijs:hover{transform:translateY(-4px);box-shadow:0 30px 60px -30px rgba(20,16,28,.18)}
 .prijs.feat{background:linear-gradient(180deg, var(--dark) 0%, var(--dark-2) 100%);color:#fff;border:1px solid rgba(255,255,255,.1);box-shadow:0 30px 60px -30px rgba(124,58,237,.45);overflow:hidden}

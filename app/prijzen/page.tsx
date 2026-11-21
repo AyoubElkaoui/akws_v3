@@ -9,14 +9,13 @@ import { PRIJZEN } from '@/lib/data';
 import { buildMetadata, breadcrumbSchema, faqSchema } from '@/lib/seo';
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Prijzen website laten maken en maatwerk software | Vanaf €69 p/m | AKWS',
+  title: 'Prijzen website laten maken en maatwerk software | Vanaf €1.495 | AKWS',
   description:
-    'Wat kost een website of maatwerk software? Starter vanaf €69 per maand, website vanaf €1.495, website met Google Ads vanaf €2.495, software vanaf €3.500 per fase. Vaste prijs vooraf, excl. btw.',
+    'Wat kost een website of maatwerk software? Website vanaf €1.495, website met Google Ads vanaf €2.495, software vanaf €3.500 per fase. Vaste prijs vooraf, excl. btw.',
   path: '/prijzen',
 });
 
 const FAQ_PRIJZEN = [
-  { q: 'Wat is het verschil tussen Starter en een losse website?', a: 'Bij Starter betaal je €495 opstart en daarna €69 per maand, minimaal 12 maanden. Hosting, onderhoud en kleine wijzigingen zitten erin. Bij een losse website betaal je vooraf vanaf €1.495 en daarna €49 per maand. Na een jaar kom je ongeveer op hetzelfde uit; Starter is vooral handig als je niet in één keer een groter bedrag wilt uitgeven.' },
   { q: 'Wat kost een website laten maken?', a: 'Een compacte website tot zo\'n zes pagina\'s begint bij €1.495. Met meer dienst- en plaatspagina\'s, een CMS om zelf teksten aan te passen of een offerteformulier met extra stappen kom je meestal uit tussen €2.000 en €3.500. Dat is in lijn met wat andere freelancers vragen; grotere bureaus zitten vaak een stuk hoger. Na het eerste gesprek krijg je een vaste prijs.' },
   { q: 'Waarom staat er "vanaf"?', a: 'Omdat een eenmanszaak iets anders nodig heeft dan een bedrijf met vijf monteurs. De vanaf-prijs is wat de kleinste versie echt kost, geen lokkertje. Wat jij nodig hebt, staat binnen 3 werkdagen na de kennismaking op papier.' },
   { q: 'Is het een vaste prijs of een schatting?', a: 'Een vaste prijs. Wat in het voorstel staat is wat je betaalt. Blijkt iets meer werk dan verwacht, dan is dat mijn probleem en niet het jouwe. Wil je tussendoor iets extra\'s, dan hoor je vooraf wat dat kost.' },
@@ -94,11 +93,6 @@ export default function PrijzenPage() {
           </div>
           <div style={{ display: 'grid', gap: 24 }}>
             {[
-              {
-                naam: 'Starter',
-                tekst: 'Voor zzp\'ers en kleine installatiebedrijven die online goed zichtbaar willen zijn zonder eerst een groot bedrag te betalen. Een compacte site van 3 tot 5 pagina\'s in je huisstijl, met belknop, WhatsApp, contactformulier, een basis voor lokale SEO en een ingericht Google Bedrijfsprofiel. €495 opstart en daarna €69 per maand, inclusief hosting, onderhoud en kleine wijzigingen. Minimaal 12 maanden, daarna maandelijks opzegbaar. Wil je later groeien, dan bouwen we gewoon verder.',
-                voor: 'Geschikt voor: zzp\'ers en kleine bedrijven die nu nog geen of een verouderde site hebben.',
-              },
               {
                 naam: 'Website',
                 tekst: 'Voor vakmensen die online vindbaar willen zijn en serieuze aanvragen willen ontvangen. Je krijgt een maatwerk ontwerp in jouw huisstijl, een lokale SEO-basis, een ingericht Google Bedrijfsprofiel en een contactformulier dat werkt. Vanaf €1.495 voor een compacte site; met meer pagina\'s of een CMS meestal €2.000 tot €3.500. Hosting en onderhoud €49 per maand.',

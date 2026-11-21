@@ -1128,23 +1128,6 @@ export const REVIEWS: { q: string; n: string; f: string; av: string }[] = [];
 
 export const PRIJZEN = [
   {
-    naam: 'Starter',
-    sub: 'Laag instappen, vast bedrag per maand',
-    prijs: '€69 p/m',
-    eenh: '+ €495 opstart · minimaal 12 maanden',
-    bullets: [
-      "Compacte site van 3 tot 5 pagina's",
-      "Ontwerp in jouw huisstijl, mobiel-first",
-      "Basis lokale SEO en Google Bedrijfsprofiel",
-      "Contactformulier, belknop en WhatsApp",
-      "Hosting, SSL, updates en onderhoud",
-      "Kleine wijzigingen inbegrepen",
-      "Na 12 maanden maandelijks opzegbaar",
-    ],
-    cta: 'Start met Starter',
-    feat: false,
-  },
-  {
     naam: 'Website',
     sub: 'Online vindbaar & serieuze aanvragen',
     prijs: 'vanaf €1.495',
@@ -1199,8 +1182,6 @@ export const PRIJZEN = [
 // Tarieven: één plek voor alle bedragen op de site (excl. 21% btw).
 // Afgestemd op wat freelancers en kleine bureaus in Nederland gemiddeld vragen.
 export const TARIEVEN = {
-  starterOpstart: '€495',
-  starterMaand: '€69',
   websiteVanaf: '€1.495',
   websitePlusVanaf: '€2.495',
   onderhoud: '€49',
@@ -1213,7 +1194,6 @@ export const TARIEVEN = {
 };
 
 export const LOSSE_PRIJZEN: { wat: string; uitleg: string; prijs: string; soort: 'website' | 'software' | 'beide' }[] = [
-  { wat: 'Starter-abonnement', uitleg: "Compacte site van 3 tot 5 pagina's met hosting, onderhoud en kleine wijzigingen. Minimaal 12 maanden", prijs: '€495 + €69 p/m', soort: 'website' },
   { wat: 'Compacte website', uitleg: "Tot zo'n zes pagina's, ontwerp in je huisstijl, lokale SEO-basis en contactformulier", prijs: 'vanaf €1.495', soort: 'website' },
   { wat: 'Uitgebreide website', uitleg: 'Pagina per dienst en plaats, CMS om zelf aan te passen, offerte- of vacatureformulier', prijs: '€2.000 – €3.500', soort: 'website' },
   { wat: 'Extra dienst- of plaatspagina', uitleg: 'Eigen tekst per pagina, geen kopie met een andere plaatsnaam', prijs: '€149 per pagina', soort: 'website' },

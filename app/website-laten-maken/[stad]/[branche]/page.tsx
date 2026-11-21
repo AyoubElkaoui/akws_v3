@@ -32,8 +32,8 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   const d = laad(stad, branche);
   if (!d) return {};
   return buildMetadata({
-    title: `Website voor ${d.h.meervoud} in ${d.s.naam} | Vanaf €69 p/m | AKWS`,
-    description: `Website laten maken als ${d.h.enkelvoud} in ${d.s.naam}? Snelle site met lokale SEO, belknop en een pagina per dienst en plaats. Vanaf €69 per maand of €1.495 eenmalig, binnen 3–4 weken live.`,
+    title: `Website voor ${d.h.meervoud} in ${d.s.naam} | Vanaf €1.495 | AKWS`,
+    description: `Website laten maken als ${d.h.enkelvoud} in ${d.s.naam}? Snelle site met lokale SEO, belknop en een pagina per dienst en plaats. Vaste prijs vanaf €1.495, binnen 3–4 weken live.`,
     path: `/website-laten-maken/${d.s.slug}/${branche}`,
   });
 }
@@ -49,7 +49,7 @@ export default async function BrancheStadPage({ params }: { params: Promise<Para
 
   const lokaleCase = CASES.find((c) => c.slug === (h.caseSlug ?? s.caseSlug));
   const faq = [
-    { q: `Wat kost een website voor een ${h.enkelvoud} in ${s.naam}?`, a: `Je kunt instappen met Starter: €495 opstart en €69 per maand, inclusief hosting en onderhoud. Een losse compacte site kost vanaf €1.495. Met een pagina per dienst en per plaats in je werkgebied zit je meestal tussen €2.000 en €3.500. Hosting en onderhoud kost €49 per maand. Je krijgt vooraf een vaste prijs.` },
+    { q: `Wat kost een website voor een ${h.enkelvoud} in ${s.naam}?`, a: `Een compacte site begint bij €1.495. Met een pagina per dienst en per plaats in je werkgebied zit je meestal tussen €2.000 en €3.500. Hosting en onderhoud kost €49 per maand. Je krijgt vooraf een vaste prijs.` },
     { q: `Hoe snel sta ik in Google op "${h.zoektermen[0]} ${s.naam}"?`, a: 'De site staat binnen drie tot vier weken live. Vindbaarheid bouwt daarna op: de eerste vertoningen zie je meestal binnen een paar weken, een goede positie kost vaak een paar maanden. Ik beloof geen posities, wel een opbouw die daar de beste kans op geeft. Google Ads werkt direct.' },
     ...b.faq.slice(2, 4),
   ];
@@ -169,8 +169,7 @@ export default async function BrancheStadPage({ params }: { params: Promise<Para
           <span className="eyebrow"><span className="num">04</span><span className="rule" /> Prijzen</span>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 16, marginTop: 32 }}>
             {[
-              { t: 'Starter', p: '€69 p/m', x: '€495 opstart. Compacte site met hosting en onderhoud, minimaal 12 maanden.' },
-              { t: 'Compacte website', p: 'vanaf €1.495', x: 'Eenmalig. Tot zo\'n zes pagina\'s, lokale SEO-basis en contactformulier.' },
+              { t: 'Compacte website', p: 'vanaf €1.495', x: 'Tot zo\'n zes pagina\'s, lokale SEO-basis en contactformulier.' },
               { t: 'Site met pagina per dienst en plaats', p: '€2.000 – €3.500', x: `Zoals bij AD Loodgieters: gevonden in ${s.naam} én de plaatsen eromheen.` },
               { t: 'Google Ads beheer', p: '€195 p/m', x: 'Direct bovenaan in je werkgebied. Advertentiebudget apart.' },
             ].map((k) => (
