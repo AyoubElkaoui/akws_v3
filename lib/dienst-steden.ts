@@ -2,6 +2,8 @@
 // Alleen plaatsen met een eigen lokale alinea krijgen een pagina (geen doorway-pagina's
 // waarin alleen de plaatsnaam wisselt). Geen verzonnen klanten of cijfers.
 
+import { STEDEN, type Stad } from '@/lib/steden';
+
 export type DienstKey = 'maatwerk-software' | 'lokale-seo';
 
 export type DienstLocatie = {
@@ -16,8 +18,10 @@ export type DienstLocatie = {
   subtitel: (stad: string) => string;
   metaTitle: (stad: string) => string;
   metaDescription: (stad: string) => string;
-  /** Per stad een eigen alinea over deze dienst in die plaats. */
+  /** Per stad een eigen alinea over deze dienst in die plaats (optioneel). */
   lokaal: Record<string, string>;
+  /** Tekst voor plaatsen zonder eigen alinea: gebouwd uit de plaatsgegevens. */
+  fallback: (s: Stad) => string;
   blokken: { titel: string; tekst: string }[];
   prijzen: { titel: string; prijs: string; tekst: string }[];
   /** Filter voor cases die bij deze dienst passen (op CASES.meta). */
@@ -64,6 +68,8 @@ export const MAATWERK_SOFTWARE: DienstLocatie = {
     { titel: 'Hosting & onderhoud', prijs: 'vanaf €49 p/m', tekst: 'Database, back-ups, updates en monitoring. Uitbreidingen €85 per uur.' },
   ],
   caseMeta: ['Maatwerk software'],
+  fallback: (s) =>
+    `Ook voor bedrijven in ${s.naam} bouw ik software die past bij hoe je werkt: urenregistratie, voorraad, werkbonnen, dashboards en koppelingen met je boekhouding of ERP. ${s.afstand} Voor een procesanalyse kom ik langs en kijk ik mee op de plek waar het werk gebeurt. Daarna begin ik met een klikbaar prototype, zodat je eerst ziet hoe het werkt voordat er gebouwd wordt.`,
   faq: (s) => [
     { q: `Kom je voor een procesanalyse langs in ${s}?`, a: 'Ja. Ik kijk het liefst mee op de plek waar het werk gebeurt, want daar zie je waar het vastloopt. Het eerste gesprek is gratis en duurt ongeveer een half uur.' },
     { q: 'Wat kost maatwerk software?', a: 'Een klikbaar prototype begint bij €750, een eerste werkende fase ligt meestal tussen €3.500 en €8.000. Grotere systemen bouw ik in fases met elk een vaste prijs. Hosting en onderhoud vanaf €49 per maand.' },
@@ -95,7 +101,7 @@ export const LOKALE_SEO: DienstLocatie = {
     bussum:
       'Bussum, Naarden en Muiden vallen onder Gooise Meren, maar niemand zoekt op die gemeentenaam. Ik maak per kern een eigen pagina en zorg dat je bedrijfsprofiel en site hetzelfde werkgebied noemen. Omdat klanten hier vaak vergelijken, krijgen je dienstpagina\'s ook projectfoto\'s en een duidelijke uitleg, zodat ze na het zoeken ook bellen.',
     utrecht:
-      'In Utrecht win je niet op de stadsnaam maar op dienst en wijk. Voor AD Loodgietersbedrijf bouwde ik pagina\'s per dienst en per plaats in de regio Utrecht. Na livegang in oktober 2026 gingen de vertoningen in Google van zo’n 100 naar bijna 500 per dag, en de site staat op pagina 1 voor meerdere plaatsen. Diezelfde opbouw gebruik ik voor andere vakmensen in en rond Utrecht.',
+      'In Utrecht win je niet op de stadsnaam maar op dienst en wijk. Voor AD Loodgietersbedrijf bouwde ik pagina\'s per dienst en per plaats in de regio Utrecht. Na livegang in oktober 2026 gingen de vertoningen in Google van zo’n 100 naar ruim 1.300 per dag, en de site staat op pagina 1 voor meerdere plaatsen. Diezelfde opbouw gebruik ik voor andere vakmensen in en rond Utrecht.',
     nijkerk:
       'Bedrijven in Nijkerk werken vaak twee kanten op: richting Amersfoort en Hoevelaken, en richting Putten en Barneveld. Een site die alleen Nijkerk noemt, laat de helft liggen. Ik breng in kaart in welke plaatsen je werkt en waar mensen op zoeken, en bouw daar pagina\'s voor met eigen tekst.',
     zeist:
@@ -115,9 +121,10 @@ export const LOKALE_SEO: DienstLocatie = {
     { titel: 'Google Ads beheer', prijs: '€195 p/m', tekst: 'Opzet €395 eenmalig op een bestaande site. Advertentiebudget apart.' },
   ],
   caseMeta: ['Website + lokale SEO'],
+  fallback: (s) => s.lokaal[0],
   faq: (s) => [
     { q: `Kan je garanderen dat ik bovenaan kom in ${s}?`, a: 'Nee, en wie dat wel belooft, kan het niet waarmaken. Wat ik wel doe: de dingen die daar aantoonbaar voor nodig zijn, en meten wat het oplevert in Search Console.' },
-    { q: 'Hoe lang duurt het voordat ik resultaat zie?', a: 'De eerste verbeteringen zie je meestal binnen een paar weken tot maanden. Bij AD Loodgieters (live in oktober) waren de vertoningen in november bijna vervijfvoudigd, maar dat verschilt per branche en concurrentie. Google Ads werkt direct.' },
+    { q: 'Hoe lang duurt het voordat ik resultaat zie?', a: 'De eerste verbeteringen zie je meestal binnen een paar weken tot maanden. Bij AD Loodgieters (live in oktober) waren de vertoningen in november ruim 13 keer zo hoog, maar dat verschilt per branche en concurrentie. Google Ads werkt direct.' },
     { q: 'Wat kost lokale SEO?', a: 'Extra pagina\'s kosten €149 per stuk, een Google Bedrijfsprofiel inrichten €195 eenmalig. Bij een nieuwe website zit een lokale SEO-basis er al in (vanaf €1.495). Google Ads-beheer is €195 per maand plus je advertentiebudget.' },
     { q: 'Kan je ook op mijn bestaande site werken?', a: 'Vaak wel. Ik begin met een audit van snelheid, techniek en inhoud. Soms is aanvullen genoeg, soms is een nieuwe site goedkoper dan blijven repareren. Dat hoor je vooraf.' },
   ],
@@ -125,6 +132,12 @@ export const LOKALE_SEO: DienstLocatie = {
 
 export const DIENST_LOCATIES = [MAATWERK_SOFTWARE, LOKALE_SEO];
 
+/** Alle plaatsen krijgen elke dienst; plaatsen met een eigen alinea eerst. */
 export function dienstSteden(d: DienstLocatie): string[] {
-  return Object.keys(d.lokaal);
+  const eigen = Object.keys(d.lokaal);
+  return [...eigen, ...STEDEN.map((s) => s.slug).filter((x) => !eigen.includes(x))];
+}
+
+export function dienstTekst(d: DienstLocatie, s: Stad): string {
+  return d.lokaal[s.slug] ?? d.fallback(s);
 }

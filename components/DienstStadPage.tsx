@@ -5,12 +5,12 @@ import { SiteFooter } from '@/components/SiteFooter';
 import { Cta } from '@/components/Cta';
 import { CASES } from '@/lib/data';
 import { stadBySlug } from '@/lib/steden';
-import { DIENST_LOCATIES, dienstSteden, type DienstLocatie } from '@/lib/dienst-steden';
+import { DIENST_LOCATIES, dienstSteden, dienstTekst, type DienstLocatie } from '@/lib/dienst-steden';
 import { buildMetadata, breadcrumbSchema, serviceSchema, faqSchema } from '@/lib/seo';
 
 export function dienstStadMetadata(d: DienstLocatie, slug: string): Metadata {
   const s = stadBySlug(slug);
-  if (!s || !d.lokaal[slug]) return {};
+  if (!s) return {};
   return buildMetadata({
     title: d.metaTitle(s.naam),
     description: d.metaDescription(s.naam),
@@ -23,13 +23,13 @@ const label = { fontFamily: 'var(--mono)', fontSize: 11, letterSpacing: '.1em', 
 
 export function DienstStadPage({ dienst: d, slug }: { dienst: DienstLocatie; slug: string }) {
   const s = stadBySlug(slug);
-  const tekst = d.lokaal[slug];
-  if (!s || !tekst) return null;
+  if (!s) return null;
+  const tekst = dienstTekst(d, s);
 
   const cases = CASES.filter((c) => d.caseMeta.includes(c.meta)).slice(0, 3);
   const faq = d.faq(s.naam);
-  const andere = dienstSteden(d).filter((x) => x !== slug).map(stadBySlug).filter((x): x is NonNullable<typeof x> => Boolean(x));
-  const andereDiensten = DIENST_LOCATIES.filter((x) => x.key !== d.key && x.lokaal[slug]);
+  const andere = [...s.buurt, ...dienstSteden(d)].filter((x, i, arr) => x !== slug && arr.indexOf(x) === i).slice(0, 8).map(stadBySlug).filter((x): x is NonNullable<typeof x> => Boolean(x));
+  const andereDiensten = DIENST_LOCATIES.filter((x) => x.key !== d.key);
 
   return (
     <>

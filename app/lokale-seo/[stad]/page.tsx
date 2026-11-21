@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation';
+import { stadBySlug } from '@/lib/steden';
 import type { Metadata } from 'next';
 import { DienstStadPage, dienstStadMetadata } from '@/components/DienstStadPage';
 import { LOKALE_SEO, dienstSteden } from '@/lib/dienst-steden';
@@ -18,6 +19,6 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
 
 export default async function Page({ params }: { params: Promise<Params> }) {
   const { stad } = await params;
-  if (!LOKALE_SEO.lokaal[stad]) notFound();
+  if (!stadBySlug(stad)) notFound();
   return <DienstStadPage dienst={LOKALE_SEO} slug={stad} />;
 }

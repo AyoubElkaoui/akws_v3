@@ -2,6 +2,7 @@ import type { MetadataRoute } from 'next';
 import { BLOG_POSTS, CASE_DETAILS, BRANCHE_DETAILS } from '@/lib/data';
 import { STEDEN } from '@/lib/steden';
 import { DIENST_LOCATIES, dienstSteden } from '@/lib/dienst-steden';
+import { BRANCHE_HAKEN } from '@/lib/branche-steden';
 import { isoDatum } from '@/lib/seo';
 
 const BASE = 'https://akwebsolutions.nl';
@@ -50,6 +51,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
   );
 
+  const brancheStadRoutes: MetadataRoute.Sitemap = STEDEN.flatMap((s) =>
+    Object.keys(BRANCHE_HAKEN).map((b) => ({
+      url: `${BASE}/website-laten-maken/${s.slug}/${b}`,
+      lastModified: now,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    })),
+  );
+
   const caseRoutes: MetadataRoute.Sitemap = CASE_DETAILS.map((c) => ({
     url: `${BASE}/cases/${c.slug}`,
     lastModified: now,
@@ -64,5 +74,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticRoutes, ...stadRoutes, ...dienstStadRoutes, ...brancheRoutes, ...caseRoutes, ...blogRoutes];
+  return [...staticRoutes, ...stadRoutes, ...dienstStadRoutes, ...brancheRoutes, ...brancheStadRoutes, ...caseRoutes, ...blogRoutes];
 }

@@ -5,6 +5,7 @@ import { SiteNav } from '@/components/SiteNav';
 import { SiteFooter } from '@/components/SiteFooter';
 import { Cta } from '@/components/Cta';
 import { BRANCHE_DETAILS, PRIJZEN } from '@/lib/data';
+import { STEDEN } from '@/lib/steden';
 import { buildMetadata, breadcrumbSchema, serviceSchema, faqSchema } from '@/lib/seo';
 
 type Params = { branche: string };
@@ -245,6 +246,22 @@ export default async function BranchePage({ params }: { params: Promise<Params> 
                 </summary>
                 <div style={{ padding: '0 28px 24px', fontSize: 16, lineHeight: 1.6, color: 'var(--ink-soft)' }}>{f.a}</div>
               </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section over" style={{ paddingTop: 40, paddingBottom: 60 }}>
+        <div className="wrap">
+          <span className="eyebrow">
+            <span className="num">→</span>
+            <span className="rule" /> {b.naam} per plaats
+          </span>
+          <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', marginTop: 24 }}>
+            {STEDEN.map((st) => (
+              <Link key={st.slug} href={`/website-laten-maken/${st.slug}/${b.slug}`} className="btn btn-ghost">
+                {b.naam} in {st.naam}
+              </Link>
             ))}
           </div>
         </div>

@@ -202,9 +202,9 @@ export default async function StadPage({ params }: { params: Promise<Params> }) 
           </div>
           <div className="branch-list">
             {BRANCHES.map((b) => (
-              <Link href={`/voor-wie/${b.slug}`} className="branch" key={b.slug}>
+              <Link href={`/website-laten-maken/${s.slug}/${b.slug}`} className="branch" key={b.slug}>
                 <div>
-                  <div className="naam">{b.naam}</div>
+                  <div className="naam">{b.naam} in {s.naam}</div>
                   <div className="sub">{b.sub}</div>
                 </div>
                 <span className="branch-arrow">→</span>
@@ -251,6 +251,8 @@ export default async function StadPage({ params }: { params: Promise<Params> }) 
                   Website laten maken in {b.naam}
                 </Link>
               ))}
+              <Link href={`/maatwerk-software/${s.slug}`} className="btn btn-ghost">Maatwerk software in {s.naam}</Link>
+              <Link href={`/lokale-seo/${s.slug}`} className="btn btn-ghost">Lokale SEO in {s.naam}</Link>
             </div>
           </div>
         </div>

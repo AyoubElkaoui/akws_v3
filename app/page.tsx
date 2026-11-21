@@ -148,9 +148,9 @@ export default function HomePage() {
       <section className="v4-proof" aria-label="Resultaten">
         <div className="wrap v4-proof-grid">
           <div className="v4-proof-item">
-            <span className="k">5×</span>
+            <span className="k">13×</span>
             <span className="t">meer vertoningen in Google</span>
-            <span className="s">AD Loodgieters · sinds livegang in okt 2026</span>
+            <span className="s">AD Loodgieters · ~100 → 1.311 per dag (nov 2026)</span>
           </div>
           <div className="v4-proof-item">
             <span className="k">70</span>

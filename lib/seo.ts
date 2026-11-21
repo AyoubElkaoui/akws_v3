@@ -83,7 +83,8 @@ export function localBusinessSchema() {
     areaServed: [
       'Baarn', 'Soest', 'Eemnes', 'Hilversum', 'Bussum', 'Naarden', 'Huizen',
       'Laren', 'Amersfoort', 'Leusden', 'Bunschoten-Spakenburg', 'Nijkerk',
-      'Zeist', 'De Bilt', 'Maarssen', 'Utrecht',
+      'Zeist', 'De Bilt', 'Maarssen', 'Utrecht', 'Blaricum', 'Nieuwegein', 'Houten',
+      'IJsselstein', 'Woerden', 'Veenendaal', 'Barneveld', 'Loosdrecht', 'Driebergen',
     ].map((name) => ({ '@type': 'City', name })),
     founder: {
       '@type': 'Person',
