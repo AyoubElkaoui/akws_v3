@@ -20,7 +20,7 @@ const HOME_FAQ = [
   },
   {
     q: "Wat kost een website?",
-    a: "Een compacte website begint bij €1.495, een uitgebreide site met pagina's per dienst en plaats zit meestal tussen €2.000 en €3.500. Hosting en onderhoud kost €49 per maand. Na een gratis kennismaking krijg je binnen drie werkdagen een vaste prijs op papier, zonder verrassingen achteraf.",
+    a: "Je kunt instappen met Starter: €495 opstart en €69 per maand, inclusief hosting en onderhoud. Een losse compacte website begint bij €1.495, een uitgebreide site met pagina's per dienst en plaats zit meestal tussen €2.000 en €3.500. Hosting en onderhoud kost €49 per maand. Na een gratis kennismaking krijg je binnen drie werkdagen een vaste prijs op papier, zonder verrassingen achteraf.",
   },
   {
     q: "Hoe snel is mijn site live?",
