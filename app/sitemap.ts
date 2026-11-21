@@ -4,6 +4,7 @@ import { STEDEN } from '@/lib/steden';
 import { DIENST_LOCATIES, dienstSteden } from '@/lib/dienst-steden';
 import { BRANCHE_HAKEN } from '@/lib/branche-steden';
 import { isoDatum } from '@/lib/seo';
+import { SOFTWARE_SOORTEN, SOFTWARE_VAKKEN } from '@/lib/software';
 
 const BASE = 'https://akwebsolutions.nl';
 const now = new Date();
@@ -60,6 +61,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
   );
 
+  const softwareRoutes: MetadataRoute.Sitemap = [
+    ...SOFTWARE_SOORTEN.map((s) => `/software-laten-maken/${s.slug}`),
+    ...Object.keys(SOFTWARE_VAKKEN).map((b) => `/software-voor/${b}`),
+  ].map((p) => ({ url: `${BASE}${p}`, lastModified: now, changeFrequency: 'monthly' as const, priority: 0.8 }));
+
   const caseRoutes: MetadataRoute.Sitemap = CASE_DETAILS.map((c) => ({
     url: `${BASE}/cases/${c.slug}`,
     lastModified: now,
@@ -74,5 +80,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticRoutes, ...stadRoutes, ...dienstStadRoutes, ...brancheRoutes, ...brancheStadRoutes, ...caseRoutes, ...blogRoutes];
+  return [...staticRoutes, ...stadRoutes, ...dienstStadRoutes, ...brancheRoutes, ...brancheStadRoutes, ...softwareRoutes, ...caseRoutes, ...blogRoutes];
 }

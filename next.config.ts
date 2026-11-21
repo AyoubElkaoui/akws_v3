@@ -61,6 +61,8 @@ const nextConfig: NextConfig = {
 
       // ─── Dienst-plaatspagina's hebben geen eigen overzicht ───────────
       { source: '/maatwerk-software', destination: '/diensten/maatwerk-software', permanent: true },
+      { source: '/software-laten-maken', destination: '/diensten/maatwerk-software', permanent: true },
+      { source: '/software-voor', destination: '/diensten/maatwerk-software', permanent: true },
       { source: '/lokale-seo', destination: '/diensten/seo-en-google-ads', permanent: true },
 
       // ─── Bedankt pagina → homepage ─────────────────────────────────

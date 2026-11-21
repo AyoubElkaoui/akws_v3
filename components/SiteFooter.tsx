@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { BRAND, BRANCHES } from '@/lib/data';
 import { STEDEN, stadBySlug } from '@/lib/steden';
 import { DIENST_LOCATIES, dienstSteden } from '@/lib/dienst-steden';
+import { SOFTWARE_SOORTEN } from '@/lib/software';
 
 export function SiteFooter() {
   return (
@@ -71,6 +72,14 @@ export function SiteFooter() {
             {STEDEN.map((st) => (
               <Link key={st.slug} href={`/website-laten-maken/${st.slug}`} style={{ color: 'rgba(255,255,255,.6)', marginRight: 14, whiteSpace: 'nowrap' }}>
                 {st.naam}
+              </Link>
+            ))}
+          </div>
+          <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+            <Link href="/diensten/maatwerk-software" style={{ color: '#fff', fontWeight: 600, marginRight: 14 }}>Software laten maken</Link>
+            {SOFTWARE_SOORTEN.map((s) => (
+              <Link key={s.slug} href={`/software-laten-maken/${s.slug}`} style={{ color: 'rgba(255,255,255,.6)', marginRight: 14, whiteSpace: 'nowrap' }}>
+                {s.naam}
               </Link>
             ))}
           </div>

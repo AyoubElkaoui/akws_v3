@@ -5,6 +5,7 @@ import { SiteFooter } from '@/components/SiteFooter';
 import { Cta } from '@/components/Cta';
 import { PageHead } from '@/components/PageHead';
 import { RegioLinks } from '@/components/RegioLinks';
+import { SoftwareLinks } from '@/components/SoftwarePagina';
 import { MAATWERK_SOFTWARE } from '@/lib/dienst-steden';
 import { CASES, CASE_DETAILS } from '@/lib/data';
 import { buildMetadata, breadcrumbSchema, serviceSchema, faqSchema } from '@/lib/seo';
@@ -13,15 +14,15 @@ const FAQ_SOFTWARE = [
   { q: 'Wanneer is maatwerk software slimmer dan een bestaand pakket?', a: 'Als je huidige tools niet aansluiten op hoe jij werkt en je daardoor veel handmatig werk of dubbele invoer hebt. Voor standaardprocessen is een bestaand pakket vaak prima; maatwerk loont zodra je maand na maand tijd verliest aan iets wat geautomatiseerd zou kunnen. In de intake bekijk ik eerlijk welke kant voor jou beter is.' },
   { q: 'Kan de software koppelen met mijn administratie?', a: 'Ja. Ik koppel met pakketten als Snelstart, Exact en Moneybird, mits die een koppeling toelaten. Zo hoef je gegevens niet dubbel in te voeren en komt bijvoorbeeld een werkbon of urenregistratie direct in je administratie terecht.' },
   { q: 'Hoe lang duurt een softwareproject?', a: 'Ik werk in afgebakende fases van doorgaans 4 tot 8 weken, elk met een vaste prijs. Zo lever ik snel iets werkends op en breiden we uit op basis van gebruik, in plaats van maandenlang aan één groot systeem te bouwen zonder tussenresultaat.' },
-  { q: 'Wat kost maatwerk software?', a: 'Een klikbaar prototype begint bij €750, een kleine tool of koppeling kost €500 tot €1.500 en een eerste werkende fase van een web-app met login en database ligt meestal tussen €3.500 en €8.000. Grotere platforms bouw ik in fases met elk een vaste prijs. Hosting en onderhoud vanaf €49 per maand, uitbreidingen €85 per uur of per blok.' },
+  { q: 'Wat kost software laten maken?', a: 'Een klikbaar prototype begint bij €750, een kleine tool of koppeling kost €500 tot €1.500 en een eerste werkende fase van een web-app met login en database ligt meestal tussen €3.500 en €8.000. Grotere platforms bouw ik in fases met elk een vaste prijs. Hosting en onderhoud vanaf €49 per maand, uitbreidingen €85 per uur of per blok.' },
   { q: 'Werkt de software ook op de bouwplaats, zonder goed bereik?', a: 'Ja. Ik bouw mobiel-first en waar nodig als Progressive Web App die offline werkt en synct zodra er weer verbinding is. Zo kan een monteur uren of een werkbon ter plekke registreren, ook in een kruipruimte zonder bereik.' },
   { q: 'Wat als maatwerk toch niet de juiste oplossing blijkt?', a: 'Dan zeg ik dat. Soms is een bestaand pakket of een slimme koppeling goedkoper en beter dan iets nieuws bouwen. Ik verdien liever je vertrouwen met eerlijk advies dan een project dat je niet nodig had.' },
 ];
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Maatwerk software laten maken | Vanaf €3.500 per fase | AKWS',
+  title: 'Software laten maken | Maatwerk vanaf €3.500 per fase | AKWS',
   description:
-    'Maatwerk software laten maken: urenregistratie, voorraad, dashboards en koppelingen met je ERP of boekhouding. Prototype vanaf €750, eerste fase vanaf €3.500. Bekijk 6 echte projecten.',
+    'Software laten maken door een freelance developer: urenregistratie, voorraad, dashboards en koppelingen met je ERP of boekhouding. Prototype vanaf €750, eerste fase vanaf €3.500. Bekijk 6 echte projecten.',
   path: '/diensten/maatwerk-software',
 });
 
@@ -75,8 +76,8 @@ export default function MaatwerkSoftwarePage() {
       <PageHead
         crumbs={[{ href: '/', label: 'Home' }, { href: '/diensten', label: 'Diensten' }, { label: 'Maatwerk software' }]}
         chip="Urenregistratie · Koppelingen · Vaste prijs"
-        title="Maatwerk software."
-        subtitle="Software die past bij hoe jouw bedrijf werkt. Geen generieke SaaS met overbodige features."
+        title="Software laten maken."
+        subtitle="Maatwerk dat past bij hoe jouw bedrijf werkt. Geen generieke SaaS met overbodige features."
       />
 
       <section className="section over">
@@ -295,6 +296,16 @@ export default function MaatwerkSoftwarePage() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(FAQ_SOFTWARE)) }}
         />
+      </section>
+
+      <section className="section over" style={{ paddingTop: 20, paddingBottom: 40 }}>
+        <div className="wrap">
+          <span className="eyebrow">
+            <span className="num">→</span>
+            <span className="rule" /> Per soort en per vak
+          </span>
+          <SoftwareLinks />
+        </div>
       </section>
 
       <RegioLinks dienst={MAATWERK_SOFTWARE} />

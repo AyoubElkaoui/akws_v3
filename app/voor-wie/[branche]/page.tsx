@@ -264,6 +264,9 @@ export default async function BranchePage({ params }: { params: Promise<Params> 
               </Link>
             ))}
           </div>
+          <div style={{ marginTop: 20 }}>
+            <Link href={`/software-voor/${b.slug}`} className="btn btn-ghost">Software voor {b.naam.toLowerCase()} laten maken →</Link>
+          </div>
         </div>
       </section>
 

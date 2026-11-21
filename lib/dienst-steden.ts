@@ -35,9 +35,9 @@ export const MAATWERK_SOFTWARE: DienstLocatie = {
   naam: 'Maatwerk software',
   dienstHref: '/diensten/maatwerk-software',
   chip: 'Maatwerk software',
-  h1: (s) => `Maatwerk software in ${s}`,
+  h1: (s) => `Software laten maken in ${s}`,
   subtitel: () => 'Software die past bij hoe jouw bedrijf werkt.',
-  metaTitle: (s) => `Maatwerk software laten maken in ${s} | Freelance developer | AKWS`,
+  metaTitle: (s) => `Software laten maken in ${s} | Maatwerk vanaf €3.500 | AKWS`,
   metaDescription: (s) =>
     `Maatwerk software laten maken in ${s}? Urenregistratie, voorraad, dashboards en koppelingen met je ERP of boekhouding. Prototype vanaf €750, eerste fase vanaf €3.500.`,
   lokaal: {
