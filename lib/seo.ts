@@ -68,7 +68,7 @@ export function localBusinessSchema() {
     '@id': BUSINESS_ID,
     url: BASE_URL,
     description:
-      'Websites, lokale SEO, Google Ads en maatwerk software voor installateurs, vakmensen en lokaal MKB in Midden-Nederland.',
+      'Websites, webshops, lokale SEO, Google Ads en software op maat voor het MKB in Midden-Nederland.',
     sameAs: ['https://www.linkedin.com/company/ak-web-solutions-nl/'],
     knowsAbout: ['Webdesign', 'Lokale SEO', 'Google Ads', 'Maatwerk software', 'Next.js'],
     telephone: '+31685722387',

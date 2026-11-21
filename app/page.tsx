@@ -7,16 +7,16 @@ import { BRAND, BRANCHES, CASES, CASE_DETAILS, PRIJZEN } from "@/lib/data";
 import { buildMetadata, faqSchema } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "Websites & software voor installateurs | AK Web Solutions Baarn",
+  title: "Website & software laten maken voor het MKB | AK Web Solutions Baarn",
   description:
-    "Websites met lokale SEO en maatwerk software voor installateurs, aannemers en vakmensen in Midden-Nederland. Vaste prijs vooraf, live in 3–4 weken.",
+    "Websites, webshops en software op maat voor het MKB in Midden-Nederland: van kapper en installateur tot zorg en IT. Vaste prijs vooraf, website vanaf €1.495.",
   path: "/",
 });
 
 const HOME_FAQ = [
   {
-    q: "Werk je alleen voor installatiebedrijven?",
-    a: "Installateurs zijn mijn thuisbasis, maar ik werk voor vakmensen in installatie, bouw en techniek: ook aannemers, dakdekkers, hoveniers, schilders en transportbedrijven. Vooral in Midden-Nederland, op afstand in heel Nederland.",
+    q: "Voor wat voor bedrijven werk je?",
+    a: "Voor het MKB: van loodgieter, aannemer en transportbedrijf tot kapper, praktijk, administratiekantoor, IT-bedrijf en winkel. Websites én software, allebei als hoofdvak. Vooral in Midden-Nederland, op afstand in heel Nederland.",
   },
   {
     q: "Wat kost een website?",
@@ -94,15 +94,15 @@ export default function HomePage() {
         <div className="wrap v4-hero-grid">
           <div className="v4-hero-copy">
             <span className="v4-pill">
-              <span className="dot" /> Voor installateurs, bouw &amp; techniek · Midden-Nederland
+              <span className="dot" /> Websites &amp; software voor het MKB · Midden-Nederland
             </span>
             <h1>
               Een website die de telefoon laat <span>rinkelen</span>.
             </h1>
             <p className="v4-hero-sub">
-              Ik bouw snelle websites met lokale SEO voor vakmensen, en de
-              software die het werk erachter makkelijker maakt. Gemeten op
-              aanvragen, niet op mooie plaatjes.
+              Ik bouw snelle websites die gevonden worden, en software op maat
+              die het werk erachter makkelijker maakt. Voor ondernemers van
+              kapper tot installateur. Gemeten op aanvragen, niet op mooie plaatjes.
             </p>
             <div className="v4-actions">
               <Link href="/contact" className="btn btn-primary">
@@ -191,7 +191,7 @@ export default function HomePage() {
           <div className="v4-sec-head">
             <div className="l">
               <span className="v4-kicker">Websites</span>
-              <h2 className="v4-h2">Echte sites voor echte vakmensen.</h2>
+              <h2 className="v4-h2">Echte sites voor echte ondernemers.</h2>
             </div>
             <Link href="/cases" className="v4-more">Alle cases →</Link>
           </div>
@@ -329,11 +329,11 @@ export default function HomePage() {
           <div className="v4-sec-head">
             <div className="l">
               <span className="v4-kicker">Voor wie</span>
-              <h2 className="v4-h2">Ik ken jullie vak.</h2>
+              <h2 className="v4-h2">Elke branche een eigen aanpak.</h2>
               <p className="v4-lead">
-                Spoedklussen op zaterdagavond, seizoenspieken, planning van
-                monteurs, uren op locatie en koppelingen met je administratie.
-                Daar hoef je mij niets over uit te leggen.
+                Een kapper wil online boekingen, een loodgieter belletjes, een
+                praktijk aanmeldingen en een IT-bedrijf vertrouwen. Daarom heeft
+                elke branche hier een eigen pagina met wat er voor jullie werkt.
               </p>
             </div>
           </div>

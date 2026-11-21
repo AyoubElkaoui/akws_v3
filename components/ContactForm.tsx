@@ -15,7 +15,7 @@ declare global {
 }
 
 const SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ?? '';
-const BRANCHES = ['Loodgieters', 'CV & HVAC', 'Elektriciens', 'Installatiebedrijven', 'Dakdekkers', 'Anders'];
+const BRANCHES = ['Bouw & installatie', 'Kapper / beauty', 'Horeca', 'Praktijk / zorg', 'Administratie / juridisch', 'IT-bedrijf', 'Winkel / webshop', 'Productie / groothandel', 'Transport', 'Anders'];
 
 export function ContactForm() {
   const [status, setStatus] = useState<'idle' | 'loading' | 'ok' | 'error'>('idle');

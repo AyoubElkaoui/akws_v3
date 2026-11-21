@@ -1,3 +1,4 @@
+import { MKB_DOELGROEPEN } from '@/lib/mkb-doelgroepen';
 // Software laten maken: pagina's per soort software (/software-laten-maken/[soort])
 // en per vak (/software-voor/[branche]). Alleen echte cases; waar nog geen live
 // project is, staat dat er eerlijk bij.
@@ -279,7 +280,7 @@ export type SoftwareVak = {
   cases: string[];
 };
 
-export const SOFTWARE_VAKKEN: Record<string, SoftwareVak> = {
+const VAKKEN_BOUW: Record<string, SoftwareVak> = {
   loodgieters: {
     meervoud: 'loodgieters',
     intro: 'Een loodgietersbedrijf draait op spoedklussen, werkbonnen en materiaal dat in de bus ligt. Als werkbonnen op papier gaan en uren pas aan het eind van de week worden ingevoerd, glipt er geld tussendoor. Met een werkbon-app en urenregistratie die aansluiten op je administratie factureer je alles wat je doet, zonder avondwerk.',
@@ -364,4 +365,11 @@ export const SOFTWARE_VAKKEN: Record<string, SoftwareVak> = {
     soorten: ['koppeling', 'voorraadbeheer', 'klantportaal'],
     cases: ['voorraad-app', 'itflow'],
   },
+};
+
+export const SOFTWARE_VAKKEN: Record<string, SoftwareVak> = {
+  ...VAKKEN_BOUW,
+  ...Object.fromEntries(
+    MKB_DOELGROEPEN.map((m) => [m.slug, { meervoud: m.meervoud, intro: m.software.intro, knelpunten: m.software.knelpunten, soorten: m.software.soorten, cases: m.software.cases }]),
+  ),
 };

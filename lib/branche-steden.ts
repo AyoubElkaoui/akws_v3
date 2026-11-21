@@ -3,6 +3,7 @@
 // plaatstekst uit lib/steden.ts. Geen verzonnen klanten of cijfers.
 
 import type { Stad } from '@/lib/steden';
+import { MKB_DOELGROEPEN } from '@/lib/mkb-doelgroepen';
 
 export type BrancheHaak = {
   /** "loodgieters", gebruikt in titels: Website voor loodgieters in X */
@@ -19,7 +20,7 @@ export type BrancheHaak = {
   caseSlug?: string;
 };
 
-export const BRANCHE_HAKEN: Record<string, BrancheHaak> = {
+const HAKEN_BOUW: Record<string, BrancheHaak> = {
   loodgieters: {
     meervoud: 'loodgieters',
     enkelvoud: 'loodgieter',
@@ -123,4 +124,21 @@ export const BRANCHE_HAKEN: Record<string, BrancheHaak> = {
     opSite: ['Afspraakformulier voor APK en onderhoud', 'Prijzen voor standaardklussen', 'Occasions of diensten overzicht', 'Openingstijden en route', 'Reviews uit Google'],
     zoektermen: ['garage', 'apk', 'auto onderhoud', 'auto reparatie', 'autobedrijf'],
   },
+};
+
+export const BRANCHE_HAKEN: Record<string, BrancheHaak> = {
+  ...HAKEN_BOUW,
+  ...Object.fromEntries(
+    MKB_DOELGROEPEN.map((m) => [
+      m.slug,
+      {
+        meervoud: m.meervoud,
+        enkelvoud: m.enkelvoud,
+        intro: (s: Stad) => m.plaatsIntro.replaceAll('{stad}', s.naam),
+        opSite: m.opSite,
+        zoektermen: m.zoektermen,
+        caseSlug: m.caseSlug,
+      } satisfies BrancheHaak,
+    ]),
+  ),
 };

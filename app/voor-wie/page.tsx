@@ -8,9 +8,9 @@ import { BRANCHES, BRANCHE_DETAILS } from '@/lib/data';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Voor wie — Websites voor installateurs, bouw, transport & MKB | AKWS',
+  title: 'Voor wie — Websites en software per branche | AKWS',
   description:
-    'Ik bouw websites en software voor vakmensen en lokaal MKB: van installateurs, bouw en afbouw tot transport, zonne-energie en autobedrijven. Kies jouw vak.',
+    'Websites en software voor het MKB: van installateurs, bouw en transport tot kappers, praktijken, zorg, administratiekantoren, IT-bedrijven en winkels. Kies jouw branche.',
   path: '/voor-wie',
 });
 
@@ -21,15 +21,18 @@ export default function VoorWiePage() {
 
       <PageHead
         crumbs={[{ href: '/', label: 'Home' }, { label: 'Voor wie' }]}
-        chip={`${BRANCHES.length} vakgebieden, 1 specialist`}
+        chip={`${BRANCHES.length} branches, 1 developer`}
         title="Voor wie."
-        subtitle="Ik bouw voor vakmensen en lokaal MKB — van installatie, bouw en afbouw tot transport, zonne-energie en autobedrijven. Geen generalist die ook wel een vaksite kan, maar iemand die jullie markt en werkdag kent."
+        subtitle="Voor het MKB, met per branche een eigen aanpak. Een kapper heeft iets anders nodig dan een loodgieter, een praktijk iets anders dan een IT-bedrijf. Kies jouw branche en lees wat voor jou werkt."
       />
 
       <section className="section over">
         <div className="wrap">
+          {([['bouw', 'Bouw, installatie & techniek'], ['mkb', 'Dienstverlening, zorg, winkels & meer']] as const).map(([groep, kop]) => (
+          <div key={groep} style={{ marginBottom: 48 }}>
+          <h2 style={{ fontFamily: 'var(--cond)', fontWeight: 800, fontSize: 26, margin: '0 0 18px' }}>{kop}</h2>
           <div className="branch-list">
-            {BRANCHES.map((b) => {
+            {BRANCHES.filter((b) => b.groep === groep).map((b) => {
               const detail = BRANCHE_DETAILS.find((d) => d.slug === b.slug);
               return (
                 <Link href={`/voor-wie/${b.slug}`} className="branch" key={b.slug} style={{ textDecoration: 'none' }}>
@@ -47,6 +50,8 @@ export default function VoorWiePage() {
               );
             })}
           </div>
+          </div>
+          ))}
         </div>
       </section>
 

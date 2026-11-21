@@ -18,7 +18,7 @@ export function SiteFooter() {
               </span>
             </Link>
             <p>
-              Websites en maatwerk software voor installateurs, bouw en lokaal MKB in
+              Websites, webshops en software op maat voor het MKB in
               Midden-Nederland. Eén freelancer, korte lijntjes, eerlijke prijzen.
             </p>
             {/* TODO: Ayoub — KvK- en BTW-nummer invullen in lib/data.ts */}

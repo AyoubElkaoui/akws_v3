@@ -1,3 +1,4 @@
+import { MKB_DOELGROEPEN } from '@/lib/mkb-doelgroepen';
 // Alle content voor akwebsolutions.nl — één bron van waarheid.
 // Wijzig hier om overal bij te werken.
 
@@ -34,7 +35,7 @@ export const USPS = [
   { num: '04', k: 'NL', v: 'Nederlandstalige support. Geen ticket-fabriek, geen tijdverschil.' },
 ];
 
-export const BRANCHES = [
+const BRANCHES_BOUW = [
   { naam: 'Loodgieters', sub: 'Sanitair & leidingwerk', slug: 'loodgieters' },
   { naam: 'CV & HVAC', sub: 'Ketels, warmtepompen, klimaat', slug: 'cv-monteurs' },
   { naam: 'Elektriciens', sub: 'Installatie & inspectie', slug: 'elektriciens' },
@@ -729,7 +730,7 @@ export type BrancheDetail = {
   faq: { q: string; a: string }[];
 };
 
-export const BRANCHE_DETAILS: BrancheDetail[] = [
+const BRANCHE_DETAILS_BOUW: BrancheDetail[] = [
   {
     slug: 'loodgieters',
     naam: 'Loodgieters',
@@ -1771,3 +1772,37 @@ export const BLOG_POSTS: BlogPost[] = [
 ];
 
 export const BLOG_CATEGORIES = ['Alles', 'Websites', 'Software', 'SEO', 'Werkwijze', 'Cases']
+
+
+// ---------------------------------------------------------------------------
+// Doelgroepen: bouw & techniek + overig MKB (lib/mkb-doelgroepen.ts)
+
+export type Branche = { naam: string; sub: string; slug: string; groep: 'bouw' | 'mkb' };
+
+export const BRANCHES: Branche[] = [
+  ...BRANCHES_BOUW.map((b) => ({ ...b, groep: 'bouw' as const })),
+  ...MKB_DOELGROEPEN.map((m) => ({ naam: m.naam, sub: m.sub, slug: m.slug, groep: 'mkb' as const })),
+];
+
+export const BRANCHE_DETAILS: BrancheDetail[] = [
+  ...BRANCHE_DETAILS_BOUW,
+  ...MKB_DOELGROEPEN.map((m): BrancheDetail => ({
+    slug: m.slug,
+    naam: m.naam,
+    sectorLabel: m.sectorLabel,
+    metaTitle: `Website laten maken voor ${m.meervoud} | Vanaf €1.495 | AKWS`,
+    metaDescription: `Website laten maken voor ${m.meervoud} in Midden-Nederland: ${m.opSite.slice(0, 3).join(', ').toLowerCase()}. Lokale SEO inbegrepen, vanaf €1.495.`,
+    h1: `Website laten maken voor ${m.meervoud}`,
+    subtitel: m.subtitel,
+    lead: m.lead,
+    overzichtTekst: m.overzicht,
+    pijnpunten: m.pijnpunten.map(([titel, tekst]) => ({ titel, tekst })),
+    oplossingen: m.oplossingen.map(([titel, tekst]) => ({ titel, tekst })),
+    zoekwoorden: m.zoekwoorden,
+    faq: [
+      { q: `Wat kost een website voor ${m.meervoud}?`, a: 'Een compacte website begint bij €1.495 eenmalig, daarna €49 per maand voor hosting en onderhoud. Een uitgebreidere site met een pagina per dienst en per plaats kost €2.000 tot €3.500. Je krijgt vooraf een vaste prijs.' },
+      ...m.faq.map(([q, a]) => ({ q, a })),
+      { q: 'Hoe snel staat mijn site live?', a: 'Drie tot vier weken na akkoord, met elke week een demo zodat je kunt bijsturen.' },
+    ],
+  })),
+];

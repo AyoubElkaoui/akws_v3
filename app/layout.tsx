@@ -23,11 +23,11 @@ const interTight = localFont({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Websites & software voor installateurs | AK Web Solutions Baarn',
+    default: 'Website & software laten maken voor het MKB | AK Web Solutions Baarn',
     template: '%s | AKWS',
   },
   description:
-    'Freelance webdeveloper voor installateurs, aannemers en vakmensen in Midden-Nederland. Websites, Google Ads en maatwerk software. Prijzen op maat, geen verrassingen.',
+    'Freelance developer voor het MKB in Midden-Nederland. Websites, webshops, Google Ads en software op maat. Website vanaf €1.495, vaste prijs vooraf.',
   metadataBase: new URL('https://akwebsolutions.nl'),
   keywords: [
     'website laten maken installateur',
@@ -40,6 +40,9 @@ export const metadata: Metadata = {
     'Google Ads installateur',
     'maatwerk software installatie',
     'website voor vakmensen',
+    'website laten maken MKB',
+    'software laten maken',
+    'webshop laten maken',
     'freelancer Baarn',
     'website Midden-Nederland',
   ],
