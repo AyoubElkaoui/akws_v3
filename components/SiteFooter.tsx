@@ -95,7 +95,7 @@ export function SiteFooter() {
           ))}
         </nav>
         <div className="bottom">
-          <span>© 2026 AK Web Solutions · Ayoub Elkaoui</span>
+          <span>© 2026 AK Web Solutions · Baarn</span>
           <span>{BRAND.domain}</span>
           <span>
             <Link href="/algemene-voorwaarden" style={{ color: 'inherit' }}>Algemene voorwaarden</Link>
