@@ -9,7 +9,7 @@ import { CASES, CASE_DETAILS, OOK_GEBOUWD } from '@/lib/data';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Werk — Websites en software voor installatiebedrijven | AKWS',
+  title: 'Werk — Websites en software voor het MKB | AKWS',
   description:
     'Websites met lokale SEO en maatwerk software: facturatie, voorraad, dashboards en ticketsystemen voor installatiebedrijven, bouw, logistiek en ander MKB.',
   path: '/cases',

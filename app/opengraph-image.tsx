@@ -1,7 +1,7 @@
 import { ImageResponse } from 'next/og';
 
 export const runtime = 'edge';
-export const alt = 'AK Web Solutions — Websites & software voor installateurs';
+export const alt = 'AK Web Solutions — Websites & software voor het MKB';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
@@ -46,7 +46,7 @@ export default function OgImage() {
         {/* Main */}
         <div>
           <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: 22, marginBottom: 24, letterSpacing: 3 }}>
-            VOOR INSTALLATIEBEDRIJVEN IN MIDDEN-NEDERLAND
+            VOOR HET MKB IN MIDDEN-NEDERLAND
           </div>
           <div
             style={{
@@ -62,7 +62,7 @@ export default function OgImage() {
             <br />
             Software voor
             <br />
-            <span style={{ color: '#a855f7' }}>installateurs.</span>
+            <span style={{ color: '#a855f7' }}>het MKB.</span>
           </div>
         </div>
 

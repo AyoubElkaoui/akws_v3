@@ -1247,9 +1247,9 @@ export type BlogBlock =
 export const BLOG_POSTS: BlogPost[] = [
   {
     slug: 'website-binnen-2-weken-live',
-    titel: 'Waarom je nieuwe website binnen 2 weken live kan (en waarom snelheid wint)',
+    titel: 'Waarom je nieuwe website binnen een maand live kan (en waarom snelheid wint)',
     excerpt:
-      'Veel ondernemers denken dat een goede website maanden kost. Dat hoeft niet. Ik lever websites binnen 2 weken op — en juist die snelheid levert je eerder klanten op. Zo werkt het.',
+      'Veel ondernemers denken dat een goede website maanden kost. Dat hoeft niet. Ik lever websites binnen 3 à 4 weken op — en juist die snelheid levert je eerder klanten op. Zo werkt het.',
     cat: 'Websites',
     date: '28 juli 2026',
     readMin: 5,
@@ -1258,15 +1258,15 @@ export const BLOG_POSTS: BlogPost[] = [
     gradient: 'linear-gradient(135deg, #4c1d95 0%, #2e1065 60%, #7c3aed 100%)',
     cover: '/blog-covers/website-binnen-2-weken-live.jpg',
     content: [
-      { kind: 'p', text: '**"Een nieuwe website? Dat duurt zeker maanden."** Dat hoor ik vaak. En bij veel bureaus klopt het ook — eindeloze rondjes, feedbackformulieren, en een offerte waar je maanden later nog op wacht. Bij mij niet. Een website staat binnen 2 weken live. Punt.' },
+      { kind: 'p', text: '**"Een nieuwe website? Dat duurt zeker maanden."** Dat hoor ik vaak. En bij veel bureaus klopt het ook — eindeloze rondjes, feedbackformulieren, en een offerte waar je maanden later nog op wacht. Bij mij niet. Een website staat binnen 3 à 4 weken live.' },
       { kind: 'h2', text: 'Waarom snelheid wint', id: 'snelheid' },
       { kind: 'p', text: 'Elke week dat je website níet live is, is een week waarin je concurrent wél gevonden wordt. Voor een installatiebedrijf, transporteur of ander lokaal MKB is dat direct gemiste omzet. Snelheid is geen luxe — het is het verschil tussen deze maand klanten krijgen of volgend kwartaal.' },
-      { kind: 'h2', text: 'Hoe het in 2 weken kan', id: 'hoe' },
+      { kind: 'h2', text: 'Hoe het in een paar weken kan', id: 'hoe' },
       { kind: 'ol', items: [
         '**Één kennismaking, geen tien meetings** — 30 minuten waarin ik alles vraag wat ik nodig heb.',
-        '**Vaste, bewezen basis** — ik bouw op Next.js met een aanpak die ik al tientallen keren heb gedaan, geen experiment op jouw kosten.',
+        '**Vaste, bewezen basis** — ik bouw op Next.js met een aanpak die zich al bij andere klanten bewezen heeft, geen experiment op jouw kosten.',
         '**Content samen, snel** — jij levert je diensten en foto’s aan, ik schrijf de rest. Wekelijkse demo, feedback tussendoor.',
-        '**Live in week 2** — getest op snelheid, mobiel en vindbaarheid, en de deur uit.',
+        '**Live in week 3 à 4** — getest op snelheid, mobiel en vindbaarheid, en de deur uit.',
       ] },
       { kind: 'h2', text: 'En de kwaliteit dan?', id: 'kwaliteit' },
       { kind: 'p', text: 'Snel betekent niet slordig. Mijn sites laden in onder een seconde, zijn mobiel-first, AVG-proof en technisch geoptimaliseerd voor Google. Snelheid komt niet doordat ik minder doe — het komt doordat ik geen tijd verspil aan bureaucratie.' },
@@ -1283,8 +1283,8 @@ export const BLOG_POSTS: BlogPost[] = [
       ] },
       { kind: 'p', text: 'Ik knip dat allemaal weg. Eén kennismaking om de scope scherp te krijgen, ik schrijf zelf de teksten (jij checkt), en je ziet elke paar dagen een werkende versie. Geen wachten, geen ruis.' },
       { kind: 'h2', text: 'Voor wie werkt dit — en voor wie niet', id: 'voor-wie' },
-      { kind: 'p', text: 'Eerlijk is eerlijk: die twee weken gelden voor een professionele bedrijfswebsite — van een installateur, transporteur, hovenier of ander MKB. Heb je een grote webshop met honderden producten of complexe maatwerk software nodig, dan duurt dat langer, en dat hoor je vooraf. Voor de meeste vakbedrijven is een snelle, vindbare site die aanvragen oplevert precies wat nodig is — en die staat binnen twee weken live.' },
-      { kind: 'callout', ico: '→', titel: 'Wil je binnen 2 weken online?', body: 'Plan een gratis kennismaking van 30 minuten. Ik vertel je eerlijk of het haalbaar is voor jouw project.' },
+      { kind: 'p', text: 'Eerlijk is eerlijk: die 3 à 4 weken gelden voor een professionele bedrijfswebsite — van een installateur, transporteur, hovenier of ander MKB. Heb je een grote webshop met honderden producten of complexe maatwerk software nodig, dan duurt dat langer, en dat hoor je vooraf. Voor de meeste vakbedrijven is een snelle, vindbare site die aanvragen oplevert precies wat nodig is — en die staat binnen twee weken live.' },
+      { kind: 'callout', ico: '→', titel: 'Wil je binnen een maand online?', body: 'Plan een gratis kennismaking van 30 minuten. Ik vertel je eerlijk of het haalbaar is voor jouw project.' },
     ],
   },
   {
@@ -1376,7 +1376,7 @@ export const BLOG_POSTS: BlogPost[] = [
     author: 'Ayoub Elkaoui',
     authorAv: 'AE',
     gradient: 'linear-gradient(135deg, #0b3a6b 0%, #0a1f3c 100%)',
-    cover: '/blog-covers/website-voor-transportbedrijf.jpg',
+    cover: '/zando-transport/screen-home.jpg',
     content: [
       { kind: 'p', text: '**In transport en logistiek telt één ding boven alles: betrouwbaarheid.** Een opdrachtgever die met spoed een zending weg moet krijgen, heeft geen tijd voor een trage of onduidelijke website. Onlangs bouwde ik de site voor Zando Transport, een spoedkoerier uit Soest — en dat maakte precies duidelijk wat een transportsite anders maakt.' },
       { kind: 'h2', text: '1. Snelheid is niet optioneel', id: 'snelheid' },
@@ -1433,7 +1433,7 @@ export const BLOG_POSTS: BlogPost[] = [
         'Kun je zelf een tekst of foto aanpassen zonder iemand te bellen?',
       ] },
       { kind: 'h2', text: 'Vervangen hoeft niet duur of traag te zijn', id: 'snel' },
-      { kind: 'p', text: 'De grootste reden dat mensen een slechte site laten staan, is de angst voor een lang, duur traject. Terecht, want zo werkt het bij veel bureaus. Bij mij niet: een nieuwe website staat binnen twee weken live, tegen een vaste prijs die je vooraf weet. Geen maandenlange verbouwing, geen verrassingen achteraf. Een verouderde site is dus geen probleem dat je nog jaren voor je uit hoeft te schuiven.' },
+      { kind: 'p', text: 'De grootste reden dat mensen een slechte site laten staan, is de angst voor een lang, duur traject. Terecht, want zo werkt het bij veel bureaus. Bij mij niet: een nieuwe website staat binnen 3 à 4 weken live, tegen een vaste prijs die je vooraf weet. Geen maandenlange verbouwing, geen verrassingen achteraf. Een verouderde site is dus geen probleem dat je nog jaren voor je uit hoeft te schuiven.' },
       { kind: 'callout', ico: '→', titel: 'Herken je een paar van deze tekenen?', body: 'Plan een gratis check van 30 minuten. Ik kijk mee naar je huidige site en geef eerlijke feedback, ook als je niks bij mij afneemt.' },
     ],
   },
@@ -1441,7 +1441,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: 'werkbon-naar-factuur-in-10-seconden',
     titel: 'Van papieren werkbon naar factuur in tien seconden: zo werkt het.',
     excerpt:
-      'De gemiddelde installateur is 32 uur per week kwijt aan administratie. We bouwden een werkbon-app die dat halveert: klant tekent op de telefoon, foto’s en materiaal direct erbij, en de werkbon staat binnen tien seconden in Snelstart.',
+      'Werkbonnen overtypen, foto’s zoeken in WhatsApp, materiaal narekenen: administratie vreet uren. Met een werkbon-app tekent de klant op de telefoon, gaan foto’s en materiaal direct mee en staat de werkbon binnen seconden klaar voor de factuur.',
     cat: 'Software',
     date: '14 mei 2026',
     readMin: 8,
@@ -1457,7 +1457,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         kind: 'p',
-        text: 'Ik heb het bij meerdere installatiebedrijven gemeten. Het gemiddelde: **32 uur per week aan administratie**. Werkbonnen overtypen, foto’s terugzoeken in de WhatsApp van vorige donderdag, materiaal narekenen, en als alles meezit nog een factuur eruit.',
+        text: 'Bij veel bedrijven gaat er **elke week een flink aantal uren naar administratie**. Werkbonnen overtypen, foto’s terugzoeken in de WhatsApp van vorige donderdag, materiaal narekenen, en als alles meezit nog een factuur eruit.',
       },
       { kind: 'h2', text: 'Het probleem', id: 'probleem' },
       {
@@ -1592,7 +1592,7 @@ export const BLOG_POSTS: BlogPost[] = [
     author: 'Ayoub Elkaoui',
     authorAv: 'AE',
     gradient: 'linear-gradient(135deg, #d97a2c 0%, #7c3aed 100%)',
-    cover: '/blog-covers/ad-loodgieter-meer-aanvragen-google-ads.jpg',
+    cover: '/ad-loodgietersbedrijf/home-v4.jpg',
     content: [
       { kind: 'p', text: 'In oktober 2026 ging de nieuwe website van AD Loodgietersbedrijf uit Maarssen live. Dit artikel beschrijft wat er gebouwd is en waarom. Er staan geen resultaatcijfers in: de site is daar te kort voor online, en een getal dat ik niet kan onderbouwen zet ik niet neer.' },
       { kind: 'h2', text: 'Waar de oude site tekortschoot', id: 'situatie' },

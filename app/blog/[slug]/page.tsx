@@ -240,7 +240,7 @@ export default async function BlogPostPage({ params }: { params: Promise<Params>
               <div className="lbl">Geschreven door</div>
               <div className="n">{post.author}</div>
               <p>
-                Oprichter van AKWS. Twaalf jaar in de installatiebranche. Bouwt software die monteurs daadwerkelijk gebruiken.
+                Oprichter van AK Web Solutions in Baarn. Bouwt websites, webshops en software op maat voor het MKB, en praat zelf met elke klant.
               </p>
             </div>
             <Link

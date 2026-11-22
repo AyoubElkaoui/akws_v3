@@ -21,10 +21,10 @@ const CHANNELS = [
 ];
 
 const FAQ = [
-  { q: 'Werken jullie alleen voor installatiebedrijven?', a: 'Ja. Ik richt me specifiek op installatiebedrijven. Die focus maakt dat ik de branche ken en geen uitleg vooraf nodig heb.', open: true },
+  { q: 'Voor wat voor bedrijven werk je?', a: 'Voor het MKB in de breedte: van installateur, aannemer en transporteur tot kapper, praktijk, administratiekantoor, IT-bedrijf en winkel. Websites, webshops en software op maat. Je praat altijd direct met mij, de developer die het bouwt.', open: true },
   { q: 'Kan ik de website zelf bijhouden?', a: 'Ja. Tekst en foto\'s pas je zelf aan in het CMS. Voor structurele wijzigingen help ik. Kleine aanpassingen zijn inbegrepen in het onderhoudsbedrag.' },
   { q: 'Wat als ik al een boekhoudpakket heb?', a: 'Snelstart, Exact, Moneybird: ik koppel ermee. Liever houden wat werkt dan opnieuw beginnen.' },
-  { q: 'Wat kost een website?', a: 'Dat hangt af van wat je nodig hebt, dus werk ik met een offerte op maat in plaats van vaste pakketprijzen. In een gratis kennismaking van 30 minuten hoor ik wat je zoekt en krijg je daarna een vast bod op papier — geen uurtje-factuurtje, alle prijzen excl. 21% BTW.' },
+  { q: 'Wat kost een website?', a: 'Een compacte website begint bij €1.495, een uitgebreide site zit meestal tussen €2.000 en €3.500. Na een gratis kennismaking van 30 minuten krijg je een vaste prijs op papier, geen uurtje-factuurtje. Alle prijzen zijn excl. 21% btw.' },
   { q: 'Hoe lang duurt een traject?', a: 'Een website staat binnen 3–4 weken live, van kennismaking tot lancering. Maatwerk software duurt langer (per fase); de planning krijg je vooraf op papier.' },
   { q: 'Wat als ik niet tevreden ben?', a: 'Ik werk met wekelijkse demo\'s en vaste mijlpalen. Bij elke mijlpaal kun je bijsturen. Als het echt niet klikt, stoppen we.' },
 ];
@@ -99,7 +99,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <div className="lbl">Type werk</div>
-                  <div className="v">Installateurs<br /><span style={{ fontFamily: 'var(--sans)', fontWeight: 400, fontSize: 14, color: 'var(--mute)', textTransform: 'none' }}>NL & BE</span></div>
+                  <div className="v">MKB<br /><span style={{ fontFamily: 'var(--sans)', fontWeight: 400, fontSize: 14, color: 'var(--mute)', textTransform: 'none' }}>NL & BE</span></div>
                 </div>
               </div>
             </div>

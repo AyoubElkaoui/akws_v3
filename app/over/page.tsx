@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import type { Metadata } from 'next';
 import { SiteNav } from '@/components/SiteNav';
 import { SiteFooter } from '@/components/SiteFooter';
@@ -10,7 +11,7 @@ import { buildMetadata, breadcrumbSchema, personSchema } from '@/lib/seo';
 export const metadata: Metadata = buildMetadata({
   title: 'Over Ayoub Elkaoui — Freelance webdeveloper Baarn | AKWS',
   description:
-    'Ayoub Elkaoui, freelance webdeveloper in Baarn. MBO Junior Accountmanager + HBO Software Development. Specialist in websites en maatwerk software voor installatiebedrijven.',
+    'Ayoub Elkaoui, freelance webdeveloper in Baarn. MBO Junior Accountmanager + HBO Software Development. Websites, webshops en software op maat voor het MKB.',
   path: '/over',
 });
 
@@ -20,13 +21,13 @@ const TIMELINE = [
   { yr: '2023', t: 'HBO Software Development', s: 'Leerde bouwen: database-design, architectuur, schaalbaarheid, security. De combinatie met MBO maakt het verschil.' },
   { yr: '2024', t: 'Fulltime als ZZP', s: 'Van hobby naar bedrijf. Eerste betaalde klanten: AD Loodgietersbedrijf en MKH Bouw.' },
   { yr: '2025', t: 'Maatwerk software', s: 'Clockd en ITflow opgeleverd. Meer dan alleen websites: complete digitale oplossingen voor technische bedrijven.' },
-  { yr: '2026', t: 'Focus op installateurs', s: 'Websites, SEO, Google Ads en maatwerk software, specifiek voor de installatiebranche.' },
+  { yr: '2026', t: 'Breed MKB', s: 'Websites, webshops, SEO, Google Ads en software op maat voor het MKB: van installateur en transporteur tot kantoor en zorg.' },
 ];
 
 const PRINCIPES = [
   { num: '01', t: 'Eerlijk over wat het kost.', s: 'Vaste prijs op papier voor de start. Als iets meer kost dan ik dacht, is dat mijn probleem, niet het jouwe.' },
   { num: '02', t: 'Geen tussenpersonen.', s: 'Jij werkt direct met de developer die je site bouwt en onderhoudt. Geen accountmanager, geen uitbesteed werk. Lijntjes kort, prijzen eerlijk.' },
-  { num: '03', t: 'Focus op de installatiebranche.', s: 'Ik zeg regelmatig nee tegen werk buiten de installatiebranche. Die focus maakt dat ik de markt ken en geen uitleg vooraf nodig heb.' },
+  { num: '03', t: 'Eerst begrijpen, dan bouwen.', s: 'Ik begin met hoe jouw bedrijf werkt en waar het vastloopt. Pas daarna kies ik wat er gebouwd wordt: soms een website, soms software, soms allebei.' },
 ];
 
 export default function OverPage() {
@@ -50,7 +51,7 @@ export default function OverPage() {
         crumbs={[{ href: '/', label: 'Home' }, { label: 'Over' }]}
         chip="Freelance ZZP · Baarn · Actief sinds 2024"
         title={<>Ayoub Elkaoui.</>}
-        subtitle="Freelance webdeveloper, Baarn. Websites en maatwerk software voor installatiebedrijven in Midden-Nederland."
+        subtitle="Freelance webdeveloper, Baarn. Websites, webshops en software op maat voor het MKB in Midden-Nederland."
       />
 
       {/* Wie ik ben */}
@@ -59,8 +60,17 @@ export default function OverPage() {
           <div className="over-grid">
             <div className="over-photo">
               <div className="ph">
-                {/* TODO: Ayoub — vervang dit door een echte foto */}
-                <span className="ph-label">Ayoub Elkaoui / Baarn, NL</span>
+                {/* Tot er een foto van Ayoub is: vier echte projecten */}
+                <div className="over-werk">
+                  {[
+                    ['/ad-loodgietersbedrijf/home-v4.jpg', 'Website AD Loodgieters'],
+                    ['/zando-transport/screen-home.jpg', 'Website Zando Transport'],
+                    ['/factuur-app/facturen.jpg', 'Facturatie-app'],
+                    ['/mkh-bouw/home-v2.jpg', 'Website MKH Bouw'],
+                  ].map(([src, alt]) => (
+                    <div key={src}><Image src={src} alt={alt} fill sizes="(max-width: 900px) 50vw, 280px" style={{ objectFit: 'cover', objectPosition: 'top' }} /></div>
+                  ))}
+                </div>
                 <div className="badge">
                   <div>
                     <div style={{ fontFamily: 'var(--mono)', fontSize: 10, color: 'var(--mute)', letterSpacing: '.08em', textTransform: 'uppercase' }}>
@@ -87,7 +97,7 @@ export default function OverPage() {
               </h2>
               <p>
                 Ik ben <strong>Ayoub Elkaoui</strong>. Freelance webdeveloper, ZZP&apos;er, gevestigd in Baarn.
-                Sinds 2024 bouw ik websites en maatwerk software voor installatiebedrijven in Midden-Nederland.
+                Sinds 2024 bouw ik websites, webshops en software op maat voor het MKB in Midden-Nederland.
               </p>
               <p>
                 Mijn achtergrond is een combinatie van <strong>MBO Junior Accountmanager</strong> (leerde mij
@@ -110,28 +120,29 @@ export default function OverPage() {
         </div>
       </section>
 
-      {/* Waarom installatiebranche */}
+      {/* Voor wie */}
       <section className="section diensten">
         <div className="wrap">
           <span className="eyebrow">
             <span className="num">02</span>
-            <span className="rule" /> Waarom installatiebranche
+            <span className="rule" /> Voor wie
           </span>
           <div className="section-head" style={{ marginTop: 24, marginBottom: 48 }}>
-            <h2>Hier liegt het werk.<em>hier ben ik thuis.</em></h2>
+            <h2>Van loodgieter tot kantoor.<em>en alles daartussen.</em></h2>
             <p className="lead">
-              Mijn eerste klanten kwamen uit deze hoek. Op een gegeven moment was het patroon duidelijk.
+              Mijn klanten lijken weinig op elkaar. Wat ze delen: ze willen dat hun website en software gewoon werken.
             </p>
           </div>
           <div style={{ maxWidth: 720 }}>
             <p style={{ fontSize: 17, lineHeight: 1.65, color: 'var(--ink-soft)', marginBottom: 20 }}>
-              AD Loodgietersbedrijf en MBA-installaties waren mijn eerste professionele klanten. Daarna kwamen
-              Clockd en ITflow — beide voor installatie- of technische bedrijven. Op een gegeven moment was
-              het patroon duidelijk: hier ligt het werk, hier ben ik thuis.
+              AD Loodgietersbedrijf en MBA-installaties waren mijn eerste professionele klanten. Daarna
+              kwamen een bouwbedrijf, twee transportbedrijven, een bandenzaak, een boekhouder en
+              software als Clockd en ITflow. Elk bedrijf heeft een andere vraag, maar het doel is steeds
+              hetzelfde: meer klanten en minder gedoe.
             </p>
             <p style={{ fontSize: 17, lineHeight: 1.65, color: 'var(--ink-soft)', marginBottom: 0 }}>
-              Installatiebedrijven hebben serieuze digitale problemen die ik kan oplossen. Trage websites die
-              spoedklussen missen. Excel-bestanden voor planning die vastlopen. Urenregistratie die handmatig
+              Veel MKB-bedrijven lopen tegen dezelfde dingen aan. Trage websites die aanvragen
+              missen. Excel-bestanden voor planning die vastlopen. Urenregistratie die handmatig
               in een ERP gaat. Stuk voor stuk problemen waar mijn combinatie van business en techniek
               precies tot zijn recht komt.
             </p>

@@ -989,3 +989,6 @@ footer .bottom{font-family:var(--sans);font-size:13px;letter-spacing:0;text-tran
 .contact-channel{grid-template-columns:48px minmax(0,1fr) auto}
 .contact-channel .v{overflow-wrap:anywhere}
 @media (max-width:640px){.contact-channel{gap:12px;padding:16px}.contact-channel .v{font-size:17px}}
+
+.over-werk{position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:8px;padding:8px}
+.over-werk>div{position:relative;border-radius:12px;overflow:hidden;background:#fff}

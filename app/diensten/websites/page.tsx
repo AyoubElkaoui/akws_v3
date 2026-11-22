@@ -12,16 +12,16 @@ const FAQ_WEBSITES = [
   { q: 'Hoe snel staat mijn website live?', a: 'Binnen 3–4 weken, van akkoord tot lancering. Dat is het uitgangspunt, geen uitzondering. Snelheid is voor mij een verkoopargument: elke week dat je site niet live is, laat je aanvragen liggen.' },
   { q: 'Wat kost een website?', a: 'Een compacte website begint bij €1.495 eenmalig. Met meer dienst- en plaatspagina\'s of een CMS zit je meestal tussen €2.000 en €3.500. Hosting en onderhoud kost €49 per maand. Na een gratis kennismaking van 30 minuten krijg je een vaste prijs op papier, zonder verrassingen achteraf.' },
   { q: 'Kan ik de website daarna zelf bijhouden?', a: 'Ja. Ik lever de site desgewenst met een eenvoudig CMS zodat je zelf teksten, foto’s en diensten aanpast, zonder code en zonder mij te hoeven bellen. Grotere wijzigingen pak ik voor je op.' },
-  { q: 'Werkt dit ook voor mijn vak buiten de installatiebranche?', a: 'Zeker. Installateurs zijn mijn thuisbasis, maar ik bouw net zo goed voor aannemers, hoveniers, schilders, transportbedrijven en ander lokaal MKB. De aanpak — snel, vindbaar, gericht op aanvragen — werkt voor elk vak.' },
+  { q: 'Werkt dit ook voor mijn branche?', a: 'Ja. Ik bouw voor installateurs en aannemers, maar net zo goed voor kappers, praktijken, administratiekantoren, IT-bedrijven, transport en winkels. De aanpak (snel, vindbaar, gericht op aanvragen) werkt voor elk bedrijf.' },
   { q: 'Ik heb al een website. Kan die verbeterd worden of moet het nieuw?', a: 'Dat hangt van je huidige site af. Soms is bijsturen op snelheid en vindbaarheid genoeg; soms is een frisse basis slimmer. Ik check je bestaande site eerst en geef je daar eerlijk advies over, ook als dat "houden zo" is.' },
   { q: 'Krijg ik ook hulp met vindbaarheid in Google?', a: 'De lokale SEO-fundamenten (snelheid, structuur, Google Bedrijfsprofiel, lokale landingspagina’s) zitten standaard in elke website. Wil je actief adverteren met Google Ads, dan is dat een aparte dienst die we erbij kunnen nemen.' },
   { q: 'Is de website geschikt voor mobiel?', a: 'Mobiel-first, altijd. Ruim 80% van je bezoekers zit op de telefoon, vaak met matig bereik. Mijn sites laden in onder een seconde en werken vlekkeloos op elk scherm — dat is waar je (spoed)klanten binnenkomen.' },
 ];
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Websites voor installatiebedrijven — Snel, vindbaar, Next.js | AKWS',
+  title: 'Website laten maken — Snel, vindbaar, vanaf €1.495 | AKWS',
   description:
-    'Websites voor installatiebedrijven gebouwd op Next.js. Snel, mobiel-first, lokale SEO ingebouwd. Vanaf €1.495, vaste prijs vooraf. Freelancer uit Baarn.',
+    'Website laten maken voor je bedrijf, gebouwd op Next.js. Snel, mobiel-first, lokale SEO ingebouwd. Vanaf €1.495, vaste prijs vooraf. Freelancer uit Baarn.',
   path: '/diensten/websites',
 });
 
@@ -40,7 +40,7 @@ export default function WebsitesPage() {
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema('Website ontwikkeling voor installatiebedrijven')) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema('Website laten maken')) }}
       />
 
       <PageHead
@@ -54,10 +54,10 @@ export default function WebsitesPage() {
         <div className="wrap">
           <div style={{ maxWidth: 800 }}>
             <p style={{ fontSize: 19, lineHeight: 1.65, color: 'var(--ink-soft)', marginBottom: 32 }}>
-              Een website voor een installatiebedrijf is iets anders dan een corporate site of een blog.
-              Je klanten zijn ofwel in paniek (spoedklus) ofwel praktisch (offerte voor planmatig werk).
-              Beide hebben geen geduld voor trage sites of onduidelijke navigatie. Mijn sites zijn gebouwd
-              om in beide situaties te werken.
+              Een bedrijfswebsite heeft één taak: van een bezoeker een klant maken. Iemand die een
+              afspraak wil maken, een offerte wil of gewoon snel wil bellen, heeft geen geduld voor
+              trage sites of onduidelijke navigatie. Mijn sites zijn gebouwd om die stap zo kort
+              mogelijk te maken, op mobiel en op de computer.
             </p>
           </div>
 

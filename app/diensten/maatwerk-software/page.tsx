@@ -70,7 +70,7 @@ export default function MaatwerkSoftwarePage() {
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema('Maatwerk software voor installatiebedrijven')) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema('Software laten maken')) }}
       />
 
       <PageHead
@@ -97,7 +97,7 @@ export default function MaatwerkSoftwarePage() {
             {[
               { titel: 'Urenregistratie & planning', tekst: 'Voor monteurs in het veld, met offline-modus. Goedkeuringsflow, doorboeking naar administratie.' },
               { titel: 'Werkbon-systemen', tekst: 'Handtekening, foto\'s en materiaalregistratie op locatie. Directe doorvoer naar Snelstart, Exact of Moneybird.' },
-              { titel: 'Klantportalen', tekst: 'Waar klanten hun installatiehistorie, facturen en service-aanvragen zien.' },
+              { titel: 'Klantportalen', tekst: 'Waar klanten hun orders, facturen, documenten en service-aanvragen zien.' },
               { titel: 'Ticketsystemen', tekst: 'Voor service-aanvragen, onderhoud en storingen. Inclusief SLA-tracking.' },
               { titel: 'Koppelingen', tekst: 'Snelstart, Exact, Moneybird, Mollie, externe ERP\'s via API.' },
               { titel: 'Dashboards', tekst: 'Jouw bedrijfsvoering inzichtelijk. Uren, projecten, omzet, openstaande items.' },

@@ -10,16 +10,16 @@ import { buildMetadata, breadcrumbSchema, serviceSchema } from '@/lib/seo';
 
 // Unsplash foto's per dienst (royalty-free, credit in footer)
 const DIENST_IMAGES: Record<string, string> = {
-  '01': 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&q=80', // laptop webdesign
+  '01': '/ad-loodgietersbedrijf/home-v4.jpg', // echte klantsite: AD Loodgieters
   '02': 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=900&q=80',    // monitor met Google Analytics dashboard
-  '03': 'https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=900&q=80',    // code op scherm
+  '03': '/factuur-app/facturen.jpg', // echte software: facturatie-app
   '04': 'https://images.unsplash.com/photo-1547658719-da2b51169166?w=900&q=80',    // clean werkruimte met monitor en devices
 };
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Diensten — Websites, SEO en software voor installateurs | AKWS',
+  title: 'Diensten — Websites, webshops, SEO en software op maat | AKWS',
   description:
-    'Vier diensten, één freelancer. Websites, Google Ads, maatwerk software en onderhoud voor installatiebedrijven. Vaste prijzen, geen verrassingen.',
+    'Vier diensten, één freelancer. Websites, Google Ads, software op maat en onderhoud voor het MKB. Vaste prijzen, geen verrassingen.',
   path: '/diensten',
 });
 
@@ -37,23 +37,23 @@ export default function DienstenPage() {
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema('Webontwikkeling voor installatiebedrijven', {
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema('Website laten maken', {
           name: 'Websites die leads opleveren',
           url: '/diensten/websites',
-          description: 'Snelle, mobiel-first websites gebouwd op Next.js voor installatiebedrijven. Lokale SEO, AVG-proof, vaste prijs.',
+          description: 'Snelle, mobiel-first websites en webshops gebouwd op Next.js voor het MKB. Lokale SEO, AVG-proof, vaste prijs.',
         })) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema('SEO en online adverteren voor installatiebedrijven', {
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema('SEO en Google Ads', {
           name: 'SEO & Google Ads',
           url: '/diensten/seo-en-google-ads',
-          description: 'Lokale SEO en Google Ads voor installateurs. Vindbaar in je werkgebied, leads meten, maandelijkse rapportage.',
+          description: 'Lokale SEO en Google Ads voor het MKB. Vindbaar in je werkgebied, leads meten, maandelijkse rapportage.',
         })) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema('Maatwerk software voor installatiebedrijven', {
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema('Software laten maken', {
           name: 'Maatwerk software',
           url: '/diensten/maatwerk-software',
           description: 'Op maat gemaakte software: urenregistratie, werkbonnen, koppelingen. Gebouwd rond hoe jouw bedrijf werkt.',
@@ -61,7 +61,7 @@ export default function DienstenPage() {
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema('Website onderhoud en support voor installatiebedrijven', {
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema('Website onderhoud en support', {
           name: 'Onderhoud & support',
           url: '/diensten/onderhoud',
           description: 'Maandelijks onderhoud, updates, hosting en support. Eén aanspreekpunt voor alles wat na de livegang komt.',

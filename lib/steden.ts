@@ -92,7 +92,7 @@ export const STEDEN: Stad[] = [
     buurt: ['leusden', 'nijkerk', 'soest', 'bunschoten-spakenburg'],
     faq: [
       { q: 'Is er in Amersfoort niet te veel concurrentie om nog gevonden te worden?', a: 'Op een brede zoekterm is het druk. Op de combinatie van jouw dienst met een wijk of een specifiek probleem veel minder. Daar begin ik: eerst de zoektermen waar je kans maakt, daarna de bredere.' },
-      { q: 'Maak je ook websites voor zakelijke dienstverleners in Amersfoort?', a: 'Ja. Mijn focus ligt op vakmensen en installatiebedrijven, maar ik bouw ook voor transport, zakelijke dienstverlening en ander lokaal MKB. In het eerste gesprek zeg ik eerlijk of ik de juiste partij ben.' },
+      { q: 'Maak je ook websites voor zakelijke dienstverleners in Amersfoort?', a: 'Ja. Ik bouw voor het hele MKB, van vakmensen en transport tot advies- en administratiekantoren. In het eerste gesprek zeg ik eerlijk of ik de juiste partij ben.' },
       { q: 'Kan je mijn bestaande website overnemen?', a: 'Vaak wel. Ik kijk eerst naar snelheid, mobiele weergave en techniek. Soms is opknappen genoeg, soms is opnieuw bouwen goedkoper dan blijven repareren. Dat hoor je vooraf.' },
       { q: 'Doe je ook Google Ads voor Amersfoort?', a: 'Ja. Advertenties gericht op Amersfoort en de plaatsen eromheen, met een landingspagina die bij de advertentie past. Het advertentiebudget betaal je rechtstreeks aan Google.' },
     ],

@@ -9,7 +9,7 @@ import { buildMetadata } from '@/lib/seo';
 export const metadata: Metadata = buildMetadata({
   title: 'Blog — Websites, lokale SEO en software voor vakmensen | AKWS',
   description:
-    'Praktische artikelen voor installatiebedrijven en vakmensen: meer aanvragen via Google, lokale SEO, Google Ads en slimme software.',
+    'Praktische artikelen voor ondernemers in het MKB: meer aanvragen via Google, lokale SEO, Google Ads en slimme software.',
   path: '/blog',
 });
 
@@ -28,7 +28,7 @@ export default function BlogPage() {
         ]}
         chip={`${BLOG_POSTS.length} artikelen`}
         title="Het kennisblok."
-        subtitle="Praktische artikelen voor installatiebedrijven — over websites, software, marketing en wat we onderweg leerden."
+        subtitle="Praktische artikelen voor ondernemers: over websites, software, marketing en wat ik onderweg leerde."
       />
 
       {/* Featured */}

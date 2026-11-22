@@ -18,7 +18,7 @@ const FAQ_SEO = [
 ];
 
 export const metadata: Metadata = buildMetadata({
-  title: 'SEO & Google Ads voor installateurs | AKWS',
+  title: 'SEO & Google Ads voor het MKB | Lokaal vindbaar | AKWS',
   description:
     'Vindbaar in je werkgebied via lokale SEO en Google Ads. Meten op leads, niet op ijdelheidscijfers. Inbegrepen bij Pro-pakket of los te boeken.',
   path: '/diensten/seo-en-google-ads',
@@ -39,13 +39,13 @@ export default function SeoPage() {
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema('SEO en Google Ads voor installatiebedrijven')) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema('SEO en Google Ads')) }}
       />
 
       <PageHead
         crumbs={[{ href: '/', label: 'Home' }, { href: '/diensten', label: 'Diensten' }, { label: 'SEO & Google Ads' }]}
         chip="Lokaal SEO · Google Ads · Meten · Rapportage"
-        title="SEO & Google Ads voor installateurs."
+        title="SEO & Google Ads voor het MKB."
         subtitle="Vindbaar in je werkgebied. Advertenties die geld opleveren in plaats van verbranden."
       />
 
@@ -54,7 +54,7 @@ export default function SeoPage() {
           <p style={{ fontSize: 19, lineHeight: 1.65, color: 'var(--ink-soft)', maxWidth: 800, marginBottom: 64 }}>
             SEO en Google Ads zijn twee verschillende dingen die elkaar versterken. SEO bouwt zichtbaarheid
             die je niet kunt kopen. Ads kopen zichtbaarheid voor zoekwoorden waar SEO te traag werkt.
-            Voor een installateur in een lokale markt is de combinatie nagenoeg altijd de juiste mix.
+            Voor een bedrijf dat in een eigen regio werkt is de combinatie nagenoeg altijd de juiste mix.
           </p>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: 24, marginBottom: 64 }}>
