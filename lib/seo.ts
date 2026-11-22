@@ -71,7 +71,7 @@ export function localBusinessSchema() {
       'Websites, webshops, lokale SEO, Google Ads en software op maat voor het MKB in Midden-Nederland.',
     sameAs: ['https://www.linkedin.com/company/ak-web-solutions-nl/'],
     knowsAbout: ['Webdesign', 'Lokale SEO', 'Google Ads', 'Maatwerk software', 'Next.js'],
-    telephone: '+31685722387',
+    telephone: '+31685738444',
     email: 'info@akwebsolutions.nl',
     priceRange: '€1.495 - €8.000',
     address: {

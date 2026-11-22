@@ -87,7 +87,7 @@ Verzonden via contactformulier op ${timestamp}`;
       // bezoeker in plaats van een aanvraag stil te laten verdwijnen.
       console.error('[contact form] RESEND_API_KEY ontbreekt. Aanvraag niet verstuurd:', { name, company, phone, email });
       return NextResponse.json(
-        { error: 'Versturen lukt nu niet. Bel of app direct: 06 85 72 23 87.' },
+        { error: 'Versturen lukt nu niet. Bel of app direct: 06 85 73 84 44.' },
         { status: 503 },
       );
     }
@@ -107,7 +107,7 @@ Verzonden via contactformulier op ${timestamp}`;
       if (melding.error) {
         console.error('[contact form] verzenden mislukt:', melding.error, { name, company, phone, email });
         return NextResponse.json(
-          { error: 'Versturen lukt nu niet. Bel of app direct: 06 85 72 23 87.' },
+          { error: 'Versturen lukt nu niet. Bel of app direct: 06 85 73 84 44.' },
           { status: 502 },
         );
       }
@@ -133,8 +133,8 @@ Verzonden via contactformulier op ${timestamp}`;
     <p style="margin:0 0 8px;font-size:15px;line-height:1.6;color:#3d3550">
       Heb je een dringende vraag? Bel of app gerust:
     </p>
-    <a href="tel:+31685722387" style="display:inline-block;background:#7c3aed;color:#fff;text-decoration:none;padding:12px 24px;border-radius:8px;font-weight:600;font-size:15px;margin-bottom:24px">
-      06 — 85 72 23 87
+    <a href="tel:+31685738444" style="display:inline-block;background:#7c3aed;color:#fff;text-decoration:none;padding:12px 24px;border-radius:8px;font-weight:600;font-size:15px;margin-bottom:24px">
+      06 — 85 73 84 44
     </a>
     <div style="padding-top:20px;border-top:1px solid #f0ecf8;font-size:12px;color:#9490a0">
       AK Web Solutions · Baarn · <a href="https://akwebsolutions.nl" style="color:#7c3aed">akwebsolutions.nl</a>
@@ -146,7 +146,7 @@ Verzonden via contactformulier op ${timestamp}`;
 
 Bedankt voor je aanvraag via akwebsolutions.nl. We nemen binnen 24 uur contact met je op.
 
-Dringende vraag? Bel of app: 06 — 85 72 23 87
+Dringende vraag? Bel of app: 06 — 85 73 84 44
 
 Met vriendelijke groet,
 Ayoub Elkaoui
