@@ -796,14 +796,14 @@ footer .col-l a:hover{color:#fff}
 .v4-stat-float .d{font-size:13px;line-height:1.4;color:var(--mute)}
 
 .v4-proof{background:var(--dark);color:#fff}
-.v4-proof-grid{padding:48px 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:32px}
+.v4-proof-grid{padding-top:48px;padding-bottom:48px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:32px}
 .v4-proof-item{display:flex;flex-direction:column;gap:6px}
 .v4-proof-item .k{font-family:var(--cond);font-size:44px;font-weight:800;letter-spacing:-.02em;line-height:1.05}
 .v4-proof-item .t{font-size:16px;font-weight:600}
 .v4-proof-item .s{font-size:14px;color:#a9b1c2}
 
 .v4-clients{border-bottom:1px solid var(--rule);background:#fff}
-.v4-clients-row{padding:26px 0;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 40px}
+.v4-clients-row{padding-top:26px;padding-bottom:26px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 40px}
 .v4-clients-row .lbl{font-size:14px;font-weight:600;color:var(--mute-2)}
 .v4-clients-row .names{display:flex;flex-wrap:wrap;gap:14px 36px;font-family:var(--cond);font-size:19px;font-weight:700;color:var(--mute)}
 
@@ -978,6 +978,14 @@ footer .bottom{font-family:var(--sans);font-size:13px;letter-spacing:0;text-tran
 .form-card .submit:hover,.contact-form .submit:hover{background:var(--p3);box-shadow:none}
 .form-card .submit .arrow,.contact-form .submit .arrow{background:none;width:auto;height:auto}
 .v4-proof{padding:48px 0}
-.v4-proof-grid{padding:0}
+.v4-proof-grid{padding-top:0;padding-bottom:0}
 .v4-clients{padding:26px 0}
-.v4-clients-row{padding:0}
+.v4-clients-row{padding-top:0;padding-bottom:0}
+
+/* Mobiel: lange knoppen mogen afbreken, niets breder dan het scherm */
+@media (max-width:640px){.btn{white-space:normal;max-width:100%;text-align:left}}
+.contact-grid>*{min-width:0}
+@media (max-width:640px){.contact-grid{grid-template-columns:minmax(0,1fr) !important}}
+.contact-channel{grid-template-columns:48px minmax(0,1fr) auto}
+.contact-channel .v{overflow-wrap:anywhere}
+@media (max-width:640px){.contact-channel{gap:12px;padding:16px}.contact-channel .v{font-size:17px}}
