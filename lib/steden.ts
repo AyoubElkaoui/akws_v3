@@ -27,13 +27,14 @@ export const STEDEN: Stad[] = [
   {
     slug: 'baarn',
     naam: 'Baarn',
-    metaTitle: 'Website laten maken in Baarn | Webdeveloper uit Baarn | AKWS',
+    metaTitle: 'Website laten maken in Baarn | Webdesign, webshop & SEO | AKWS',
     metaDescription:
       'Website laten maken in Baarn? AK Web Solutions zit zelf in Baarn. Snelle websites, lokale SEO en maatwerk software voor vakmensen en MKB. Vanaf €1.495.',
     subtitel: 'Door een webdeveloper die zelf in Baarn woont en werkt.',
     lead: 'AK Web Solutions is gevestigd in Baarn. Zoek je iemand in het dorp die je website bouwt, vindbaar maakt en daarna bereikbaar blijft, dan hoef je niet naar een bureau in Utrecht of Amsterdam. We spreken gewoon af, bij jou op de zaak of aan de keukentafel.',
     lokaal: [
       'Baarn is een dorp waar veel werk via via gaat. Dat is prettig, tot je wilt groeien of tot een vaste klant stopt. Wie dan in Google zoekt op een loodgieter, schilder of boekhouder in Baarn, ziet een handvol bedrijven. Sta je daar niet tussen, dan besta je voor die zoeker niet. Het goede nieuws: in een plaats van deze omvang is de concurrentie in Google te overzien. Met een snelle site, een goed ingevuld Google Bedrijfsprofiel en een paar echte reviews kom je verder dan in een grote stad.',
+      'Niet elk Baarns bedrijf heeft hetzelfde nodig. Een winkel in de Laanstraat of op de Brink wil vaak een webshop, zodat klanten ook ’s avonds kunnen bestellen of reserveren. Een vakman wil vooral gebeld worden. Een kantoor wil er betrouwbaar uitzien en vindbaar zijn op zijn specialisme. Ik doe het webdesign, de bouw van de site of webshop en de SEO zelf, dus je hebt één aanspreekpunt in Baarn in plaats van drie partijen.',
       'Veel Baarnse bedrijven werken ook in Soest, Eemnes, Bunschoten en Hilversum. Daar houd ik rekening mee in de opbouw van je site: per dienst en per plaats waar je echt komt een eigen pagina, zodat je ook buiten het dorp gevonden wordt.',
     ],
     gebieden: ['Centrum', 'Eemdal', 'Lage Vuursche', 'Bedrijventerrein Noordschil', 'Eemnes'],
@@ -43,6 +44,8 @@ export const STEDEN: Stad[] = [
       { q: 'Kunnen we in Baarn persoonlijk afspreken?', a: 'Ja. Ik woon en werk in Baarn, dus langskomen op je bedrijf of ergens koffie drinken kan altijd. Het eerste gesprek duurt ongeveer een half uur en is vrijblijvend.' },
       { q: 'Wat kost een website laten maken in Baarn?', a: 'Dat hangt af van wat je nodig hebt: een compacte site voor een eenmanszaak is iets anders dan een site met offertemodule en koppelingen. Een compacte site begint bij €1.495, een uitgebreide site zit meestal tussen €2.000 en €3.500. Je krijgt vooraf een vaste prijs, zodat je weet waar je aan toe bent.' },
       { q: 'Hoe snel staat mijn website live?', a: 'Reken op drie tot vier weken van akkoord tot livegang, met elke week een demo. Dat lukt als ik je teksten en foto\'s op tijd heb. Maatwerk software gaat in fases en duurt langer.' },
+      { q: 'Kan ik in Baarn ook een webshop laten maken?', a: 'Ja. Voor winkels en ondernemers die online verkopen bouw ik webshops met betalen via iDEAL, voorraad en verzendopties. Hoeveel producten je hebt en welke koppelingen je nodig hebt bepaalt de prijs; die hoor je vooraf in een vaste offerte.' },
+      { q: 'Doe je ook SEO voor bedrijven in Baarn?', a: 'Ja. Elke site die ik bouw is technisch klaar voor Google. Daarnaast kan ik je Google Bedrijfsprofiel inrichten, pagina’s per dienst en plaats schrijven en je helpen aan reviews. In Baarn is de concurrentie in Google klein, dus dat werkt hier sneller dan in een stad.' },
       { q: 'Werk je alleen voor bedrijven uit Baarn?', a: 'Nee. De meeste klanten zitten in Midden-Nederland: Baarn, Soest, Amersfoort, het Gooi en Utrecht. Verder weg kan ook, dan overleggen we via videobellen.' },
     ],
   },
