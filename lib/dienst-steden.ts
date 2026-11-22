@@ -138,6 +138,11 @@ export function dienstSteden(d: DienstLocatie): string[] {
   return [...eigen, ...STEDEN.map((s) => s.slug).filter((x) => !eigen.includes(x))];
 }
 
+/** Alleen plaatsen met een eigen alinea mogen in Google; de rest is noindex. */
+export function heeftEigenTekst(d: DienstLocatie, slug: string): boolean {
+  return slug in d.lokaal;
+}
+
 export function dienstTekst(d: DienstLocatie, s: Stad): string {
   return d.lokaal[s.slug] ?? d.fallback(s);
 }

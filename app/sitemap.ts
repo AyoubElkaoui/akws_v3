@@ -1,8 +1,7 @@
 import type { MetadataRoute } from 'next';
 import { BLOG_POSTS, CASE_DETAILS, BRANCHE_DETAILS } from '@/lib/data';
 import { STEDEN } from '@/lib/steden';
-import { DIENST_LOCATIES, dienstSteden } from '@/lib/dienst-steden';
-import { BRANCHE_HAKEN } from '@/lib/branche-steden';
+import { DIENST_LOCATIES, dienstSteden, heeftEigenTekst } from '@/lib/dienst-steden';
 import { isoDatum } from '@/lib/seo';
 import { SOFTWARE_SOORTEN, SOFTWARE_VAKKEN } from '@/lib/software';
 
@@ -44,7 +43,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   const dienstStadRoutes: MetadataRoute.Sitemap = DIENST_LOCATIES.flatMap((d) =>
-    dienstSteden(d).map((slug) => ({
+    dienstSteden(d).filter((slug) => heeftEigenTekst(d, slug)).map((slug) => ({
       url: `${BASE}${d.base}/${slug}`,
       lastModified: now,
       changeFrequency: 'monthly' as const,
@@ -52,14 +51,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
   );
 
-  const brancheStadRoutes: MetadataRoute.Sitemap = STEDEN.flatMap((s) =>
-    Object.keys(BRANCHE_HAKEN).map((b) => ({
-      url: `${BASE}/website-laten-maken/${s.slug}/${b}`,
-      lastModified: now,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    })),
-  );
+  // vak x plaats (/website-laten-maken/[stad]/[branche]) staat bewust NIET in de sitemap: noindex.
 
   const softwareRoutes: MetadataRoute.Sitemap = [
     ...SOFTWARE_SOORTEN.map((s) => `/software-laten-maken/${s.slug}`),
@@ -80,5 +72,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticRoutes, ...stadRoutes, ...dienstStadRoutes, ...brancheRoutes, ...brancheStadRoutes, ...softwareRoutes, ...caseRoutes, ...blogRoutes];
+  return [...staticRoutes, ...stadRoutes, ...dienstStadRoutes, ...brancheRoutes, ...softwareRoutes, ...caseRoutes, ...blogRoutes];
 }

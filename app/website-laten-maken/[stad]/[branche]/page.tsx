@@ -35,6 +35,9 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
     title: `Website voor ${d.h.meervoud} in ${d.s.naam} | Vanaf €1.495 | AKWS`,
     description: `Website laten maken als ${d.h.enkelvoud} in ${d.s.naam}? Snelle site met lokale SEO, belknop en een pagina per dienst en plaats. Vaste prijs vanaf €1.495, binnen 3–4 weken live.`,
     path: `/website-laten-maken/${d.s.slug}/${branche}`,
+    // 27 vakken x 24 plaatsen lijken te veel op elkaar (~65% gelijk tussen plaatsen).
+    // Wel bereikbaar en gelinkt, niet in Google: zo geen risico op 'doorway pages'.
+    noIndex: true,
   });
 }
 

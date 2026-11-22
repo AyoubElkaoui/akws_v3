@@ -5,7 +5,7 @@ import { SiteFooter } from '@/components/SiteFooter';
 import { Cta } from '@/components/Cta';
 import { CASES } from '@/lib/data';
 import { stadBySlug } from '@/lib/steden';
-import { DIENST_LOCATIES, dienstSteden, dienstTekst, type DienstLocatie } from '@/lib/dienst-steden';
+import { DIENST_LOCATIES, dienstSteden, dienstTekst, type DienstLocatie, heeftEigenTekst } from '@/lib/dienst-steden';
 import { buildMetadata, breadcrumbSchema, serviceSchema, faqSchema } from '@/lib/seo';
 
 export function dienstStadMetadata(d: DienstLocatie, slug: string): Metadata {
@@ -15,6 +15,7 @@ export function dienstStadMetadata(d: DienstLocatie, slug: string): Metadata {
     title: d.metaTitle(s.naam),
     description: d.metaDescription(s.naam),
     path: `${d.base}/${s.slug}`,
+    noIndex: !heeftEigenTekst(d, s.slug),
   });
 }
 

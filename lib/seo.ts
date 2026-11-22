@@ -52,7 +52,7 @@ export function buildMetadata({
       ...(ogImage ? { images: [ogImage] } : {}),
     },
     robots: noIndex
-      ? { index: false, follow: false }
+      ? { index: false, follow: true }
       : { index: true, follow: true },
   };
 }
