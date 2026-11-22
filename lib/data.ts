@@ -8,6 +8,8 @@ export const BRAND = {
   domain: 'akwebsolutions.nl',
   phone: '06 — 85 72 23 87',
   phoneRaw: '0685722387',
+  whatsapp: '06 — 85 73 84 44',
+  whatsappUrl: 'https://wa.me/31685738444',
   email: 'info@akwebsolutions.nl',
   kvk: '96245190',
   btw: 'NL005197684B40',

@@ -16,7 +16,7 @@ export const metadata: Metadata = buildMetadata({
 const CHANNELS = [
   { ico: '☎', lbl: 'Bel direct', v: BRAND.phone, href: `tel:${BRAND.phoneRaw}` },
   { ico: '✉', lbl: 'E-mail', v: BRAND.email, href: `mailto:${BRAND.email}` },
-  { ico: 'w', lbl: 'WhatsApp', v: BRAND.phone, href: `https://wa.me/31${BRAND.phoneRaw.slice(1)}`, brand: '#25d366' },
+  { ico: 'w', lbl: 'WhatsApp', v: BRAND.whatsapp, href: BRAND.whatsappUrl, brand: '#25d366' },
   { ico: 'in', lbl: 'LinkedIn', v: 'AK Web Solutions', href: BRAND.linkedin, brand: '#0a66c2' },
 ];
 

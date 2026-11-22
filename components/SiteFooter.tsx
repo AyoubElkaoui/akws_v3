@@ -51,7 +51,7 @@ export function SiteFooter() {
               <a href={`tel:${BRAND.phoneRaw}`}>{BRAND.phone}</a>
               <a href={`mailto:${BRAND.email}`}>{BRAND.email}</a>
               <a href={BRAND.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
-              <a href={`https://wa.me/31${BRAND.phoneRaw.slice(1)}`} target="_blank" rel="noopener noreferrer">WhatsApp</a>
+              <a href={BRAND.whatsappUrl} target="_blank" rel="noopener noreferrer">WhatsApp</a>
             </div>
           </div>
         </div>

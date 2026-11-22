@@ -20,7 +20,7 @@ export function Cta({
   body = 'We bespreken waar het knelt en wat het zou opleveren om dat op te lossen. Geen verkooppraat. Eerlijk advies, ook als ik niet de juiste partij blijk.',
   variant = 'form',
 }: CtaProps) {
-  const wa = `https://wa.me/31${BRAND.phoneRaw.slice(1)}?text=${encodeURIComponent('Hoi Ayoub, ik heb een vraag over een website.')}`;
+  const wa = `${BRAND.whatsappUrl}?text=${encodeURIComponent('Hoi Ayoub, ik heb een vraag over een website.')}`;
   const pil = {
     display: 'inline-flex',
     alignItems: 'center',
