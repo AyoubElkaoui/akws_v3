@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     template: '%s | AKWS',
   },
   description:
-    'Freelance developer voor het MKB in Midden-Nederland. Websites, webshops, Google Ads en software op maat. Website vanaf €1.495, vaste prijs vooraf.',
+    'Webbureau uit Baarn voor het MKB in Midden-Nederland. Websites, webshops, Google Ads en software op maat. Website vanaf €1.495, vaste prijs vooraf.',
   metadataBase: new URL('https://akwebsolutions.nl'),
   keywords: [
     'website laten maken installateur',
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     'website laten maken MKB',
     'software laten maken',
     'webshop laten maken',
-    'freelancer Baarn',
+    'webbureau Baarn',
     'website Midden-Nederland',
   ],
   openGraph: {

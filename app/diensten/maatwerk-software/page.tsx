@@ -11,18 +11,18 @@ import { CASES, CASE_DETAILS } from '@/lib/data';
 import { buildMetadata, breadcrumbSchema, serviceSchema, faqSchema } from '@/lib/seo';
 
 const FAQ_SOFTWARE = [
-  { q: 'Wanneer is maatwerk software slimmer dan een bestaand pakket?', a: 'Als je huidige tools niet aansluiten op hoe jij werkt en je daardoor veel handmatig werk of dubbele invoer hebt. Voor standaardprocessen is een bestaand pakket vaak prima; maatwerk loont zodra je maand na maand tijd verliest aan iets wat geautomatiseerd zou kunnen. In de intake bekijk ik eerlijk welke kant voor jou beter is.' },
-  { q: 'Kan de software koppelen met mijn administratie?', a: 'Ja. Ik koppel met pakketten als Snelstart, Exact en Moneybird, mits die een koppeling toelaten. Zo hoef je gegevens niet dubbel in te voeren en komt bijvoorbeeld een werkbon of urenregistratie direct in je administratie terecht.' },
-  { q: 'Hoe lang duurt een softwareproject?', a: 'Ik werk in afgebakende fases van doorgaans 4 tot 8 weken, elk met een vaste prijs. Zo lever ik snel iets werkends op en breiden we uit op basis van gebruik, in plaats van maandenlang aan één groot systeem te bouwen zonder tussenresultaat.' },
-  { q: 'Wat kost software laten maken?', a: 'Een klikbaar prototype begint bij €750, een kleine tool of koppeling kost €500 tot €1.500 en een eerste werkende fase van een web-app met login en database ligt meestal tussen €3.500 en €8.000. Grotere platforms bouw ik in fases met elk een vaste prijs. Hosting en onderhoud vanaf €49 per maand, uitbreidingen €85 per uur of per blok.' },
-  { q: 'Werkt de software ook op de bouwplaats, zonder goed bereik?', a: 'Ja. Ik bouw mobiel-first en waar nodig als Progressive Web App die offline werkt en synct zodra er weer verbinding is. Zo kan een monteur uren of een werkbon ter plekke registreren, ook in een kruipruimte zonder bereik.' },
-  { q: 'Wat als maatwerk toch niet de juiste oplossing blijkt?', a: 'Dan zeg ik dat. Soms is een bestaand pakket of een slimme koppeling goedkoper en beter dan iets nieuws bouwen. Ik verdien liever je vertrouwen met eerlijk advies dan een project dat je niet nodig had.' },
+  { q: 'Wanneer is maatwerk software slimmer dan een bestaand pakket?', a: 'Als je huidige tools niet aansluiten op hoe jij werkt en je daardoor veel handmatig werk of dubbele invoer hebt. Voor standaardprocessen is een bestaand pakket vaak prima; maatwerk loont zodra je maand na maand tijd verliest aan iets wat geautomatiseerd zou kunnen. In de intake bekijken we eerlijk welke kant voor jou beter is.' },
+  { q: 'Kan de software koppelen met mijn administratie?', a: 'Ja. We koppelen met pakketten als Snelstart, Exact en Moneybird, mits die een koppeling toelaten. Zo hoef je gegevens niet dubbel in te voeren en komt bijvoorbeeld een werkbon of urenregistratie direct in je administratie terecht.' },
+  { q: 'Hoe lang duurt een softwareproject?', a: 'We werken in afgebakende fases van doorgaans 4 tot 8 weken, elk met een vaste prijs. Zo leveren we snel iets werkends op en breiden we uit op basis van gebruik, in plaats van maandenlang aan één groot systeem te bouwen zonder tussenresultaat.' },
+  { q: 'Wat kost software laten maken?', a: 'Een klikbaar prototype begint bij €750, een kleine tool of koppeling kost €500 tot €1.500 en een eerste werkende fase van een web-app met login en database ligt meestal tussen €3.500 en €8.000. Grotere platforms bouwen we in fases met elk een vaste prijs. Hosting en onderhoud vanaf €49 per maand, uitbreidingen €85 per uur of per blok.' },
+  { q: 'Werkt de software ook op de bouwplaats, zonder goed bereik?', a: 'Ja. We bouwen mobiel-first en waar nodig als Progressive Web App die offline werkt en synct zodra er weer verbinding is. Zo kan een monteur uren of een werkbon ter plekke registreren, ook in een kruipruimte zonder bereik.' },
+  { q: 'Wat als maatwerk toch niet de juiste oplossing blijkt?', a: 'Dan zeggen we dat. Soms is een bestaand pakket of een slimme koppeling goedkoper en beter dan iets nieuws bouwen. We verdienen liever je vertrouwen met eerlijk advies dan een project dat je niet nodig had.' },
 ];
 
 export const metadata: Metadata = buildMetadata({
   title: 'Software laten maken | Maatwerk vanaf €3.500 per fase | AKWS',
   description:
-    'Software laten maken door een freelance developer: urenregistratie, voorraad, dashboards en koppelingen met je ERP of boekhouding. Prototype vanaf €750, eerste fase vanaf €3.500. Bekijk 6 echte projecten.',
+    'Software laten maken door een webbureau uit Baarn: urenregistratie, voorraad, dashboards en koppelingen met je ERP of boekhouding. Prototype vanaf €750, eerste fase vanaf €3.500. Bekijk 6 echte projecten.',
   path: '/diensten/maatwerk-software',
 });
 
@@ -45,7 +45,7 @@ const KLASSE_PER_CASE: Record<string, keyof typeof PRIJSKLASSEN> = {
 
 const WERKWIJZE_MAATWERK = [
   { n: '01', t: 'Intake', d: 'gratis', s: 'Wat moet de software doen, wat is het probleem nu? 30 minuten, geen verkooppraat.' },
-  { n: '02', t: 'Procesanalyse', d: 'verrekend in project', s: 'Ik bel uitgebreid of kom langs, schrijf op hoe je nu werkt, en breng in kaart wat de software moet doen.' },
+  { n: '02', t: 'Procesanalyse', d: 'verrekend in project', s: 'We bellen uitgebreid of komen langs, schrijven op hoe je nu werkt en brengen in kaart wat de software moet doen.' },
   { n: '03', t: 'Voorstel', d: 'binnen 5 werkdagen', s: 'Vaste prijs per fase, scope op papier. Geen uurtje-factuurtje, geen nacalculatie.' },
   { n: '04', t: 'Bouw', d: 'sprints van 2 weken', s: 'Demo\'s tussendoor. Je ziet elke sprint wat er gebouwd is.' },
   { n: '05', t: 'Oplevering', d: 'training + documentatie', s: 'Productie-klaar systeem, training voor je team, documentatie voor beheer.' },
@@ -89,9 +89,9 @@ export default function MaatwerkSoftwarePage() {
             tijd voor maatwerk software.
           </p>
 
-          {/* Wat ik bouw */}
+          {/* Wat we bouwen */}
           <span className="eyebrow" style={{ marginBottom: 24, display: 'inline-flex' }}>
-            <span className="rule" /> Wat ik bouw
+            <span className="rule" /> Wat we bouwen
           </span>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 16, marginBottom: 64, marginTop: 16 }}>
             {[
@@ -113,7 +113,7 @@ export default function MaatwerkSoftwarePage() {
           <div style={{ padding: '36px 40px', background: 'linear-gradient(135deg, color-mix(in oklab, var(--p1) 6%, #fff), #fff)', border: '1px solid color-mix(in oklab, var(--p1) 20%, transparent)', borderRadius: 16, maxWidth: 720, marginBottom: 64 }}>
             <h3 style={{ fontFamily: 'var(--cond)', fontWeight: 800, fontSize: 24, margin: '0 0 16px' }}>Geen SaaS, wel maatwerk</h3>
             <p style={{ fontSize: 16, lineHeight: 1.65, color: 'var(--ink-soft)', margin: 0 }}>
-              Het verschil met generieke software (Zoho, AFAS, Simplicate) is dat ik bouw wat jouw bedrijf
+              Het verschil met generieke software (Zoho, AFAS, Simplicate) is dat wij bouwen wat jouw bedrijf
               nodig heeft, niet wat 10.000 andere bedrijven nodig hebben. Geen overbodige features, geen
               abonnementsvallen. Software die precies past op jouw werkwijze, koppelt met jouw bestaande
               tools, en met je meegroeit.
@@ -190,10 +190,10 @@ export default function MaatwerkSoftwarePage() {
             <span className="rule" /> Per project uitgelegd
           </span>
           <div className="section-head" style={{ marginTop: 24, marginBottom: 40 }}>
-            <h2>Wat ik bouwde.<em>probleem, oplossing en wat het opleverde.</em></h2>
+            <h2>Wat we bouwden.<em>probleem, oplossing en wat het opleverde.</em></h2>
             <p className="lead">
               Geen vage beloftes: per project lees je wat er misging, wat de software doet en wat het
-              nu oplevert. De prijsklasse is wat een vergelijkbaar project bij mij kost.
+              nu oplevert. De prijsklasse is wat een vergelijkbaar project bij ons kost.
             </p>
           </div>
           <div style={{ display: 'grid', gap: 20 }}>
@@ -314,7 +314,7 @@ export default function MaatwerkSoftwarePage() {
         eyebrow="Een software-uitdaging?"
         title="Bespreek je vraagstuk."
         subtitle="30 minuten · vrijblijvend"
-        body="Vertel wat er nu vastloopt. Ik geef een eerlijke inschatting van wat mogelijk is, ook als maatwerk niet de juiste oplossing blijkt."
+        body="Vertel wat er nu vastloopt. We geven een eerlijke inschatting van wat mogelijk is, ook als maatwerk niet de juiste oplossing blijkt."
       />
 
       <SiteFooter />

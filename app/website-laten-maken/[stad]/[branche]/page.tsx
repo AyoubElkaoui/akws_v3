@@ -53,7 +53,7 @@ export default async function BrancheStadPage({ params }: { params: Promise<Para
   const lokaleCase = CASES.find((c) => c.slug === (h.caseSlug ?? s.caseSlug));
   const faq = [
     { q: `Wat kost een website voor een ${h.enkelvoud} in ${s.naam}?`, a: `Een compacte site begint bij €1.495. Met een pagina per dienst en per plaats in je werkgebied zit je meestal tussen €2.000 en €3.500. Hosting en onderhoud kost €49 per maand. Je krijgt vooraf een vaste prijs.` },
-    { q: `Hoe snel sta ik in Google op "${h.zoektermen[0]} ${s.naam}"?`, a: 'De site staat binnen drie tot vier weken live. Vindbaarheid bouwt daarna op: de eerste vertoningen zie je meestal binnen een paar weken, een goede positie kost vaak een paar maanden. Ik beloof geen posities, wel een opbouw die daar de beste kans op geeft. Google Ads werkt direct.' },
+    { q: `Hoe snel sta ik in Google op "${h.zoektermen[0]} ${s.naam}"?`, a: 'De site staat binnen drie tot vier weken live. Vindbaarheid bouwt daarna op: de eerste vertoningen zie je meestal binnen een paar weken, een goede positie kost vaak een paar maanden. We beloven geen posities, wel een opbouw die daar de beste kans op geeft. Google Ads werkt direct.' },
     ...b.faq.slice(2, 4),
   ];
   const andereBranches = BRANCHES.filter((x) => x.slug !== branche && BRANCHE_HAKEN[x.slug]);
@@ -103,7 +103,7 @@ export default async function BrancheStadPage({ params }: { params: Promise<Para
         <div className="wrap">
           <span className="eyebrow"><span className="num">01</span><span className="rule" /> Waar het vastloopt</span>
           <div className="section-head" style={{ marginTop: 24, marginBottom: 40 }}>
-            <h2>Herkenbaar?<em>wat ik bij {h.meervoud} vaak zie.</em></h2>
+            <h2>Herkenbaar?<em>wat we bij {h.meervoud} vaak zien.</em></h2>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 16 }}>
             {b.pijnpunten.slice(0, 3).map((p) => (

@@ -18,18 +18,18 @@ const STAPPEN = [
     n: '01',
     titel: 'Kennismaking',
     duur: '30 min · gratis · vrijblijvend',
-    tekst: 'Een gesprek van 30 minuten waarin ik drie dingen vaststel: wat is je situatie nu, wat zou beter moeten en wat levert dat op, past mijn aanpak bij wat je zoekt? Geen verkooppraat. Als ik niet de juiste partij blijk, zeg ik dat. Eerlijk advies, ook als je elders beter af bent.',
+    tekst: 'Een gesprek van 30 minuten waarin we drie dingen vaststellen: wat is je situatie nu, wat zou beter moeten en wat levert dat op, past onze aanpak bij wat je zoekt? Geen verkooppraat. Als wij niet de juiste partij blijken, zeggen we dat. Eerlijk advies, ook als je elders beter af bent.',
     details: [
       'Wat werkt en wat niet?',
       'Wat is realistisch om te bereiken?',
-      'Past mijn aanpak en prijsniveau bij jou?',
+      'Past onze aanpak en ons prijsniveau bij jou?',
     ],
   },
   {
     n: '02',
     titel: 'Voorstel',
     duur: 'binnen 3 werkdagen',
-    tekst: "Binnen drie werkdagen na de kennismaking krijg je een schriftelijk voorstel: scope (wat ga ik bouwen, wat valt erbuiten), planning (wanneer is wat klaar), prijs (vast bedrag per fase), en voorwaarden. Geen kleine lettertjes, geen 'op nacalculatie', geen verborgen kosten.",
+    tekst: "Binnen drie werkdagen na de kennismaking krijg je een schriftelijk voorstel: scope (wat gaan we bouwen, wat valt erbuiten), planning (wanneer is wat klaar), prijs (vast bedrag per fase), en voorwaarden. Geen kleine lettertjes, geen 'op nacalculatie', geen verborgen kosten.",
     details: [
       'Scope: wat zit erin, wat niet',
       'Planning: concrete milestones',
@@ -53,7 +53,7 @@ const STAPPEN = [
     n: '04',
     titel: 'Live',
     duur: 'opleverweek + nazorg',
-    tekst: 'In de opleverweek gaat de site of software live. Google Bedrijfsprofiel ingericht, Google Ads-campagne actief (Pro-pakket), training of demo voor jouw team (maatwerk software). De eerste maand zit ik er extra bovenop: snellere reactietijd, dagelijkse monitoring, kleine optimalisaties zonder extra kosten.',
+    tekst: 'In de opleverweek gaat de site of software live. Google Bedrijfsprofiel ingericht, Google Ads-campagne actief (Pro-pakket), training of demo voor jouw team (maatwerk software). De eerste maand zitten we er extra bovenop: snellere reactietijd, dagelijkse monitoring, kleine optimalisaties zonder extra kosten.',
     details: [
       'Live deployment',
       'Google Bedrijfsprofiel ingericht',
@@ -106,7 +106,7 @@ export default function WerkwijzePage() {
               Vijf stappen.<em>transparant van begin tot eind.</em>
             </h2>
             <p className="lead">
-              Mijn werkwijze is opgezet om verrassingen te minimaliseren. Je weet vooraf wat je krijgt,
+              Onze werkwijze is opgezet om verrassingen te minimaliseren. Je weet vooraf wat je krijgt,
               wanneer je het krijgt, en wat het kost. Tijdens de bouw zie je elke week vooruitgang in
               plaats van te wachten op een grote oplevering.
             </p>
@@ -156,9 +156,9 @@ export default function WerkwijzePage() {
           <div style={{ marginTop: 32, display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 20 }}>
             {[
               { t: 'Geen lange trajecten zonder zichtbare voortgang', s: 'Je ziet elke week wat er gebouwd is. Geen grote oplevering na drie maanden stilte.' },
-              { t: 'Geen onbeperkte revisies zonder extra kosten', s: 'Wijzigingen binnen de afgesproken scope zijn altijd welkom. Buiten scope bespreek ik apart, transparant, zonder verrassingen achteraf.' },
+              { t: 'Geen onbeperkte revisies zonder extra kosten', s: 'Wijzigingen binnen de afgesproken scope zijn altijd welkom. Buiten scope bespreken we apart, transparant, zonder verrassingen achteraf.' },
               { t: 'Geen verborgen kosten', s: 'Het voorstel is compleet. Geen "toevallige" meerkosten die pas na oplevering opduiken.' },
-              { t: 'Geen verdwijnact na livegang', s: 'Na live blijf ik beschikbaar voor onderhoud, vragen en uitbreidingen. Vast aanspreekpunt.' },
+              { t: 'Geen verdwijnact na livegang', s: 'Na live blijven we beschikbaar voor onderhoud, vragen en uitbreidingen. Vast aanspreekpunt.' },
             ].map((item) => (
               <div key={item.t} className="dienst" style={{ cursor: 'default' }}>
                 <h3 style={{ fontSize: 20, marginBottom: 10 }}>{item.t}</h3>

@@ -42,7 +42,7 @@ const WAT_JE_KRIJGT = [
   },
   {
     titel: 'Zelf bij te werken',
-    tekst: "Wil je zelf teksten, foto's of vacatures aanpassen, dan bouw ik er een CMS bij. Je logt in, past aan en het staat live. Geen ticket en geen wachttijd.",
+    tekst: "Wil je zelf teksten, foto's of vacatures aanpassen, dan bouwen we er een CMS bij. Je logt in, past aan en het staat live. Geen ticket en geen wachttijd.",
   },
 ];
 
@@ -197,7 +197,7 @@ export default async function StadPage({ params }: { params: Promise<Params> }) 
             </h2>
             <p className="lead">
               Een loodgieter heeft een andere site nodig dan een hovenier. Per branche lees je
-              waar het meestal vastloopt en hoe ik dat aanpak.
+              waar het meestal vastloopt en hoe we dat aanpakken.
             </p>
           </div>
           <div className="branch-list">

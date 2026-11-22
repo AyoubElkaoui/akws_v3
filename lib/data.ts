@@ -33,7 +33,7 @@ export const NAV_LINKS = [
 export const USPS = [
   { num: '01', k: '3–4 wkn', v: 'Van akkoord tot een live website in drie tot vier weken, met elke week een demo.' },
   { num: '02', k: 'Vast', v: 'Wat we afspreken is wat je betaalt. Geen verrassingen achteraf.' },
-  { num: '03', k: '1 partij', v: 'Website en software bij dezelfde freelancer.' },
+  { num: '03', k: '1 partij', v: 'Website en software onder één dak.' },
   { num: '04', k: 'NL', v: 'Nederlandstalige support. Geen ticket-fabriek, geen tijdverschil.' },
 ];
 
@@ -77,7 +77,7 @@ export const DIENSTEN = [
     n: '02',
     sub: 'Vindbaarheid',
     titel: 'SEO & Google Ads',
-    body: "Lokale SEO voor je werkgebied: Google Bedrijfsprofiel, lokale landingspagina's en gerichte Google Ads voor spoedklussen en seizoenswerk. Ik meet leads, niet ijdelheidscijfers.",
+    body: "Lokale SEO voor je werkgebied: Google Bedrijfsprofiel, lokale landingspagina's en gerichte Google Ads voor spoedklussen en seizoenswerk. We meten leads, geen ijdelheidscijfers.",
     tags: ['Lokaal SEO', 'Google Ads', 'Meten', 'Rapportage'],
     deepDeck:
       "Lokale SEO-optimalisatie, Google Bedrijfsprofiel-beheer en gerichte Google Ads-campagnes voor jouw werkgebied. Maandelijkse rapportage: leads en conversies, geen ijdelheidscijfers. Inbegrepen bij het Pro-pakket.",
@@ -157,7 +157,7 @@ export const PROCES = [
   {
     n: '04',
     t: 'Live',
-    s: "Site live, Google Business ingericht, eventuele Ads-campagne actief. De eerste maand sta ik extra dicht op de monitoring.",
+    s: "Site live, Google Business ingericht, eventuele Ads-campagne actief. De eerste maand houden we de monitoring extra scherp in de gaten.",
     d: 'opleverweek',
   },
   {
@@ -592,12 +592,12 @@ export const CASE_DETAILS: CaseDetail[] = [
     naam: 'Facturatie-app',
     sector: 'Eigen product',
     locatie: 'Baarn',
-    intro: 'Mijn eigen facturatiesysteem: facturen, offertes en terugkerende facturen, met een betaallink op elke factuur.',
+    intro: 'Ons eigen facturatiesysteem: facturen, offertes en terugkerende facturen, met een betaallink op elke factuur.',
     meta: 'Maatwerk software',
     gradient: 'linear-gradient(135deg, #1e1b4b 0%, #4f35e8 100%)',
     situatie: [
-      'Als zzp\'er factureer ik elke maand uren, reiskosten, hosting en projecten. Standaard boekhoudpakketten konden dat wel, maar niet op de manier waarop ik werk: uren komen uit een export, reiskosten hangen af van de locatie en hosting komt elk jaar terug.',
-      'Dus bouwde ik mijn eigen app. Die gebruik ik dagelijks, en hij is opgezet voor meerdere organisaties.',
+      'Wij factureren zelf elke maand uren, reiskosten, hosting en projecten. Standaard boekhoudpakketten konden dat wel, maar niet op de manier waarop wij werken: uren komen uit een export, reiskosten hangen af van de locatie en hosting komt elk jaar terug.',
+      'Dus bouwden we onze eigen app. Die gebruiken we dagelijks, en hij is opgezet voor meerdere organisaties.',
     ],
     aanpak: [
       { titel: 'Van uren naar factuur', tekst: 'Een urenexport plakken en de app maakt er factuurregels van, inclusief reiskosten op basis van de afstand naar de klantlocatie.' },
@@ -745,13 +745,13 @@ const BRANCHE_DETAILS_BOUW: BrancheDetail[] = [
     overzichtTekst: "Sanitair, leidingwerk, lekkages, riool. Vooral spoedklussen waar tijd telt. Je website moet 's nachts gevonden worden, je moet bovenaan staan voor 'loodgieter [stad]', en je telefoon moet rinkelen.",
     pijnpunten: [
       { titel: "Mijn site staat niet bovenaan voor spoedklussen", tekst: "De zoekterm 'loodgieter spoed [stad]' is waar de bellers naartoe gaan. Als je daar niet bovenaan staat, gaan ze naar de concurrent die er wel in heeft geïnvesteerd. Urgentie is je markt — maar alleen als ze je vinden." },
-      { titel: "Klanten klikken weg voor de site geladen is", tekst: "Trage sites kosten loodgieters letterlijk klanten. Een bezoeker die 's avonds in paniek zoekt, wacht niet twee seconden op je afbeeldingen. Mijn sites laden in onder één seconde op mobiel." },
+      { titel: "Klanten klikken weg voor de site geladen is", tekst: "Trage sites kosten loodgieters letterlijk klanten. Een bezoeker die 's avonds in paniek zoekt, wacht niet twee seconden op je afbeeldingen. Onze sites laden in onder één seconde op mobiel." },
       { titel: "Google Ads draaien op de verkeerde momenten", tekst: "Je betaalt voor clicks overdag terwijl je spoedwerk 's avonds en in het weekend binnenkomt. Met slimme dagdeel-instellingen besteed je je budget op het moment dat het loont." },
       { titel: "Geen aanvragen voor onderhoud of vaste klanten", tekst: "Spoedklussen zijn goed, maar onderhoudsabonnementen zijn stabiele omzet. Als je site alleen spoedwerk uitstraalt, mis je die kans. Met de juiste pagina's trek je ook planmatige klanten aan." },
       { titel: "Concurrentie van serviceplatforms neemt mijn leads over", tekst: "Platforms als Werkspot pakken leads af en rekenen provisie. Een eigen vindbare site en Google Ads geeft je directe klanten, zonder platform-afhankelijkheid." },
     ],
     oplossingen: [
-      { titel: "Mobiel-first website die snel laadt", tekst: "Een loodgieter-bezoeker is 80% mobiel. Mijn sites laden in onder één seconde, ook op een trage 4G-verbinding. Telefoonnummer altijd één tap weg, contactformulier kort en duidelijk." },
+      { titel: "Mobiel-first website die snel laadt", tekst: "Een loodgieter-bezoeker is 80% mobiel. Onze sites laden in onder één seconde, ook op een trage 4G-verbinding. Telefoonnummer altijd één tap weg, contactformulier kort en duidelijk." },
       { titel: "Lokale SEO voor jouw werkgebied", tekst: "Per stad in je werkgebied een eigen landingspagina. Google Bedrijfsprofiel volledig ingericht, openingstijden inclusief spoedlijn, foto's van werk. Je verschijnt in de lokale 3-pack boven aan Google." },
       { titel: "Google Ads die werken op de juiste momenten", tekst: "Spoedklus-campagnes draaien 's avonds, in het weekend, op feestdagen. Onderhoudscampagnes overdag op weekdagen. Gericht op de plaatsen waar je rijdt. Geen verspild budget op mensen ver buiten je werkgebied." },
     ],
@@ -762,9 +762,9 @@ const BRANCHE_DETAILS_BOUW: BrancheDetail[] = [
     faq: [
       { q: "Hoe lang duurt het bouwen van een loodgieter-website?", a: "Je website staat drie tot vier weken na akkoord op het voorstel live. Komt er Google Ads bij, dan loopt de campagne-optimalisatie daarna door — maar de site zelf hoef je niet lang op te wachten." },
       { q: "Wat kost een Google Ads-campagne voor mijn loodgietersbedrijf?", a: "Het beheer kost €195 per maand, inclusief conversiemeting en maandrapport. Het advertentiebudget dat je aan Google betaalt staat daar los van en bepaal je zelf. Realistisch begin je met €300 tot €600 per maand voor lokaal spoedwerk." },
-      { q: "Mijn telefoon rinkelt al genoeg, heb ik dit wel nodig?", a: "Misschien niet. Een goede website is een investering in groei, niet een noodgreep. Als je geen ruimte hebt voor meer klussen, zijn er andere prioriteiten. Ik geef je dat eerlijk advies in het kennismakingsgesprek." },
-      { q: "Kan ik mijn huidige website houden en alleen Google Ads laten doen?", a: "Soms wel, soms niet. Een Ads-campagne stuurt mensen naar je site — als die slecht converteert verbrand je geld. Ik check eerst je huidige site. Als die qua snelheid en mobiele weergave in orde is, kan ik los Google Ads doen." },
-      { q: "Doe je ook 24/7 monitoring van mijn website?", a: "Ja, dat zit standaard in het onderhoudscontract. Als de site eruit ligt, krijg ik een melding en los het op. Je hoeft niet eerst een klant te krijgen die meldt dat hij offline staat." },
+      { q: "Mijn telefoon rinkelt al genoeg, heb ik dit wel nodig?", a: "Misschien niet. Een goede website is een investering in groei, niet een noodgreep. Als je geen ruimte hebt voor meer klussen, zijn er andere prioriteiten. Dat eerlijke advies geven we je in het kennismakingsgesprek." },
+      { q: "Kan ik mijn huidige website houden en alleen Google Ads laten doen?", a: "Soms wel, soms niet. Een Ads-campagne stuurt mensen naar je site — als die slecht converteert verbrand je geld. We checken eerst je huidige site. Als die qua snelheid en mobiele weergave in orde is, kunnen we los Google Ads doen." },
+      { q: "Doe je ook 24/7 monitoring van mijn website?", a: "Ja, dat zit standaard in het onderhoudscontract. Als de site eruit ligt, krijgen we een melding en lossen we het op. Je hoeft niet eerst een klant te krijgen die meldt dat hij offline staat." },
     ],
   },
   {
@@ -781,7 +781,7 @@ const BRANCHE_DETAILS_BOUW: BrancheDetail[] = [
       { titel: "Ik mis storingen in de winter omdat klanten me niet vinden", tekst: "De eerste koude week van het jaar is de drukste week van een CV-monteur. Als je dan niet bovenaan staat, gaan die aanvragen naar de concurrent. Je hebt de capaciteit — maar je wordt niet gevonden." },
       { titel: "Mijn site toont alleen storingen, niet warmtepompen", tekst: "De helft van je werk is ketelvervanging en warmtepompen, maar als je site dat niet laat zien, zoeken klanten hiervoor iemand anders. Gemiste omzet op de hoogwaardige klussen." },
       { titel: "Google Ads draait het hele jaar tegen dezelfde kosten", tekst: "Je omzet is seizoensgevoelig maar je advertentiebudget niet. Een campagne die zich aanpast aan het seizoen levert meer op met hetzelfde totaalbudget." },
-      { titel: "Warmtepomp-klanten vinden me niet via subsidiezoekwoorden", tekst: "Klanten zoeken nu op 'warmtepomp subsidie' en 'hybride ketel'. Die termen staan niet op mijn site, dus kom ik niet bovenaan. Terwijl dit juist de hoogwaardige klussen zijn." },
+      { titel: "Warmtepomp-klanten vinden me niet via subsidiezoekwoorden", tekst: "Klanten zoeken nu op 'warmtepomp subsidie' en 'hybride ketel'. Staan die termen niet op je site, dan kom je niet bovenaan. Terwijl dit juist de hoogwaardige klussen zijn." },
     ],
     oplossingen: [
       { titel: "Aparte secties voor spoed en planmatig werk", tekst: "Storingen, onderhoud, ketelvervanging, warmtepompen — elk een eigen pagina met eigen zoekwoorden. Klanten vinden snel wat ze zoeken, Google begrijpt duidelijk wat je aanbiedt." },
@@ -794,10 +794,10 @@ const BRANCHE_DETAILS_BOUW: BrancheDetail[] = [
       "ISDE subsidie warmtepomp", "CV onderhoud abonnement",
     ],
     faq: [
-      { q: "Welke Ads zou ik draaien in de zomer?", a: "Onderhoudsabonnementen, warmtepompen en ketelvervanging. Storingen lopen door maar pieken in de winter. In juni-augustus verhoog ik de onderhoudscampagnes en zet ik spoedklus-campagnes op een lager budget." },
+      { q: "Welke Ads zou ik draaien in de zomer?", a: "Onderhoudsabonnementen, warmtepompen en ketelvervanging. Storingen lopen door maar pieken in de winter. In juni-augustus verhogen we de onderhoudscampagnes en zetten we de spoedklus-campagnes op een lager budget." },
       { q: "Is het de moeite waard om in warmtepompen te investeren via mijn website?", a: "Voor de meeste CV-monteurs in 2026: ja. De markt verschuift snel. Een goede warmtepomp-pagina trekt klanten die specifiek hierop zoeken, en die zijn vaak hoogwaardiger leads dan een eenvoudige storing." },
-      { q: "Kunnen jullie koppelen met mijn planningssysteem?", a: "Sommige tools (Snelstart, Exact, AFAS) hebben open API's. We checken het bij intake. Als het kan, zorg ik dat een aanvraag via je site direct in je planning terechtkomt." },
-      { q: "Hoe zit het met de bereikbaarheid van mijn spoedlijn?", a: "Op de site maak ik twee routes: regulier contact (formulier, mail) en spoed (telefoon). De spoedlijn staat altijd prominent. Of die 24/7 is, geef jij aan." },
+      { q: "Kunnen jullie koppelen met mijn planningssysteem?", a: "Sommige tools (Snelstart, Exact, AFAS) hebben open API's. We checken het bij intake. Als het kan, zorgen we dat een aanvraag via je site direct in je planning terechtkomt." },
+      { q: "Hoe zit het met de bereikbaarheid van mijn spoedlijn?", a: "Op de site maken we twee routes: regulier contact (formulier, mail) en spoed (telefoon). De spoedlijn staat altijd prominent. Of die 24/7 is, geef jij aan." },
     ],
   },
   {
@@ -828,7 +828,7 @@ const BRANCHE_DETAILS_BOUW: BrancheDetail[] = [
     ],
     faq: [
       { q: "Moet ik me specialiseren in laadpalen of zonnepanelen?", a: "Als je beide doet en goed bent: laat beide zien. Wel per dienst een eigen pagina. Specialiseren op je site is anders dan je hele bedrijf afkappen. Een klant zoekt op één term — die ene pagina moet hem overtuigen." },
-      { q: "Kan ik leads filteren op grootte?", a: "In het formulier voeg ik een veld toe (Particulier / MKB / Grootzakelijk). Zo zie je vooraf welk type aanvraag binnenkomt. Eventueel aparte formulieren voor laadpaal-thuis versus laadpaal-bedrijf." },
+      { q: "Kan ik leads filteren op grootte?", a: "In het formulier voegen we een veld toe (Particulier / MKB / Grootzakelijk). Zo zie je vooraf welk type aanvraag binnenkomt. Eventueel aparte formulieren voor laadpaal-thuis versus laadpaal-bedrijf." },
       { q: "Werkt SEO nog voor zonnepanelen, of moet ik vooral Ads draaien?", a: "Beide. Voor algemeen 'zonnepanelen [stad]' is SEO competitief. Voor 'lokale zonnepanelen installateur in Hilversum' is SEO doenlijk en Ads ondersteunend. Hangt af van je werkgebied en concurrenten." },
       { q: "Hoeveel kost een laadpaal-campagne?", a: "Voor lokale laadpaal-campagnes praat je over €400 tot €800 advertentiebudget per maand, plus €195 per maand beheer. De CPC's zijn hoger dan voor algemene termen, maar de waarde per lead is ook hoger." },
     ],
@@ -892,7 +892,7 @@ const BRANCHE_DETAILS_BOUW: BrancheDetail[] = [
       "dakgoot reinigen", "dakdekker verzekering", "dakisolatie [stad]", "schuin dak vervangen",
     ],
     faq: [
-      { q: "Hoe ga ik om met de seizoensgevoeligheid in mijn Google Ads?", a: "Spoedklus-campagnes op hoger budget in herfst en winter. Renovatie-campagnes hoger in voorjaar en zomer. De campagne past zich aan de markt aan. Ik regel het maandelijks." },
+      { q: "Hoe ga ik om met de seizoensgevoeligheid in mijn Google Ads?", a: "Spoedklus-campagnes op hoger budget in herfst en winter. Renovatie-campagnes hoger in voorjaar en zomer. De campagne past zich aan de markt aan; dat regelen we maandelijks." },
       { q: "Werkt een prijsindicatie op mijn site of schrikt dat klanten af?", a: "Voor renovatiewerk werkt een prijsindicatie ('Platdak vervangen vanaf €X per m²') positief: het filtert prijs-shoppers eruit en trekt serieuze klanten aan. Voor spoedwerk werkt het niet." },
       { q: "Kan ik schade-aanvragen via verzekeraars beter inkanaliseren?", a: "Ja, met een specifiek formulier voor schadegevallen. Als je site op de standaard-werkwijze van grote verzekeraars is ingericht, word je vaker doorverwezen door schade-experts." },
       { q: "Wat doe je met cases waarvan ik geen foto's heb?", a: "Voor renovaties zijn voor/na-foto's cruciaal. Vanaf nu maak je ze bij elk project (telefoon is goed genoeg). Voor oudere projecten: tekstmatige casebeschrijving of weglaten. Geen stockfoto's." },
@@ -988,7 +988,7 @@ const BRANCHE_DETAILS_BOUW: BrancheDetail[] = [
       "behanger [stad]", "houtrot herstellen", "kozijnen schilderen", "schilder offerte [stad]",
     ],
     faq: [
-      { q: "Hoe krijg ik meer reviews om op mijn site te zetten?", a: "We richten een simpele review-vraag in na oplevering (Google en op je site). Vraag je er actief naar, dan groeit het snel. Ik help je die routine op te zetten." },
+      { q: "Hoe krijg ik meer reviews om op mijn site te zetten?", a: "We richten een simpele review-vraag in na oplevering (Google en op je site). Vraag je er actief naar, dan groeit het snel. We helpen je die routine op te zetten." },
       { q: "Werkt een website als ik het al druk heb in het seizoen?", a: "Juist dan bouw je aan de rustige maanden. Een site die binnenwerk in de winter aantrekt, egaliseert je jaar. En met reviews win je vaker de klus zonder te concurreren op prijs." },
       { q: "Kan ik binnen- en buitenwerk apart adverteren?", a: "Ja. We maken aparte campagnes en pagina's, en schakelen per seizoen. Zo besteed je budget aan het werk dat op dat moment binnenkomt." },
       { q: "Ik werk vooral voor vaste klanten en aannemers, heb ik dit nodig?", a: "Een site bevestigt je professionaliteit richting aannemers én vangt nieuwe particuliere klanten op als het vaste werk terugloopt. Het is spreiding van risico." },
@@ -1020,9 +1020,9 @@ const BRANCHE_DETAILS_BOUW: BrancheDetail[] = [
       "expediteur transport", "gekoeld transport", "internationaal transport", "same day levering",
     ],
     faq: [
-      { q: "Bouw je ook een offerte- of trackingsysteem?", a: "Een offerteflow zit standaard in de site. Voor tracking of een klantportaal maak ik maatwerk software — dat bespreken we los, op basis van wat je nodig hebt." },
-      { q: "Werk je alleen voor grote transportbedrijven?", a: "Nee, juist ook voor koeriers en kleinere transporteurs. Zo bouwde ik de website voor Zando Transport, een spoedkoerier uit Soest. Elk bedrijf krijgt een aanpak op maat." },
-      { q: "Kan ik zelf teksten en diensten aanpassen?", a: "Ja. Ik lever de site desgewenst met een CMS zodat je diensten, teksten en FAQ zelf beheert, zonder telkens een developer nodig te hebben." },
+      { q: "Bouw je ook een offerte- of trackingsysteem?", a: "Een offerteflow zit standaard in de site. Voor tracking of een klantportaal maken we maatwerk software — dat bespreken we los, op basis van wat je nodig hebt." },
+      { q: "Werk je alleen voor grote transportbedrijven?", a: "Nee, juist ook voor koeriers en kleinere transporteurs. Zo bouwden we de website voor Zando Transport, een spoedkoerier uit Soest. Elk bedrijf krijgt een aanpak op maat." },
+      { q: "Kan ik zelf teksten en diensten aanpassen?", a: "Ja. We leveren de site desgewenst met een CMS zodat je diensten, teksten en FAQ zelf beheert, zonder telkens een developer nodig te hebben." },
       { q: "Hoe snel kan mijn nieuwe site live?", a: "Afhankelijk van de omvang meestal binnen enkele weken. Na een gratis kennismaking krijg je een vast bod met planning op papier." },
     ],
   },
@@ -1054,7 +1054,7 @@ const BRANCHE_DETAILS_BOUW: BrancheDetail[] = [
     faq: [
       { q: "Moet ik me specialiseren of alles laten zien?", a: "Laat alles zien wat je doet, maar geef elke dienst een eigen pagina. Een klant zoekt op één term — die pagina moet overtuigen. Specialiseren op je site is anders dan je bedrijf afkappen." },
       { q: "Kan ik leads filteren op particulier of zakelijk?", a: "Ja, met een veld in het formulier (particulier / zakelijk / grootzakelijk) of aparte formulieren. Zo zie je vooraf welk type aanvraag binnenkomt." },
-      { q: "Werkt SEO nog of moet ik vooral Google Ads draaien?", a: "Beide. Lokale SEO is goed haalbaar en Ads ondersteunt op competitieve termen. In de kennismaking bekijk ik wat past bij je werkgebied en concurrentie." },
+      { q: "Werkt SEO nog of moet ik vooral Google Ads draaien?", a: "Beide. Lokale SEO is goed haalbaar en Ads ondersteunt op competitieve termen. In de kennismaking bekijken we wat past bij je werkgebied en concurrentie." },
       { q: "Kunnen jullie koppelen met een offerte- of ontwerptool?", a: "Als je tool een koppeling toelaat, kan dat. We bekijken het bij de intake zodat een aanvraag zo min mogelijk overtypwerk oplevert." },
     ],
   },
@@ -1116,10 +1116,10 @@ const BRANCHE_DETAILS_BOUW: BrancheDetail[] = [
       "banden wisselen [stad]", "auto reparatie [stad]", "occasions [stad]", "airco auto bijvullen",
     ],
     faq: [
-      { q: "Kan ik een online afspraaksysteem krijgen?", a: "Ja. Een simpele afspraak-/aanvraagmodule zit standaard in de site. Wil je een uitgebreid boekingssysteem met agenda-koppeling, dan maak ik maatwerk — dat bespreken we los." },
+      { q: "Kan ik een online afspraaksysteem krijgen?", a: "Ja. Een simpele afspraak-/aanvraagmodule zit standaard in de site. Wil je een uitgebreid boekingssysteem met agenda-koppeling, dan maken we maatwerk — dat bespreken we los." },
       { q: "Kunnen mijn occasions op de site?", a: "Ja, met een overzichtelijke occasion-sectie. Voor grotere voorraden kunnen we een koppeling of beheer inrichten zodat je auto's makkelijk toevoegt en verwijdert." },
-      { q: "Hoe krijg ik meer reviews op mijn site?", a: "We richten een simpele review-vraag in na een klus (Google en op je site). Vraag je er actief naar, dan groeit het snel — ik help je die routine op te zetten." },
-      { q: "Ik heb al een website, kan ik alleen beter vindbaar worden?", a: "Soms wel, soms niet. Ik check eerst je huidige site. Als die qua snelheid en mobiel in orde is, kan ik los lokale SEO en Google Ads doen; anders is een nieuwe basis slimmer." },
+      { q: "Hoe krijg ik meer reviews op mijn site?", a: "We richten een simpele review-vraag in na een klus (Google en op je site). Vraag je er actief naar, dan groeit het snel — we helpen je die routine op te zetten." },
+      { q: "Ik heb al een website, kan ik alleen beter vindbaar worden?", a: "Soms wel, soms niet. We checken eerst je huidige site. Als die qua snelheid en mobiel in orde is, kunnen we los lokale SEO en Google Ads doen; anders is een nieuwe basis slimmer." },
     ],
   },
 ];
@@ -1249,7 +1249,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: 'website-binnen-2-weken-live',
     titel: 'Waarom je nieuwe website binnen een maand live kan (en waarom snelheid wint)',
     excerpt:
-      'Veel ondernemers denken dat een goede website maanden kost. Dat hoeft niet. Ik lever websites binnen 3 à 4 weken op — en juist die snelheid levert je eerder klanten op. Zo werkt het.',
+      'Veel ondernemers denken dat een goede website maanden kost. Dat hoeft niet. Wij leveren websites binnen 3 à 4 weken op — en juist die snelheid levert je eerder klanten op. Zo werkt het.',
     cat: 'Websites',
     date: '28 juli 2026',
     readMin: 5,
@@ -1258,18 +1258,18 @@ export const BLOG_POSTS: BlogPost[] = [
     gradient: 'linear-gradient(135deg, #4c1d95 0%, #2e1065 60%, #7c3aed 100%)',
     cover: '/blog-covers/website-binnen-2-weken-live.jpg',
     content: [
-      { kind: 'p', text: '**"Een nieuwe website? Dat duurt zeker maanden."** Dat hoor ik vaak. En bij veel bureaus klopt het ook — eindeloze rondjes, feedbackformulieren, en een offerte waar je maanden later nog op wacht. Bij mij niet. Een website staat binnen 3 à 4 weken live.' },
+      { kind: 'p', text: '**"Een nieuwe website? Dat duurt zeker maanden."** Dat horen we vaak. En bij veel bureaus klopt het ook — eindeloze rondjes, feedbackformulieren, en een offerte waar je maanden later nog op wacht. Bij ons niet. Een website staat binnen 3 à 4 weken live.' },
       { kind: 'h2', text: 'Waarom snelheid wint', id: 'snelheid' },
       { kind: 'p', text: 'Elke week dat je website níet live is, is een week waarin je concurrent wél gevonden wordt. Voor een installatiebedrijf, transporteur of ander lokaal MKB is dat direct gemiste omzet. Snelheid is geen luxe — het is het verschil tussen deze maand klanten krijgen of volgend kwartaal.' },
       { kind: 'h2', text: 'Hoe het in een paar weken kan', id: 'hoe' },
       { kind: 'ol', items: [
-        '**Één kennismaking, geen tien meetings** — 30 minuten waarin ik alles vraag wat ik nodig heb.',
-        '**Vaste, bewezen basis** — ik bouw op Next.js met een aanpak die zich al bij andere klanten bewezen heeft, geen experiment op jouw kosten.',
-        '**Content samen, snel** — jij levert je diensten en foto’s aan, ik schrijf de rest. Wekelijkse demo, feedback tussendoor.',
+        '**Één kennismaking, geen tien meetings** — 30 minuten waarin we alles vragen wat we nodig hebben.',
+        '**Vaste, bewezen basis** — we bouwen op Next.js met een aanpak die zich al bij andere klanten bewezen heeft, geen experiment op jouw kosten.',
+        '**Content samen, snel** — jij levert je diensten en foto’s aan, wij schrijven de rest. Wekelijkse demo, feedback tussendoor.',
         '**Live in week 3 à 4** — getest op snelheid, mobiel en vindbaarheid, en de deur uit.',
       ] },
       { kind: 'h2', text: 'En de kwaliteit dan?', id: 'kwaliteit' },
-      { kind: 'p', text: 'Snel betekent niet slordig. Mijn sites laden in onder een seconde, zijn mobiel-first, AVG-proof en technisch geoptimaliseerd voor Google. Snelheid komt niet doordat ik minder doe — het komt doordat ik geen tijd verspil aan bureaucratie.' },
+      { kind: 'p', text: 'Snel betekent niet slordig. Onze sites laden in onder een seconde, zijn mobiel-first, AVG-proof en technisch geoptimaliseerd voor Google. Snelheid komt niet doordat we minder doen — het komt doordat we geen tijd verspillen aan bureaucratie.' },
       { kind: 'h2', text: 'Wat "maanden wachten" je écht kost', id: 'kosten' },
       { kind: 'p', text: 'Stel: je nieuwe site levert je gemiddeld twee extra aanvragen per maand op. Voor een installateur is dat al snel een paar duizend euro aan werk. Elke maand dat je site níet live is, laat je dat geld liggen. Bij een doorlooptijd van vier maanden praat je dus niet over "een paar maanden geduld" — je praat over vier maanden gemiste omzet. Dat is de verborgen prijs van traagheid, en die staat op geen enkele offerte.' },
       { kind: 'p', text: 'Daar komt bij: de wereld staat niet stil. Terwijl jij wacht, laat je concurrent zijn site wél vernieuwen, verzamelt hij reviews en klimt hij in Google. Een voorsprong die je later alleen met veel moeite weer inhaalt.' },
@@ -1281,10 +1281,10 @@ export const BLOG_POSTS: BlogPost[] = [
         '**Content die blijft liggen** — teksten en foto’s die "nog moeten komen" en het hele project ophouden.',
         '**Overleg om het overleg** — meetings die weinig opleveren behalve een gevoel van voortgang.',
       ] },
-      { kind: 'p', text: 'Ik knip dat allemaal weg. Eén kennismaking om de scope scherp te krijgen, ik schrijf zelf de teksten (jij checkt), en je ziet elke paar dagen een werkende versie. Geen wachten, geen ruis.' },
+      { kind: 'p', text: 'Wij knippen dat allemaal weg. Eén kennismaking om de scope scherp te krijgen, wij schrijven zelf de teksten (jij checkt), en je ziet elke paar dagen een werkende versie. Geen wachten, geen ruis.' },
       { kind: 'h2', text: 'Voor wie werkt dit — en voor wie niet', id: 'voor-wie' },
-      { kind: 'p', text: 'Eerlijk is eerlijk: die 3 à 4 weken gelden voor een professionele bedrijfswebsite — van een installateur, transporteur, hovenier of ander MKB. Heb je een grote webshop met honderden producten of complexe maatwerk software nodig, dan duurt dat langer, en dat hoor je vooraf. Voor de meeste vakbedrijven is een snelle, vindbare site die aanvragen oplevert precies wat nodig is — en die staat binnen twee weken live.' },
-      { kind: 'callout', ico: '→', titel: 'Wil je binnen een maand online?', body: 'Plan een gratis kennismaking van 30 minuten. Ik vertel je eerlijk of het haalbaar is voor jouw project.' },
+      { kind: 'p', text: 'Eerlijk is eerlijk: die 3 à 4 weken gelden voor een professionele bedrijfswebsite — van een installateur, transporteur, hovenier of ander MKB. Heb je een grote webshop met honderden producten of complexe maatwerk software nodig, dan duurt dat langer, en dat hoor je vooraf. Voor de meeste vakbedrijven is een snelle, vindbare site die aanvragen oplevert precies wat nodig is — en die staat binnen 3 à 4 weken live.' },
+      { kind: 'callout', ico: '→', titel: 'Wil je binnen een maand online?', body: 'Plan een gratis kennismaking van 30 minuten. We vertellen je eerlijk of het haalbaar is voor jouw project.' },
     ],
   },
   {
@@ -1326,7 +1326,7 @@ export const BLOG_POSTS: BlogPost[] = [
       { kind: 'p', text: 'Van alle knoppen die je kunt indrukken, is actief om reviews vragen de krachtigste. Reviews doen twee dingen tegelijk: ze overtuigen de klant die twijfelt, én ze geven Google een sterk signaal dat je een levend, gewaardeerd bedrijf bent. Vraag er dus standaard om na elke tevreden klus, en reageer op wat binnenkomt — ook op de kritische reviews. Dat laat toekomstige klanten zien hoe je met problemen omgaat.' },
       { kind: 'h2', text: 'Hoe snel zie je resultaat?', id: 'resultaat' },
       { kind: 'p', text: 'Sneller dan met "gewone" SEO. Waar het maanden duurt om met je website hoog te komen, kan een compleet ingericht profiel met de eerste reviews al binnen enkele weken zichtbaar verschil maken in de lokale resultaten. Het is daarmee de goedkoopste, snelste winst die er is — en de basis waar je website op voortbouwt.' },
-      { kind: 'callout', ico: 'i', titel: 'Hulp nodig met je lokale vindbaarheid?', body: 'Ik richt je Google Bedrijfsprofiel volledig in en zorg dat je website erop aansluit. Plan een gratis kennismaking.' },
+      { kind: 'callout', ico: 'i', titel: 'Hulp nodig met je lokale vindbaarheid?', body: 'We richten je Google Bedrijfsprofiel volledig in en zorg dat je website erop aansluit. Plan een gratis kennismaking.' },
     ],
   },
   {
@@ -1362,14 +1362,14 @@ export const BLOG_POSTS: BlogPost[] = [
       { kind: 'p', text: 'Reviews overtuigen niet alleen mensen, ze helpen ook Google. Het aantal, de recentheid en zelfs de wóórden in je reviews wegen mee in de lokale ranking. Een klant die schrijft "snel geholpen bij een lekkage in Soest" geeft Google precies de signalen die je nodig hebt om te scoren op "loodgieter Soest". Reviews zijn dus tegelijk je verkoopargument én gratis SEO.' },
       { kind: 'h2', text: 'Zet ze niet alleen op Google', id: 'op-je-site' },
       { kind: 'p', text: 'Veel bedrijven verzamelen reviews op Google en vergeten ze op hun eigen website te tonen. Zonde. Een bezoeker die op je site landt, moet dat vertrouwen daar meteen zien — niet eerst wegklikken naar Google om het te zoeken. Een blok met je beste, echte reviews op de homepage en bij je contactpagina verhoogt merkbaar het aantal aanvragen.' },
-      { kind: 'callout', ico: '→', titel: 'Reviews slim inzetten op je site?', body: 'Ik zet een reviewroutine op en toon je beste beoordelingen prominent op je website. Plan een gratis gesprek.' },
+      { kind: 'callout', ico: '→', titel: 'Reviews slim inzetten op je site?', body: 'We zetten een reviewroutine op en tonen je beste beoordelingen prominent op je website. Plan een gratis gesprek.' },
     ],
   },
   {
     slug: 'website-voor-transportbedrijf',
     titel: 'Een website voor een transportbedrijf: wat maakt het anders?',
     excerpt:
-      'Een transporteur heeft een andere website nodig dan een webshop of een kapper. Snelheid, betrouwbaarheid en directe bereikbaarheid bepalen alles. Aan de hand van het project voor Zando Transport laat ik zien wat werkt.',
+      'Een transporteur heeft een andere website nodig dan een webshop of een kapper. Snelheid, betrouwbaarheid en directe bereikbaarheid bepalen alles. Aan de hand van het project voor Zando Transport laten we zien wat werkt.',
     cat: 'Websites',
     date: '21 juli 2026',
     readMin: 6,
@@ -1378,7 +1378,7 @@ export const BLOG_POSTS: BlogPost[] = [
     gradient: 'linear-gradient(135deg, #0b3a6b 0%, #0a1f3c 100%)',
     cover: '/zando-transport/screen-home.jpg',
     content: [
-      { kind: 'p', text: '**In transport en logistiek telt één ding boven alles: betrouwbaarheid.** Een opdrachtgever die met spoed een zending weg moet krijgen, heeft geen tijd voor een trage of onduidelijke website. Onlangs bouwde ik de site voor Zando Transport, een spoedkoerier uit Soest — en dat maakte precies duidelijk wat een transportsite anders maakt.' },
+      { kind: 'p', text: '**In transport en logistiek telt één ding boven alles: betrouwbaarheid.** Een opdrachtgever die met spoed een zending weg moet krijgen, heeft geen tijd voor een trage of onduidelijke website. Onlangs bouwden we de site voor Zando Transport, een spoedkoerier uit Soest — en dat maakte precies duidelijk wat een transportsite anders maakt.' },
       { kind: 'h2', text: '1. Snelheid is niet optioneel', id: 'snelheid' },
       { kind: 'p', text: 'Als jouw belofte "binnen 45 minuten onderweg" is, mag je website daar niet bij achterblijven. Elke seconde laadtijd is een bezoeker die afhaakt. Een transportsite moet razendsnel zijn, zeker op mobiel.' },
       { kind: 'h2', text: '2. Direct kunnen bellen', id: 'bellen' },
@@ -1393,8 +1393,8 @@ export const BLOG_POSTS: BlogPost[] = [
       { kind: 'p', text: 'Een kant-en-klaar website-sjabloon is gemaakt voor "een bedrijf", niet voor jóuw bedrijf. Het weet niets van spoedlijnen, van het verschil tussen express en contractvervoer, of van de certificeringen waar expediteurs op letten. Het resultaat is een site die er misschien aardig uitziet, maar die de bezoeker niet doet wat hij moet doen: bellen of een offerte aanvragen. Maatwerk betekent dat elke keuze — van de plek van de spoedknop tot de volgorde van je diensten — is gemaakt met jouw klant in gedachten.' },
       { kind: 'quote', text: 'Als jouw belofte is dat een zending binnen 45 minuten onderweg is, moet je website die snelheid en betrouwbaarheid vanaf de eerste seconde uitstralen. Dat lukt niet met een sjabloon.', cite: 'De aanpak bij Zando Transport' },
       { kind: 'h2', text: 'De rol van een CMS', id: 'cms-rol' },
-      { kind: 'p', text: 'Tarieven, diensten en werkgebieden veranderen in de logistiek regelmatig. Als je voor elke wijziging een developer moet bellen, blijft je site achterlopen. Daarom lever ik transportsites met een eenvoudig CMS: je past teksten, diensten en veelgestelde vragen zelf aan, en de wijziging staat direct live. Je site blijft zo net zo wendbaar als je bedrijf.' },
-      { kind: 'callout', ico: 'i', titel: 'Transporteur en aan een nieuwe site toe?', body: 'Bekijk de case van Zando Transport of plan een gratis kennismaking. Ik snap de logistieke wereld.' },
+      { kind: 'p', text: 'Tarieven, diensten en werkgebieden veranderen in de logistiek regelmatig. Als je voor elke wijziging een developer moet bellen, blijft je site achterlopen. Daarom leveren we transportsites met een eenvoudig CMS: je past teksten, diensten en veelgestelde vragen zelf aan, en de wijziging staat direct live. Je site blijft zo net zo wendbaar als je bedrijf.' },
+      { kind: 'callout', ico: 'i', titel: 'Transporteur en aan een nieuwe site toe?', body: 'Bekijk de case van Zando Transport of plan een gratis kennismaking. We kennen de logistieke wereld.' },
     ],
   },
   {
@@ -1433,8 +1433,8 @@ export const BLOG_POSTS: BlogPost[] = [
         'Kun je zelf een tekst of foto aanpassen zonder iemand te bellen?',
       ] },
       { kind: 'h2', text: 'Vervangen hoeft niet duur of traag te zijn', id: 'snel' },
-      { kind: 'p', text: 'De grootste reden dat mensen een slechte site laten staan, is de angst voor een lang, duur traject. Terecht, want zo werkt het bij veel bureaus. Bij mij niet: een nieuwe website staat binnen 3 à 4 weken live, tegen een vaste prijs die je vooraf weet. Geen maandenlange verbouwing, geen verrassingen achteraf. Een verouderde site is dus geen probleem dat je nog jaren voor je uit hoeft te schuiven.' },
-      { kind: 'callout', ico: '→', titel: 'Herken je een paar van deze tekenen?', body: 'Plan een gratis check van 30 minuten. Ik kijk mee naar je huidige site en geef eerlijke feedback, ook als je niks bij mij afneemt.' },
+      { kind: 'p', text: 'De grootste reden dat mensen een slechte site laten staan, is de angst voor een lang, duur traject. Terecht, want zo werkt het bij veel bureaus. Bij ons niet: een nieuwe website staat binnen 3 à 4 weken live, tegen een vaste prijs die je vooraf weet. Geen maandenlange verbouwing, geen verrassingen achteraf. Een verouderde site is dus geen probleem dat je nog jaren voor je uit hoeft te schuiven.' },
+      { kind: 'callout', ico: '→', titel: 'Herken je een paar van deze tekenen?', body: 'Plan een gratis check van 30 minuten. We kijken mee naar je huidige site en geven eerlijke feedback, ook als je niks bij ons afneemt.' },
     ],
   },
   {
@@ -1550,7 +1550,7 @@ export const BLOG_POSTS: BlogPost[] = [
       { kind: 'p', text: 'Google Bedrijfsprofiel is gratis. De tijdsinvestering zit in het invullen en het actief bijhouden: reageren op reviews, foto uploaden, openingstijden bijwerken.' },
       { kind: 'p', text: "Lokale landingspagina's maken kost moeite. Per stad minimaal 300 woorden unieke content, correcte title-tags en een interne link vanuit de homepage. Als je vijf steden wilt bedienen, zit je snel op een halve dag werk." },
       { kind: 'p', text: 'Reviews zijn gratis, maar kosten consistentie. Maak een routine van het vragen: elke klus, elke dag. Na drie maanden heb je een reviewprofiel dat concurrenten niet zomaar inhalen.' },
-      { kind: 'callout', ico: 'i', titel: 'Wil je dit professioneel laten aanpakken?', body: 'Ik stel de lokale SEO-fundamenten in en bouw de landingspagina voor jouw werkgebied. Plan een gesprek van 30 minuten.' },
+      { kind: 'callout', ico: 'i', titel: 'Wil je dit professioneel laten aanpakken?', body: 'We zetten de lokale SEO-fundamenten neer en bouwen de landingspagina voor jouw werkgebied. Plan een gesprek van 30 minuten.' },
       { kind: 'quote', text: 'Lokale SEO is geen eenmalige klus. Het is een lopend proces van Google Bedrijfsprofiel bijhouden, reviews verzamelen en content toevoegen.', cite: 'Ayoub Elkaoui, AK Web Solutions' },
     ],
   },
@@ -1558,7 +1558,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: '5-fouten-op-installateur-websites',
     titel: '5 fouten op websites van installatiebedrijven (en hoe je ze fikst)',
     excerpt:
-      'Ik bekeek 50 willekeurige sites van installateurs. Dit zijn de vijf fouten die ik het vaakst tegenkom en wat het kost aan leads.',
+      'We bekeken 50 willekeurige sites van installateurs. Dit zijn de vijf fouten die we het vaakst tegenkomen en wat het kost aan leads.',
     cat: 'Websites',
     date: '02 mei 2026',
     readMin: 5,
@@ -1567,7 +1567,7 @@ export const BLOG_POSTS: BlogPost[] = [
     gradient: 'linear-gradient(135deg, #1a0f33 0%, #4c1d95 100%)',
     cover: '/blog-covers/5-fouten-op-installateur-websites.jpg',
     content: [
-      { kind: 'p', text: 'Ik heb tientallen websites van installatiebedrijven bekeken. Niet om te oordelen, maar om te begrijpen wat er beter kan. Vijf fouten komen keer op keer terug. Samen kosten ze meer leads dan een slechte Google-ranking.' },
+      { kind: 'p', text: 'We hebben tientallen websites van installatiebedrijven bekeken. Niet om te oordelen, maar om te begrijpen wat er beter kan. Vijf fouten komen keer op keer terug. Samen kosten ze meer leads dan een slechte Google-ranking.' },
       { kind: 'h2', text: 'Fout 1: geen telefoonnummer in beeld op mobiel', id: 'fout-1' },
       { kind: 'p', text: 'Meer dan 70% van de bezoekers van een loodgieter-website komt via mobiel. Veel websites verstoppen het telefoonnummer in de footer of maken het niet klikbaar. Een click-to-call knop die direct bovenaan staat is het meest impactvolle element op de hele site.' },
       { kind: 'h2', text: 'Fout 2: geen aparte spoedpagina', id: 'fout-2' },
@@ -1578,7 +1578,7 @@ export const BLOG_POSTS: BlogPost[] = [
       { kind: 'p', text: 'Je website en je Google Bedrijfsprofiel moeten kloppen: zelfde naam, zelfde adres, zelfde telefoonnummer. Google noemt dit NAP-consistentie. Een verschil — ook klein — ondermijnt je lokale SEO. Check het en zorg dat beide profielen identiek zijn.' },
       { kind: 'h2', text: 'Fout 5: geen reviews gevraagd', id: 'fout-5' },
       { kind: 'p', text: 'Reviews komen niet vanzelf. Tevreden klanten zijn blij, maar vergeten om iets te schrijven. Ontevreden klanten schrijven juist wel. Vraag actief om een review na elke klus, het liefst met een directe link. Wie dit structureel doet, heeft na een jaar een veelvoud aan reviews ten opzichte van concurrenten.' },
-      { kind: 'callout', ico: '→', titel: 'Zit een van deze fouten op jouw site?', body: 'Plan een gratis gesprek van 30 minuten. Ik kijk mee naar je huidige site en geef concrete feedback, ook als je niks bij mij afneemt.' },
+      { kind: 'callout', ico: '→', titel: 'Zit een van deze fouten op jouw site?', body: 'Plan een gratis gesprek van 30 minuten. We kijken mee naar je huidige site en geven concrete feedback, ook als je niks bij ons afneemt.' },
     ],
   },
   {
@@ -1594,7 +1594,7 @@ export const BLOG_POSTS: BlogPost[] = [
     gradient: 'linear-gradient(135deg, #d97a2c 0%, #7c3aed 100%)',
     cover: '/ad-loodgietersbedrijf/home-v4.jpg',
     content: [
-      { kind: 'p', text: 'In oktober 2026 ging de nieuwe website van AD Loodgietersbedrijf uit Maarssen live. Dit artikel beschrijft wat er gebouwd is en waarom. Er staan geen resultaatcijfers in: de site is daar te kort voor online, en een getal dat ik niet kan onderbouwen zet ik niet neer.' },
+      { kind: 'p', text: 'In oktober 2026 ging de nieuwe website van AD Loodgietersbedrijf uit Maarssen live. Dit artikel beschrijft wat er gebouwd is en waarom. Er staan geen resultaatcijfers in: de site is daar te kort voor online, en een getal dat we niet kunnen onderbouwen zetten we niet neer.' },
       { kind: 'h2', text: 'Waar de oude site tekortschoot', id: 'situatie' },
       { kind: 'p', text: 'AD werkt al ruim tien jaar voor bedrijven en particulieren in Utrecht en omgeving en is dag en nacht bereikbaar voor spoedklussen. De vorige site was vooral zakelijk ingericht. Voor een opdrachtgever die een aannemer zoekt is dat prima. Voor iemand die om elf uur \'s avonds water door het plafond ziet komen niet. Die wil maar twee dingen weten: lossen jullie dit op, en hoe bereik ik jullie nu.' },
       { kind: 'p', text: 'Daarnaast had de site geen pagina\'s voor de plaatsen waar AD werkt. Wie zocht op een loodgieter in een buurgemeente, kwam AD daardoor niet snel tegen.' },
@@ -1613,7 +1613,7 @@ export const BLOG_POSTS: BlogPost[] = [
       { kind: 'p', text: 'Een nieuwe site kan bestaande vindbaarheid kosten als oude adressen ineens nergens meer heen gaan. Alle oude URL\'s zijn daarom doorgestuurd naar de pagina die er nu het beste bij past, en de nieuwe sitemap is ingediend bij Google. Het contactformulier is getest en verstuurt vanaf het eigen maildomein, zodat aanvragen niet in de spam belanden.' },
       { kind: 'h2', text: 'Alleen wat klopt', id: 'eerlijk' },
       { kind: 'p', text: 'Op de site staan alleen bevestigde gegevens. Geen verzonnen aantallen klanten of jaren ervaring, en de reviews komen rechtstreeks van Google. Dat is eerlijker tegenover bezoekers en het voorkomt gedoe achteraf.' },
-      { kind: 'callout', ico: '→', titel: 'Wil je dit ook voor jouw bedrijf?', body: 'Bekijk de volledige case met screenshots onder Cases, of plan een gesprek van 30 minuten. Ik kijk naar je huidige site en zeg eerlijk wat het oplevert om die aan te pakken.' },
+      { kind: 'callout', ico: '→', titel: 'Wil je dit ook voor jouw bedrijf?', body: 'Bekijk de volledige case met screenshots onder Cases, of plan een gesprek van 30 minuten. We kijken naar je huidige site en zeggen eerlijk wat het oplevert om die aan te pakken.' },
     ],
   },
   {
@@ -1748,9 +1748,9 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: 'geen-uurtjes-factuurtjes',
-    titel: 'Waarom ik geen uurtje-factuurtjes doe',
+    titel: 'Waarom wij geen uurtje-factuurtje doen',
     excerpt:
-      'Vaste prijs, geen verrassingen. Klinkt logisch, maar bijna geen webbureau doet het. Ik leg uit waarom ik wel.',
+      'Vaste prijs, geen verrassingen. Klinkt logisch, maar bijna geen webbureau doet het. We leggen uit waarom wij het wel doen.',
     cat: 'Werkwijze',
     date: '26 mrt 2026',
     readMin: 5,
@@ -1759,16 +1759,16 @@ export const BLOG_POSTS: BlogPost[] = [
     gradient: 'linear-gradient(135deg, #1e1244 0%, #c2521b 100%)',
     cover: '/blog-covers/geen-uurtjes-factuurtjes.jpg',
     content: [
-      { kind: 'p', text: 'Bijna alle webdesignbureaus werken op uurbasis. Je betaalt een uurtarief, de bureau schrijft uren, aan het einde van de maand comes a surprise. Ik doe dit niet. Dit is waarom.' },
+      { kind: 'p', text: 'Bijna alle webdesignbureaus werken op uurbasis. Je betaalt een uurtarief, het bureau schrijft uren, en aan het einde van de maand volgt de verrassing. Wij doen dat niet. Dit is waarom.' },
       { kind: 'h2', text: 'Het probleem met uurtjes-factuurtjes', id: 'probleem' },
       { kind: 'p', text: 'Uurtarieven zetten de prikkel verkeerd. Hoe meer uur een bureau schrijft, hoe meer ze verdienen. Een klant die vragen stelt, aanpassingen vraagt of extra uitleg nodig heeft: meer uren. Dat is geen samenwerking, dat is een nachtmerrie.' },
       { kind: 'p', text: 'Voor de klant is het ook onaangenaam: je weet niet wat het gaat kosten tot de factuur binnenkomt. Je aarzelt om vragen te stellen omdat je bang bent voor extra uren. Je houdt de discussie over meerwerk permanent in je achterhoofd.' },
       { kind: 'h2', text: 'Hoe vaste prijzen werken', id: 'vaste-prijzen' },
-      { kind: 'p', text: 'Vóór het project maak ik een voorstel met een vaste prijs en een duidelijke scope. Wat er in zit, staat erin. Wat er niet in zit, staat er ook in. Als iets meer kost dan ik had ingeschat: pech voor mij, niet voor jou.' },
-      { kind: 'p', text: 'Dit dwingt mij om goed na te denken voor ik een prijs noem. Ik kan niet zomaar een laag bedrag zeggen en het later compenseren met uren. Ik moet realistisch zijn, en dat is ook beter voor jou: geen verrassingen achteraf.' },
+      { kind: 'p', text: 'Vóór het project maken we een voorstel met een vaste prijs en een duidelijke scope. Wat er in zit, staat erin. Wat er niet in zit, staat er ook in. Als iets meer kost dan we hadden ingeschat: pech voor ons, niet voor jou.' },
+      { kind: 'p', text: 'Dit dwingt ons om goed na te denken voordat we een prijs noemen. We kunnen niet zomaar een laag bedrag zeggen en het later compenseren met uren. We moeten realistisch zijn, en dat is ook beter voor jou: geen verrassingen achteraf.' },
       { kind: 'h2', text: 'Wanneer kies je dan toch voor uurwerk?', id: 'uurwerk' },
-      { kind: 'p', text: 'Bij grote maatwerk-projecten waarbij de scope echt niet van tevoren vast te stellen is, werk ik in fasen met een vaste prijs per fase. Elke fase heeft een duidelijk begin, einde en prijs. Na elke fase beslissen we samen of we doorgaan.' },
-      { kind: 'quote', text: 'Een vaste prijs is niet goedkoper of duurder dan uurwerk. Het is eerlijker. Je weet waar je aan toe bent, en je kunt me aanspreken als we afwijken.', cite: 'Ayoub Elkaoui, AK Web Solutions' },
+      { kind: 'p', text: 'Bij grote maatwerk-projecten waarbij de scope echt niet van tevoren vast te stellen is, werken we in fasen met een vaste prijs per fase. Elke fase heeft een duidelijk begin, einde en prijs. Na elke fase beslissen we samen of we doorgaan.' },
+      { kind: 'quote', text: 'Een vaste prijs is niet goedkoper of duurder dan uurwerk. Het is eerlijker. Je weet waar je aan toe bent, en je kunt ons aanspreken als we afwijken.', cite: 'Ayoub Elkaoui, AK Web Solutions' },
     ],
   },
 ];

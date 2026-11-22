@@ -42,7 +42,7 @@ export default function NotFound() {
               lineHeight: 1.55,
             }}
           >
-            Iets klopt niet, maar daar ben ik voor. De pagina die je zoekt bestaat niet, is verplaatst,
+            Iets klopt niet, maar daar zijn we voor. De pagina die je zoekt bestaat niet, is verplaatst,
             of er is een typfout in de URL. Hier zijn een paar plekken waar je waarschijnlijk wel terecht kunt:
           </p>
           <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap', marginBottom: 24 }}>

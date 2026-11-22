@@ -10,11 +10,11 @@ import { buildMetadata, breadcrumbSchema, serviceSchema, faqSchema } from '@/lib
 
 const FAQ_SEO = [
   { q: 'Wat is het verschil tussen SEO en Google Ads?', a: 'SEO is de lange termijn: je bouwt gratis, duurzaam verkeer op door hoger in de organische resultaten te komen. Dat kost maanden, maar blijft. Google Ads is direct: je betaalt per klik en staat meteen bovenaan, maar het verkeer stopt zodra je de campagne uitzet. De sterkste aanpak combineert beide.' },
-  { q: 'Hoe lang duurt het voordat ik resultaat zie?', a: 'Met Google Ads heb je binnen dagen de eerste klikken en aanvragen. Met SEO praat je over maanden: lokale SEO en een goed Google Bedrijfsprofiel laten meestal binnen enkele maanden verbetering zien in de lokale resultaten. Ik zet daarom vaak Ads in om het gat te overbruggen terwijl de SEO rijpt.' },
-  { q: 'Wat kost een Google Ads-campagne?', a: 'Beheer kost €195 per maand, inclusief conversiemeting en maandrapport. Op een bestaande site begin ik met een audit en opzet van €395 eenmalig. Het advertentiebudget dat je aan Google betaalt staat daar los van: voor lokaal werk begin je realistisch met €300 tot €600 per maand.' },
+  { q: 'Hoe lang duurt het voordat ik resultaat zie?', a: 'Met Google Ads heb je binnen dagen de eerste klikken en aanvragen. Met SEO praat je over maanden: lokale SEO en een goed Google Bedrijfsprofiel laten meestal binnen enkele maanden verbetering zien in de lokale resultaten. We zetten daarom vaak Ads in om het gat te overbruggen terwijl de SEO rijpt.' },
+  { q: 'Wat kost een Google Ads-campagne?', a: 'Beheer kost €195 per maand, inclusief conversiemeting en maandrapport. Op een bestaande site beginnen we met een audit en opzet van €395 eenmalig. Het advertentiebudget dat je aan Google betaalt staat daar los van: voor lokaal werk begin je realistisch met €300 tot €600 per maand.' },
   { q: 'Kom ik ook in de lokale top 3 van Google?', a: 'Dat is precies het doel van lokale SEO. Met een volledig ingericht Google Bedrijfsprofiel, lokale landingspagina’s per stad en actief om reviews vragen, werk je toe naar dat kaartje met drie bedrijven bovenaan — waar de meeste klikken naartoe gaan.' },
-  { q: 'Kan ik alleen Ads laten draaien op mijn bestaande site?', a: 'Soms wel, soms niet. Een advertentie stuurt bezoekers naar je site; als die traag is of slecht converteert, verbrand je geld. Daarom check ik eerst je huidige site. Is die qua snelheid en mobiel in orde, dan kan ik los Ads doen; zo niet, dan is een betere basis eerst slimmer.' },
-  { q: 'Hoe weet ik of het werkt?', a: 'Ik meet leads, geen ijdelheidscijfers. Met conversie-tracking op telefoontjes en formulieren zie je maandelijks precies hoeveel aanvragen je campagne oplevert en wat een aanvraag je kost. Geen vaag "meer bereik", maar concrete klussen.' },
+  { q: 'Kan ik alleen Ads laten draaien op mijn bestaande site?', a: 'Soms wel, soms niet. Een advertentie stuurt bezoekers naar je site; als die traag is of slecht converteert, verbrand je geld. Daarom checken we eerst je huidige site. Is die qua snelheid en mobiel in orde, dan kunnen we los Ads doen; zo niet, dan is een betere basis eerst slimmer.' },
+  { q: 'Hoe weet ik of het werkt?', a: 'We meten leads, geen ijdelheidscijfers. Met conversie-tracking op telefoontjes en formulieren zie je maandelijks precies hoeveel aanvragen je campagne oplevert en wat een aanvraag je kost. Geen vaag "meer bereik", maar concrete klussen.' },
 ];
 
 export const metadata: Metadata = buildMetadata({
@@ -88,7 +88,7 @@ export default function SeoPage() {
                 'Geen SEO-rapport van 30 pagina\'s per maand zonder dat er iets verandert',
                 'Geen Google Ads-campagne die geld kost zonder dat iemand belt',
                 'Geen vage cijfers over "zichtbaarheid" of "ranking"',
-                'Ik meet één ding: hoeveel aanvragen krijgt jouw bedrijf',
+                'We meten één ding: hoeveel aanvragen krijgt jouw bedrijf',
               ].map((item) => (
                 <div key={item} style={{ display: 'flex', gap: 12, alignItems: 'start', fontSize: 15, color: 'var(--ink-soft)' }}>
                   <span style={{ color: 'var(--p1)', fontWeight: 700, flexShrink: 0 }}>✓</span>
@@ -102,8 +102,8 @@ export default function SeoPage() {
           <div style={{ padding: '32px 36px', background: 'linear-gradient(135deg, color-mix(in oklab, var(--p1) 6%, #fff), #fff)', border: '1px solid color-mix(in oklab, var(--p1) 20%, transparent)', borderRadius: 16, maxWidth: 720 }}>
             <h3 style={{ fontFamily: 'var(--cond)', fontWeight: 800, fontSize: 20, margin: '0 0 16px' }}>Verbonden met je website</h3>
             <p style={{ fontSize: 16, lineHeight: 1.65, color: 'var(--ink-soft)', margin: 0 }}>
-              SEO en Ads werken alleen goed als je website ze ondersteunt. Daarom doe ik beide bij
-              voorkeur samen met de site. Op een bestaande site doe ik eerst een snelheids- en
+              SEO en Ads werken alleen goed als je website ze ondersteunt. Daarom doen we beide bij
+              voorkeur samen met de site. Op een bestaande site doen we eerst een snelheids- en
               SEO-audit. Anders verbrand je advertentiebudget op een site die niet converteert.
             </p>
           </div>

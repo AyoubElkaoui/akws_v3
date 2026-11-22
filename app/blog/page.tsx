@@ -28,7 +28,7 @@ export default function BlogPage() {
         ]}
         chip={`${BLOG_POSTS.length} artikelen`}
         title="Het kennisblok."
-        subtitle="Praktische artikelen voor ondernemers: over websites, software, marketing en wat ik onderweg leerde."
+        subtitle="Praktische artikelen voor ondernemers: over websites, software, marketing en wat we in de praktijk tegenkomen."
       />
 
       {/* Featured */}

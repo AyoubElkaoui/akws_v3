@@ -19,7 +19,7 @@ export function SiteFooter() {
             </Link>
             <p>
               Websites, webshops en software op maat voor het MKB in
-              Midden-Nederland. Eén freelancer, korte lijntjes, eerlijke prijzen.
+              Midden-Nederland. Webbureau uit Baarn: korte lijntjes, eerlijke prijzen.
             </p>
             {/* TODO: Ayoub — KvK- en BTW-nummer invullen in lib/data.ts */}
             {BRAND.kvk !== 'TODO_KVK' && (
@@ -38,7 +38,7 @@ export function SiteFooter() {
           <div>
             <div className="col-t">Bedrijf</div>
             <div className="col-l">
-              <Link href="/over">Over Ayoub</Link>
+              <Link href="/over">Over ons</Link>
               <Link href="/cases">Werk</Link>
               <Link href="/werkwijze">Werkwijze</Link>
               <Link href="/prijzen">Pakketten</Link>

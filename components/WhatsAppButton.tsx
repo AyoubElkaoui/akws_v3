@@ -3,7 +3,7 @@
 import { BRAND } from '@/lib/data';
 
 export function WhatsAppButton() {
-  const href = `${BRAND.whatsappUrl}?text=${encodeURIComponent('Hoi Ayoub, ik heb een vraag over jullie diensten.')}`;
+  const href = `${BRAND.whatsappUrl}?text=${encodeURIComponent('Hoi, ik heb een vraag over jullie diensten.')}`;
 
   return (
     <a

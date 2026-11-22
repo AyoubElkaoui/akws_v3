@@ -28,7 +28,7 @@ const HOME_FAQ = [
   },
   {
     q: "Wat als ik al een administratiepakket heb?",
-    a: "Dan koppel ik ermee: Snelstart, Exact, Moneybird of een ERP-pakket zoals Syntess. Liever houden wat werkt dan opnieuw beginnen.",
+    a: "Dan koppelen we ermee: Snelstart, Exact, Moneybird of een ERP-pakket zoals Syntess. Liever houden wat werkt dan opnieuw beginnen.",
   },
 ];
 
@@ -100,7 +100,7 @@ export default function HomePage() {
               Een website die de telefoon laat <span>rinkelen</span>.
             </h1>
             <p className="v4-hero-sub">
-              Ik bouw snelle websites die gevonden worden, en software op maat
+              We bouwen snelle websites die gevonden worden, en software op maat
               die het werk erachter makkelijker maakt. Voor ondernemers van
               kapper tot installateur. Gemeten op aanvragen, niet op mooie plaatjes.
             </p>
@@ -109,7 +109,7 @@ export default function HomePage() {
                 Plan een gratis gesprek <span className="arrow">→</span>
               </Link>
               <Link href="/cases" className="btn btn-ghost">
-                Bekijk mijn werk
+                Bekijk ons werk
               </Link>
             </div>
             <div className="v4-checks">
@@ -395,7 +395,7 @@ export default function HomePage() {
               <span className="v4-kicker">Werkwijze</span>
               <h2 className="v4-h2">Van eerste gesprek tot je eerste aanvraag.</h2>
             </div>
-            <Link href="/werkwijze" className="v4-more">Hoe ik werk →</Link>
+            <Link href="/werkwijze" className="v4-more">Hoe we werken →</Link>
           </div>
           <div className="v4-steps">
             {STAPPEN.map((s) => (
@@ -419,16 +419,15 @@ export default function HomePage() {
             <span className="v4-kicker">Over</span>
             <h2 className="v4-h2">Je praat met degene die je site bouwt.</h2>
             <p className="v4-lead">
-              Ik ben {BRAND.founder}, webdeveloper uit {BRAND.location}. Met een
-              achtergrond als junior accountmanager en in HBO Software Development
-              denk ik eerst vanuit jouw klanten, en bouw ik daarna. Geen
-              accountmanager ertussen, niets uitbesteed.
+              AK Web Solutions is een webbureau uit {BRAND.location}. We denken
+              eerst vanuit jouw klanten en bouwen daarna. Geen accountmanager
+              ertussen, niets uitbesteed: je spreekt direct met wie je site bouwt.
             </p>
             <div className="v4-contacts">
               <a href={`tel:${BRAND.phoneRaw}`}>{BRAND.phone.replace(/ — /g, " ")}</a>
               <a href={`mailto:${BRAND.email}`}>{BRAND.email}</a>
               <a href={BRAND.whatsappUrl} target="_blank" rel="noopener noreferrer">WhatsApp</a>
-              <Link href="/over">Mijn verhaal →</Link>
+              <Link href="/over">Over ons →</Link>
             </div>
           </div>
         </div>

@@ -42,19 +42,19 @@ export const MAATWERK_SOFTWARE: DienstLocatie = {
     `Maatwerk software laten maken in ${s}? Urenregistratie, voorraad, dashboards en koppelingen met je ERP of boekhouding. Prototype vanaf €750, eerste fase vanaf €3.500.`,
   lokaal: {
     baarn:
-      'Ik zit zelf in Baarn, dus een procesanalyse doe ik gewoon bij jou op de zaak. Juist bij kleinere bedrijven in het dorp zie ik hetzelfde patroon: uren op briefjes of in Excel, een planning op het whiteboard en een boekhouder die elke maand alles moet overtypen. Daar is vaak geen groot systeem voor nodig, wel een paar slimme schermen die precies doen wat jij nodig hebt.',
+      'We zitten zelf in Baarn, dus een procesanalyse doen we gewoon bij jou op de zaak. Juist bij kleinere bedrijven in het dorp zien we hetzelfde patroon: uren op briefjes of in Excel, een planning op het whiteboard en een boekhouder die elke maand alles moet overtypen. Daar is vaak geen groot systeem voor nodig, wel een paar slimme schermen die precies doen wat jij nodig hebt.',
     soest:
-      'In Soest en Soesterberg zitten veel bedrijven in transport, installatie en bouw, met mensen die de hele dag onderweg zijn. Voor hen moet software werken op een telefoon, met een paar tikken: uren boeken, een werkbon afronden, een foto toevoegen. Dat is precies het soort tool dat ik bouw, en Soest ligt op tien minuten van mijn werkplek.',
+      'In Soest en Soesterberg zitten veel bedrijven in transport, installatie en bouw, met mensen die de hele dag onderweg zijn. Voor hen moet software werken op een telefoon, met een paar tikken: uren boeken, een werkbon afronden, een foto toevoegen. Dat is precies het soort tool dat wij bouwen, en Soest ligt op tien minuten van Baarn, waar we zitten.',
     amersfoort:
-      'Amersfoort heeft veel groeiende MKB-bedrijven die tegen de grenzen van Excel en losse pakketten aanlopen. Vaak is er al een boekhoudpakket of ERP, maar sluit het niet aan op hoe het team werkt. Dan bouw ik er iets naast dat er rechtstreeks mee praat, zoals een dashboard dat cijfers live uit de database haalt of een urenmodule die direct in het ERP boekt.',
+      'Amersfoort heeft veel groeiende MKB-bedrijven die tegen de grenzen van Excel en losse pakketten aanlopen. Vaak is er al een boekhoudpakket of ERP, maar sluit het niet aan op hoe het team werkt. Dan bouwen we er iets naast dat er rechtstreeks mee praat, zoals een dashboard dat cijfers live uit de database haalt of een urenmodule die direct in het ERP boekt.',
     hilversum:
-      'In Hilversum en het Gooi werk ik vooral voor bedrijven die meer willen dan een website: een klantportaal waar klanten zelf meldingen doen, een planning die het hele team ziet of een koppeling tussen twee pakketten die niet met elkaar praten. Je werkt met één developer die het bouwt én onderhoudt, zonder bureau-tarieven.',
+      'In Hilversum en het Gooi werken we vooral voor bedrijven die meer willen dan een website: een klantportaal waar klanten zelf meldingen doen, een planning die het hele team ziet of een koppeling tussen twee pakketten die niet met elkaar praten. Je praat direct met wie het bouwt én onderhoudt, zonder accountmanager ertussen.',
     utrecht:
-      'In de regio Utrecht zitten veel IT-dienstverleners, installateurs en zakelijke dienstverleners met processen die niet in een standaardpakket passen. Voor een IT-dienstverlener bouwde ik een ticket- en urenplatform dat Zoho Desk verving, met voorraad, assets en een klantportaal in één systeem. Dat soort maatwerk werkt ook voor andere bedrijven in en rond Utrecht.',
+      'In de regio Utrecht zitten veel IT-dienstverleners, installateurs en zakelijke dienstverleners met processen die niet in een standaardpakket passen. Voor een IT-dienstverlener bouwden we een ticket- en urenplatform dat Zoho Desk verving, met voorraad, assets en een klantportaal in één systeem. Dat soort maatwerk werkt ook voor andere bedrijven in en rond Utrecht.',
     nijkerk:
-      'Nijkerk heeft veel familiebedrijven in bouw, techniek en productie. Daar zie ik vaak dat de kennis in een paar hoofden en een paar Excel-bestanden zit. Software die vastlegt wat er per project, kast of klus gebeurt, met een QR-code of barcode op de werkvloer, maakt dat overdraagbaar en scheelt zoekwerk.',
+      'Nijkerk heeft veel familiebedrijven in bouw, techniek en productie. Daar zien we vaak dat de kennis in een paar hoofden en een paar Excel-bestanden zit. Software die vastlegt wat er per project, kast of klus gebeurt, met een QR-code of barcode op de werkvloer, maakt dat overdraagbaar en scheelt zoekwerk.',
     zeist:
-      'In Zeist en omgeving werk ik voor bedrijven die hun administratie, planning of klantcontact slimmer willen regelen zonder een duur softwarepakket met tien modules die ze niet gebruiken. Ik begin met een klikbaar prototype, zodat je eerst ziet hoe het werkt voordat er gebouwd wordt.',
+      'In Zeist en omgeving werken we voor bedrijven die hun administratie, planning of klantcontact slimmer willen regelen zonder een duur softwarepakket met tien modules die ze niet gebruiken. We beginnen met een klikbaar prototype, zodat je eerst ziet hoe het werkt voordat er gebouwd wordt.',
   },
   blokken: [
     { titel: 'Urenregistratie & planning', tekst: 'Uren per klant of project, op telefoon of pc, met goedkeuring door de manager en export naar je ERP of facturatie.' },
@@ -69,12 +69,12 @@ export const MAATWERK_SOFTWARE: DienstLocatie = {
   ],
   caseMeta: ['Maatwerk software'],
   fallback: (s) =>
-    `Ook voor bedrijven in ${s.naam} bouw ik software die past bij hoe je werkt: urenregistratie, voorraad, werkbonnen, dashboards en koppelingen met je boekhouding of ERP. ${s.afstand} Voor een procesanalyse kom ik langs en kijk ik mee op de plek waar het werk gebeurt. Daarna begin ik met een klikbaar prototype, zodat je eerst ziet hoe het werkt voordat er gebouwd wordt.`,
+    `Ook voor bedrijven in ${s.naam} bouwen we software die past bij hoe je werkt: urenregistratie, voorraad, werkbonnen, dashboards en koppelingen met je boekhouding of ERP. ${s.afstand} Voor een procesanalyse komen we langs en kijken we mee op de plek waar het werk gebeurt. Daarna beginnen we met een klikbaar prototype, zodat je eerst ziet hoe het werkt voordat er gebouwd wordt.`,
   faq: (s) => [
-    { q: `Kom je voor een procesanalyse langs in ${s}?`, a: 'Ja. Ik kijk het liefst mee op de plek waar het werk gebeurt, want daar zie je waar het vastloopt. Het eerste gesprek is gratis en duurt ongeveer een half uur.' },
-    { q: 'Wat kost maatwerk software?', a: 'Een klikbaar prototype begint bij €750, een eerste werkende fase ligt meestal tussen €3.500 en €8.000. Grotere systemen bouw ik in fases met elk een vaste prijs. Hosting en onderhoud vanaf €49 per maand.' },
-    { q: 'Is een bestaand pakket niet goedkoper?', a: 'Soms wel, en dan zeg ik dat. Maatwerk loont als je maand na maand tijd verliest aan dubbel invoeren of aan een pakket dat niet past bij hoe je werkt.' },
-    { q: 'Ben ik eigenaar van de software?', a: 'Ja. Je krijgt de code en de data. Stop je met mij, dan kan een andere developer verder.' },
+    { q: `Komen jullie voor een procesanalyse langs in ${s}?`, a: 'Ja. We kijken het liefst mee op de plek waar het werk gebeurt, want daar zie je waar het vastloopt. Het eerste gesprek is gratis en duurt ongeveer een half uur.' },
+    { q: 'Wat kost maatwerk software?', a: 'Een klikbaar prototype begint bij €750, een eerste werkende fase ligt meestal tussen €3.500 en €8.000. Grotere systemen bouwen we in fases met elk een vaste prijs. Hosting en onderhoud vanaf €49 per maand.' },
+    { q: 'Is een bestaand pakket niet goedkoper?', a: 'Soms wel, en dan zeggen we dat. Maatwerk loont als je maand na maand tijd verliest aan dubbel invoeren of aan een pakket dat niet past bij hoe je werkt.' },
+    { q: 'Ben ik eigenaar van de software?', a: 'Ja. Je krijgt de code en de data. Stop je met ons, dan kan een andere developer verder.' },
   ],
 };
 
@@ -91,23 +91,23 @@ export const LOKALE_SEO: DienstLocatie = {
     `Beter gevonden worden in Google in ${s}? Lokale SEO, Google Bedrijfsprofiel en Google Ads voor vakmensen en MKB. Pagina's vanaf €149, Ads-beheer €195 per maand.`,
   lokaal: {
     baarn:
-      'In Baarn is de concurrentie in Google te overzien. Voor veel zoekopdrachten, zoals een beroep met Baarn erachter, staan er maar een paar bedrijven met een goede site en een compleet bedrijfsprofiel. Met een pagina per dienst, nette structured data en een handvol echte reviews kom je hier relatief snel in beeld. En omdat ik zelf in Baarn zit, ken ik ook de kernen eromheen, zoals Lage Vuursche en Eemnes.',
+      'In Baarn is de concurrentie in Google te overzien. Voor veel zoekopdrachten, zoals een beroep met Baarn erachter, staan er maar een paar bedrijven met een goede site en een compleet bedrijfsprofiel. Met een pagina per dienst, nette structured data en een handvol echte reviews kom je hier relatief snel in beeld. En omdat we zelf in Baarn zitten, kennen we ook de kernen eromheen, zoals Lage Vuursche en Eemnes.',
     soest:
-      'Soest is langgerekt en Soesterberg is een aparte kern. Wie daar zoekt, typt vaak Soesterberg in en niet Soest. Een site die alleen Soest noemt, mist die zoekers. Ik zet per kern waar je werkt een eigen pagina op en richt je bedrijfsprofiel in met het juiste werkgebied, zodat je in beide plaatsen meedoet.',
+      'Soest is langgerekt en Soesterberg is een aparte kern. Wie daar zoekt, typt vaak Soesterberg in en niet Soest. Een site die alleen Soest noemt, mist die zoekers. We zetten per kern waar je werkt een eigen pagina op en richten je bedrijfsprofiel in met het juiste werkgebied, zodat je in beide plaatsen meedoet.',
     amersfoort:
-      'In Amersfoort is het druk op brede zoektermen, maar op een dienst met een wijk erbij, zoals Vathorst, Nieuwland of Hoogland, veel minder. Daar begin ik: de zoektermen waar je op korte termijn kans maakt. Wil je sneller aanvragen, dan zet ik daarnaast een Google Ads-campagne op die alleen in jouw werkgebied draait.',
+      'In Amersfoort is het druk op brede zoektermen, maar op een dienst met een wijk erbij, zoals Vathorst, Nieuwland of Hoogland, veel minder. Daar beginnen we: de zoektermen waar je op korte termijn kans maakt. Wil je sneller aanvragen, dan zetten we daarnaast een Google Ads-campagne op die alleen in jouw werkgebied draait.',
     hilversum:
-      'Wie in Hilversum een vakman zoekt, kijkt eerst naar de kaart in Google en belt een van de eerste drie. Wie daar staat, heeft meestal een compleet bedrijfsprofiel, recente reviews en een site die op mobiel snel laadt. Dat zijn precies de dingen die ik inricht, voor Hilversum en voor de plaatsen in het Gooi waar je werkt.',
+      'Wie in Hilversum een vakman zoekt, kijkt eerst naar de kaart in Google en belt een van de eerste drie. Wie daar staat, heeft meestal een compleet bedrijfsprofiel, recente reviews en een site die op mobiel snel laadt. Dat zijn precies de dingen die wij inrichten, voor Hilversum en voor de plaatsen in het Gooi waar je werkt.',
     bussum:
-      'Bussum, Naarden en Muiden vallen onder Gooise Meren, maar niemand zoekt op die gemeentenaam. Ik maak per kern een eigen pagina en zorg dat je bedrijfsprofiel en site hetzelfde werkgebied noemen. Omdat klanten hier vaak vergelijken, krijgen je dienstpagina\'s ook projectfoto\'s en een duidelijke uitleg, zodat ze na het zoeken ook bellen.',
+      'Bussum, Naarden en Muiden vallen onder Gooise Meren, maar niemand zoekt op die gemeentenaam. We maken per kern een eigen pagina en zorgen dat je bedrijfsprofiel en site hetzelfde werkgebied noemen. Omdat klanten hier vaak vergelijken, krijgen je dienstpagina\'s ook projectfoto\'s en een duidelijke uitleg, zodat ze na het zoeken ook bellen.',
     utrecht:
-      'In Utrecht win je niet op de stadsnaam maar op dienst en wijk. Voor AD Loodgietersbedrijf bouwde ik pagina\'s per dienst en per plaats in de regio Utrecht. Na livegang in oktober 2026 gingen de vertoningen in Google van zo’n 100 naar ruim 1.300 per dag, en de site staat op pagina 1 voor meerdere plaatsen. Diezelfde opbouw gebruik ik voor andere vakmensen in en rond Utrecht.',
+      'In Utrecht win je niet op de stadsnaam maar op dienst en wijk. Voor AD Loodgietersbedrijf bouwden we pagina\'s per dienst en per plaats in de regio Utrecht. Na livegang in oktober 2026 gingen de vertoningen in Google van zo’n 100 naar ruim 1.300 per dag, en de site staat op pagina 1 voor meerdere plaatsen. Diezelfde opbouw gebruiken we voor andere vakmensen in en rond Utrecht.',
     nijkerk:
-      'Bedrijven in Nijkerk werken vaak twee kanten op: richting Amersfoort en Hoevelaken, en richting Putten en Barneveld. Een site die alleen Nijkerk noemt, laat de helft liggen. Ik breng in kaart in welke plaatsen je werkt en waar mensen op zoeken, en bouw daar pagina\'s voor met eigen tekst.',
+      'Bedrijven in Nijkerk werken vaak twee kanten op: richting Amersfoort en Hoevelaken, en richting Putten en Barneveld. Een site die alleen Nijkerk noemt, laat de helft liggen. We brengen in kaart in welke plaatsen je werkt en waar mensen op zoeken, en bouwen daar pagina\'s voor met eigen tekst.',
     zeist:
       'Rond Zeist hebben Den Dolder, Huis ter Heide en Austerlitz elk hun eigen zoekers. Voor dure klussen als renovatie of tuinaanleg vergelijken mensen hier meerdere bedrijven. Goede lokale SEO zorgt dat je in die vergelijking zit; projectfoto\'s en reviews op je site zorgen dat ze daarna voor jou kiezen.',
     maarssen:
-      'Maarssen is waar mijn bekendste SEO-case vandaan komt: AD Loodgietersbedrijf. Met pagina\'s per dienst en plaats, structured data en een opgeschoond bedrijfsprofiel staat de site nu op pagina 1 voor onder meer "loodgieter Maarssen". Voor andere bedrijven in Stichtse Vecht, van Breukelen tot Maarssenbroek, werkt dezelfde aanpak.',
+      'Maarssen is waar onze bekendste SEO-case vandaan komt: AD Loodgietersbedrijf. Met pagina\'s per dienst en plaats, structured data en een opgeschoond bedrijfsprofiel staat de site nu op pagina 1 voor onder meer "loodgieter Maarssen". Voor andere bedrijven in Stichtse Vecht, van Breukelen tot Maarssenbroek, werkt dezelfde aanpak.',
   },
   blokken: [
     { titel: 'Pagina per dienst en plaats', tekst: 'Een eigen pagina voor elke combinatie die ertoe doet, met eigen tekst. Geen kopie waarin alleen de plaatsnaam wisselt.' },
@@ -123,10 +123,10 @@ export const LOKALE_SEO: DienstLocatie = {
   caseMeta: ['Website + lokale SEO'],
   fallback: (s) => s.lokaal[0],
   faq: (s) => [
-    { q: `Kan je garanderen dat ik bovenaan kom in ${s}?`, a: 'Nee, en wie dat wel belooft, kan het niet waarmaken. Wat ik wel doe: de dingen die daar aantoonbaar voor nodig zijn, en meten wat het oplevert in Search Console.' },
+    { q: `Kunnen jullie garanderen dat ik bovenaan kom in ${s}?`, a: 'Nee, en wie dat wel belooft, kan het niet waarmaken. Wat we wel doen: de dingen die daar aantoonbaar voor nodig zijn, en meten wat het oplevert in Search Console.' },
     { q: 'Hoe lang duurt het voordat ik resultaat zie?', a: 'De eerste verbeteringen zie je meestal binnen een paar weken tot maanden. Bij AD Loodgieters (live in oktober) waren de vertoningen in november ruim 13 keer zo hoog, maar dat verschilt per branche en concurrentie. Google Ads werkt direct.' },
     { q: 'Wat kost lokale SEO?', a: 'Extra pagina\'s kosten €149 per stuk, een Google Bedrijfsprofiel inrichten €195 eenmalig. Bij een nieuwe website zit een lokale SEO-basis er al in (vanaf €1.495). Google Ads-beheer is €195 per maand plus je advertentiebudget.' },
-    { q: 'Kan je ook op mijn bestaande site werken?', a: 'Vaak wel. Ik begin met een audit van snelheid, techniek en inhoud. Soms is aanvullen genoeg, soms is een nieuwe site goedkoper dan blijven repareren. Dat hoor je vooraf.' },
+    { q: 'Kunnen jullie ook op mijn bestaande site werken?', a: 'Vaak wel. We beginnen met een audit van snelheid, techniek en inhoud. Soms is aanvullen genoeg, soms is een nieuwe site goedkoper dan blijven repareren. Dat hoor je vooraf.' },
   ],
 };
 

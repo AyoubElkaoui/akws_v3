@@ -10,7 +10,7 @@ import { buildMetadata, breadcrumbSchema } from '@/lib/seo';
 export const metadata: Metadata = buildMetadata({
   title: 'Website laten maken in Midden-Nederland | Baarn, Amersfoort, Utrecht | AKWS',
   description:
-    'Website laten maken door een freelance webdeveloper uit Baarn. Actief in Baarn, Soest, Amersfoort, Hilversum, Zeist, Utrecht en omgeving. Vanaf €1.495, binnen 3–4 weken live.',
+    'Website laten maken door een webbureau uit Baarn. Actief in Baarn, Soest, Amersfoort, Hilversum, Zeist, Utrecht en omgeving. Vanaf €1.495, binnen 3–4 weken live.',
   path: '/website-laten-maken',
 });
 
@@ -34,9 +34,9 @@ export default function WebsiteLatenMakenPage() {
         subtitle="/ bij jou in de buurt."
       >
         <p className="lead">
-          Ik werk vanuit Baarn voor bedrijven in Midden-Nederland. Elke plaats heeft zijn eigen
-          markt en zijn eigen zoekgedrag. Kies je plaats en lees wat daar speelt en hoe ik je
-          website daarop inricht.
+          We werken vanuit Baarn voor bedrijven in Midden-Nederland. Elke plaats heeft zijn eigen
+          markt en zijn eigen zoekgedrag. Kies je plaats en lees wat daar speelt en hoe we je
+          website daarop inrichten.
         </p>
       </PageHead>
 
@@ -62,8 +62,8 @@ export default function WebsiteLatenMakenPage() {
             ))}
           </div>
           <p style={{ marginTop: 32, fontSize: 16, color: 'var(--mute)', maxWidth: 720, lineHeight: 1.6 }}>
-            Staat jouw plaats er niet tussen? Ik werk ook daarbuiten. Zoek je juist iets voor jouw
-            vak, kijk dan bij <Link href="/voor-wie" style={{ color: 'var(--p1)' }}>voor wie ik bouw</Link>.
+            Staat jouw plaats er niet tussen? We werken ook daarbuiten. Zoek je juist iets voor jouw
+            vak, kijk dan bij <Link href="/voor-wie" style={{ color: 'var(--p1)' }}>voor wie we bouwen</Link>.
           </p>
         </div>
       </section>

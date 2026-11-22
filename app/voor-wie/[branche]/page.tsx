@@ -104,7 +104,7 @@ export default async function BranchePage({ params }: { params: Promise<Params> 
         <div className="wrap">
           <span className="eyebrow">
             <span className="num">02</span>
-            <span className="rule" /> Hoe ik dat oplos
+            <span className="rule" /> Hoe we dat oplossen
           </span>
           <div className="section-head" style={{ marginTop: 24, marginBottom: 48 }}>
             <h2>
@@ -170,7 +170,7 @@ export default async function BranchePage({ params }: { params: Promise<Params> 
               Zoekwoorden die ertoe doen.<em>voor {b.naam.toLowerCase()}.</em>
             </h2>
             <p className="lead">
-              Dit zijn de zoekopdrachten waarop ik jouw site optimaliseer. Klanten die dit googelen,
+              Dit zijn de zoekopdrachten waarop we jouw site optimaliseren. Klanten die dit googelen,
               zijn op zoek naar precies wat jij aanbiedt.
             </p>
           </div>
@@ -274,7 +274,7 @@ export default async function BranchePage({ params }: { params: Promise<Params> 
         eyebrow={`Website voor ${b.naam.toLowerCase()}?`}
         title="Plan een gesprek."
         subtitle="30 minuten, vrijblijvend"
-        body={`Vertel wat je nodig hebt. Ik geef binnen één werkdag een eerlijke inschatting voor een website of software voor jouw ${b.naam.toLowerCase()}bedrijf.`}
+        body={`Vertel wat je nodig hebt. We geven binnen één werkdag een eerlijke inschatting voor een website of software voor jouw ${b.naam.toLowerCase()}bedrijf.`}
       />
 
       <SiteFooter />

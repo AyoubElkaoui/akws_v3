@@ -80,7 +80,7 @@ export function DienstStadPage({ dienst: d, slug }: { dienst: DienstLocatie; slu
         <div className="wrap">
           <span className="eyebrow">
             <span className="num">01</span>
-            <span className="rule" /> Wat ik doe
+            <span className="rule" /> Wat we doen
           </span>
           <div className="section-head" style={{ marginTop: 24, marginBottom: 48 }}>
             <h2>Concreet.<em>voor bedrijven in {s.naam}.</em></h2>

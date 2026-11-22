@@ -49,14 +49,14 @@ export const MKB_DOELGROEPEN: MkbDoelgroep[] = [
     ],
     zoekwoorden: ['kapper [stad]', 'barbershop [stad]', 'kapsalon in de buurt', 'kapper online afspraak', 'herenkapper [stad]', 'balayage [stad]'],
     faq: [
-      ['Kan online boeken koppelen met mijn huidige systeem?', 'Meestal wel. Salonized, Treatwell en vergelijkbare systemen hebben een boekwidget of link die ik in je site verwerk. Heb je nog niets, dan adviseer ik wat past.'],
+      ['Kan online boeken koppelen met mijn huidige systeem?', 'Meestal wel. Salonized, Treatwell en vergelijkbare systemen hebben een boekwidget of link die we in je site verwerken. Heb je nog niets, dan adviseren we wat past.'],
       ['Moet ik een site hebben als ik al Instagram heb?', 'Instagram is goed voor vaste klanten. Nieuwe klanten zoeken in Google, en daar telt een site met je adres, prijzen en reviews.'],
     ],
     plaatsIntro: 'Wie in {stad} een nieuwe kapper zoekt, kijkt op de telefoon naar foto’s, prijzen en reviews en wil direct een tijd kiezen. Een snelle site met een boekknop bovenaan en een goed bedrijfsprofiel zorgt dat die afspraak bij jou in de agenda komt in plaats van bij de zaak verderop.',
     opSite: ['Boekknop op elke pagina', 'Prijslijst per behandeling', 'Galerij met eigen werk', 'Reviews uit Google', 'Openingstijden en route'],
     zoektermen: ['kapper', 'barbershop', 'kapsalon', 'herenkapper', 'kapper afspraak'],
     software: {
-      intro: 'De meeste kappers kunnen prima uit de voeten met een bestaand boekingssysteem. Maatwerk loont pas als je meerdere vestigingen, eigen abonnementen of een klantenkaart hebt die nergens in past. Dan bouw ik de koppeling of de module die ontbreekt, in plaats van een heel nieuw systeem.',
+      intro: 'De meeste kappers kunnen prima uit de voeten met een bestaand boekingssysteem. Maatwerk loont pas als je meerdere vestigingen, eigen abonnementen of een klantenkaart hebt die nergens in past. Dan bouwen we de koppeling of de module die ontbreekt, in plaats van een heel nieuw systeem.',
       knelpunten: ['Boekingssysteem en kassa praten niet met elkaar', 'Abonnementen of klantenkaarten met de hand bijhouden', 'Geen overzicht over meerdere vestigingen'],
       soorten: ['koppeling', 'klantportaal', 'dashboard'],
       cases: ['facturatie-app'],
@@ -84,7 +84,7 @@ export const MKB_DOELGROEPEN: MkbDoelgroep[] = [
     ],
     zoekwoorden: ['schoonheidssalon [stad]', 'nagelstudio [stad]', 'wimperextensions [stad]', 'gezichtsbehandeling', 'gellak [stad]', 'harsen [stad]'],
     faq: [
-      ['Kan ik zelf behandelingen en prijzen aanpassen?', 'Ja. Ik bouw een eenvoudig beheer waarin je prijzen, behandelingen en foto’s zelf wijzigt.'],
+      ['Kan ik zelf behandelingen en prijzen aanpassen?', 'Ja. We bouwen een eenvoudig beheer waarin je prijzen, behandelingen en foto’s zelf wijzigt.'],
       ['Kunnen klanten online een cadeaubon kopen?', 'Ja, met een betaalkoppeling. De bon komt direct als PDF in de mail.'],
     ],
     plaatsIntro: 'Wie in {stad} een salon zoekt voor nagels, wimpers of een gezichtsbehandeling, vergelijkt op foto’s, prijzen en reviews. Met een pagina per behandeling en een boekknop sta je in Google precies waar die klanten zoeken.',
@@ -120,7 +120,7 @@ export const MKB_DOELGROEPEN: MkbDoelgroep[] = [
     zoekwoorden: ['restaurant [stad]', 'lunchroom [stad]', 'uit eten [stad]', 'terras [stad]', 'afhalen [stad]', 'restaurant reserveren'],
     faq: [
       ['Kan ik zelf de menukaart aanpassen?', 'Ja, in een eenvoudig beheer. Prijs veranderd of seizoensgerecht erbij: binnen een minuut online.'],
-      ['Moet ik via Thuisbezorgd of kan het via mijn eigen site?', 'Allebei kan. Een eigen bestelmodule scheelt provisie; een platform geeft bereik. Ik denk mee wat bij je zaak past.'],
+      ['Moet ik via Thuisbezorgd of kan het via mijn eigen site?', 'Allebei kan. Een eigen bestelmodule scheelt provisie; een platform geeft bereik. We denken mee over wat bij je zaak past.'],
     ],
     plaatsIntro: 'Wie in {stad} gaat eten, kijkt eerst op de telefoon naar de kaart, foto’s en of er nog plek is. Met een snelle site, een menukaart die direct laadt en een reserveerknop kies je hun avond.',
     opSite: ['Menukaart als snelle pagina', 'Reserveerknop', 'Groepen en arrangementen', 'Openingstijden en route', 'Reviews uit Google'],
@@ -154,14 +154,14 @@ export const MKB_DOELGROEPEN: MkbDoelgroep[] = [
     ],
     zoekwoorden: ['fysiotherapeut [stad]', 'fysiotherapie [stad]', 'fysio rugklachten', 'sportfysio [stad]', 'manueel therapeut [stad]', 'fysio zonder verwijzing'],
     faq: [
-      ['Kan de site koppelen met ons EPD of agenda?', 'Vaak is er een boekmodule of link vanuit het EPD die ik netjes in de site verwerk. Patiëntgegevens blijven in jullie eigen systeem.'],
-      ['Is een contactformulier AVG-proof?', 'Ja. Ik vraag alleen wat nodig is, versleutel de verbinding en sla geen medische gegevens op in de site.'],
+      ['Kan de site koppelen met ons EPD of agenda?', 'Vaak is er een boekmodule of link vanuit het EPD die we netjes in de site verwerken. Patiëntgegevens blijven in jullie eigen systeem.'],
+      ['Is een contactformulier AVG-proof?', 'Ja. We vragen alleen wat nodig is, versleutelen de verbinding en slaan geen medische gegevens op in de site.'],
     ],
     plaatsIntro: 'Wie in {stad} last heeft van rug, knie of schouder, zoekt een praktijk dichtbij die snel plek heeft. Met een pagina per klacht, heldere uitleg over vergoeding en een kort aanmeldformulier word je gevonden én gekozen.',
     opSite: ['Pagina per klacht en specialisatie', 'Uitleg vergoeding en verwijzing', 'Online aanmelden', 'Team met specialisaties', 'Reviews en keurmerken'],
     zoektermen: ['fysiotherapeut', 'fysiotherapie', 'sportfysiotherapeut', 'manueel therapeut', 'oefentherapeut'],
     software: {
-      intro: 'Het EPD vervang je niet. Wat vaak ontbreekt, zit eromheen: een overzicht voor de praktijkhouder, uren van therapeuten, een koppeling tussen aanmeldingen en de agenda. Daar bouw ik de module die mist.',
+      intro: 'Het EPD vervang je niet. Wat vaak ontbreekt, zit eromheen: een overzicht voor de praktijkhouder, uren van therapeuten, een koppeling tussen aanmeldingen en de agenda. Daar bouwen we de module die mist.',
       knelpunten: ['Aanmeldingen van de site met de hand in het EPD', 'Geen overzicht van bezetting en omzet per therapeut', 'Uren en declaraties los van elkaar'],
       soorten: ['koppeling', 'dashboard', 'urenregistratie'],
       cases: ['financieel-dashboard', 'urenportaal'],
@@ -231,7 +231,7 @@ export const MKB_DOELGROEPEN: MkbDoelgroep[] = [
     opSite: ['Online inschrijven', 'Pagina per behandeling', 'Spoedregeling', 'Team en praktijk', 'Vergoedingen'],
     zoektermen: ['tandarts', 'mondhygiënist', 'tandarts nieuwe patiënten', 'tandarts spoed', 'orthodontist'],
     software: {
-      intro: 'Het praktijksysteem doet het zware werk. Wat ernaast vaak ontbreekt: een nette koppeling voor inschrijvingen, een overzicht voor de praktijkhouder of een eenvoudig portaal voor verwijzers. Dat bouw ik op maat.',
+      intro: 'Het praktijksysteem doet het zware werk. Wat ernaast vaak ontbreekt: een nette koppeling voor inschrijvingen, een overzicht voor de praktijkhouder of een eenvoudig portaal voor verwijzers. Dat bouwen we op maat.',
       knelpunten: ['Inschrijvingen met de hand overgenomen', 'Geen overzicht van productie per behandelaar', 'Verwijzingen per mail en fax'],
       soorten: ['koppeling', 'dashboard', 'klantportaal'],
       cases: ['financieel-dashboard'],
@@ -260,14 +260,14 @@ export const MKB_DOELGROEPEN: MkbDoelgroep[] = [
     zoekwoorden: ['boekhouder [stad]', 'administratiekantoor [stad]', 'boekhouder zzp', 'accountant [stad]', 'salarisadministratie uitbesteden', 'belastingaangifte laten doen'],
     faq: [
       ['Kunnen klanten via de site documenten aanleveren?', 'Ja, met een klantportaal of een veilige uploadfunctie. Liefst gekoppeld aan het pakket dat jullie al gebruiken.'],
-      ['Bouw je ook een urenregistratie voor ons kantoor?', 'Ja. Voor een administratiekantoor heb ik een urenportaal met weekgoedkeuring en teamoverzicht uitgewerkt.'],
+      ['Bouwen jullie ook een urenregistratie voor ons kantoor?', 'Ja. Voor een administratiekantoor hebben we een urenportaal met weekgoedkeuring en teamoverzicht uitgewerkt.'],
     ],
     plaatsIntro: 'Ondernemers in {stad} zoeken een boekhouder die ze vertrouwen en die hun situatie snapt. Met een pagina per doelgroep, een eerlijke prijsindicatie en je eigen gezicht op de site trek je de klanten aan die bij je kantoor passen.',
     opSite: ['Pagina per doelgroep (zzp, bv, starter)', 'Prijsindicatie', 'Team en werkwijze', 'Veilig documenten aanleveren', 'Reviews en keurmerken'],
     zoektermen: ['boekhouder', 'administratiekantoor', 'accountant', 'boekhouder zzp', 'salarisadministratie'],
     caseSlug: 'urenportaal',
     software: {
-      intro: 'Een administratiekantoor werkt met uren per klant, deadlines en documenten van klanten. Voor een kantoor werkte ik een urenportaal uit met weekgoedkeuring en een teamoverzicht. Daarnaast zijn een klantportaal voor documenten en koppelingen met je boekhoudpakket logische stappen.',
+      intro: 'Een administratiekantoor werkt met uren per klant, deadlines en documenten van klanten. Voor een kantoor werkten we een urenportaal uit met weekgoedkeuring en een teamoverzicht. Daarnaast zijn een klantportaal voor documenten en koppelingen met je boekhoudpakket logische stappen.',
       knelpunten: ['Uren per klant in Excel', 'Documenten van klanten via mail en WhatsApp', 'Geen overzicht van deadlines per klant'],
       soorten: ['urenregistratie', 'klantportaal', 'koppeling', 'facturatie'],
       cases: ['urenportaal', 'facturatie-app'],
@@ -295,7 +295,7 @@ export const MKB_DOELGROEPEN: MkbDoelgroep[] = [
     ],
     zoekwoorden: ['IT-beheer [stad]', 'systeembeheer MKB', 'IT-bedrijf [stad]', 'IT-support MKB', 'managed services [stad]', 'cybersecurity MKB'],
     faq: [
-      ['Heb je ervaring met IT-bedrijven?', 'Ja. Voor een IT-dienstverlener bouwde ik zowel de website als ITflow, het ticket- en urenplatform dat Zoho Desk verving.'],
+      ['Hebben jullie ervaring met IT-bedrijven?', 'Ja. Voor een IT-dienstverlener bouwden we zowel de website als ITflow, het ticket- en urenplatform dat Zoho Desk verving.'],
       ['Kan een klantportaal aan onze PSA-tool koppelen?', 'Als je tool een API heeft, ja. Anders kan een eigen platform zoals ITflow de PSA-tool vervangen.'],
     ],
     plaatsIntro: 'Ondernemers in {stad} zoeken een IT-partner die ze vertrouwen en die snel reageert. Met diensten in gewone taal, een herkenbaar team en een eerste stap zoals een quickscan haal je die aanvragen binnen.',
@@ -303,7 +303,7 @@ export const MKB_DOELGROEPEN: MkbDoelgroep[] = [
     zoektermen: ['IT-beheer', 'systeembeheer', 'IT-bedrijf', 'IT-support', 'managed services'],
     caseSlug: 'itfin-website',
     software: {
-      intro: 'Voor een IT-dienstverlener bouwde ik ITflow: tickets per klant, werktijd, voorraad, assets, kennisbank en klantportaal in één systeem, ter vervanging van Zoho Desk. Ook laptops klaarmaken heb ik geautomatiseerd met een eigen tool. Ik ken dus het werk van binnenuit.',
+      intro: 'Voor een IT-dienstverlener bouwden we ITflow: tickets per klant, werktijd, voorraad, assets, kennisbank en klantportaal in één systeem, ter vervanging van Zoho Desk. Ook het klaarmaken van laptops hebben we geautomatiseerd met een eigen tool. We kennen het werk dus van binnenuit.',
       knelpunten: ['Tickets, voorraad en assets in losse tools', 'Per gebruiker betalen voor een helpdesk', 'Uren met de hand naar de facturatie'],
       soorten: ['ticketsysteem', 'klantportaal', 'voorraadbeheer', 'urenregistratie'],
       cases: ['itflow', 'itfin-website'],
@@ -331,7 +331,7 @@ export const MKB_DOELGROEPEN: MkbDoelgroep[] = [
     ],
     zoekwoorden: ['makelaar [stad]', 'verkoopmakelaar [stad]', 'aankoopmakelaar [stad]', 'woning verkopen [stad]', 'gratis waardebepaling', 'taxatie [stad]'],
     faq: [
-      ['Kan ons aanbod automatisch op de site?', 'Vaak wel, via een koppeling of feed vanuit je aanbodsysteem. Dat check ik in de intake.'],
+      ['Kan ons aanbod automatisch op de site?', 'Vaak wel, via een koppeling of feed vanuit je aanbodsysteem. Dat checken we in de intake.'],
       ['Wat kost een makelaarssite?', 'Een site met waardebepaling, diensten en reviews begint bij €1.495. Met een aanbodkoppeling erbij hangt het af van je systeem.'],
     ],
     plaatsIntro: 'Wie in {stad} zijn huis wil verkopen, vergelijkt makelaars op hun site: wat hebben ze in de buurt verkocht, wat kost het en wat zeggen anderen. Met een gratis waardebepaling als ingang en lokale resultaten win je die opdrachten.',
@@ -373,7 +373,7 @@ export const MKB_DOELGROEPEN: MkbDoelgroep[] = [
     opSite: ['Pagina per rechtsgebied', 'Kosten en werkwijze', 'Gratis eerste gesprek of belverzoek', 'Team met specialisaties', 'Kennisartikelen'],
     zoektermen: ['advocaat', 'arbeidsrecht advocaat', 'scheidingsadvocaat', 'mediator', 'juridisch advies'],
     software: {
-      intro: 'Kantoren werken met een dossierpakket, maar urenregistratie per zaak, intake en documenten van cliënten lopen vaak los. Een urenregistratie per dossier of een beveiligd portaal voor stukken bouw ik op maat.',
+      intro: 'Kantoren werken met een dossierpakket, maar urenregistratie per zaak, intake en documenten van cliënten lopen vaak los. Een urenregistratie per dossier of een beveiligd portaal voor stukken bouwen we op maat.',
       knelpunten: ['Uren per dossier achteraf bij elkaar zoeken', 'Stukken van cliënten via mail', 'Intake via telefoon en losse notities'],
       soorten: ['urenregistratie', 'klantportaal', 'facturatie'],
       cases: ['urenportaal', 'facturatie-app'],
@@ -437,7 +437,7 @@ export const MKB_DOELGROEPEN: MkbDoelgroep[] = [
     zoekwoorden: ['rijschool [stad]', 'rijles [stad]', 'goedkope rijschool [stad]', 'proefles rijschool', 'motorrijles [stad]', 'spoedcursus rijbewijs'],
     faq: [
       ['Kunnen leerlingen online een proefles aanvragen?', 'Ja, met een kort formulier dat direct bij jou binnenkomt.'],
-      ['Kun je een leerlingportaal bouwen?', 'Ja. Lessen, voortgang en betalingen in één overzicht voor leerling en ouder.'],
+      ['Kunnen jullie een leerlingportaal bouwen?', 'Ja. Lessen, voortgang en betalingen in één overzicht voor leerling en ouder.'],
     ],
     plaatsIntro: 'Leerlingen en ouders in {stad} vergelijken rijscholen op prijs, slagingspercentage en reviews. Met eerlijke pakketten, een proefles als eerste stap en je instructeurs in beeld word jij de keuze.',
     opSite: ['Pakketten en prijzen', 'Proefles aanvragen', 'Slagingspercentage en reviews', 'Instructeurs', 'Lesgebied per plaats'],
@@ -478,7 +478,7 @@ export const MKB_DOELGROEPEN: MkbDoelgroep[] = [
     opSite: ['Proefles aanmelden', 'Abonnementen en prijzen', 'Rooster', 'Trainers', 'Reviews en sfeerfoto’s'],
     zoektermen: ['sportschool', 'personal trainer', 'yoga', 'gym', 'bootcamp'],
     software: {
-      intro: 'Ledensystemen dekken veel, maar niet alles. Een koppeling met je boekhouding, een eigen portaal voor personal-trainingklanten of een overzicht van opzeggingen en groei bouw ik op maat.',
+      intro: 'Ledensystemen dekken veel, maar niet alles. Een koppeling met je boekhouding, een eigen portaal voor personal-trainingklanten of een overzicht van opzeggingen en groei bouwen we op maat.',
       knelpunten: ['Ledenadministratie en boekhouding los', 'Personal-trainingklanten in losse lijstjes', 'Geen inzicht in aanmeldingen en opzeggingen'],
       soorten: ['klantportaal', 'dashboard', 'koppeling'],
       cases: ['financieel-dashboard'],
@@ -513,7 +513,7 @@ export const MKB_DOELGROEPEN: MkbDoelgroep[] = [
     opSite: ['Assortiment of webshop', 'Online bestellen of reserveren', 'Openingstijden en route', 'Betalen met iDEAL', 'Reviews uit Google'],
     zoektermen: ['webshop laten maken', 'winkel', 'online winkel', 'webshop', 'speciaalzaak'],
     software: {
-      intro: 'Voor winkels zit de winst vaak in voorraad: wat ligt er, wat moet besteld, wat verkoopt goed. Voor een productiebedrijf bouwde ik een voorraadapp met scannen, minimumvoorraad en bestellijsten. Dezelfde aanpak werkt voor winkel en webshop.',
+      intro: 'Voor winkels zit de winst vaak in voorraad: wat ligt er, wat moet besteld, wat verkoopt goed. Voor een productiebedrijf bouwden we een voorraadapp met scannen, minimumvoorraad en bestellijsten. Dezelfde aanpak werkt voor winkel en webshop.',
       knelpunten: ['Voorraad in winkel en webshop loopt niet gelijk', 'Bestellen bij leveranciers op gevoel', 'Geen inzicht in wat goed verkoopt'],
       soorten: ['voorraadbeheer', 'koppeling', 'dashboard'],
       cases: ['voorraad-app', 'financieel-dashboard'],
@@ -527,7 +527,7 @@ export const MKB_DOELGROEPEN: MkbDoelgroep[] = [
     enkelvoud: 'productiebedrijf',
     sectorLabel: 'PRODUCTIE',
     subtitel: 'Zakelijke klanten overtuigen, en grip op productie en voorraad.',
-    lead: 'Een zakelijke inkoper wil snel zien wat je maakt, wat je kunt leveren en hoe hij een offerte aanvraagt. Achter de schermen draait het om voorraad, productie en serienummers. Voor beide bouw ik: een zakelijke site die aanvragen oplevert, en software die de werkvloer overzicht geeft.',
+    lead: 'Een zakelijke inkoper wil snel zien wat je maakt, wat je kunt leveren en hoe hij een offerte aanvraagt. Achter de schermen draait het om voorraad, productie en serienummers. Voor beide bouwen we: een zakelijke site die aanvragen oplevert, en software die de werkvloer overzicht geeft.',
     overzicht: 'Maakindustrie, assemblage, groothandel. Zakelijke klanten en een werkvloer met voorraad en productie.',
     pijnpunten: [
       ['Inkopers vinden niet wat we kunnen', 'Een site met producten, mogelijkheden en een offerteformulier dat de juiste vragen stelt helpt zakelijke klanten verder.'],
@@ -541,15 +541,15 @@ export const MKB_DOELGROEPEN: MkbDoelgroep[] = [
     ],
     zoekwoorden: ['productiebedrijf [stad]', 'groothandel [stad]', 'voorraadbeheer software', 'productie software op maat', 'QR-code voorraad', 'metaalbewerking [stad]'],
     faq: [
-      ['Heb je ervaring met productie?', 'Ja. Voor een bedrijf dat groepenkasten bouwt maakte ik een productie- en voorraadapp met QR-paspoort per kast, scannen en bestellijsten.'],
-      ['Kan het koppelen met ons ERP?', 'Als je ERP een API of database-toegang heeft, ja. Ik heb eerder rechtstreeks op een Firebird-database van een ERP gekoppeld.'],
+      ['Hebben jullie ervaring met productie?', 'Ja. Voor een bedrijf dat groepenkasten bouwt maakten we een productie- en voorraadapp met QR-paspoort per kast, scannen en bestellijsten.'],
+      ['Kan het koppelen met ons ERP?', 'Als je ERP een API of database-toegang heeft, ja. We hebben eerder rechtstreeks op een Firebird-database van een ERP gekoppeld.'],
     ],
     plaatsIntro: 'Zakelijke klanten die in {stad} en omgeving een leverancier zoeken, willen snel zien wat je maakt en hoe ze een offerte krijgen. Met een zakelijke site en een gerichte offerteflow komen die aanvragen bij jou binnen.',
     opSite: ['Producten en mogelijkheden', 'Gericht offerteformulier', 'Certificeringen', 'Vacatures', 'Contact per afdeling'],
     zoektermen: ['productiebedrijf', 'groothandel', 'maakbedrijf', 'leverancier', 'metaalbewerking'],
     caseSlug: 'voorraad-app',
     software: {
-      intro: 'Voor een bedrijf dat groepenkasten bouwt maakte ik een productie- en voorraadapp: elke kast een QR-paspoort met serienummer en schema, een magazijn dat je met een scanner bijhoudt en bestellijsten per leverancier. Dat is precies waar productie- en groothandelsbedrijven het meest aan hebben.',
+      intro: 'Voor een bedrijf dat groepenkasten bouwt maakten we een productie- en voorraadapp: elke kast een QR-paspoort met serienummer en schema, een magazijn dat je met een scanner bijhoudt en bestellijsten per leverancier. Dat is precies waar productie- en groothandelsbedrijven het meest aan hebben.',
       knelpunten: ['Voorraad en productie in Excel', 'Serienummers en schema’s niet terug te vinden', 'Marge per order pas achteraf'],
       soorten: ['voorraadbeheer', 'app', 'dashboard', 'koppeling'],
       cases: ['voorraad-app', 'financieel-dashboard'],

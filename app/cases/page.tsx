@@ -29,7 +29,7 @@ export default function CasesPage() {
 
       <PageHead
         crumbs={[{ href: '/', label: 'Home' }, { label: 'Werk' }]}
-        title="Werk dat ik laat zien."
+        title="Werk dat we laten zien."
         subtitle="Websites voor vakmensen en de software erachter. Met wat er gedaan is en wat het opleverde, zonder verzonnen cijfers."
       >
         <div className="v4-filter" style={{ marginTop: 28, marginBottom: 0 }}>
@@ -76,7 +76,7 @@ export default function CasesPage() {
               <h2 className="v4-h2">Software die werk uit handen neemt.</h2>
               <p className="v4-lead">
                 De schermen hieronder tonen voorbeelddata. Echte klantgegevens en
-                bedragen laat ik nooit zien.
+                bedragen laten we nooit zien.
               </p>
             </div>
           </div>
@@ -122,7 +122,7 @@ export default function CasesPage() {
         eyebrow="Iets vergelijkbaars nodig?"
         title="Plan een gesprek."
         subtitle="30 minuten, vrijblijvend"
-        body="Vertel wat je wil bouwen of verbeteren. Ik geef binnen één werkdag een eerlijke inschatting."
+        body="Vertel wat je wil bouwen of verbeteren. We geven binnen één werkdag een eerlijke inschatting."
       />
 
       <SiteFooter />

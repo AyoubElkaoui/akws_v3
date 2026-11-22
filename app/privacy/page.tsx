@@ -6,7 +6,7 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = buildMetadata({
   title: 'Privacyverklaring | AK Web Solutions',
-  description: 'Privacyverklaring van AK Web Solutions. Hoe ik omga met persoonsgegevens conform de AVG.',
+  description: 'Privacyverklaring van AK Web Solutions. Hoe wij omgaan met persoonsgegevens conform de AVG.',
   path: '/privacy',
   noIndex: true,
 });

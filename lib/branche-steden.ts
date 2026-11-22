@@ -25,7 +25,7 @@ const HAKEN_BOUW: Record<string, BrancheHaak> = {
     meervoud: 'loodgieters',
     enkelvoud: 'loodgieter',
     intro: (s) =>
-      `Wie in ${s.naam} water op de vloer heeft, pakt de telefoon en zoekt "loodgieter ${s.naam}". Binnen een paar seconden kiest hij uit de eerste resultaten. Een snelle site met een belknop bovenaan, een pagina per klus en een volledig Google Bedrijfsprofiel bepalen of dat jij bent. Zo heb ik het voor AD Loodgieters aangepakt, en die site groeide van zo'n 100 naar ruim 1.300 vertoningen per dag.`,
+      `Wie in ${s.naam} water op de vloer heeft, pakt de telefoon en zoekt "loodgieter ${s.naam}". Binnen een paar seconden kiest hij uit de eerste resultaten. Een snelle site met een belknop bovenaan, een pagina per klus en een volledig Google Bedrijfsprofiel bepalen of dat jij bent. Zo hebben we het voor AD Loodgieters aangepakt, en die site groeide van zo'n 100 naar ruim 1.300 vertoningen per dag.`,
     opSite: ['Belknop en WhatsApp altijd in beeld', 'Pagina per klus: lekkage, verstopping, cv, badkamer', 'Spoedlijn en werktijden duidelijk', 'Reviews uit Google', 'Werkgebied met eigen pagina per plaats'],
     zoektermen: ['loodgieter', 'lekkage', 'riool ontstoppen', 'loodgieter spoed', 'badkamer renovatie'],
     caseSlug: 'ad-loodgietersbedrijf',
@@ -52,7 +52,7 @@ const HAKEN_BOUW: Record<string, BrancheHaak> = {
     meervoud: 'installatiebedrijven',
     enkelvoud: 'installatiebedrijf',
     intro: (s) =>
-      `Een installatiebedrijf in ${s.naam} doet vaak van alles: water, warmte, elektra, ventilatie en verduurzaming. Op de site wordt dat al snel een lange lijst waarin niemand vindt wat hij zoekt. Ik bouw een opbouw per dienst, met eigen pagina's voor de plaatsen waar je werkt, zodat zowel particulieren als aannemers snel zien wat je doet.`,
+      `Een installatiebedrijf in ${s.naam} doet vaak van alles: water, warmte, elektra, ventilatie en verduurzaming. Op de site wordt dat al snel een lange lijst waarin niemand vindt wat hij zoekt. We maken een indeling per dienst, met eigen pagina's voor de plaatsen waar je werkt, zodat zowel particulieren als aannemers snel zien wat je doet.`,
     opSite: ['Duidelijke indeling per dienst', 'Aparte ingang voor particulier en zakelijk', 'Projecten met foto\'s', 'Vacaturepagina met sollicitatieformulier', 'Pagina per plaats in je werkgebied'],
     zoektermen: ['installatiebedrijf', 'installateur', 'warmtepomp', 'zonnepanelen installateur', 'badkamer installateur'],
     caseSlug: 'mba-installaties',
@@ -69,7 +69,7 @@ const HAKEN_BOUW: Record<string, BrancheHaak> = {
     meervoud: 'aannemers en bouwbedrijven',
     enkelvoud: 'aannemer',
     intro: (s) =>
-      `Wie in ${s.naam} gaat verbouwen, vraagt meerdere offertes op en kijkt eerst naar je site. Ze willen zien wat je eerder bouwde, hoe je werkt en of je betrouwbaar bent. Voor MKH Bouw bouwde ik daarom een site met een pagina per dienst en per plaats, 70 in totaal, en projectfoto's die laten zien wat het bedrijf kan.`,
+      `Wie in ${s.naam} gaat verbouwen, vraagt meerdere offertes op en kijkt eerst naar je site. Ze willen zien wat je eerder bouwde, hoe je werkt en of je betrouwbaar bent. Voor MKH Bouw bouwden we daarom een site met een pagina per dienst en per plaats, 70 in totaal, en projectfoto's die laten zien wat het bedrijf kan.`,
     opSite: ['Projecten met foto\'s en uitleg', 'Pagina per dienst: verbouw, renovatie, aanbouw', 'Werkwijze en planning', 'Offerteformulier met projectdetails', 'Pagina per plaats in je werkgebied'],
     zoektermen: ['aannemer', 'verbouwing', 'aanbouw', 'renovatie', 'bouwbedrijf'],
     caseSlug: 'mkh-bouw',
@@ -86,7 +86,7 @@ const HAKEN_BOUW: Record<string, BrancheHaak> = {
     meervoud: 'schilders',
     enkelvoud: 'schilder',
     intro: (s) =>
-      `Schilderwerk in ${s.naam} wordt vaak maanden vooruit gepland, en klanten vragen meerdere offertes op. Wie dan een verzorgde site heeft met echte projectfoto's, een duidelijke werkwijze en reviews, maakt het verschil. Ik bouw een site die je planning vult met de klussen die je wilt.`,
+      `Schilderwerk in ${s.naam} wordt vaak maanden vooruit gepland, en klanten vragen meerdere offertes op. Wie dan een verzorgde site heeft met echte projectfoto's, een duidelijke werkwijze en reviews, maakt het verschil. We bouwen een site die je planning vult met de klussen die je wilt.`,
     opSite: ['Projectfoto\'s binnen en buiten', 'Pagina per dienst: buitenschilderwerk, binnen, houtrot', 'Planning en werkwijze', 'Offerteformulier', 'Werkgebied per plaats'],
     zoektermen: ['schilder', 'schildersbedrijf', 'buitenschilderwerk', 'binnenschilderwerk', 'houtrot herstellen'],
   },
@@ -94,7 +94,7 @@ const HAKEN_BOUW: Record<string, BrancheHaak> = {
     meervoud: 'transport- en koeriersbedrijven',
     enkelvoud: 'koerier',
     intro: (s) =>
-      `Een transportbedrijf in ${s.naam} wordt gevonden door bedrijven die vandaag nog iets weg moeten hebben, en door chauffeurs die werk zoeken. Voor Zando Transport uit Soest en R.I.N. uit Amersfoort bouwde ik sites met een spoedlijn, een offerteformulier en vacatures waar sollicitanten direct op reageren.`,
+      `Een transportbedrijf in ${s.naam} wordt gevonden door bedrijven die vandaag nog iets weg moeten hebben, en door chauffeurs die werk zoeken. Voor Zando Transport uit Soest en R.I.N. uit Amersfoort bouwden we sites met een spoedlijn, een offerteformulier en vacatures waar sollicitanten direct op reageren.`,
     opSite: ['Spoedlijn en offerteformulier', 'Diensten en voertuigen', 'Vacatures met sollicitatieformulier', 'Zakelijke uitstraling', 'Eigen CMS om zelf te beheren'],
     zoektermen: ['koerier', 'spoedkoerier', 'transportbedrijf', 'spoedtransport', 'chauffeur vacature'],
     caseSlug: 'zando-transport',
@@ -111,7 +111,7 @@ const HAKEN_BOUW: Record<string, BrancheHaak> = {
     meervoud: 'stukadoors en afbouwbedrijven',
     enkelvoud: 'stukadoor',
     intro: (s) =>
-      `Een stukadoor in ${s.naam} wordt gekozen op het eindresultaat: strakke muren, mooi sierpleister, een plafond zonder scheuren. Daarom draait je site om foto's en om duidelijke pagina's per soort werk. Voor afbouwbedrijf MKH Bouw bouwde ik zo'n opbouw, met pagina's per dienst en per plaats.`,
+      `Een stukadoor in ${s.naam} wordt gekozen op het eindresultaat: strakke muren, mooi sierpleister, een plafond zonder scheuren. Daarom draait je site om foto's en om duidelijke pagina's per soort werk. Voor afbouwbedrijf MKH Bouw bouwden we zo'n opbouw, met pagina's per dienst en per plaats.`,
     opSite: ['Foto\'s van afgerond werk', 'Pagina per dienst: stucwerk, sierpleister, plafonds', 'Werkwijze en planning', 'Offerteformulier met m²', 'Werkgebied per plaats'],
     zoektermen: ['stukadoor', 'stucwerk', 'sierpleister', 'plafond stucen', 'spachtelputz'],
     caseSlug: 'mkh-bouw',

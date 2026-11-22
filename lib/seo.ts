@@ -141,7 +141,7 @@ export function personSchema() {
     '@context': 'https://schema.org',
     '@type': 'Person',
     name: 'Ayoub Elkaoui',
-    jobTitle: 'Freelance Webdeveloper',
+    jobTitle: 'Oprichter AK Web Solutions',
     worksFor: { '@type': 'Organization', name: SITE_NAME },
     address: { '@type': 'PostalAddress', addressLocality: 'Baarn', addressCountry: 'NL' },
     email: 'info@akwebsolutions.nl',

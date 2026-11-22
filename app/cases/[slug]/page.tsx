@@ -241,7 +241,7 @@ export default async function CaseDetailPage({ params }: { params: Promise<Param
         eyebrow="Een vergelijkbaar project?"
         title="Plan een gesprek."
         subtitle="30 minuten, vrijblijvend"
-        body="Vertel wat je wil bouwen. Ik geef binnen één werkdag een eerlijke inschatting, ook als het project niet bij mij past."
+        body="Vertel wat je wil bouwen. We geven binnen één werkdag een eerlijke inschatting, ook als het project niet bij ons past."
       />
 
       <SiteFooter />

@@ -21,7 +21,7 @@ export default function VoorWiePage() {
 
       <PageHead
         crumbs={[{ href: '/', label: 'Home' }, { label: 'Voor wie' }]}
-        chip={`${BRANCHES.length} branches, 1 developer`}
+        chip={`${BRANCHES.length} branches, 1 aanspreekpunt`}
         title="Voor wie."
         subtitle="Voor het MKB, met per branche een eigen aanpak. Een kapper heeft iets anders nodig dan een loodgieter, een praktijk iets anders dan een IT-bedrijf. Kies jouw branche en lees wat voor jou werkt."
       />
@@ -59,7 +59,7 @@ export default function VoorWiePage() {
         eyebrow="Staat jouw branche er niet tussen?"
         title="Neem contact op."
         subtitle="30 minuten, vrijblijvend"
-        body="Staat jouw type bedrijf er niet bij? Plan een gesprek. Als ik kan helpen, zeg ik het. Als je beter af bent bij iemand anders, zeg ik dat ook."
+        body="Staat jouw type bedrijf er niet bij? Plan een gesprek. Als we kunnen helpen, zeggen we het. Als je beter af bent bij iemand anders, zeggen we dat ook."
       />
 
       <SiteFooter />

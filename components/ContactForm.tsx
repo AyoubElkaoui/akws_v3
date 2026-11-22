@@ -91,7 +91,7 @@ export function ContactForm() {
           Aanvraag ontvangen
         </div>
         <p style={{ color: 'rgba(255,255,255,.7)', textAlign: 'center', margin: 0, fontSize: 15 }}>
-          Ayoub neemt binnen één werkdag contact op via je opgegeven telefoonnummer of e-mailadres.
+          We nemen binnen één werkdag contact op via je opgegeven telefoonnummer of e-mailadres.
         </p>
         <div style={{ fontFamily: 'var(--mono)', fontSize: 12, color: 'rgba(255,255,255,.5)', marginTop: 8 }}>
           Of bel direct: {BRAND.phone}
@@ -112,7 +112,7 @@ export function ContactForm() {
       <form className="contact-form" onSubmit={handleSubmit}>
         <span className="chip chip-purple-fill">Vrijblijvend strategiegesprek</span>
         <div className="head">
-          Plan 30 minuten<br />met Ayoub.
+          Plan een gesprek<br />van 30 minuten.
         </div>
         <p className="sub">
           Vertel kort waar je tegenaan loopt. Reactie binnen één werkdag.

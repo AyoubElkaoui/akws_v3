@@ -19,7 +19,7 @@ const DIENST_IMAGES: Record<string, string> = {
 export const metadata: Metadata = buildMetadata({
   title: 'Diensten — Websites, webshops, SEO en software op maat | AKWS',
   description:
-    'Vier diensten, één freelancer. Websites, Google Ads, software op maat en onderhoud voor het MKB. Vaste prijzen, geen verrassingen.',
+    'Vier diensten, één aanspreekpunt. Websites, Google Ads, software op maat en onderhoud voor het MKB. Vaste prijzen, geen verrassingen.',
   path: '/diensten',
 });
 
@@ -72,7 +72,7 @@ export default function DienstenPage() {
         crumbs={[{ href: '/', label: 'Home' }, { label: 'Diensten' }]}
         chip="Vier modules, één aanspreekpunt"
         title="Diensten."
-        subtitle="Begin met een website. Voeg software toe wanneer het uitkomt. Eén freelancer, één factuur, één telefoonnummer."
+        subtitle="Begin met een website. Voeg software toe wanneer het uitkomt. Eén aanspreekpunt, één factuur, één telefoonnummer."
       >
         <div style={{ marginTop: 32, display: 'flex', gap: 12, flexWrap: 'wrap' }}>
           {DIENSTEN.map((d) => (
@@ -210,7 +210,7 @@ export default function DienstenPage() {
       <Cta
         title="Klaar om te starten?"
         subtitle="30 minuten kennismaking, vrijblijvend"
-        body="Ik kijk samen met jou welke dienst of modules bij jouw bedrijf passen. Eerlijk advies, ook als ik niet de juiste partij blijk."
+        body="We kijken samen met jou welke dienst of modules bij jouw bedrijf passen. Eerlijk advies, ook als wij niet de juiste partij blijken."
       />
 
       <SiteFooter />

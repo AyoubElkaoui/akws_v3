@@ -17,10 +17,10 @@ export function Cta({
   eyebrow = 'De volgende stap',
   title,
   subtitle = '30 minuten, vrijblijvend',
-  body = 'We bespreken waar het knelt en wat het zou opleveren om dat op te lossen. Geen verkooppraat. Eerlijk advies, ook als ik niet de juiste partij blijk.',
+  body = 'We bespreken waar het knelt en wat het zou opleveren om dat op te lossen. Geen verkooppraat. Eerlijk advies, ook als wij niet de juiste partij blijken.',
   variant = 'form',
 }: CtaProps) {
-  const wa = `${BRAND.whatsappUrl}?text=${encodeURIComponent('Hoi Ayoub, ik heb een vraag over een website.')}`;
+  const wa = `${BRAND.whatsappUrl}?text=${encodeURIComponent('Hoi, ik heb een vraag over een website.')}`;
   const pil = {
     display: 'inline-flex',
     alignItems: 'center',
@@ -121,7 +121,7 @@ function CtaSimpleForm() {
           Aanvraag ontvangen
         </div>
         <p style={{ color: 'var(--mute)', marginTop: 8, fontSize: 14 }}>
-          Ayoub neemt binnen één werkdag contact op.
+          We nemen binnen één werkdag contact op.
         </p>
       </div>
     );
@@ -129,8 +129,8 @@ function CtaSimpleForm() {
 
   return (
     <form className="form-card" onSubmit={handleSubmit}>
-      <div className="lbl">Liever dat ik bel?</div>
-      <div className="head">Ik neem contact op</div>
+      <div className="lbl">Liever dat we bellen?</div>
+      <div className="head">Wij bellen je terug</div>
       <div className="form-fields">
         <input name="name" placeholder="Naam en bedrijf" required />
         <input name="contact" placeholder="Telefoon of e-mail" required />

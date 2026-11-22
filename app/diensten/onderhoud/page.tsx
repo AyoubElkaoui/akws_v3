@@ -9,10 +9,10 @@ import { buildMetadata, breadcrumbSchema, faqSchema } from '@/lib/seo';
 const FAQ_ONDERHOUD = [
   { q: 'Wat zit er precies in het onderhoud?', a: 'Beheerde hosting, SSL-certificaat, software- en beveiligingsupdates, uptime- en beveiligingsmonitoring, automatische back-ups en een aantal uur kleine wijzigingen per maand. Kortom: alles om je site snel, veilig en actueel te houden zonder dat jij eraan hoeft te denken.' },
   { q: 'Is onderhoud verplicht?', a: 'Onderhoud is een vast onderdeel van elk traject. Een website zonder onderhoud is een tijdbom: na een halfjaar zitten er security-lekken in, na een jaar kost traagheid je rankings. Het is een investering in continuïteit, geen bijkomende kostenpost.' },
-  { q: 'Kan ik maandelijks opzeggen?', a: 'Ja, maandelijks opzegbaar — geen jaarcontract. Bij opzegging help ik je met de overdracht naar een andere partij. Je houdt je site, je code en je content: geen vendor lock-in.' },
-  { q: 'Wat gebeurt er als mijn site eruit ligt?', a: 'Dat merk ik meestal eerder dan jij. Door de uptime-monitoring krijg ik automatisch een melding als er iets mis is en pak ik het op — je hoeft niet eerst een klant te krijgen die meldt dat je offline staat.' },
-  { q: 'Krijg ik ook hulp bij kleine tekst- of fotowijzigingen?', a: 'Ja, kleine wijzigingen zitten in het maandbedrag. En omdat ik de site desgewenst met een CMS lever, kun je de meeste teksten en foto’s ook gewoon zelf aanpassen wanneer het jou uitkomt.' },
-  { q: 'Wat kost onderhoud?', a: 'Basis onderhoud kost €49 per maand, Pro (met Google Ads-beheer) €195 per maand en Premium €395 per maand. Werk buiten het pakket reken ik tegen €85 per uur, altijd vooraf geschat.' },
+  { q: 'Kan ik maandelijks opzeggen?', a: 'Ja, maandelijks opzegbaar — geen jaarcontract. Bij opzegging helpen we je met de overdracht naar een andere partij. Je houdt je site, je code en je content: geen vendor lock-in.' },
+  { q: 'Wat gebeurt er als mijn site eruit ligt?', a: 'Dat merken we meestal eerder dan jij. Door de uptime-monitoring krijgen we automatisch een melding als er iets mis is en pakken we het op — je hoeft niet eerst een klant te krijgen die meldt dat je offline staat.' },
+  { q: 'Krijg ik ook hulp bij kleine tekst- of fotowijzigingen?', a: 'Ja, kleine wijzigingen zitten in het maandbedrag. En omdat we de site desgewenst met een CMS leveren, kun je de meeste teksten en foto’s ook gewoon zelf aanpassen wanneer het jou uitkomt.' },
+  { q: 'Wat kost onderhoud?', a: 'Basis onderhoud kost €49 per maand, Pro (met Google Ads-beheer) €195 per maand en Premium €395 per maand. Werk buiten het pakket rekenen we tegen €85 per uur, altijd vooraf geschat.' },
 ];
 
 export const metadata: Metadata = buildMetadata({
@@ -69,7 +69,7 @@ export default function OnderhoudPage() {
         <div className="wrap">
           <p style={{ fontSize: 19, lineHeight: 1.65, color: 'var(--ink-soft)', maxWidth: 800, marginBottom: 56 }}>
             Een website is geen statisch product. Software heeft updates nodig, beveiligingspatches
-            komen uit, content wijzigt, en af en toe gaat er iets stuk. Mijn onderhoudscontract dekt
+            komen uit, content wijzigt, en af en toe gaat er iets stuk. Ons onderhoudscontract dekt
             al die situaties tegen een vast maandbedrag, zonder ticketstapels of meerwerk-discussies.
           </p>
 
@@ -82,7 +82,7 @@ export default function OnderhoudPage() {
               },
               {
                 titel: 'Wat zit er niet in',
-                items: ['Grote wijzigingen of nieuwe features (apart voorstel)', 'Geen 24/7 telefonische ondersteuning', 'Geen garantie op 100% uptime bij force majeure', 'Geen ondersteuning voor andere websites dan bij mij gebouwd'],
+                items: ['Grote wijzigingen of nieuwe features (apart voorstel)', 'Geen 24/7 telefonische ondersteuning', 'Geen garantie op 100% uptime bij force majeure', 'Geen ondersteuning voor andere websites dan door ons gebouwd'],
                 kleur: 'var(--mute)',
               },
             ].map((col) => (
@@ -105,7 +105,7 @@ export default function OnderhoudPage() {
             <h3 style={{ fontFamily: 'var(--cond)', fontWeight: 800, fontSize: 20, margin: '0 0 16px' }}>Geen vendor lock-in</h3>
             <p style={{ fontSize: 16, lineHeight: 1.65, color: 'var(--ink-soft)', margin: 0 }}>
               Het contract is maandelijks opzegbaar. Stop je het contract: je houdt je site, je code
-              en je content. Ik help je met overdracht naar een andere partij als dat nodig is.
+              en je content. We helpen je met de overdracht naar een andere partij als dat nodig is.
               Geen drempels om weg te gaan, geen verborgen kosten bij vertrek.
             </p>
           </div>

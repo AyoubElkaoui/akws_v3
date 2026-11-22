@@ -46,7 +46,7 @@ export default async function Page({ params }: { params: Promise<{ branche: stri
       description={`${h} op maat: ${soorten.map((s) => s.naam.toLowerCase()).join(', ')}.`}
       problemenTitel={`Waar ${v.meervoud} tijd verliezen`}
       problemen={v.knelpunten}
-      functiesTitel="Wat ik voor je kan bouwen"
+      functiesTitel="Wat we voor je kunnen bouwen"
       functies={soorten.map((s) => ({ titel: s.h1, tekst: s.functies[0].tekst + ' ' + s.functies[1].tekst, href: `/software-laten-maken/${s.slug}` }))}
       cases={v.cases}
       prijzen={[
@@ -56,8 +56,8 @@ export default async function Page({ params }: { params: Promise<{ branche: stri
       ]}
       faq={[
         { q: `Wat kost software voor ${v.meervoud}?`, a: 'Een klikbaar prototype begint bij €750, een koppeling of kleine tool kost €500 tot €1.500 en een eerste werkende module met login en database €3.500 tot €8.000. Hosting en onderhoud vanaf €49 per maand.' },
-        { q: 'Is een bestaand pakket niet goedkoper?', a: 'Soms wel, en dan zeg ik dat. Maatwerk loont als je elke week handwerk hebt omdat een pakket niet past of niet koppelt. Vaak is één module of koppeling naast je huidige software genoeg.' },
-        { q: 'Werkt het met mijn huidige administratie?', a: 'Meestal wel. Ik koppel met Syntess Atrium, Exact, Moneybird, Snelstart en alles met een API. In de intake check ik wat jouw pakket toelaat.' },
+        { q: 'Is een bestaand pakket niet goedkoper?', a: 'Soms wel, en dan zeggen we dat. Maatwerk loont als je elke week handwerk hebt omdat een pakket niet past of niet koppelt. Vaak is één module of koppeling naast je huidige software genoeg.' },
+        { q: 'Werkt het met mijn huidige administratie?', a: 'Meestal wel. We koppelen met Syntess Atrium, Exact, Moneybird, Snelstart en alles met een API. In de intake checken we wat jouw pakket toelaat.' },
         { q: 'Van wie is de software?', a: 'Van jou. Je krijgt de broncode en documentatie, zodat je nooit vastzit.' },
       ]}
       ctaBody={`Vertel waar je nu tijd verliest. Je krijgt binnen 5 werkdagen een voorstel met een vaste prijs voor software voor jouw bedrijf.`}

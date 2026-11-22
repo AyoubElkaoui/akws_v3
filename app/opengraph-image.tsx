@@ -69,7 +69,7 @@ export default function OgImage() {
         {/* Bottom */}
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end' }}>
           <div style={{ color: 'rgba(255,255,255,0.6)', fontSize: 18 }}>
-            Ayoub Elkaoui — Freelance webdeveloper, Baarn
+            Webbureau uit Baarn · Websites en software voor het MKB
           </div>
           <div
             style={{
