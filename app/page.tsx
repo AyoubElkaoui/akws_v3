@@ -305,7 +305,7 @@ export default function HomePage() {
           <div className="v4-sec-head">
             <div className="l">
               <span className="v4-kicker">Diensten</span>
-              <h2 className="v4-h2">Alles wat je online nodig hebt, bij één persoon.</h2>
+              <h2 className="v4-h2">Alles wat je online nodig hebt, onder één dak.</h2>
             </div>
             <Link href="/diensten" className="v4-more">Alle diensten →</Link>
           </div>
