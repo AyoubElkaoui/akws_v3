@@ -127,10 +127,11 @@ export default function PrivacyPage() {
                 Onze website gebruikt <strong>geen tracking cookies of marketing cookies</strong>.
               </p>
               <p style={{ marginTop: 12 }}>
-                Wij maken gebruik van Vercel Analytics, een privacy-vriendelijke dienst die geen cookies
-                plaatst en geen persoonsgegevens verwerkt. Alleen geanonimiseerde statistieken worden
-                verzameld: aantal bezoekers, bezochte pagina&apos;s, bron van verkeer, land/regio en
-                type apparaat. Deze gegevens kunnen niet worden herleid tot individuele personen.
+                Wij meten het websitegebruik met Plausible en met een eigen anonieme teller. Beide
+                plaatsen geen cookies, slaan niets op in je browser en bewaren geen IP-adressen. Alleen
+                geanonimiseerde statistieken worden verzameld: bezochte pagina&apos;s, leestijd en hoe ver
+                er gescrold is, waarop geklikt wordt, bron van verkeer, plaats/regio en type apparaat.
+                Deze gegevens kunnen niet worden herleid tot individuele personen.
               </p>
             </Sectie>
 

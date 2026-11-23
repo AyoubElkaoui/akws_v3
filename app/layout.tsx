@@ -77,6 +77,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <Script id="plausible-init" strategy="afterInteractive">
           {`window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init()`}
         </Script>
+        {/* Eigen cookieloze teller (portaal.akwebsolutions.nl) */}
+        <script src="https://portaal.akwebsolutions.nl/t.js" data-key="s_96394aa12a3fc5b77cfd" defer />
       </body>
     </html>
   );
