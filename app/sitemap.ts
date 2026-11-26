@@ -24,8 +24,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/over`,                          lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${BASE}/contact`,                       lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${BASE}/blog`,                          lastModified: now, changeFrequency: 'weekly',  priority: 0.6 },
-    { url: `${BASE}/privacy`,                       lastModified: now, changeFrequency: 'yearly',  priority: 0.3 },
-    { url: `${BASE}/algemene-voorwaarden`,          lastModified: now, changeFrequency: 'yearly',  priority: 0.3 },
   ];
 
   const brancheRoutes: MetadataRoute.Sitemap = BRANCHE_DETAILS.map((b) => ({
