@@ -86,7 +86,7 @@ export default function PrijzenPage() {
             {[
               { href: '/cases/probandenservice', cijfer: '±6 per dag', tekst: 'klanten die bellen of appen via de nieuwe site en Google Ads van Pro Banden Service.' },
               { href: '/cases/ad-loodgietersbedrijf', cijfer: '13×', tekst: 'meer vertoningen in Google voor AD Loodgietersbedrijf na de nieuwe site met lokale SEO.' },
-              { href: '/cases', cijfer: '12+', tekst: 'websites en systemen opgeleverd voor bedrijven in Midden-Nederland. Bekijk wat we gebouwd hebben.' },
+              { href: '/cases', cijfer: '15+', tekst: 'websites en systemen opgeleverd voor bedrijven in Midden-Nederland. Bekijk wat we gebouwd hebben.' },
             ].map((b) => (
               <Link key={b.href} href={b.href} data-track="prijzen-bewijs" style={{ display: 'block', background: '#fff', borderRadius: 16, padding: '24px 28px', border: '1px solid var(--rule)', textDecoration: 'none', color: 'inherit' }}>
                 <div style={{ fontFamily: 'var(--cond)', fontWeight: 800, fontSize: 30, color: 'var(--p1)', lineHeight: 1.1 }}>{b.cijfer}</div>

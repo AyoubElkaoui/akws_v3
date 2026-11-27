@@ -4,7 +4,8 @@ import type { Metadata } from 'next';
 import { SiteNav } from '@/components/SiteNav';
 import { SiteFooter } from '@/components/SiteFooter';
 import { Cta } from '@/components/Cta';
-import { BRANCHE_DETAILS, PRIJZEN } from '@/lib/data';
+import { BRANCHE_DETAILS, CASES, CASE_DETAILS, PRIJZEN } from '@/lib/data';
+import { BRANCHE_HAKEN } from '@/lib/branche-steden';
 import { STEDEN } from '@/lib/steden';
 import { buildMetadata, breadcrumbSchema, serviceSchema, faqSchema } from '@/lib/seo';
 
@@ -72,6 +73,31 @@ export default async function BranchePage({ params }: { params: Promise<Params> 
           </div>
         </div>
       </section>
+
+      {/* Eigen werk in deze branche */}
+      {(() => {
+        const slug = BRANCHE_HAKEN[b.slug]?.caseSlug;
+        const c = slug ? CASES.find((x) => x.slug === slug) : undefined;
+        const d = slug ? CASE_DETAILS.find((x) => x.slug === slug) : undefined;
+        if (!c) return null;
+        return (
+          <section className="section" style={{ paddingTop: 24, paddingBottom: 24 }}>
+            <div className="wrap">
+              <Link href={`/cases/${c.slug}`} data-track="branche-case" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 24, alignItems: 'center', background: '#fff', border: '1px solid var(--rule)', borderRadius: 18, padding: 20, textDecoration: 'none', color: 'inherit' }}>
+                <div style={{ borderRadius: 12, overflow: 'hidden', aspectRatio: '16 / 10', background: c.gradient }}>
+                  {d?.images?.cover && <img src={d.images.cover} alt={`Website van ${c.naam}`} loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top', display: 'block' }} />}
+                </div>
+                <div>
+                  <span className="chip chip-purple">Recent werk · {c.branche}</span>
+                  <h2 style={{ fontFamily: 'var(--cond)', fontWeight: 800, fontSize: 26, margin: '14px 0 8px' }}>{c.naam} <span style={{ color: 'var(--mute)', fontWeight: 600 }}>· {c.locatie}</span></h2>
+                  <p style={{ margin: 0, fontSize: 16, lineHeight: 1.6, color: 'var(--ink-soft)' }}>{c.excerpt}</p>
+                  <p style={{ margin: '14px 0 0', color: 'var(--p1)', fontWeight: 600 }}>Bekijk wat we gebouwd hebben →</p>
+                </div>
+              </Link>
+            </div>
+          </section>
+        );
+      })()}
 
       {/* Pijnpunten */}
       <section className="section diensten">

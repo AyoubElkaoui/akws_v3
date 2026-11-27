@@ -195,6 +195,7 @@ export const MKB_DOELGROEPEN: MkbDoelgroep[] = [
     plaatsIntro: 'Ouders, cliënten en verwijzers in {stad} zoeken een zorgaanbieder die duidelijk zegt voor wie hij er is en hoe aanmelden werkt. Met een aparte ingang per publiek en een vacaturepagina helpt je site zowel nieuwe cliënten als nieuwe collega’s.',
     opSite: ['Ingang voor cliënten en verwijzers', 'Aanmeldformulier', 'Vacatures en open sollicitatie', 'Keurmerken en gemeenten', 'Privacy en klachtenregeling'],
     zoektermen: ['jeugdzorg', 'ambulante begeleiding', 'zorgaanbieder', 'dagbesteding', 'begeleid wonen'],
+    caseSlug: 'avisi',
     software: {
       intro: 'Zorgorganisaties draaien op een ECD, maar uren, roosters, verantwoording en aanmeldingen lopen vaak via Excel en mail. Daar zit het handwerk. Een urenregistratie met goedkeuring of een overzicht voor de directie scheelt elke week tijd, zonder je ECD te vervangen.',
       knelpunten: ['Uren van begeleiders in Excel voor de verantwoording', 'Aanmeldingen per mail die zoekraken', 'Geen overzicht van caseload en uren per cliënt'],
@@ -260,17 +261,17 @@ export const MKB_DOELGROEPEN: MkbDoelgroep[] = [
     zoekwoorden: ['boekhouder [stad]', 'administratiekantoor [stad]', 'boekhouder zzp', 'accountant [stad]', 'salarisadministratie uitbesteden', 'belastingaangifte laten doen'],
     faq: [
       ['Kunnen klanten via de site documenten aanleveren?', 'Ja, met een klantportaal of een veilige uploadfunctie. Liefst gekoppeld aan het pakket dat jullie al gebruiken.'],
-      ['Bouwen jullie ook een urenregistratie voor ons kantoor?', 'Ja. Voor een administratiekantoor hebben we een urenportaal met weekgoedkeuring en teamoverzicht uitgewerkt.'],
+      ['Bouwen jullie ook een urenregistratie voor ons kantoor?', 'Ja. Voor een administratiekantoor bouwden we Uurly: uren per klant, een weekstaat, goedkeuring door de manager en een taakbalk-app die laat zien wanneer er echt gewerkt is.'],
     ],
     plaatsIntro: 'Ondernemers in {stad} zoeken een boekhouder die ze vertrouwen en die hun situatie snapt. Met een pagina per doelgroep, een eerlijke prijsindicatie en je eigen gezicht op de site trek je de klanten aan die bij je kantoor passen.',
     opSite: ['Pagina per doelgroep (zzp, bv, starter)', 'Prijsindicatie', 'Team en werkwijze', 'Veilig documenten aanleveren', 'Reviews en keurmerken'],
     zoektermen: ['boekhouder', 'administratiekantoor', 'accountant', 'boekhouder zzp', 'salarisadministratie'],
-    caseSlug: 'urenportaal',
+    caseSlug: 'azro-finance',
     software: {
-      intro: 'Een administratiekantoor werkt met uren per klant, deadlines en documenten van klanten. Voor een kantoor werkten we een urenportaal uit met weekgoedkeuring en een teamoverzicht. Daarnaast zijn een klantportaal voor documenten en koppelingen met je boekhoudpakket logische stappen.',
+      intro: 'Een administratiekantoor werkt met uren per klant, deadlines en documenten van klanten. Voor een kantoor bouwden we Uurly, een urenregistratie met weekgoedkeuring, teamoverzicht en een taakbalk-app voor Windows. Daarnaast zijn een klantportaal voor documenten en koppelingen met je boekhoudpakket logische stappen.',
       knelpunten: ['Uren per klant in Excel', 'Documenten van klanten via mail en WhatsApp', 'Geen overzicht van deadlines per klant'],
       soorten: ['urenregistratie', 'klantportaal', 'koppeling', 'facturatie'],
-      cases: ['urenportaal', 'facturatie-app'],
+      cases: ['urenportaal', 'facturatie-app', 'klantenportaal'],
     },
   },
   {

@@ -123,6 +123,7 @@ const HAKEN_BOUW: Record<string, BrancheHaak> = {
       `Wie in ${s.naam} een APK, onderhoud of reparatie nodig heeft, zoekt een garage in de buurt en wil meteen een afspraak maken. Een site met duidelijke prijzen voor standaardklussen, een afspraakformulier en je openingstijden zorgt dat ze bij jou binnenrijden in plaats van bij de ketens.`,
     opSite: ['Afspraakformulier voor APK en onderhoud', 'Prijzen voor standaardklussen', 'Occasions of diensten overzicht', 'Openingstijden en route', 'Reviews uit Google'],
     zoektermen: ['garage', 'apk', 'auto onderhoud', 'auto reparatie', 'autobedrijf'],
+    caseSlug: 'probandenservice',
   },
 };
 
