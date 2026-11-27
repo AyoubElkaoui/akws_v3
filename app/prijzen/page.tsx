@@ -79,6 +79,24 @@ export default function PrijzenPage() {
         </div>
       </section>
 
+      {/* Bewijs direct onder de prijzen: wat het klanten opleverde */}
+      <section className="section" style={{ paddingTop: 0, paddingBottom: 40 }}>
+        <div className="wrap">
+          <div style={{ display: 'grid', gap: 16, gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))' }}>
+            {[
+              { href: '/cases/probandenservice', cijfer: '±6 per dag', tekst: 'klanten die bellen of appen via de nieuwe site en Google Ads van Pro Banden Service.' },
+              { href: '/cases/ad-loodgietersbedrijf', cijfer: '13×', tekst: 'meer vertoningen in Google voor AD Loodgietersbedrijf na de nieuwe site met lokale SEO.' },
+              { href: '/cases', cijfer: '12+', tekst: 'websites en systemen opgeleverd voor bedrijven in Midden-Nederland. Bekijk wat we gebouwd hebben.' },
+            ].map((b) => (
+              <Link key={b.href} href={b.href} data-track="prijzen-bewijs" style={{ display: 'block', background: '#fff', borderRadius: 16, padding: '24px 28px', border: '1px solid var(--rule)', textDecoration: 'none', color: 'inherit' }}>
+                <div style={{ fontFamily: 'var(--cond)', fontWeight: 800, fontSize: 30, color: 'var(--p1)', lineHeight: 1.1 }}>{b.cijfer}</div>
+                <p style={{ margin: '8px 0 0', fontSize: 15, lineHeight: 1.55, color: 'var(--ink-soft)' }}>{b.tekst} <span style={{ color: 'var(--p1)' }}>→</span></p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Wat zit erin per pakket */}
       <section className="section over">
         <div className="wrap">

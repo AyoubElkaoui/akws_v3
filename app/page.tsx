@@ -32,7 +32,7 @@ const HOME_FAQ = [
   },
 ];
 
-const WEBSITE_CASES = ["ad-loodgietersbedrijf", "mkh-bouw", "zando-transport"];
+const WEBSITE_CASES = ["probandenservice", "ad-loodgietersbedrijf", "mkh-bouw"];
 const SOFTWARE_CASES = ["facturatie-app", "voorraad-app", "financieel-dashboard", "itflow"];
 
 const DIENSTEN_KORT = [

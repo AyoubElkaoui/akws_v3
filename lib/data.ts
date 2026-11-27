@@ -170,6 +170,17 @@ export const PROCES = [
 
 export const CASES = [
   {
+    slug: 'probandenservice',
+    naam: 'Pro Banden Service',
+    branche: 'Bandenservice & spoed',
+    locatie: 'Culemborg',
+    resultaat: '±6',
+    resultaatSub: 'klanten die per dag bellen of appen',
+    meta: 'Website + Google Ads',
+    gradient: 'linear-gradient(135deg, #e0002a 0%, #111111 100%)',
+    excerpt: "Nieuwe site, Google Ads per stad en een WhatsApp-knop die de locatie meestuurt. Mensen met een lekke band bellen of appen nu direct vanaf hun telefoon.",
+  },
+  {
     slug: 'ad-loodgietersbedrijf',
     naam: 'AD Loodgietersbedrijf',
     branche: 'Loodgieters',
@@ -334,6 +345,39 @@ export type CaseDetail = {
 
 export const CASE_DETAILS: CaseDetail[] = [
   {
+    slug: 'probandenservice',
+    naam: 'Pro Banden Service',
+    sector: 'Bandenservice & spoed',
+    locatie: 'Culemborg',
+    liveUrl: 'https://probandenservice.nl',
+    liveLabel: 'Bekijk probandenservice.nl',
+    intro: 'Nieuwe website, Google Ads en meting voor een bandenservice met een spoedbus die bij pech ter plekke een nieuwe band legt.',
+    meta: 'Website + Google Ads',
+    gradient: 'linear-gradient(135deg, #e0002a 0%, #111111 100%)',
+    situatie: [
+      'Pro Banden Service uit Culemborg heeft een werkplaats en een spoedbus met bandenmachine. Bij een lekke band langs de weg komt de bus naar je toe en legt ter plekke een nieuwe band. Een sterk verhaal, maar de oude WordPress-site vertelde het niet en werkte slecht op de telefoon.',
+      'Er liep al een Google Ads-campagne, maar die gaf een maand lang geld uit aan algemene en Engelse zoektermen en mat geen enkel telefoontje. Niemand wist dus wat de advertenties opleverden.',
+    ],
+    aanpak: [
+      { titel: 'Site gebouwd voor pech', tekst: "Snelle Next.js-site met de spoedlijn altijd in beeld, een vaste belbalk op mobiel en een WhatsApp-knop die je locatie als kaartlink meestuurt. Echte foto's van de bus en het werk, geen stockbeelden op de belangrijkste pagina's." },
+      { titel: 'Een pagina per stad', tekst: "Voor 33 steden in de regio een eigen spoedpagina, plus pagina's voor winterbanden en uitleg zoals 'lekke band onderweg, wat nu?'. Zo komt de site naar boven bij zoekopdrachten als 'lekke band Utrecht'." },
+      { titel: 'Google Ads opnieuw opgezet', tekst: "Twee nieuwe campagnes: spoed binnen 70 km en winterbanden rond Culemborg. Ruim 50 verkeerde zoektermen uitgesloten (concurrenten, fietsbanden, plaksets), advertenties per stad naar de juiste stadspagina." },
+      { titel: 'Meten wat het oplevert', tekst: 'Elke tik op bellen, WhatsApp of het formulier wordt gemeten, met de knop en pagina erbij. De eigenaar ziet in een eigen portaal waar zijn klanten vandaan komen en wat de advertenties kosten.' },
+    ],
+    resultaat: [
+      'Site live sinds november 2026 op probandenservice.nl.',
+      "Gemiddeld zo'n 6 klanten per dag die vanaf de site bellen, appen of een aanvraag sturen (eind november 2026).",
+      'Bezoekers via Google zelf (gratis) nemen het vaakst contact op; de advertenties vullen dat aan op de drukke pechmomenten.',
+      'Aanvragen komen binnen als nette mail met kenteken, merk en model erbij.',
+    ],
+    techStack: ['Next.js', 'TypeScript', 'Google Ads', 'GA4', 'Search Console', 'Resend', 'Vercel'],
+    images: {
+      cover: '/probandenservice/home.jpg',
+      screens: ['/probandenservice/home.jpg', '/probandenservice/spoed.jpg', '/probandenservice/regio.jpg'],
+    },
+    quote: null,
+  },
+  {
     slug: 'ad-loodgietersbedrijf',
     naam: 'AD Loodgietersbedrijf',
     sector: 'Loodgieter',
@@ -422,6 +466,8 @@ export const CASE_DETAILS: CaseDetail[] = [
       'Nieuwe site live sinds oktober 2026.',
       "70 lokale dienstpagina's, 18 diensten in beeld.",
       'Offerteformulier actief, metingen via GA4 en Search Console staan klaar.',
+      "Google Bedrijfsprofiel volledig ingericht: projectfoto's, werkgebied, WhatsApp-chat en een reviewlink met QR-code voor na de oplevering.",
+      "Google Ads-campagne klaargezet met eigen landingspagina's voor aannemer en aanbouw, inclusief echte opgeleverde projecten.",
     ],
     techStack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Resend', 'GA4', 'Search Console'],
     images: {
