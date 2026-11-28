@@ -346,17 +346,6 @@ export const CASES = [
     excerpt: 'Portaal waarin klanten in gewone taal zien hoeveel mensen belden, appten of een aanvraag stuurden, waar ze vandaan kwamen en wat de advertenties kostten.',
   },
   {
-    slug: 'ijs-en-aap',
-    naam: 'IJs & Aap',
-    branche: 'Eigen app',
-    locatie: 'Baarn',
-    resultaat: '6 talen',
-    resultaatSub: 'web-app voor iPhone en Android',
-    meta: 'Maatwerk software',
-    gradient: 'linear-gradient(135deg, #2fb2f5 0%, #58cc02 100%)',
-    excerpt: 'Eigen app met dagritme, dagelijkse puzzels en een ijsbeer die meegroeit. Accounts, reeksen, winkel en een levende wereld, installeerbaar op de telefoon.',
-  },
-  {
     slug: 'urenportaal',
     naam: 'Uurly urenregistratie',
     branche: 'Administratiekantoor',
@@ -512,35 +501,6 @@ export const CASE_DETAILS: CaseDetail[] = [
       'Klant en AKWS kijken naar dezelfde cijfers, dus het gesprek gaat over wat werkt.',
     ],
     techStack: ['Next.js', 'TypeScript', 'Prisma', 'PostgreSQL', 'Search Console API', 'GA4 API'],
-    quote: null,
-  },
-  {
-    slug: 'ijs-en-aap',
-    naam: 'IJs & Aap',
-    sector: 'Eigen app',
-    locatie: 'Baarn',
-    liveUrl: 'https://yukimo.vercel.app',
-    liveLabel: 'Bekijk IJs & Aap',
-    intro: 'Een eigen app die van je dag een spel maakt: gewoontes, dagelijkse puzzels en een ijsbeer die met je meegroeit.',
-    meta: 'Maatwerk software',
-    gradient: 'linear-gradient(135deg, #2fb2f5 0%, #58cc02 100%)',
-    situatie: [
-      'IJs & Aap is een eigen product, samen met een vriend bedacht. Het idee: een planner en puzzels die je elke dag wilt openen, omdat er een karakter is dat meegroeit met wat je doet.',
-    ],
-    aanpak: [
-      { titel: 'Dagritme en reeksen', tekst: 'Een vast dagritme met eigen gewoontes, reeksen die doorlopen en beloningen als je volhoudt.' },
-      { titel: 'Elke dag nieuwe puzzels', tekst: 'Sudoku, woordzoeker en woordpuzzels die elke dag vernieuwen, voor iedereen dezelfde.' },
-      { titel: 'Een levende wereld', tekst: 'IJs en zijn maatjes reageren op wat je doet, met een winkel, outfits, seizoenen en feestdagen. Werkt in de browser en is te installeren op iPhone en Android.' },
-    ],
-    resultaat: [
-      'Live met accounts, in zes talen.',
-      'Laat zien dat we ook complete apps voor consumenten bouwen, niet alleen bedrijfssoftware.',
-    ],
-    techStack: ['JavaScript', 'PWA', 'Vercel', 'PostgreSQL'],
-    images: {
-      cover: '/ijs-en-aap/home.jpg',
-      screens: ['/ijs-en-aap/home.jpg'],
-    },
     quote: null,
   },
   {
